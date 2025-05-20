@@ -12,25 +12,45 @@ def main():
     embedding_generator = EmbeddingGenerator()
     
     # Configuration
-    collection_name = "constitution_of_india"
+    base_collection_name = "constitution_of_india"
     pdf_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "constution_of_india.pdf")
+    pages_per_group = 85
     
     try:
-        # Create collection if it doesn't exist
-        try:
-            milvus_client.create_collection(collection_name)
-        except Exception as e:
-            print(f"Collection might already exist: {str(e)}")
+        # Split PDF into groups
+        print("Splitting PDF into groups...")
+        page_groups = embedding_generator.split_pdf_into_groups(pdf_path, pages_per_group)
+
+        # with open("./result.txt", "w") as f:
+        #     f.write(str(page_groups))
         
-        # Process PDF and generate embeddings
-        print("Processing PDF and generating embeddings...")
-        texts, embeddings = embedding_generator.process_pdf(pdf_path)
+        print(f"Split PDF into {len(page_groups)} groups")
         
-        # Insert data into Zilliz Cloud
-        print(f"Inserting {len(texts)} chunks into Zilliz Cloud...")
-        milvus_client.insert_data(collection_name, texts, embeddings)
+        # Process each group
+        for group_num, texts in page_groups.items():
+            collection_name = f"{base_collection_name}_{group_num}"
+            print(f"\nProcessing group {group_num}...")
+            
+            try:
+                # Create collection for this group
+                print(f"Creating collection: {collection_name}")
+                milvus_client.create_collection(collection_name)
+                
+                # Generate embeddings for this group
+                print(f"Generating embeddings for group {group_num}...")
+                texts, embeddings = embedding_generator.process_pdf_group(texts)
+                
+                # Insert data into collection
+                print(f"Inserting {len(texts)} chunks into collection {collection_name}...")
+                milvus_client.insert_data(collection_name, texts, embeddings)
+                
+                print(f"Successfully processed and stored data for group {group_num}!")
+                
+            except Exception as e:
+                print(f"Error processing group {group_num}: {str(e)}")
+                continue
         
-        print("Successfully processed and stored all data!")
+        print("\nAll groups processed!")
         
     except Exception as e:
         print(f"An error occurred: {str(e)}")

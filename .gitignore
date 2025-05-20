@@ -49,3 +49,5 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+
+result.txt
