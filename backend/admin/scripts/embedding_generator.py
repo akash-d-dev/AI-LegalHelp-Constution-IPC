@@ -1,14 +1,15 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+from pymilvus import model
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 import os
 from typing import List, Tuple
 import numpy as np
+from dotenv import load_dotenv
 
 class EmbeddingGenerator:
-    def __init__(self, model_name: str = "sentence-transformers/all-mpnet-base-v2"):
-        """Initialize the embedding generator with a specific model"""
-        self.embeddings_model = HuggingFaceEmbeddings(model_name=model_name)
+    def __init__(self):
+        """Initialize the embedding generator with Gemini model"""
+        load_dotenv()
         
     def read_pdf(self, pdf_path: str) -> List[str]:
         """Read PDF and extract text using LangChain's PyPDFLoader"""
@@ -35,9 +36,15 @@ class EmbeddingGenerator:
         return texts
     
     def generate_embeddings(self, texts: List[str]) -> Tuple[List[str], List[np.ndarray]]:
-        """Generate embeddings for a list of texts using HuggingFace embeddings"""
+        """Generate embeddings for a list of texts using Gemini embeddings"""
         print(f"Generating embeddings for {len(texts)} texts")
-        embeddings = self.embeddings_model.embed_documents(texts)
+        
+        gemini_ef = model.dense.GeminiEmbeddingFunction(
+            model_name="gemini-embedding-exp-03-07",
+            api_key=os.getenv("GEMINI_API_KEY"),
+        )
+        
+        embeddings = gemini_ef.encode_documents(texts)
         return texts, embeddings
     
     def process_pdf(self, pdf_path: str) -> Tuple[List[str], List[np.ndarray]]:
@@ -46,7 +53,6 @@ class EmbeddingGenerator:
         chunks = self.read_pdf(pdf_path)
         print(f"Generated {len(chunks)} text chunks")
         
-        # Generate embeddings
         return self.generate_embeddings(chunks)
 
 # Test the functionality
@@ -72,3 +78,7 @@ if __name__ == "__main__":
     print(f"\nLast text: {texts[-1]}")
     print(f"Last embedding: {embeddings[-1]}")
 
+
+    texts, embeddings = generator.generate_embeddings(["India, or any other instrument, treaty or agreement as envisaged under article 363 or otherwise."])
+    print(texts)
+    print(embeddings)
