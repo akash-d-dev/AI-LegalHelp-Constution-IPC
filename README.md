@@ -1,51 +1,42 @@
-# Constitution of India API
+# 🇮🇳 Indian Legal AI Assistant
 
-A FastAPI-based backend service for accessing and managing the Constitution of India.
+A powerful AI-driven agent that answers legal queries related to the **Constitution of India** and the **Indian Penal Code (IPC)** using keyword generation, vector search, and smart tool orchestration.
 
-## Setup
+---
 
-1. Create and activate virtual environment:
-```bash
-# Windows
-.\venv\Scripts\activate
+## 🧠 How It Works
 
-# Linux/Mac
-source venv/bin/activate
-```
+1. **User enters a legal query**  
+   → e.g., *"When can the Indian government restrict freedom of speech?"*
 
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. **AI Agent activates tools**:
+   - 🔑 `generate_keywords` → Extracts keywords like “freedom”, “speech”, “restrictions”
+   - 📚 `search_db_constitution` → Searches Indian Constitution vector DB
+   - ⚖️ `search_db_penal_code` → Searches IPC vector DB
+   - 🔄 Synthesizes all retrieved data into a final answer
 
-3. Create a `.env` file in the root directory with the following variables:
-```
-SECRET_KEY=your-secret-key-here
-DATABASE_URL=sqlite:///./constitution.db
-```
+3. **Returns structured legal answer**  
+   With referenced articles and sections.
 
-4. Run the application:
-```bash
-uvicorn backend.main:app --reload
-```
+---
 
-The API will be available at `http://localhost:8000`
+## ⚙️ System Components
 
-## API Documentation
+- `generate_keywords`: Keyword extractor from user input
+- `search_db_constitution`: Vector search on Constitution articles
+- `search_db_penal_code`: Vector search on IPC sections
+- `ai_agent`: Controls the flow, uses tools, composes the answer
 
-Once the server is running, you can access:
-- Swagger UI documentation: `http://localhost:8000/docs`
-- ReDoc documentation: `http://localhost:8000/redoc`
+---
 
-## Project Structure
+## 🔮 Future Add-on: Predict Punishment from Case
 
-```
-.
-├── backend/
-│   ├── main.py          # FastAPI application
-│   ├── config.py        # Configuration settings
-│   └── models.py        # Database models
-├── venv/                # Virtual environment
-├── requirements.txt     # Project dependencies
-└── README.md           # This file
-``` 
+A fine-tuned AI model trained on court judgments to:
+
+- Predict punishment based on case description
+- Reference relevant IPC sections
+- Suggest similar past judgments
+
+**Planned Tool:** `predict_punishment_from_case`
+
+---
