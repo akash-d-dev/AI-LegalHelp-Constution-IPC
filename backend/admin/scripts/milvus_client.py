@@ -4,10 +4,15 @@ from dotenv import load_dotenv
 import numpy as np
 
 class MilvusDBClient:
-    def __init__(self):
+    def __init__(self, uri: str | None = None, token: str | None = None):
+        """Initialize the client with optional URI and token.
+
+        If ``uri`` or ``token`` are not provided, values are read from the
+        environment variables ``MILVUS_URI`` and ``MILVUS_TOKEN`` respectively.
+        """
         load_dotenv()
-        self.uri = os.getenv("MILVUS_URI")
-        self.token = os.getenv("MILVUS_TOKEN")
+        self.uri = uri or os.getenv("MILVUS_URI")
+        self.token = token or os.getenv("MILVUS_TOKEN")
 
     def _get_client(self):
         """Create a new client connection"""
