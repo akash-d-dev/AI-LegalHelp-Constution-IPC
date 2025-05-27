@@ -37,6 +37,21 @@ A fine-tuned AI model trained on court judgments to:
 - Reference relevant IPC sections
 - Suggest similar past judgments
 
-**Planned Tool:** `predict_punishment_from_case`
+
 
 ---
+
+## 🚀 Running the Agent
+
+1. Copy `backend/sample.env` to `.env` and fill in required credentials for Milvus and HuggingFace/OpenAI.
+2. Install dependencies: `pip install -r backend/requirements.txt`.
+3. Generate embeddings for the Constitution and IPC PDFs using scripts in `backend/admin/scripts`.
+4. Run the agent interactively:
+
+```python
+from backend.ai_agent.agent_graph import run_agent
+print(run_agent("When can the government restrict freedom of speech?"))
+```
+
+
+
