@@ -2,104 +2,146 @@
 
 from __future__ import annotations
 
-from typing import Dict
-
-from langgraph.graph import StateGraph
-from langchain_core.messages import HumanMessage, SystemMessage
+from typing import Annotated, Sequence, TypedDict
+from langgraph.graph import StateGraph, END
+from langgraph.graph.message import add_messages
+from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage
 from langchain_openai import ChatOpenAI
-# from langchain_community.chat_models import ChatOpenAI
-
-
-from .tools import (
-    KeywordGeneratorTool,
-    ConstitutionSearchTool,
-    IPCSearchTool,
-    PredictPunishmentTool,
-)
-from utils.vector_db import MilvusVectorDB
 import os
-from dotenv import load_dotenv
+from utils.Constants import Constants
 
 
-class AgentState(Dict):
-    """Simple state dict for the agent."""
+from .tools import tools
+
+class AgentState(TypedDict):
+    """State for the legal AI agent with message history."""
+    messages: Annotated[Sequence[BaseMessage], add_messages]
 
 
 def build_graph() -> StateGraph:
-    load_dotenv()
-    llm = ChatOpenAI(temperature=0)
-
-    constitution_db = MilvusVectorDB(
-        uri=os.getenv("MILVUS_URI_DB1"),
-        token=os.getenv("MILVUS_TOKEN_DB1"),
-        collection_names=[f"constitution_of_india_{i}" for i in range(1, 6)],
-    )
-    ipc_db = MilvusVectorDB(
-        uri=os.getenv("MILVUS_URI_DB2"),
-        token=os.getenv("MILVUS_TOKEN_DB2"),
-        collection_names=[f"ipc_{i}" for i in range(1, 3)],
-    )
-
-    keyword_tool = KeywordGeneratorTool()
-    constitution_tool = ConstitutionSearchTool(constitution_db)
-    ipc_tool = IPCSearchTool(ipc_db)
-    punish_tool = PredictPunishmentTool()
-
+    """Build and return the compiled LangGraph agent."""
+    
+    # Initialize LLM with tools
+    llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
+    
+    # Create tools dictionary for easy lookup
+    tools_dict = {tool.name: tool for tool in tools}
+    
+    def should_continue(state: AgentState) -> str:
+        """Check if the last message contains tool calls."""
+        last_message = state['messages'][-1]
+        if hasattr(last_message, 'tool_calls') and last_message.tool_calls:
+            return "tools"
+        else:
+            return "end"
+    
+    def call_llm(state: AgentState) -> AgentState:
+        """Call the LLM with the current state and system prompt."""
+        system_prompt = SystemMessage(content=Constants.LLM_PROMPT_SYSTEM)
+        
+        messages = [system_prompt] + list(state['messages'])
+        response = llm.invoke(messages)
+        return {'messages': [response]}
+    
+    def execute_tools(state: AgentState) -> AgentState:
+        """Execute tool calls from the LLM's response."""
+        tool_calls = state['messages'][-1].tool_calls
+        results = []
+        
+        for tool_call in tool_calls:
+            tool_name = tool_call['name']
+            tool_args = tool_call['args']
+            
+            print(f"Calling tool: {tool_name} with args: {tool_args}")
+            
+            if tool_name not in tools_dict:
+                result = f"Error: Tool '{tool_name}' not found. Available tools: {list(tools_dict.keys())}"
+            else:
+                try:
+                    # Get the first argument value (tools expect single string input)
+                    query = list(tool_args.values())[0] if tool_args else ""
+                    result = tools_dict[tool_name].invoke(query)
+                except Exception as e:
+                    result = f"Error executing tool {tool_name}: {str(e)}"
+            
+            # Create tool message
+            tool_message = ToolMessage(
+                tool_call_id=tool_call['id'],
+                name=tool_name,
+                content=str(result)
+            )
+            results.append(tool_message)
+        
+        return {'messages': results}
+    
+    # Build the graph
     graph = StateGraph(AgentState)
-
-    def generate_keywords(state: AgentState) -> AgentState:
-        query = state.get("query")
-        keywords = keyword_tool.run(query)
-        state["keywords"] = keywords
-        return state
-
-    def search_constitution(state: AgentState) -> AgentState:
-        keywords = state.get("keywords") or [state.get("query")]
-        results = constitution_tool.run(" ".join(keywords))
-        state["constitution_results"] = results
-        return state
-
-    def search_ipc(state: AgentState) -> AgentState:
-        keywords = state.get("keywords") or [state.get("query")]
-        results = ipc_tool.run(" ".join(keywords))
-        state["ipc_results"] = results
-        return state
-
-    def synthesize(state: AgentState) -> str:
-        messages = [
-            SystemMessage(
-                content="You are a legal assistant answering queries about the Indian Constitution and IPC."
-            ),
-            HumanMessage(content=f"Query: {state.get('query')}")
-        ]
-        if state.get("constitution_results"):
-            messages.append(
-                HumanMessage(content=f"Constitution refs: {state['constitution_results']}")
-            )
-        if state.get("ipc_results"):
-            messages.append(
-                HumanMessage(content=f"IPC refs: {state['ipc_results']}")
-            )
-        answer = llm.invoke(messages).content
-        state["answer"] = answer
-        return state
-
-    graph.add_node("keywords", generate_keywords)
-    graph.add_node("constitution", search_constitution)
-    graph.add_node("ipc", search_ipc)
-    graph.add_node("synthesize", synthesize)
-
-    graph.set_entry_point("keywords")
-    graph.connect("keywords", "constitution")
-    graph.connect("constitution", "ipc")
-    graph.connect("ipc", "synthesize")
-
-    return graph
+    
+    # Add nodes
+    graph.add_node("llm", call_llm)
+    graph.add_node("tools", execute_tools)
+    
+    # Set entry point
+    graph.set_entry_point("llm")
+    
+    # Add conditional edges
+    graph.add_conditional_edges(
+        "llm",
+        should_continue,
+        {
+            "tools": "tools",
+            "end": END
+        }
+    )
+    
+    # Add edge from tools back to llm
+    graph.add_edge("tools", "llm")
+    
+    # Compile the graph
+    app = graph.compile()
+    
+    # Create generated directory if it doesn't exist
+    os.makedirs("generated", exist_ok=True)
+    
+    try:
+        # Save the graph visualization as a PNG file
+        graph_png = app.get_graph().draw_mermaid_png()
+        with open("generated/graph_visualization.png", "wb") as f:
+            f.write(graph_png)
+        print("Graph visualization has been saved as 'generated/graph_visualization.png'")
+    except Exception as e:
+        print(f"Could not save graph visualization: {e}")
+    
+    return app
 
 
 def run_agent(query: str) -> str:
-    graph = build_graph()
-    state = AgentState(query=query)
-    result = graph.invoke(state)
-    return result["answer"]
+    """Run the agent with a query and return the final answer."""
+    app = build_graph()
+    
+    # Create initial state with user message
+    initial_state = {
+        "messages": [HumanMessage(content=query)]
+    }
+    
+    # Run the agent
+    result = app.invoke(initial_state)
+    
+    # Return the last message content
+    return result["messages"][-1].content
+
+
+def stream_agent(query: str):
+    """Stream the agent execution for real-time responses."""
+    app = build_graph()
+    
+    initial_state = {
+        "messages": [HumanMessage(content=query)]
+    }
+    
+    for chunk in app.stream(initial_state, stream_mode="values"):
+        if "messages" in chunk:
+            last_message = chunk["messages"][-1]
+            if hasattr(last_message, 'content') and last_message.content:
+                yield last_message.content
 

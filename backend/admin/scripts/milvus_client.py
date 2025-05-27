@@ -11,8 +11,8 @@ class MilvusDBClient:
         environment variables ``MILVUS_URI`` and ``MILVUS_TOKEN`` respectively.
         """
         load_dotenv()
-        self.uri = uri or os.getenv("MILVUS_URI")
-        self.token = token or os.getenv("MILVUS_TOKEN")
+        self.uri = uri or os.getenv("MILVUS_URI_DB_IPC")
+        self.token = token or os.getenv("MILVUS_TOKEN_DB_IPC")
 
     def _get_client(self):
         """Create a new client connection"""

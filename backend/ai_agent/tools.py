@@ -2,86 +2,151 @@
 
 from __future__ import annotations
 
-from typing import List
-
-from langchain.tools import BaseTool
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
+from typing import List, Optional
+from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
-# from langchain_community.chat_models import ChatOpenAI
+from utils.Constants import Constants
 
-from utils.vector_db import MilvusVectorDB
-
-
-class KeywordGeneratorTool(BaseTool):
-    name = "generate_keywords"
-    description = "Generate semantic keywords for a legal query"
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        prompt = PromptTemplate(
-            template="Extract important legal keywords from the query: {query}",
-            input_variables=["query"],
-        )
-        self.chain = LLMChain(llm=ChatOpenAI(temperature=0), prompt=prompt)
-
-    def _run(self, query: str) -> List[str]:
-        response = self.chain.run(query=query)
-        keywords = [k.strip() for k in response.split(",") if k.strip()]
-        return keywords
-
-    async def _arun(self, query: str) -> List[str]:
-        return self._run(query)
+# Global variables for lazy initialization
+_constitution_db: Optional[object] = None
+_ipc_db: Optional[object] = None
+_llm: Optional[ChatOpenAI] = None
 
 
-class ConstitutionSearchTool(BaseTool):
-    name = "search_db_constitution"
-    description = "Search the Constitution vector database"
-
-    def __init__(self, vector_db: MilvusVectorDB, **kwargs):
-        super().__init__(**kwargs)
-        self.vector_db = vector_db
-
-    def _run(self, query: str) -> List[dict]:
-        return self.vector_db.search(query)
-
-    async def _arun(self, query: str) -> List[dict]:
-        return self._run(query)
-
-
-class IPCSearchTool(BaseTool):
-    name = "search_db_penal_code"
-    description = "Search the IPC vector database"
-
-    def __init__(self, vector_db: MilvusVectorDB, **kwargs):
-        super().__init__(**kwargs)
-        self.vector_db = vector_db
-
-    def _run(self, query: str) -> List[dict]:
-        return self.vector_db.search(query)
-
-    async def _arun(self, query: str) -> List[dict]:
-        return self._run(query)
+def get_constitution_db():
+    """Lazy initialization of constitution database."""
+    global _constitution_db
+    if _constitution_db is None:
+        try:
+            from utils.vector_db import MilvusVectorDB
+            _constitution_db = MilvusVectorDB(
+                uri=Constants.MILVUS_URI_DB_COI,
+                token=Constants.MILVUS_TOKEN_DB_COI,
+                collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_CONSTITUTION}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_CONSTITUTION + 1)],
+            )
+        except Exception as e:
+            print(f"Warning: Could not initialize constitution database: {e}")
+            _constitution_db = None
+    return _constitution_db
 
 
-class PredictPunishmentTool(BaseTool):
-    name = "predict_punishment_from_case"
-    description = (
-        "Predict punishment based on case description. "
-        "Returns likely sentence and relevant IPC sections."
-    )
+def get_ipc_db():
+    """Lazy initialization of IPC database."""
+    global _ipc_db
+    if _ipc_db is None:
+        try:
+            from utils.vector_db import MilvusVectorDB
+            _ipc_db = MilvusVectorDB(
+                uri=Constants.MILVUS_URI_DB_IPC,
+                token=Constants.MILVUS_TOKEN_DB_IPC,
+                collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_IPC}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_IPC + 1)],
+            )
+        except Exception as e:
+            print(f"Warning: Could not initialize IPC database: {e}")
+            _ipc_db = None
+    return _ipc_db
 
-    def __init__(self, llm=None, **kwargs):
-        super().__init__(**kwargs)
-        self.llm = llm or ChatOpenAI(temperature=0)
 
-    def _run(self, query: str) -> str:
-        prompt = (
-            "Given the case description, predict likely punishment and relevant IPC sections. "
-            "Return concise text. Query: " + query
-        )
-        return self.llm.invoke(prompt)
+def get_llm():
+    """Lazy initialization of LLM."""
+    global _llm
+    if _llm is None:
+        _llm = ChatOpenAI(temperature=0, api_key=Constants.OPENAI_API_KEY)
+    return _llm
 
-    async def _arun(self, query: str) -> str:
-        return self._run(query)
+
+@tool
+def generate_keywords(query: str) -> str:
+    """Generate semantic keywords for a legal query to improve search results."""
+    prompt = f"""Extract important legal keywords from this query for better search results.
+    Return only the keywords separated by commas, no explanations.
+    
+    Query: {query}
+    
+    Keywords:"""
+    
+    try:
+        llm = get_llm()
+        response = llm.invoke(prompt)
+        return response.content.strip()
+    except Exception as e:
+        return f"Error generating keywords: {str(e)}"
+
+
+@tool
+def search_constitution(query: str) -> str:
+    """Search the Indian Constitution database for relevant articles, clauses, and amendments."""
+    constitution_db = get_constitution_db()
+    
+    if constitution_db is None:
+        return "Constitution database is not available. Please check your database configuration."
+    
+    try:
+        results = constitution_db.search(query)
+        if not results:
+            return "No relevant constitutional provisions found for this query."
+        
+        formatted_results = []
+        for i, result in enumerate(results[:5]):  # Limit to top 5 results
+            content = result.get('text', result.get('content', 'No content available'))
+            metadata = result.get('metadata', {})
+            article = metadata.get('article', 'Unknown Article')
+            
+            formatted_results.append(f"Result {i+1}:\nArticle: {article}\nContent: {content}\n")
+        
+        return "\n".join(formatted_results)
+    except Exception as e:
+        return f"Error searching constitution database: {str(e)}"
+
+
+@tool
+def search_ipc(query: str) -> str:
+    """Search the Indian Penal Code database for relevant sections and offenses."""
+    ipc_db = get_ipc_db()
+    
+    if ipc_db is None:
+        return "IPC database is not available. Please check your database configuration."
+    
+    try:
+        results = ipc_db.search(query)
+        if not results:
+            return "No relevant IPC sections found for this query."
+        
+        formatted_results = []
+        for i, result in enumerate(results[:5]):  # Limit to top 5 results
+            content = result.get('text', result.get('content', 'No content available'))
+            metadata = result.get('metadata', {})
+            section = metadata.get('section', 'Unknown Section')
+            
+            formatted_results.append(f"Result {i+1}:\nSection: {section}\nContent: {content}\n")
+        
+        return "\n".join(formatted_results)
+    except Exception as e:
+        return f"Error searching IPC database: {str(e)}"
+
+
+@tool
+def predict_punishment(case_description: str) -> str:
+    """Predict likely punishment and relevant IPC sections based on case description."""
+    prompt = f"""Based on the following case description, predict the likely punishment and relevant IPC sections under Indian law.
+    
+    Case Description: {case_description}
+    
+    Please provide:
+    1. Likely punishment (imprisonment duration, fine amount, etc.)
+    2. Relevant IPC sections
+    3. Brief reasoning
+    
+    Keep the response concise and factual."""
+    
+    try:
+        llm = get_llm()
+        response = llm.invoke(prompt)
+        return response.content
+    except Exception as e:
+        return f"Error predicting punishment: {str(e)}"
+
+
+# List of all tools for easy import
+tools = [generate_keywords, search_constitution, search_ipc, predict_punishment]
 

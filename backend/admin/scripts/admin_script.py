@@ -12,8 +12,8 @@ def main():
     embedding_generator = EmbeddingGenerator()
     
     # Configuration
-    base_collection_name = "constitution_of_india"
-    pdf_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "constution_of_india.pdf")
+    base_collection_name = "ipc"
+    pdf_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "ipc.pdf")
     pages_per_group = 85
     
     try:

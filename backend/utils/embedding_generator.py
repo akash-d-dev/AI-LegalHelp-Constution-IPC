@@ -3,16 +3,14 @@
 from typing import List, Tuple
 import numpy as np
 from langchain_huggingface import HuggingFaceEmbeddings
-from dotenv import load_dotenv
-
+from utils.Constants import Constants
 
 class EmbeddingGenerator:
     """Generates embeddings for text using HuggingFace models."""
 
     def __init__(self):
         """Initialize the embedding generator with HuggingFace embeddings."""
-        load_dotenv()
-        self.model_name = "sentence-transformers/all-mpnet-base-v2"
+        self.model_name = Constants.EMBEDDING_MODEL_NAME
         self.embeddings_model = HuggingFaceEmbeddings(model_name=self.model_name)
 
     def generate_embeddings(self, texts: List[str]) -> Tuple[List[str], List[np.ndarray]]:
