@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 class EmbeddingGenerator:
     def __init__(self):
-        """Initialize the embedding generator with Gemini model"""
+        """Initialize the embedding generator with HuggingFace embeddings"""
         load_dotenv()
         
     def read_pdf(self, pdf_path: str) -> List[str]:

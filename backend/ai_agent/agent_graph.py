@@ -6,7 +6,9 @@ from typing import Dict
 
 from langgraph.graph import StateGraph
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
+# from langchain_community.chat_models import ChatOpenAI
+
 
 from .tools import (
     KeywordGeneratorTool,
@@ -14,7 +16,7 @@ from .tools import (
     IPCSearchTool,
     PredictPunishmentTool,
 )
-from .vector_db import MilvusVectorDB
+from utils.vector_db import MilvusVectorDB
 import os
 from dotenv import load_dotenv
 

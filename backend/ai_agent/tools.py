@@ -7,9 +7,10 @@ from typing import List
 from langchain.tools import BaseTool
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
+# from langchain_community.chat_models import ChatOpenAI
 
-from .vector_db import MilvusVectorDB
+from utils.vector_db import MilvusVectorDB
 
 
 class KeywordGeneratorTool(BaseTool):
