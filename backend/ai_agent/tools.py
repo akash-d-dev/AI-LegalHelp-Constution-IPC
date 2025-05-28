@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
+import logging
 from typing import List, Optional
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
 from utils.Constants import Constants
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Global variables for lazy initialization
 _constitution_db: Optional[object] = None
@@ -17,6 +22,7 @@ def get_constitution_db():
     """Lazy initialization of constitution database."""
     global _constitution_db
     if _constitution_db is None:
+        logger.info("🔄 Initializing Constitution database...")
         try:
             from utils.vector_db import MilvusVectorDB
             _constitution_db = MilvusVectorDB(
@@ -24,8 +30,9 @@ def get_constitution_db():
                 token=Constants.MILVUS_TOKEN_DB_COI,
                 collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_CONSTITUTION}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_CONSTITUTION + 1)],
             )
+            logger.info("✅ Constitution database initialized successfully")
         except Exception as e:
-            print(f"Warning: Could not initialize constitution database: {e}")
+            logger.error(f"❌ Could not initialize constitution database: {e}")
             _constitution_db = None
     return _constitution_db
 
@@ -34,6 +41,7 @@ def get_ipc_db():
     """Lazy initialization of IPC database."""
     global _ipc_db
     if _ipc_db is None:
+        logger.info("🔄 Initializing IPC database...")
         try:
             from utils.vector_db import MilvusVectorDB
             _ipc_db = MilvusVectorDB(
@@ -41,8 +49,9 @@ def get_ipc_db():
                 token=Constants.MILVUS_TOKEN_DB_IPC,
                 collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_IPC}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_IPC + 1)],
             )
+            logger.info("✅ IPC database initialized successfully")
         except Exception as e:
-            print(f"Warning: Could not initialize IPC database: {e}")
+            logger.error(f"❌ Could not initialize IPC database: {e}")
             _ipc_db = None
     return _ipc_db
 
@@ -51,13 +60,17 @@ def get_llm():
     """Lazy initialization of LLM."""
     global _llm
     if _llm is None:
+        logger.info("🔄 Initializing LLM...")
         _llm = ChatOpenAI(temperature=0, api_key=Constants.OPENAI_API_KEY)
+        logger.info("✅ LLM initialized successfully")
     return _llm
 
 
 @tool
 def generate_keywords(query: str) -> str:
     """Generate semantic keywords for a legal query to improve search results."""
+    logger.info(f"🔑 TOOL: generate_keywords called with query: '{query}'")
+    
     prompt = f"""Extract important legal keywords from this query for better search results.
     Return only the keywords separated by commas, no explanations.
     
@@ -66,68 +79,121 @@ def generate_keywords(query: str) -> str:
     Keywords:"""
     
     try:
+        logger.info("🔄 Calling LLM to generate keywords...")
         llm = get_llm()
         response = llm.invoke(prompt)
-        return response.content.strip()
+        keywords = response.content.strip()
+        logger.info(f"✅ Generated keywords: {keywords}")
+        return keywords
     except Exception as e:
-        return f"Error generating keywords: {str(e)}"
+        error_msg = f"Error generating keywords: {str(e)}"
+        logger.error(f"❌ {error_msg}")
+        return error_msg
 
 
 @tool
 def search_constitution(query: str) -> str:
-    """Search the Indian Constitution database for relevant articles, clauses, and amendments."""
+    """Search the Indian Constitution database using combined hybrid and basic search for most relevant articles, clauses, and amendments."""
+    logger.info(f"📜 TOOL: search_constitution called with query: '{query}'")
+    
     constitution_db = get_constitution_db()
     
     if constitution_db is None:
-        return "Constitution database is not available. Please check your database configuration."
+        error_msg = "Constitution database is not available. Please check your database configuration."
+        logger.warning(f"⚠️ {error_msg}")
+        return error_msg
     
     try:
-        results = constitution_db.search(query)
+        logger.info("🔍 Performing combined search (hybrid + basic) on Constitution database...")
+        results = constitution_db.combined_search(query, top_k=3)
+        
         if not results:
+            logger.info("📭 No relevant constitutional provisions found")
             return "No relevant constitutional provisions found for this query."
         
-        formatted_results = []
-        for i, result in enumerate(results[:5]):  # Limit to top 5 results
-            content = result.get('text', result.get('content', 'No content available'))
-            metadata = result.get('metadata', {})
-            article = metadata.get('article', 'Unknown Article')
-            
-            formatted_results.append(f"Result {i+1}:\nArticle: {article}\nContent: {content}\n")
+        logger.info(f"📊 Found {len(results)} combined results from Constitution database")
         
-        return "\n".join(formatted_results)
+        formatted_results = []
+        for i, result in enumerate(results):
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', 'No content available')
+            distance = result.get('distance', 'Unknown')
+            search_type = result.get('search_type', 'Unknown')
+            collection = result.get('collection', 'Unknown')
+            article = entity.get('article', 'Unknown Article')
+            
+            formatted_results.append(
+                f"Result {i+1} (Distance: {distance:.4f}, Search: {search_type}):\n"
+                f"Collection: {collection}\n"
+                f"Article: {article}\n"
+                f"Content: {content}\n"
+            )
+            logger.debug(f"📄 Result {i+1}: Article {article}, Distance: {distance:.4f}, Type: {search_type}")
+        
+        result_text = "\n".join(formatted_results)
+        logger.info(f"✅ Constitution combined search completed, returning {len(formatted_results)} results")
+        return result_text
+        
     except Exception as e:
-        return f"Error searching constitution database: {str(e)}"
+        error_msg = f"Error searching constitution database: {str(e)}"
+        logger.error(f"❌ {error_msg}")
+        return error_msg
 
 
 @tool
 def search_ipc(query: str) -> str:
-    """Search the Indian Penal Code database for relevant sections and offenses."""
+    """Search the Indian Penal Code database using combined hybrid and basic search for most relevant sections and offenses."""
+    logger.info(f"⚖️ TOOL: search_ipc called with query: '{query}'")
+    
     ipc_db = get_ipc_db()
     
     if ipc_db is None:
-        return "IPC database is not available. Please check your database configuration."
+        error_msg = "IPC database is not available. Please check your database configuration."
+        logger.warning(f"⚠️ {error_msg}")
+        return error_msg
     
     try:
-        results = ipc_db.search(query)
+        logger.info("🔍 Performing combined search (hybrid + basic) on IPC database...")
+        results = ipc_db.combined_search(query, top_k=3)
+        
         if not results:
+            logger.info("📭 No relevant IPC sections found")
             return "No relevant IPC sections found for this query."
         
-        formatted_results = []
-        for i, result in enumerate(results[:5]):  # Limit to top 5 results
-            content = result.get('text', result.get('content', 'No content available'))
-            metadata = result.get('metadata', {})
-            section = metadata.get('section', 'Unknown Section')
-            
-            formatted_results.append(f"Result {i+1}:\nSection: {section}\nContent: {content}\n")
+        logger.info(f"📊 Found {len(results)} combined results from IPC database")
         
-        return "\n".join(formatted_results)
+        formatted_results = []
+        for i, result in enumerate(results):
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', 'No content available')
+            distance = result.get('distance', 'Unknown')
+            search_type = result.get('search_type', 'Unknown')
+            collection = result.get('collection', 'Unknown')
+            section = entity.get('section', 'Unknown Section')
+            
+            formatted_results.append(
+                f"Result {i+1} (Distance: {distance:.4f}, Search: {search_type}):\n"
+                f"Collection: {collection}\n"
+                f"Section: {section}\n"
+                f"Content: {content}\n"
+            )
+            logger.debug(f"📄 Result {i+1}: Section {section}, Distance: {distance:.4f}, Type: {search_type}")
+        
+        result_text = "\n".join(formatted_results)
+        logger.info(f"✅ IPC combined search completed, returning {len(formatted_results)} results")
+        return result_text
+        
     except Exception as e:
-        return f"Error searching IPC database: {str(e)}"
+        error_msg = f"Error searching IPC database: {str(e)}"
+        logger.error(f"❌ {error_msg}")
+        return error_msg
 
 
 @tool
 def predict_punishment(case_description: str) -> str:
     """Predict likely punishment and relevant IPC sections based on case description."""
+    logger.info(f"🔮 TOOL: predict_punishment called with case: '{case_description[:100]}...'")
+    
     prompt = f"""Based on the following case description, predict the likely punishment and relevant IPC sections under Indian law.
     
     Case Description: {case_description}
@@ -140,13 +206,19 @@ def predict_punishment(case_description: str) -> str:
     Keep the response concise and factual."""
     
     try:
+        logger.info("🔄 Calling LLM to predict punishment...")
         llm = get_llm()
         response = llm.invoke(prompt)
-        return response.content
+        prediction = response.content
+        logger.info(f"✅ Punishment prediction completed (length: {len(prediction)} chars)")
+        return prediction
     except Exception as e:
-        return f"Error predicting punishment: {str(e)}"
+        error_msg = f"Error predicting punishment: {str(e)}"
+        logger.error(f"❌ {error_msg}")
+        return error_msg
 
 
 # List of all tools for easy import
 tools = [generate_keywords, search_constitution, search_ipc, predict_punishment]
+logger.info(f"🛠️ Tools module loaded with {len(tools)} tools: {[tool.name for tool in tools]}")
 

@@ -178,7 +178,7 @@ if __name__ == "__main__":
         
         # Test search functionality
         print("\n4. Testing search functionality...")
-        query_embedding = np.random.rand(768).tolist()
+        query_embedding = test_embeddings[0]
         results = client.search_similar(test_collection, query_embedding, top_k=2)
         print("✓ Search completed successfully")
         print("Search results:")

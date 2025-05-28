@@ -2,6 +2,7 @@
 
 import sys
 import os
+from backend.utils.Constants import Constants
 
 # Add the backend directory to the Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
@@ -28,4 +29,5 @@ def main():
 
 
 if __name__ == "__main__":
+    Constants.set_env_variables()
     main() 
