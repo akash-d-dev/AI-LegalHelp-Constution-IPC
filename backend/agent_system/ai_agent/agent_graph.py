@@ -3,19 +3,58 @@
 from __future__ import annotations
 
 import logging
+import os
+from datetime import datetime
 from typing import Annotated, Sequence, TypedDict
 from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage
 from langchain_openai import ChatOpenAI
-import os
-from utils.Constants import Constants
+from agent_system.utils.Constants import Constants
 
 from .tools import tools
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Configure logging with both console and file handlers
+def setup_agent_logging():
+    """Setup logging configuration for the agent with file output."""
+    # Create generated directory if it doesn't exist
+    os.makedirs("generated", exist_ok=True)
+    
+    # Create log file path
+    log_file = os.path.join("generated", "agent_execution.log")
+    
+    # Create formatter
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    
+    # Get the root logger for the agent
+    agent_logger = logging.getLogger('agent_system.ai_agent')
+    agent_logger.setLevel(logging.INFO)
+    
+    # Remove existing handlers to avoid duplicates
+    for handler in agent_logger.handlers[:]:
+        agent_logger.removeHandler(handler)
+    
+    # Create file handler
+    file_handler = logging.FileHandler(log_file, encoding='utf-8')
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(formatter)
+    
+    # Create console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(formatter)
+    
+    # Add handlers to logger
+    agent_logger.addHandler(file_handler)
+    agent_logger.addHandler(console_handler)
+    
+    return agent_logger
+
+# Setup logging
+logger = setup_agent_logging()
 
 
 class AgentState(TypedDict):
@@ -188,6 +227,7 @@ def build_graph() -> StateGraph:
 
 
 def run_agent(query: str) -> str:
+    Constants.check_env_variables()
     """Run the agent with a query and return the final answer."""
     logger.info("🚀 Starting agent execution...")
     logger.info(f"❓ User query: '{query}'")
@@ -211,6 +251,8 @@ def run_agent(query: str) -> str:
         answer_preview = final_answer[:200] if final_answer else "No content"
         logger.info(f"💡 Final answer preview: '{answer_preview}...'")
         logger.info(f"📊 Total messages in final state: {len(result['messages'])}")
+        
+        save_agent_conversation_log(query, final_answer, len(result['messages']))
         
         return final_answer
         
@@ -246,4 +288,32 @@ def stream_agent(query: str):
     except Exception as e:
         logger.error(f"❌ Agent streaming failed: {str(e)}")
         raise
+
+
+def save_agent_conversation_log(query: str, final_answer: str, total_messages: int):
+    """Save the agent conversation to a log file."""
+    try:
+        # Create generated directory if it doesn't exist
+        os.makedirs("generated", exist_ok=True)
+        
+        log_file = os.path.join("generated", "agent_conversations.log")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"\n{'='*100}\n")
+            f.write(f"AGENT CONVERSATION LOG\n")
+            f.write(f"Timestamp: {timestamp}\n")
+            f.write(f"Total Messages Processed: {total_messages}\n")
+            f.write(f"{'='*100}\n\n")
+            
+            f.write(f"USER QUERY:\n")
+            f.write(f"{query}\n\n")
+            
+            f.write(f"AGENT RESPONSE:\n")
+            f.write(f"{final_answer}\n\n")
+            
+            f.write(f"{'='*100}\n\n")
+            
+    except Exception as e:
+        logger.error(f"❌ Error saving conversation log: {e}")
 

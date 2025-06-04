@@ -1,23 +1,19 @@
 """Test script for Milvus vector databases with enhanced search capabilities."""
 
-import sys
 import os
 import logging
 from typing import List, Dict, Any
 from dotenv import load_dotenv
 from datetime import datetime
-
-# Add the backend directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
-
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Import necessary modules
-from backend.utils.Constants import Constants
-from backend.utils.vector_db import MilvusVectorDB
-from backend.utils.embedding_generator import EmbeddingGenerator
+from agent_system.utils.Constants import Constants
+from agent_system.utils.vector_db import MilvusVectorDB
+from agent_system.utils.embedding_generator import EmbeddingGenerator
+
 
 
 class VectorDBTester:

@@ -1,0 +1,257 @@
+2025-06-05 02:29:41 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 02:29:41 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights guaranteed by the Indian Constitution?'
+2025-06-05 02:29:41 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 02:29:41 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 4 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 02:29:42 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 📋 Initial state created with user message
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights guaranteed by the Indian Constitution?...'
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:29:43 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query'])
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['search_constitution']
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: search_constitution
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights guaranteed by the Indian Constitution'}
+2025-06-05 02:29:45 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'fundamental rights guaranteed by the Indian Consti...'
+2025-06-05 02:29:45 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with query: 'fundamental rights guaranteed by the Indian Constitution'
+2025-06-05 02:29:45 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-05 02:29:54 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-05 02:29:54 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 02:30:12 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 02:30:12 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.4122, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights guaranteed by the Indian Constitution?...'
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:30:12 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The fundamental rights guaranteed by the Indian Constitution are enshrined in Part III of the Consti...'
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The fundamental rights guaranteed by the Indian Constitution are enshrined in Part III of the Constitution. These rights are essential for the protection of individual liberties and the promotion of s...'
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ❓ User query: 'What is the punishment for theft under IPC?'
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 4 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 02:30:23 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 📋 Initial state created with user message
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:30:24 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: predict_punishment(['case_description'])
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['predict_punishment']
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: predict_punishment
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 📝 Tool args: {'case_description': 'theft'}
+2025-06-05 02:30:26 - agent_system.ai_agent - INFO - 🔍 Calling predict_punishment with query: 'theft...'
+2025-06-05 02:30:26 - agent_system.ai_agent.tools - INFO - 🔮 TOOL: predict_punishment called with case: 'theft...'
+2025-06-05 02:30:26 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to predict punishment...
+2025-06-05 02:30:26 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-05 02:30:26 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-05 02:30:29 - agent_system.ai_agent.tools - INFO - ✅ Punishment prediction completed (length: 390 chars)
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - ✅ Tool predict_punishment completed. Result preview: '1. Likely punishment: Imprisonment for up to 3 years and/or fine
+2. Relevant IPC sections: Section 3...'
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 📨 Tool message created for predict_punishment
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:30:29 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The punishment for theft under the Indian Penal Code (IPC) is defined in **Section 379**. The likely...'
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The punishment for theft under the Indian Penal Code (IPC) is defined in **Section 379**. The likely punishment for theft is:
+
+- **Imprisonment** for up to **3 years** and/or a **fine**.
+
+### Relevant...'
+2025-06-05 02:30:32 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
+2025-06-05 02:36:55 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 02:36:55 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights guaranteed by the Indian Constitution?'
+2025-06-05 02:36:55 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 02:36:55 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 4 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📋 Initial state created with user message
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights guaranteed by the Indian Constitution?...'
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:36:56 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights guaranteed by the Indian Constitution'}
+2025-06-05 02:36:57 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'fundamental rights guaranteed by the Indian Consti...'
+2025-06-05 02:36:57 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'fundamental rights guaranteed by the Indian Constitution'
+2025-06-05 02:36:57 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 02:36:57 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-05 02:36:58 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-05 02:36:59 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords: fundamental rights, Indian Constitution
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: 'fundamental rights, Indian Constitution...'
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights guaranteed by the Indian Constitution?...'
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:36:59 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query'])
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['search_constitution']
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: search_constitution
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights, Indian Constitution'}
+2025-06-05 02:37:00 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'fundamental rights, Indian Constitution...'
+2025-06-05 02:37:00 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with query: 'fundamental rights, Indian Constitution'
+2025-06-05 02:37:00 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-05 02:37:10 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-05 02:37:10 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 02:37:27 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 02:37:27 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.3906, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights guaranteed by the Indian Constitution?...'
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:37:27 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The fundamental rights guaranteed by the Indian Constitution are enshrined in Part III of the Consti...'
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The fundamental rights guaranteed by the Indian Constitution are enshrined in Part III of the Constitution. These rights are essential for the protection of individual liberties and the promotion of s...'
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 6
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ❓ User query: 'What is the punishment for theft under IPC?'
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 4 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment']
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 02:37:38 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 📋 Initial state created with user message
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'punishment for theft under IPC'}
+2025-06-05 02:37:39 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'punishment for theft under IPC...'
+2025-06-05 02:37:39 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'punishment for theft under IPC'
+2025-06-05 02:37:39 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 02:37:40 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords: punishment, theft, IPC
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: 'punishment, theft, IPC...'
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:37:40 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_ipc(['query'])
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['search_ipc']
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: search_ipc
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'punishment, theft, IPC'}
+2025-06-05 02:37:42 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'punishment, theft, IPC...'
+2025-06-05 02:37:42 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with query: 'punishment, theft, IPC'
+2025-06-05 02:37:42 - agent_system.ai_agent.tools - INFO - 🔄 Initializing IPC database...
+2025-06-05 02:37:45 - agent_system.ai_agent.tools - INFO - ✅ IPC database initialized successfully
+2025-06-05 02:37:45 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 02:37:51 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 02:37:51 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.8085, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 02:37:51 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Under the Indian Penal Code (IPC), theft is primarily addressed in **Section 378**, which defines th...'
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Under the Indian Penal Code (IPC), theft is primarily addressed in **Section 378**, which defines theft, and **Section 379**, which prescribes the punishment for theft.
+
+### Definition of Theft (Secti...'
+2025-06-05 02:37:55 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 6

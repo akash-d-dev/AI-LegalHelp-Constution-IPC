@@ -3,7 +3,7 @@
 from typing import List, Tuple
 import numpy as np
 from langchain_huggingface import HuggingFaceEmbeddings
-from utils.Constants import Constants
+from agent_system.utils.Constants import Constants
 
 class EmbeddingGenerator:
     """Generates embeddings for text using HuggingFace models."""

@@ -6,8 +6,8 @@ import os
 # Add the backend directory to the Python path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
 
-from backend.ai_agent.agent_graph import run_agent, stream_agent
-from backend.utils.Constants import Constants
+from agent_system.ai_agent.agent_graph import run_agent, stream_agent
+from agent_system.utils.Constants import Constants
 
 def test_agent():
     """Test the legal AI agent with sample queries."""
@@ -15,8 +15,6 @@ def test_agent():
     test_queries = [
         "What are the fundamental rights guaranteed by the Indian Constitution?",
         "What is the punishment for theft under IPC?",
-        "Can the government restrict freedom of speech? Under what circumstances?",
-        "What happens if someone commits murder in India?"
     ]
     
     print("=== Legal AI Agent Test ===\n")
@@ -64,4 +62,5 @@ def interactive_test():
 if __name__ == "__main__":
     # Run interactive test by default
     Constants.set_env_variables()
-    interactive_test() 
+    # interactive_test() 
+    test_agent()

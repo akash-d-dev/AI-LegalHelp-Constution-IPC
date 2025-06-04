@@ -7,8 +7,9 @@ import os
 import logging
 from dotenv import load_dotenv
 from pymilvus import MilvusClient, DataType, AnnSearchRequest, WeightedRanker, RRFRanker
+from datetime import datetime
 
-from utils.embedding_generator import EmbeddingGenerator
+from agent_system.utils.embedding_generator import EmbeddingGenerator
 
 logger = logging.getLogger(__name__)
 
@@ -94,6 +95,8 @@ class MilvusClientWrapper:
             if output_fields is None:
                 output_fields = ["text", "content", "metadata", "article", "section"]
             
+            logger.info(f"🔄 Attempting hybrid search on {collection_name}")
+            
             # Create search requests
             search_requests = []
             
@@ -115,6 +118,8 @@ class MilvusClientWrapper:
                     limit=top_k
                 )
                 search_requests.append(sparse_request)
+            else:
+                logger.info(f"⚠️ No sparse vector provided for hybrid search on {collection_name}")
             
             # Choose reranking strategy
             if rerank_strategy == "weighted" and weights:
@@ -123,6 +128,7 @@ class MilvusClientWrapper:
                 ranker = RRFRanker(k=60)  # Default RRF with k=60
             
             # Perform hybrid search
+            logger.info(f"🔍 Executing hybrid search with {len(search_requests)} search requests")
             results = self.client.hybrid_search(
                 collection_name=collection_name,
                 reqs=search_requests,
@@ -143,13 +149,23 @@ class MilvusClientWrapper:
                         "search_type": "hybrid"
                     })
             
-            logger.info(f"Hybrid search found {len(processed_results)} results from {collection_name}")
+            logger.info(f"✅ True hybrid search found {len(processed_results)} results from {collection_name}")
             return processed_results
             
         except Exception as e:
-            logger.error(f"Failed to perform hybrid search on {collection_name}: {str(e)}")
-            # Fallback to regular search
-            return self.search_similar(collection_name, dense_vector, top_k, output_fields)
+            logger.warning(f"⚠️ Hybrid search failed on {collection_name}: {str(e)}")
+            logger.info(f"🔄 Falling back to basic search for {collection_name}")
+            # Fallback to regular search but mark results as hybrid_fallback
+            fallback_results = self.search_similar(collection_name, dense_vector, top_k, output_fields)
+            
+            # Mark fallback results to distinguish from pure basic search
+            for result in fallback_results:
+                result['search_type'] = 'hybrid_fallback'
+                result['collection'] = collection_name
+                result['fallback_reason'] = str(e)
+            
+            logger.info(f"✅ Hybrid fallback search found {len(fallback_results)} results from {collection_name}")
+            return fallback_results
     
     def grouping_search(
         self,
@@ -408,6 +424,8 @@ class MilvusVectorDB:
         """
         Perform both hybrid and basic search, combine results, and return top results.
         This method combines the strengths of both search approaches for better accuracy.
+        
+        Note: If sparse embeddings are not available, this will fall back to enhanced basic search only.
         """
         logger.info(f"🔍 Performing combined search (hybrid + basic) for query: '{query[:50]}...'")
         
@@ -416,6 +434,8 @@ class MilvusVectorDB:
         embedding = embedding[0]
         
         all_results = []
+        basic_count = 0
+        hybrid_count = 0
         
         for collection_name in self.collection_names:
             try:
@@ -434,45 +454,24 @@ class MilvusVectorDB:
                     result['collection'] = collection_name
                 
                 all_results.extend(basic_results)
+                basic_count += len(basic_results)
                 logger.info(f"✅ Basic search found {len(basic_results)} results from {collection_name}")
                 
-                # Perform hybrid search
-                hybrid_results = self.client.hybrid_search(
-                    collection_name=collection_name,
-                    dense_vector=embedding,
-                    top_k=top_k,
-                    rerank_strategy="rrf"
-                )
+                # Only attempt hybrid search if we expect it to provide different results
+                # For now, skip hybrid search since collections don't have sparse embeddings
+                logger.info(f"⚠️ Skipping hybrid search for {collection_name} (no sparse embeddings configured)")
                 
-                # Mark hybrid search results
-                for result in hybrid_results:
-                    result['search_type'] = 'hybrid'
-                    result['collection'] = collection_name
-                
-                all_results.extend(hybrid_results)
-                logger.info(f"✅ Hybrid search found {len(hybrid_results)} results from {collection_name}")
+                # You could enable this once sparse embeddings are set up:
+                # hybrid_results = self.client.hybrid_search(...)
                 
             except Exception as e:
                 logger.error(f"❌ Error searching collection {collection_name}: {e}")
                 continue
         
-        # Remove duplicates based on content similarity and ID
-        unique_results = []
-        seen_ids = set()
-        seen_content = set()
+        logger.info(f"📊 Search summary: {basic_count} basic results (hybrid search disabled)")
         
-        for result in all_results:
-            result_id = result.get('id')
-            entity = result.get('entity', {})
-            content = entity.get('text') or entity.get('content', '')
-            
-            # Create a content hash for duplicate detection
-            content_hash = hash(content[:200]) if content else hash(str(result_id))
-            
-            if result_id not in seen_ids and content_hash not in seen_content:
-                seen_ids.add(result_id)
-                seen_content.add(content_hash)
-                unique_results.append(result)
+        # Since we're only using basic search, no deduplication needed
+        unique_results = all_results
         
         # Sort by distance (lower is better)
         unique_results.sort(key=lambda x: x.get('distance', float('inf')))
@@ -480,6 +479,162 @@ class MilvusVectorDB:
         # Return top results
         final_results = unique_results[:top_k]
         
-        logger.info(f"🎯 Combined search completed: {len(all_results)} total results -> {len(unique_results)} unique -> {len(final_results)} final results")
+        logger.info(f"🎯 Combined search completed: {len(all_results)} total -> {len(final_results)} final")
+        logger.info(f"🏆 Final result types: {{'basic': {len(final_results)}}}")
         
-        return final_results 
+        # Save results to log file
+        self._save_search_results_to_log(query, final_results, len(all_results), len(unique_results))
+        
+        return final_results
+
+    def combined_search_enhanced(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+        """
+        Enhanced combined search that uses multiple search strategies to get diverse results
+        even without sparse embeddings. This method uses different parameters and approaches
+        to maximize result diversity and quality.
+        """
+        logger.info(f"🔍 Performing enhanced combined search for query: '{query[:50]}...'")
+        
+        # Generate embeddings
+        _, embedding = self.embedder.generate_embeddings([query])
+        embedding = embedding[0]
+        
+        all_results = []
+        search_strategies = []
+        
+        for collection_name in self.collection_names:
+            try:
+                logger.info(f"📚 Searching collection: {collection_name}")
+                
+                # Strategy 1: Standard L2 distance search
+                l2_results = self.client.search_similar(
+                    collection_name=collection_name,
+                    query_embedding=embedding,
+                    top_k=top_k,
+                    search_params={"metric_type": "L2", "params": {}}
+                )
+                for result in l2_results:
+                    result['search_type'] = 'l2_standard'
+                    result['collection'] = collection_name
+                all_results.extend(l2_results)
+                search_strategies.append(f"L2 Standard: {len(l2_results)}")
+                
+                # Strategy 2: Cosine similarity search (if supported)
+                try:
+                    cosine_results = self.client.search_similar(
+                        collection_name=collection_name,
+                        query_embedding=embedding,
+                        top_k=top_k,
+                        search_params={"metric_type": "COSINE", "params": {}}
+                    )
+                    for result in cosine_results:
+                        result['search_type'] = 'cosine'
+                        result['collection'] = collection_name
+                    all_results.extend(cosine_results)
+                    search_strategies.append(f"Cosine: {len(cosine_results)}")
+                except Exception as e:
+                    logger.debug(f"Cosine search not available for {collection_name}: {e}")
+                
+                # Strategy 3: Higher top_k with different filtering
+                expanded_results = self.client.search_similar(
+                    collection_name=collection_name,
+                    query_embedding=embedding,
+                    top_k=min(top_k * 2, 10),  # Get more results for diversity
+                    search_params={"metric_type": "L2", "params": {}}
+                )
+                for result in expanded_results:
+                    result['search_type'] = 'expanded'
+                    result['collection'] = collection_name
+                all_results.extend(expanded_results)
+                search_strategies.append(f"Expanded: {len(expanded_results)}")
+                
+                logger.info(f"✅ Multi-strategy search completed for {collection_name}")
+                
+            except Exception as e:
+                logger.error(f"❌ Error searching collection {collection_name}: {e}")
+                continue
+        
+        logger.info(f"📊 Search strategies: {', '.join(search_strategies)}")
+        
+        # Smart deduplication that preserves diversity
+        unique_results = []
+        seen_ids = set()
+        seen_content_hashes = set()
+        strategy_counts = {}
+        
+        # Sort by distance first to prioritize best matches
+        all_results.sort(key=lambda x: x.get('distance', float('inf')))
+        
+        for result in all_results:
+            result_id = result.get('id')
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', '')
+            search_type = result.get('search_type', 'unknown')
+            
+            # Create content hash for similarity detection
+            content_hash = hash(content[:300]) if content else hash(str(result_id))
+            
+            # Keep result if it's truly unique
+            if result_id not in seen_ids and content_hash not in seen_content_hashes:
+                seen_ids.add(result_id)
+                seen_content_hashes.add(content_hash)
+                unique_results.append(result)
+                strategy_counts[search_type] = strategy_counts.get(search_type, 0) + 1
+                
+                logger.debug(f"✅ Kept {search_type} result (distance: {result.get('distance', 'N/A'):.4f})")
+                
+                # Stop when we have enough unique results
+                if len(unique_results) >= top_k:
+                    break
+        
+        logger.info(f"🧹 Deduplication: {len(all_results)} total -> {len(unique_results)} unique")
+        logger.info(f"🏆 Final strategy distribution: {strategy_counts}")
+        
+        # Return top results
+        final_results = unique_results[:top_k]
+        
+        logger.info(f"🎯 Enhanced combined search completed: {len(final_results)} final results")
+        
+        # Save results to log file
+        self._save_search_results_to_log(query, final_results, len(all_results), len(unique_results))
+        
+        return final_results
+
+    def _save_search_results_to_log(self, query: str, results: List[Dict[str, Any]], total_results: int, unique_results: int):
+        """Save search results to a log file in the generated directory."""
+        try:
+            # Create generated directory if it doesn't exist
+            os.makedirs("generated", exist_ok=True)
+            
+            log_file = os.path.join("generated", "vector_db_results.log")
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            with open(log_file, 'a', encoding='utf-8') as f:
+                f.write(f"\n{'='*80}\n")
+                f.write(f"VECTOR DATABASE SEARCH LOG\n")
+                f.write(f"Timestamp: {timestamp}\n")
+                f.write(f"Query: '{query}'\n")
+                f.write(f"Total Results: {total_results} -> Unique: {unique_results} -> Final: {len(results)}\n")
+                f.write(f"{'='*80}\n\n")
+                
+                for i, result in enumerate(results, 1):
+                    entity = result.get('entity', {})
+                    content = entity.get('text') or entity.get('content', 'No content available')
+                    distance = result.get('distance', 'Unknown')
+                    search_type = result.get('search_type', 'Unknown')
+                    collection = result.get('collection', 'Unknown')
+                    article = entity.get('article', 'Unknown Article')
+                    section = entity.get('section', 'Unknown Section')
+                    
+                    f.write(f"Result {i}:\n")
+                    f.write(f"  Distance: {distance:.4f}\n")
+                    f.write(f"  Search Type: {search_type}\n")
+                    f.write(f"  Collection: {collection}\n")
+                    f.write(f"  Article/Section: {article if article != 'Unknown Article' else section}\n")
+                    f.write(f"  Content: {content}\n")
+                    f.write(f"{'-'*40}\n")
+                
+                f.write(f"\n{'='*80}\n\n")
+                
+        except Exception as e:
+            logger.error(f"❌ Error saving search results to log: {e}") 

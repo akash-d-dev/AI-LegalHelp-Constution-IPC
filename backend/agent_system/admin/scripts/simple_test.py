@@ -2,12 +2,9 @@
 
 import sys
 import os
-from backend.utils.Constants import Constants
+from agent_system.utils.Constants import Constants
 
-# Add the backend directory to the Python path
-sys.path.append(os.path.join(os.path.dirname(__file__), 'backend'))
-
-from backend.ai_agent.agent_graph import run_agent
+from ai_agent.agent_graph import run_agent
 
 
 def main():
