@@ -255,3 +255,261 @@ What are reasonable means or what is a reasonable time in such a case, is a ques
 
 ================================================================================
 
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 03:21:06
+Query: 'fundamental rights'
+Total Results: 45 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.7545
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to Freedom19.Protection of certain rights regarding freedom of speech, etc.20. Protection in respect of conviction for offences.21.Protection of life and personal liberty.21A. Right to education.22.Protection against arrest and detention in certain cases.Right against Exploitation23. Prohibition of traffic in human beings and forced labour.24.Prohibition of employment of children in factories, etc.Right to  Freedom of Religion25. Freedom of conscience and free profession, practice and propagation of religion.26.Freedom to manage religious affairs.27. Freedom as to payment of taxes for promotion of any particular religion.28. Freedom as to attendance at religious instruction or religious worship in certain educational institutions.
+----------------------------------------
+Result 2:
+  Distance: 0.9229
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India.13. Laws inconsistent with or in derogation of the fundamental rights.—(1) All laws in force in the territory of India immediately before the commencement of this Constitution, in so far as they are inconsistent with the provisions of this Part, shall, to the extent of such inconsistency, be void.(2) The State shall not make any law which takes away or abridges the rights conferred by this Part and any law made in contravention of this clause shall, to the extent of the contravention, be void.(3) In this article, unless the context otherwise requires,—(a) “law” includes any Ordinance, order, bye-law, rule, regulation, notification, custom or usage having in the territory of India the force of law;(b) “laws in force” includes laws passed or made by a Legislature or other competent authority in the territory of India before the commencement of this Constitution and not previously repealed, notwithstanding that any such law or any part thereof may not be then in operation either at all or in particular areas.1[(4) Nothing in this article shall apply to any amendment of this Constitution made under article 368.]Right to Equality14. Equality before law.—The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.15.  Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.—(1) The State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth or any of them.(2) No citizen shall, on grounds only of religion, race, caste, sex, place of birth or any of them, be subject to any disability, liability, restriction or condition with regard to—______________________________________________1. Ins. by the Constitution  (Twenty-fourth Amendment)  Act, 1971, s. 2 (w.e.f. 5-11-1971).
+----------------------------------------
+Result 3:
+  Distance: 1.0344
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain directive principles.[31D. Saving of laws in respect of anti-national activities.—Omitted.] Right to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.[32A. Constitutional validity of State laws not to be considered in proceedings under article 32.—Omitted.]33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc. 34. Restriction on rights conferred by this Part while martial law is in force in any area.35. Legislation to give effect to the provisions of this Part.PART IVDIRECTIVE PRINCIPLES OF STATE POLICY36. Definition.37. Application of the principles contained in this Part.38.State to secure a social order for the promotion of welfare of the people.39. Certain principles of policy to be followed by the State.39A. Equal justice and free legal aid.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 03:21:17
+Query: 'fundamental rights'
+Total Results: 18 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.0634
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 17 
+ 
+Seventh.—Every person who holds any office by virtue of which he is empowered to place or kee p 
+any person in confinement; 
+Eighth.—Every officer of 1[the Government] whose duty it is, as such officer, to prevent offences, to 
+give information of offences, to bring offenders to justice, or to protect  the public health, safety or 
+convenience; 
+Ninth.—Every officer whose duty it is as such officer, to take, receive, keep o r expend any property 
+on behalf of 1[the Government], or to make any survey, assessment or contract on behalf of 1[the 
+Government], or to execute any revenue-process, or to investigate, or to report, on any matter affecting 
+the pecuniary interests of 1[the Government], or to make, authenticate or keep any document relating to 
+the pecuniary interests of 1[the Government], or to prevent the infraction of any law for the protection of 
+the pecuniary interests of 1[the Government] 2***; 
+Tenth.—Every officer whose duty it is, as such officer, to take, receive, keep or expend any property, 
+to make any survey or assessment or to levy any rate or tax for any secular common purpose of any 
+village, town or district, or to make, authenticate or keep any document for the a scertaining of the rights 
+of the people of any village, town or district; 
+3[Eleventh.—Every person who holds any office in virtue of which he is empowered to prepare, 
+publish, maintain or revise an electoral roll or to conduct an election or part of an election;] 
+4[Twelfth.—Every person— 
+(a) in the service or pay of the Government or remunerated by fees or commission for the 
+performance of any public duty by the Government; 
+(b) in the service or pay of a local authority, a corporation established by or under a Central, 
+Provincial or State Act or a Government company as defined in section 617 of the Compani es  
+Act, 1956 (1 of 1956).] 
+Illustration 
+A Municipal Commissioner is a public servant. 
+Explanation 1 .—Persons falling under any of the above descriptions are public servants, whether 
+appointed by the Government or not. 
+Explanation 2 .—Wherever the words “public servant ” occur, they shall be understood of every 
+person who is in actual possession of the situation of a public servant, whatever l egal defect there may be 
+in his right to hold that situation. 
+3[Explanation 3.—The word “election” denotes an election for the purpose of selecting members of 
+any legislative, municipal or other public authority, of whatever character, the m ethod of selection to 
+which is by, or under, any law prescribed as by election.] 
+5*    *    *    *    * 
+STATE AMENDMENT 
+Rajasthan 
+Amendment of Section 21, Central Act 45 of 1860. —In section 21 of the Indian Penal Code, 1860 (Central 
+Act 45 of 1860), in its application to the State of Rajasthan, after clause Twelfth, the following new clause shall be 
+added, namely:- 
+"Thirteenth.—Every person employed or engaged by any public body in the conduct and supervision of any 
+examination recognised or approved under any law. 
+Explanation.—The expression "Public Body" includes.— 
+                                                           
+1. Subs. by the A.O. 1950, for “the Crown” which had been subs. by the A.O. 1937, for “Government”. 
+2. Certain words omitted by Act 40 of 1964, s. 2 (w.e.f. 18-12-1964). 
+3. Ins. by Act 39 of 1920, s. 2. 
+4. Subs. by Act 40 of 1964, s. 2, for Cl. Twelfth (w.e.f. 18-12-1964). 
+5. Explanation 4 omitted by Act 39 of 1920, s. 2 Earlier Explanation Four was ins. By Act 2 of 1958, s. 2 (w.e.f. 12-2-1958).
+----------------------------------------
+Result 2:
+  Distance: 1.0872
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 28 
+ 
+97. Right of private defence of the body and of property .—Every person has a right, subject to the 
+restrictions contained in section 99, to defend— 
+First.—His own body, and the body of any other person, against any offence affecting the human 
+body; 
+Secondly.—The property, whether movable or immovable, of himself or of any other person, against 
+any act which is an offence falling under the definition of theft, robber y, mischief or criminal trespass, or 
+which is an attempt to commit theft, robbery, mischief or criminal trespass. 
+98. Right of private defence against the act of a person of unsound mind, etc .—When an act, 
+which would otherwise be a certain offence, is not that offence, by reason of the youth, the want of 
+maturity of understanding, the unsoundness of mind or the intoxication of the person doing  that act, or by 
+reason of any misconception on the part of that person, every person has the same right of private defence 
+against that act which he would have if the act were that offence. 
+Illustrations 
+(a) Z, under the influence of madness, attempts to kill A; Z is guilty o f no offence. But A has the same right of private 
+defence which he would have if Z were sane. 
+(b) A enters by night a house which he is legally entitled to enter. Z, in g ood faith, taking A for a house-breaker, attacks A. 
+Here Z, by attacking A under this misconception, commits no offe nce. But A has the same right of private defence against Z, 
+which he would have if Z were not acting under that misconception. 
+99. Acts against which there is no right of private defence .—There is no right of private defence 
+against an act which does not reasonably cause the apprehension of death or of gri evous hurt, if done, or 
+attempted to be done by a public servant acting in good faith under colour of his off ice, though that act 
+may not be strictly justifiable by law. 
+There is no right of private defence against an act which does not reasonably cau se the apprehension 
+of death or of grievous hurt, if done, or attempted to be done, by the direction of a public servant acting in 
+good faith under colour of his office though that direction may not be strictly justifiable by law. 
+There is no right of private defence in cases in which there is time to have recou rse to protection of 
+the public authorities. 
+Extent to which the right may be exercised.—The right of private defence in no case extends to the 
+inflicting of more harm than it is necessary to inflict for the purpose ofdefence. 
+Explanation 1 .—A person is not deprived of the right of private defence against an act done, or 
+attempted to be done, by a public servant, as such, unless he knows or has reason to believe, t hat the 
+person doing the act is such public servant. 
+Explanation 2 .—A person is not deprived of the right of private defence against an act done, or 
+attempted to be done, by the direction of a public servant, unless he knows, or has r eason to believe, that 
+the person doing the act is acting by such direction, or unless such person states the authority under which 
+he acts, or if he has authority in writing, unless he produces such authority, if demanded. 
+100. When the right of private defence of the body extends to causing death .—The right of 
+private defence of the body extends, under the restrictions mentioned in the last preceding se ction, to the 
+voluntary causing of death or of any other harm to the assailant, if the of fence which occasions the 
+exercise of the right be of any of the descriptions hereinafter enumerated, namely:— 
+First.—Such an assault as may reasonably cause the apprehension that death will otherwise be t he 
+consequence of such assault; 
+Secondly.—Such an assault as may reasonably cause the apprehension that grievous hurt will  
+otherwise be the consequence of such assault; 
+Thirdly.—An assault with the intention of committing rape; 
+Fourthly.—An assault with the intention of gratifying unnatural lust; 
+Fifthly.—An assault with the intention of kidnapping or abducting; 
+Sixthly.—An assault with the intention of wrongfully confining a person, under circumstances w hich 
+may reasonably cause him to apprehend that he will be unable to have recourse to the public authorities 
+for his release.
+----------------------------------------
+Result 3:
+  Distance: 1.1700
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 3 
+ 
+SECTIONS  
+82. Act of a child under seven years of age.  
+83. Act of a child above seven and under twelve of imma ture understanding.  
+84. Act of a person of unsound mind.  
+85. Act of a person incapable of judgment by reason of intoxication caused against his will.  
+86. Offence requiring a particular intent or knowledge committed by one who is intoxicated.  
+87. Act not intended and not known to be likely to caus e death or grievous hurt, done by consent.  
+88. Act not intended to cause death, done by consent in  good faith for person's benefit.  
+89. Act done in good faith for benefit of child or insa ne person, by or by consent of guardian.  
+Provisos. 
+90.  Consent known to be given under fear or misconcepti on. 
+Consent of insane person. 
+Consent of child. 
+91.  Exclusion of acts which are offences independently of harm caused. 
+92.  Act done in good faith for benefit of a person without consent. 
+Provisos. 
+93.  Communication made in good faith. 
+94.  Act to which a person is compelled by threats. 
+95.  Act causing slight harm. 
+Of the Right of Private Defence 
+96.  Things done in private defence.  
+97.  Right of private defence of the body and of propert y.  
+98.  Right of private defence against the act of a perso n of unsound mind , etc.  
+99.  Acts against which there is no right of private defence. 
+Extent to which the right may be exercised. 
+100.  When the right of private defence of the body exten ds to causing death.  
+101.  When such right extends to causing any harm other t han death.  
+102.  Commencement and continuance of the right of privat e defence of the body.  
+103.  When the right of private defence of property exten ds to causing death.  
+104.  When such right extends to causing any harm other t han death.  
+105.  Commencement and continuance of the right of privat e defence of property.  
+106.  Right of private defence against deadly assault whe n there is risk of harm to inno cent person.  
+ 
+CHAPTER V 
+OF ABETMENT 
+107.  Abetment of a thing.  
+108.  Abettor.  
+108A. Abetment in Indian of offences outside India.  
+109.  Punishment of a abetment if the act abetted is comm itted in consequence and whe re  no express 
+provision is made for its punishment.  
+110.  Punishment of abetment if person abetted does act w ith different intention from that of abettor.  
+111.  Liability of abettor when one act abetted and diffe rent act done.  
+112.  Abettor when liable to cumulative punishment for ac t abetted and for act done.  
+113.  Liability of abettor for an effect caused by the ac t abetted different from that intended by the abett or.  
+114.  Abettor present when offence is committed.  
+115.  Abetment of offence punishable with death or imprisonment for life.—if offence not committed. 
+if act causing harm be done in consequence. 
+116.  Abetment of offence punishable with imprisonment.—if offence be not committed. 
+if abettor or person abetted be a public servant whose duty it is to prevent offence. 
+117.  Abetting commission of offence by the public or by more than ten persons. 
+118.  Concealing design to commit offence punishable with death or im prisonment for life.  
+If offence be committed; 
+if offence be not committed. 
+119.  Public servant concealing design to commit offence which  it is his duty to prevent. 
+if offence be committed; 
+if offence be punishable with death, etc. 
+if offence be not committed. 
+120.  Concealing design to commit offence punishable with impr isonment. 
+if offence be committed; 
+if offence be not committed.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 03:21:52
+Query: 'Article 21, Indian Constitution'
+Total Results: 45 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.5721
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Seventh Schedule) 31464. Institutions for scientific or technical education financed by the Government of India wholly or in part and declared by Parliament by law to be institutions of national importance.65. Union agencies and institutions for—(a) professional, vocational or technical training, including the training of police officers; or(b) the promotion of special studies or research; or(c) scientific or technical assistance in the investigation or detection of crime. 66. Co-ordination and determination of standards in institutions for higher education or research and scientific and technical institutions.67. Ancient and historical monuments and records, and archaeological sites and remains, 1[declared by or under law made by Parliament] to be of national importance.68. The Survey of India, the Geological, Botanical, Zoological and Anthropological Surveys of India; Meteorological organisations.69.  Census. 70. Union Public Service; All-India Services; Union Public Service Commission.71. Union pensions, that is to say, pensions payable by the Government of India or out of the Consolidated Fund of India.72. Elections to Parliament, to the Legislatures of States and to the offices of President and Vice-President; the Election Commission.73. Salaries and allowances of members of Parliament, the Chairman and Deputy Chairman of the Council of States and the Speaker and Deputy Speaker of the House of the People.74. Powers, privileges and immunities of each House of Parliament and of the members and the Committees of each House; enforcement of attendance of persons for giving evidence or producing documents before committees of Parliament or commissions appointed by Parliament.75. Emoluments, allowances, privileges, and rights in respect of leaveof absence, of the President and Governors; salaries and allowances ofthe Ministers for the Union; the salaries, allowances, and rights in respect of leave of absence and other conditions of service of the Comptroller and Auditor-General of India.______________________________________________1. Subs. by the Constitution (Seventh Amendment) Act, 1956, s. 27, for "declared by Parliament by law" (w.e.f. 1-11-1956).
+----------------------------------------
+Result 2:
+  Distance: 0.5818
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Seventh Schedule) 31350. Establishment of standards of weight and measure.51. Establishment of standards of quality for goods to be exported out of India or transported from one State to another. 52. Industries, the control of which by the Union is declared by Parliament by law to be expedient in the public interest.53. Regulation and development of oilfields and mineral oil resources; petroleum and petroleum products; other liquids and substances declared by Parliament by law to be dangerously inflammable. 54. Regulation of mines and mineral development to the extent to which such regulation and development under the control of the Union is declared by Parliament by law to be expedient in the public interest.55. Regulation of labour and safety in mines and oilfields.56. Regulation and development of inter-State rivers and river valleys to the extent to which such regulation and development under the control of the Union is declared by Parliament by law to be expedient in the public interest.57. Fishing and fisheries beyond territorial waters.58. Manufacture, supply and distribution of salt by Union agencies; regulation and control of manufacture, supply and distribution of salt by other agencies.59. Cultivation, manufacture, and sale for export, of opium.60. Sanctioning of cinematograph films for exhibition.61. Industrial disputes concerning Union employees.62. The institutions known at the commencement of this Constitution as the National Library, the Indian Museum, the Imperial War Museum, the Victoria Memorial and the Indian War Memorial, and any other like institution financed by the Government of India wholly or in  part and declared by Parliament by law to be an institution of national importance.63. The institutions known at the commencement of this Constitution as the Benares Hindu University, the Aligarh Muslim University and the 1[Delhi University; the University established in pursuance of article 371E;] any other institution declared by Parliament by law to be an institution of national importance.______________________________________________1. Subs. by the Constitution (Thirty-second Amendment) Act, 1973, s. 4, for "Delhi University and" (w.e.f. 1-7-1974).
+----------------------------------------
+Result 3:
+  Distance: 0.5970
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Seventh Schedule) 3225. Marriage and divorce; infants and minors; adoption; wills, intestacy and succession; joint family and partition; all matters in respect of which parties in judicial proceedings were immediately before the commencement of this Constitution subject to their personal law. 6. Transfer of property other than agricultural land; registration of deeds and documents.7.  Contracts, including partnership, agency, contracts of carriage, and other special forms of contracts, but not including contracts relating to agricultural land.  8.  Actionable wrongs. 9.  Bankruptcy and insolvency.10. Trust and Trustees.11.  Administrators-general and official trustees. 1[11A. Administration of Justice; constitution and organisation of all courts, except the Supreme Court and the High Courts.] 12. Evidence and oaths; recognition of laws, public acts and records, and judicial proceedings.13. Civil procedure, including all matters included in the Code of Civil Procedure at the commencement of this Constitution, limitation and arbitration.14. Contempt of court, but not including contempt of the Supreme Court.15. Vagrancy; nomadic and migratory tribes.16. Lunacy and mental deficiency, including places for the reception or treatment of lunatics and mental deficients.17. Prevention of cruelty to animals.1[17A.  Forests.17B. Protection of wild animals and birds.]18. Adulteration of foodstuffs and other goods.19. Drugs and poisons, subject to the provisions of entry 59 of List I with respect to opium.20. Economic and social planning.1[20A. Population control and family planning.]______________________________________________1. Entries 11A, 17A, 17B and 20A ins. by the Constitution (Forty-second Amendment) Act, 1976, s. 57 (w.e.f. 3-1-1977).
+----------------------------------------
+
+================================================================================
+

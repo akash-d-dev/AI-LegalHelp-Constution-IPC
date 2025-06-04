@@ -5,10 +5,10 @@ from __future__ import annotations
 import logging
 import os
 from datetime import datetime
-from typing import Annotated, Sequence, TypedDict
+from typing import Annotated, Sequence, TypedDict, List, Optional
 from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
-from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage
+from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from agent_system.utils.Constants import Constants
 
@@ -226,19 +226,57 @@ def build_graph() -> StateGraph:
     return app
 
 
-def run_agent(query: str) -> str:
+def run_agent(query: str, chat_history: Optional[List[dict]] = None) -> str:
+    """Run the agent with a query and optional chat history, return the final answer.
+    
+    Args:
+        query: The current user question/query
+        chat_history: Optional list of previous messages in format:
+                     [{"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}, ...]
+    
+    Returns:
+        str: The agent's response to the current query
+    """
     Constants.check_env_variables()
-    """Run the agent with a query and return the final answer."""
     logger.info("🚀 Starting agent execution...")
     logger.info(f"❓ User query: '{query}'")
     
+    # Log chat history if provided
+    if chat_history:
+        logger.info(f"📚 Chat history provided with {len(chat_history)} messages")
+        for i, msg in enumerate(chat_history):
+            role = msg.get('role', 'unknown')
+            content_preview = msg.get('content', '')[:50]
+            logger.info(f"  {i+1}. {role}: '{content_preview}...'")
+    else:
+        logger.info("📚 No chat history provided - starting fresh conversation")
+    
     app = build_graph()
     
-    # Create initial state with user message
-    initial_state = {
-        "messages": [HumanMessage(content=query)]
-    }
-    logger.info("📋 Initial state created with user message")
+    # Create initial state with chat history + current query
+    messages = []
+    
+    # Add chat history if provided
+    if chat_history:
+        for msg in chat_history:
+            role = msg.get('role')
+            content = msg.get('content', '')
+            
+            if role == 'user':
+                messages.append(HumanMessage(content=content))
+            elif role == 'assistant':
+                messages.append(AIMessage(content=content))
+            elif role == 'system':
+                messages.append(SystemMessage(content=content))
+            else:
+                logger.warning(f"⚠️ Unknown message role: {role}, treating as user message")
+                messages.append(HumanMessage(content=content))
+    
+    # Add current user query
+    messages.append(HumanMessage(content=query))
+    
+    initial_state = {"messages": messages}
+    logger.info(f"📋 Initial state created with {len(messages)} total messages")
     
     # Run the agent
     logger.info("🔄 Invoking agent...")
@@ -252,7 +290,7 @@ def run_agent(query: str) -> str:
         logger.info(f"💡 Final answer preview: '{answer_preview}...'")
         logger.info(f"📊 Total messages in final state: {len(result['messages'])}")
         
-        save_agent_conversation_log(query, final_answer, len(result['messages']))
+        save_agent_conversation_log(query, final_answer, len(result['messages']), chat_history)
         
         return final_answer
         
@@ -261,17 +299,52 @@ def run_agent(query: str) -> str:
         raise
 
 
-def stream_agent(query: str):
-    """Stream the agent execution for real-time responses."""
+def stream_agent(query: str, chat_history: Optional[List[dict]] = None):
+    """Stream the agent execution for real-time responses with optional chat history.
+    
+    Args:
+        query: The current user question/query
+        chat_history: Optional list of previous messages in format:
+                     [{"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}, ...]
+    
+    Yields:
+        str: Chunks of the agent's response as they become available
+    """
     logger.info("🌊 Starting agent streaming...")
     logger.info(f"❓ User query: '{query}'")
     
+    # Log chat history if provided
+    if chat_history:
+        logger.info(f"📚 Chat history provided with {len(chat_history)} messages")
+    else:
+        logger.info("📚 No chat history provided - starting fresh conversation")
+    
     app = build_graph()
     
-    initial_state = {
-        "messages": [HumanMessage(content=query)]
-    }
-    logger.info("📋 Initial state created for streaming")
+    # Create initial state with chat history + current query
+    messages = []
+    
+    # Add chat history if provided
+    if chat_history:
+        for msg in chat_history:
+            role = msg.get('role')
+            content = msg.get('content', '')
+            
+            if role == 'user':
+                messages.append(HumanMessage(content=content))
+            elif role == 'assistant':
+                messages.append(AIMessage(content=content))
+            elif role == 'system':
+                messages.append(SystemMessage(content=content))
+            else:
+                logger.warning(f"⚠️ Unknown message role: {role}, treating as user message")
+                messages.append(HumanMessage(content=content))
+    
+    # Add current user query
+    messages.append(HumanMessage(content=query))
+    
+    initial_state = {"messages": messages}
+    logger.info(f"📋 Initial state created for streaming with {len(messages)} total messages")
     
     try:
         for i, chunk in enumerate(app.stream(initial_state, stream_mode="values")):
@@ -290,8 +363,8 @@ def stream_agent(query: str):
         raise
 
 
-def save_agent_conversation_log(query: str, final_answer: str, total_messages: int):
-    """Save the agent conversation to a log file."""
+def save_agent_conversation_log(query: str, final_answer: str, total_messages: int, chat_history: Optional[List[dict]] = None):
+    """Save the agent conversation to a log file with chat history context."""
     try:
         # Create generated directory if it doesn't exist
         os.makedirs("generated", exist_ok=True)
@@ -304,9 +377,19 @@ def save_agent_conversation_log(query: str, final_answer: str, total_messages: i
             f.write(f"AGENT CONVERSATION LOG\n")
             f.write(f"Timestamp: {timestamp}\n")
             f.write(f"Total Messages Processed: {total_messages}\n")
+            f.write(f"Chat History Messages: {len(chat_history) if chat_history else 0}\n")
             f.write(f"{'='*100}\n\n")
             
-            f.write(f"USER QUERY:\n")
+            # Log chat history if provided
+            if chat_history:
+                f.write(f"CHAT HISTORY:\n")
+                for i, msg in enumerate(chat_history, 1):
+                    role = msg.get('role', 'unknown').upper()
+                    content = msg.get('content', '')
+                    f.write(f"{i}. {role}: {content}\n")
+                f.write(f"\n")
+            
+            f.write(f"CURRENT USER QUERY:\n")
             f.write(f"{query}\n\n")
             
             f.write(f"AGENT RESPONSE:\n")
@@ -316,4 +399,23 @@ def save_agent_conversation_log(query: str, final_answer: str, total_messages: i
             
     except Exception as e:
         logger.error(f"❌ Error saving conversation log: {e}")
+
+
+def get_conversation_history_format() -> dict:
+    """Return the expected format for chat history parameter.
+    
+    Returns:
+        dict: Example format for chat_history parameter
+    """
+    return {
+        "description": "Chat history should be a list of message dictionaries",
+        "format": [
+            {"role": "user", "content": "What are fundamental rights?"},
+            {"role": "assistant", "content": "Fundamental rights are basic human rights..."},
+            {"role": "user", "content": "Can you explain Article 21?"},
+            {"role": "assistant", "content": "Article 21 of the Indian Constitution..."}
+        ],
+        "supported_roles": ["user", "assistant", "system"],
+        "note": "Messages will be processed in order to maintain conversation context"
+    }
 
