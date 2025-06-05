@@ -637,4 +637,404 @@ class MilvusVectorDB:
                 f.write(f"\n{'='*80}\n\n")
                 
         except Exception as e:
-            logger.error(f"❌ Error saving search results to log: {e}") 
+            logger.error(f"❌ Error saving search results to log: {e}")
+
+    def enhanced_cross_domain_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        """
+        Enhanced cross-domain search specifically designed for legal queries that may span
+        multiple legal domains (e.g., constitutional + criminal law). This method uses
+        query decomposition, domain-specific search variants, and intelligent result fusion.
+        
+        This works with existing schema and doesn't require Milvus 2.5 upgrades.
+        """
+        logger.info(f"🔍 Performing enhanced cross-domain search for: '{query[:50]}...'")
+        
+        # Step 1: Generate legal domain-specific query variants
+        query_variants = self._generate_legal_query_variants(query)
+        logger.info(f"📝 Generated {len(query_variants)} query variants for enhanced search")
+        
+        # Step 2: Execute multiple search strategies
+        all_results = []
+        strategy_counts = {}
+        
+        # Generate embeddings for all variants
+        variant_embeddings = {}
+        for variant in query_variants:
+            _, embedding = self.embedder.generate_embeddings([variant])
+            variant_embeddings[variant] = embedding[0]
+        
+        # Strategy 1: Original query with multiple distance metrics
+        logger.info("🎯 Strategy 1: Multi-metric search with original query")
+        original_results = self._multi_metric_search(query, top_k)
+        for result in original_results:
+            result['search_strategy'] = 'multi_metric_original'
+            result['query_variant'] = query
+        all_results.extend(original_results)
+        strategy_counts['multi_metric_original'] = len(original_results)
+        
+        # Strategy 2: Domain-specific variant searches
+        logger.info("🎯 Strategy 2: Domain-specific variant searches")
+        for i, variant in enumerate(query_variants[:3]):  # Limit to avoid too many searches
+            logger.info(f"  Variant {i+1}: '{variant[:50]}...'")
+            variant_results = self._targeted_variant_search(variant, variant_embeddings[variant], top_k)
+            for result in variant_results:
+                result['search_strategy'] = f'domain_variant_{i+1}'
+                result['query_variant'] = variant
+            all_results.extend(variant_results)
+            strategy_counts[f'domain_variant_{i+1}'] = len(variant_results)
+        
+        # Strategy 3: Expanded search with relaxed parameters
+        logger.info("🎯 Strategy 3: Expanded parameter search")
+        expanded_results = self._expanded_parameter_search(query, top_k * 2)
+        for result in expanded_results:
+            result['search_strategy'] = 'expanded_parameters'
+            result['query_variant'] = query
+        all_results.extend(expanded_results)
+        strategy_counts['expanded_parameters'] = len(expanded_results)
+        
+        logger.info(f"📊 Search strategies executed: {strategy_counts}")
+        
+        # Step 3: Intelligent result fusion with domain scoring
+        logger.info("🔀 Step 3: Applying intelligent result fusion...")
+        fused_results = self._intelligent_result_fusion(all_results, query, top_k)
+        
+        # Step 4: Legal domain analysis
+        domain_analysis = self._analyze_legal_domains(fused_results, query)
+        
+        # Add domain analysis to results
+        for result in fused_results:
+            result['domain_analysis'] = domain_analysis
+        
+        logger.info(f"✅ Enhanced cross-domain search completed: {len(fused_results)} final results")
+        logger.info(f"🏆 Domain coverage: {domain_analysis.get('domain_coverage', {})}")
+        
+        # Save to log with enhanced details
+        self._save_enhanced_search_log(query, fused_results, all_results, strategy_counts, domain_analysis)
+        
+        return fused_results
+    
+    def _generate_legal_query_variants(self, query: str) -> List[str]:
+        """Generate legal domain-specific query variants for enhanced search coverage."""
+        query_lower = query.lower()
+        variants = [query]  # Always include original
+        
+        # Constitutional law indicators
+        constitutional_terms = [
+            'constitutional', 'article', 'fundamental rights', 'freedom', 'speech', 
+            'expression', 'liberty', 'equality', 'directive principles', 'amendment'
+        ]
+        
+        # Criminal law indicators  
+        criminal_terms = [
+            'criminal', 'punishment', 'imprisonment', 'section', 'offense', 'defamation',
+            'hate speech', 'liability', 'conviction', 'ipc', 'penal', 'crime'
+        ]
+        
+        # Check domain relevance
+        const_relevance = sum(1 for term in constitutional_terms if term in query_lower)
+        criminal_relevance = sum(1 for term in criminal_terms if term in query_lower)
+        
+        # Generate constitutional variants
+        if const_relevance > 0:
+            variants.extend([
+                f"fundamental rights {query}",
+                f"constitutional protection {query}",
+                f"Article 19 {query}" if 'speech' in query_lower or 'expression' in query_lower else f"constitutional provision {query}"
+            ])
+        
+        # Generate criminal law variants  
+        if criminal_relevance > 0:
+            variants.extend([
+                f"criminal law {query}",
+                f"IPC section {query}",
+                f"punishment {query}"
+            ])
+        
+        # Generate cross-domain variants for complex queries
+        if const_relevance > 0 and criminal_relevance > 0:
+            variants.extend([
+                f"legal framework {query}",
+                f"constitutional criminal law {query}",
+                f"rights and restrictions {query}"
+            ])
+        
+        # Remove duplicates while preserving order
+        unique_variants = []
+        seen = set()
+        for variant in variants:
+            if variant not in seen:
+                unique_variants.append(variant)
+                seen.add(variant)
+        
+        return unique_variants[:6]  # Limit to avoid excessive searches
+    
+    def _multi_metric_search(self, query: str, top_k: int) -> List[Dict[str, Any]]:
+        """Search using multiple distance metrics for diverse results."""
+        _, embedding = self.embedder.generate_embeddings([query])
+        embedding = embedding[0]
+        
+        all_results = []
+        metrics = [("L2", "L2"), ("COSINE", "COSINE"), ("IP", "IP")]
+        
+        for metric_name, metric_type in metrics:
+            for collection_name in self.collection_names:
+                try:
+                    results = self.client.search_similar(
+                        collection_name=collection_name,
+                        query_embedding=embedding,
+                        top_k=top_k,
+                        search_params={"metric_type": metric_type, "params": {}}
+                    )
+                    for result in results:
+                        result['search_type'] = f'multi_metric_{metric_name.lower()}'
+                        result['collection'] = collection_name
+                    all_results.extend(results)
+                except Exception as e:
+                    logger.debug(f"Metric {metric_name} not supported for {collection_name}: {e}")
+                    continue
+        
+        return all_results
+    
+    def _targeted_variant_search(self, variant: str, embedding: List[float], top_k: int) -> List[Dict[str, Any]]:
+        """Perform targeted search with a specific query variant."""
+        all_results = []
+        
+        for collection_name in self.collection_names:
+            try:
+                results = self.client.search_similar(
+                    collection_name=collection_name,
+                    query_embedding=embedding,
+                    top_k=top_k,
+                    search_params={"metric_type": "L2", "params": {}}
+                )
+                for result in results:
+                    result['search_type'] = 'targeted_variant'
+                    result['collection'] = collection_name
+                all_results.extend(results)
+            except Exception as e:
+                logger.error(f"Error in targeted search for {collection_name}: {e}")
+                continue
+        
+        return all_results
+    
+    def _expanded_parameter_search(self, query: str, top_k: int) -> List[Dict[str, Any]]:
+        """Search with expanded parameters for broader coverage."""
+        _, embedding = self.embedder.generate_embeddings([query])
+        embedding = embedding[0]
+        
+        all_results = []
+        
+        for collection_name in self.collection_names:
+            try:
+                # Relaxed search with higher top_k
+                results = self.client.search_similar(
+                    collection_name=collection_name,
+                    query_embedding=embedding,
+                    top_k=min(top_k, 15),  # Expanded but reasonable
+                    search_params={"metric_type": "L2", "params": {}}
+                )
+                for result in results:
+                    result['search_type'] = 'expanded_parameters'
+                    result['collection'] = collection_name
+                all_results.extend(results)
+            except Exception as e:
+                logger.error(f"Error in expanded search for {collection_name}: {e}")
+                continue
+        
+        return all_results
+    
+    def _intelligent_result_fusion(self, all_results: List[Dict[str, Any]], original_query: str, top_k: int) -> List[Dict[str, Any]]:
+        """Apply intelligent fusion with domain relevance scoring and deduplication."""
+        logger.info(f"🧠 Fusing {len(all_results)} results with domain intelligence...")
+        
+        # Step 1: Calculate domain relevance for each result
+        for result in all_results:
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', '')
+            
+            # Domain relevance scoring
+            result['domain_score'] = self._calculate_domain_relevance_score(content, original_query)
+            
+            # Strategy diversity bonus
+            strategy = result.get('search_strategy', 'unknown')
+            result['strategy_bonus'] = self._get_strategy_diversity_bonus(strategy)
+            
+            # Calculate composite score
+            distance = result.get('distance', 1.0)
+            similarity_score = max(0, 1.0 - distance)  # Convert distance to similarity
+            
+            composite_score = (
+                similarity_score * 0.6 +  # Semantic similarity (60%)
+                result['domain_score'] * 0.3 +  # Domain relevance (30%)
+                result['strategy_bonus'] * 0.1   # Strategy diversity (10%)
+            )
+            
+            result['composite_score'] = composite_score
+        
+        # Step 2: Advanced deduplication
+        unique_results = self._advanced_deduplication(all_results)
+        
+        # Step 3: Sort by composite score and return top results
+        unique_results.sort(key=lambda x: x.get('composite_score', 0), reverse=True)
+        
+        final_results = unique_results[:top_k]
+        
+        logger.info(f"🎯 Fusion complete: {len(all_results)} -> {len(unique_results)} unique -> {len(final_results)} final")
+        return final_results
+    
+    def _calculate_domain_relevance_score(self, content: str, query: str) -> float:
+        """Calculate how relevant content is to the legal domain of the query."""
+        content_lower = content.lower()
+        query_lower = query.lower()
+        
+        # Constitutional law terms
+        const_terms = ['constitutional', 'article', 'fundamental', 'rights', 'freedom', 'liberty']
+        const_score = sum(1 for term in const_terms if term in content_lower) / len(const_terms)
+        
+        # Criminal law terms
+        criminal_terms = ['criminal', 'punishment', 'section', 'offense', 'liable', 'imprisonment']
+        criminal_score = sum(1 for term in criminal_terms if term in content_lower) / len(criminal_terms)
+        
+        # Query alignment
+        query_terms = query_lower.split()
+        content_alignment = sum(1 for term in query_terms if term in content_lower) / max(len(query_terms), 1)
+        
+        # Combined score
+        domain_score = max(const_score, criminal_score) * 0.6 + content_alignment * 0.4
+        return min(domain_score, 1.0)
+    
+    def _get_strategy_diversity_bonus(self, strategy: str) -> float:
+        """Assign diversity bonus based on search strategy to promote result diversity."""
+        strategy_bonuses = {
+            'multi_metric_original': 0.8,
+            'domain_variant_1': 0.9,
+            'domain_variant_2': 0.7,
+            'domain_variant_3': 0.6,
+            'expanded_parameters': 0.5,
+            'targeted_variant': 0.7
+        }
+        return strategy_bonuses.get(strategy, 0.3)
+    
+    def _advanced_deduplication(self, results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Advanced deduplication that preserves the best result from each unique content."""
+        unique_results = []
+        seen_content_hashes = set()
+        seen_ids = set()
+        
+        # Sort by composite score first to prioritize best results
+        sorted_results = sorted(results, key=lambda x: x.get('composite_score', 0), reverse=True)
+        
+        for result in sorted_results:
+            result_id = result.get('id')
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', '')
+            
+            # Create content hash for duplicate detection
+            content_hash = hash(content[:200]) if content else hash(str(result_id))
+            
+            # Keep if truly unique
+            if result_id not in seen_ids and content_hash not in seen_content_hashes:
+                seen_ids.add(result_id)
+                seen_content_hashes.add(content_hash)
+                unique_results.append(result)
+        
+        return unique_results
+    
+    def _analyze_legal_domains(self, results: List[Dict[str, Any]], query: str) -> Dict[str, Any]:
+        """Analyze the legal domains covered in the search results."""
+        domain_analysis = {
+            'query_classification': {},
+            'result_domains': {},
+            'domain_coverage': {},
+            'cross_domain_relevance': 0.0
+        }
+        
+        # Classify original query
+        query_lower = query.lower()
+        const_indicators = sum(1 for term in ['constitutional', 'article', 'fundamental', 'rights'] if term in query_lower)
+        criminal_indicators = sum(1 for term in ['criminal', 'punishment', 'section', 'ipc'] if term in query_lower)
+        
+        domain_analysis['query_classification'] = {
+            'constitutional_strength': min(const_indicators / 4.0, 1.0),
+            'criminal_strength': min(criminal_indicators / 4.0, 1.0),
+            'is_cross_domain': const_indicators > 0 and criminal_indicators > 0
+        }
+        
+        # Analyze result domains
+        const_results = 0
+        criminal_results = 0
+        
+        for result in results:
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', '')
+            content_lower = content.lower()
+            
+            is_constitutional = any(term in content_lower for term in ['constitutional', 'article', 'fundamental'])
+            is_criminal = any(term in content_lower for term in ['criminal', 'punishment', 'section'])
+            
+            if is_constitutional:
+                const_results += 1
+            if is_criminal:
+                criminal_results += 1
+        
+        total_results = len(results)
+        if total_results > 0:
+            domain_analysis['domain_coverage'] = {
+                'constitutional_percentage': (const_results / total_results) * 100,
+                'criminal_percentage': (criminal_results / total_results) * 100,
+                'balanced_coverage': abs(const_results - criminal_results) <= 2
+            }
+            
+            # Cross-domain relevance score
+            if const_results > 0 and criminal_results > 0:
+                domain_analysis['cross_domain_relevance'] = min(const_results, criminal_results) / total_results
+        
+        return domain_analysis
+    
+    def _save_enhanced_search_log(self, query: str, results: List[Dict[str, Any]], all_results: List[Dict[str, Any]], 
+                                 strategy_counts: Dict[str, int], domain_analysis: Dict[str, Any]):
+        """Save enhanced search results with detailed analysis to log file."""
+        try:
+            os.makedirs("generated", exist_ok=True)
+            log_file = os.path.join("generated", "enhanced_search_results.log")
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            
+            with open(log_file, 'a', encoding='utf-8') as f:
+                f.write(f"\n{'='*100}\n")
+                f.write(f"ENHANCED CROSS-DOMAIN SEARCH LOG\n")
+                f.write(f"Timestamp: {timestamp}\n")
+                f.write(f"Query: '{query}'\n")
+                f.write(f"{'='*100}\n\n")
+                
+                # Search strategy summary
+                f.write(f"SEARCH STRATEGY SUMMARY:\n")
+                f.write(f"Total Raw Results: {len(all_results)}\n")
+                f.write(f"Strategy Breakdown: {strategy_counts}\n")
+                f.write(f"Final Unique Results: {len(results)}\n\n")
+                
+                # Domain analysis
+                f.write(f"DOMAIN ANALYSIS:\n")
+                f.write(f"Query Classification: {domain_analysis.get('query_classification', {})}\n")
+                f.write(f"Domain Coverage: {domain_analysis.get('domain_coverage', {})}\n")
+                f.write(f"Cross-Domain Relevance: {domain_analysis.get('cross_domain_relevance', 0):.2f}\n\n")
+                
+                # Detailed results
+                f.write(f"DETAILED RESULTS:\n")
+                for i, result in enumerate(results, 1):
+                    entity = result.get('entity', {})
+                    content = entity.get('text') or entity.get('content', 'No content available')
+                    
+                    f.write(f"Result {i}:\n")
+                    f.write(f"  Composite Score: {result.get('composite_score', 0):.4f}\n")
+                    f.write(f"  Original Distance: {result.get('distance', 'N/A'):.4f}\n")
+                    f.write(f"  Domain Score: {result.get('domain_score', 0):.4f}\n")
+                    f.write(f"  Strategy: {result.get('search_strategy', 'Unknown')}\n")
+                    f.write(f"  Collection: {result.get('collection', 'Unknown')}\n")
+                    f.write(f"  Query Variant: {result.get('query_variant', 'Unknown')[:50]}...\n")
+                    f.write(f"  Content: {content[:300]}...\n")
+                    f.write(f"{'-'*50}\n")
+                
+                f.write(f"\n{'='*100}\n\n")
+                
+        except Exception as e:
+            logger.error(f"❌ Error saving enhanced search log: {e}") 

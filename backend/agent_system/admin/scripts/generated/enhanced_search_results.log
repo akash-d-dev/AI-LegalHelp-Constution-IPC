@@ -1,0 +1,338 @@
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-05 17:04:40
+Query: 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on hate speech and defamation, reasonable restrictions on free speech, legal consequences for violating these restrictions'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 150
+Strategy Breakdown: {'multi_metric_original': 25, 'domain_variant_1': 25, 'domain_variant_2': 25, 'domain_variant_3': 25, 'expanded_parameters': 50}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 100.0, 'criminal_percentage': 40.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.40
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.3656
+  Original Distance: 0.8470
+  Domain Score: 0.6793
+  Strategy: domain_variant_2
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights constitutional protections for ...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2362
+  Original Distance: 1.1497
+  Domain Score: 0.6207
+  Strategy: expanded_parameters
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)9(5) Nothing in this article shall affect the operation of any law which provides that the incumbent of an office in connection with the affairs of any religious or denominational institution or any member of the governing body thereof shall be...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2338
+  Original Distance: 1.1217
+  Domain Score: 0.4793
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2338
+  Original Distance: 1.1260
+  Domain Score: 0.4793
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)11(6) Nothing in sub-clause (g) of the said clause shall affect the operation of any existing law in so far as it imposes, or prevent the State from making any law imposing, in the interests of the general public, reasonable restrictions on the...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2214
+  Original Distance: 1.0758
+  Domain Score: 0.4379
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)15(b) to manage its own affairs in matters of religion;(c) to own and acquire movable and immovable property; and(d) to administer such property in accordance with law.27. Freedom as to payment of taxes for promotion of any particular religion....
+--------------------------------------------------
+
+====================================================================================================
+
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-05 17:04:56
+Query: 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on hate speech and defamation, reasonable restrictions on free speech, legal consequences for violating these restrictions'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 60
+Strategy Breakdown: {'multi_metric_original': 10, 'domain_variant_1': 10, 'domain_variant_2': 10, 'domain_variant_3': 10, 'expanded_parameters': 20}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 20.0, 'criminal_percentage': 100.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.20
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.3335
+  Original Distance: 0.9063
+  Domain Score: 0.6241
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of ...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2772
+  Original Distance: 0.9569
+  Domain Score: 0.5379
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 117 
+ 
+such matter, shall be punished with simple imprisonment for a term which may  extend to two years, or 
+with fine, or with both. 
+CHAPTER XXII 
+OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE 
+503. Criminal intimidation.—Whoever threatens another with any injury to his person, reputation or 
+pr...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2572
+  Original Distance: 1.0790
+  Domain Score: 0.6241
+  Strategy: domain_variant_2
+  Collection: ipc_1
+  Query Variant: fundamental rights constitutional protections for ...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other ...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2534
+  Original Distance: 0.9829
+  Domain Score: 0.5103
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 13 
+ 
+CHAPTER XX 
+OF OFFENCES RELATING TO MARRIAGE 
+SECTIONS 
+493. Cohabitation caused by a man deceitfully inducing a be lief of lawful marriage. 
+494. Marrying again during life-time of husband or wife. 
+495. Same offence with concealment of former marriage from person with whom subsequent marriag...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2472
+  Original Distance: 1.0335
+  Domain Score: 0.5241
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either...
+--------------------------------------------------
+
+====================================================================================================
+
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-05 17:05:46
+Query: 'fundamental rights balance with criminal law provisions, constitutional freedoms conflict with IPC sections on public order and morality'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 150
+Strategy Breakdown: {'multi_metric_original': 25, 'domain_variant_1': 25, 'domain_variant_2': 25, 'domain_variant_3': 25, 'expanded_parameters': 50}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.75, 'criminal_strength': 0.75, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 100.0, 'criminal_percentage': 0.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.00
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.4517
+  Original Distance: 0.7027
+  Domain Score: 0.6778
+  Strategy: domain_variant_2
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights fundamental rights balance with...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.3570
+  Original Distance: 0.7939
+  Domain Score: 0.4778
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)11(6) Nothing in sub-clause (g) of the said clause shall affect the operation of any existing law in so far as it imposes, or prevent the State from making any law imposing, in the interests of the general public, reasonable restrictions on the...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.3035
+  Original Distance: 0.8831
+  Domain Score: 0.4778
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under ...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2996
+  Original Distance: 0.9617
+  Domain Score: 0.6222
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.(2) The...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2649
+  Original Distance: 0.8918
+  Domain Score: 0.4333
+  Strategy: domain_variant_2
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights fundamental rights balance with...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates...
+--------------------------------------------------
+
+====================================================================================================
+
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-05 17:06:01
+Query: 'fundamental rights balance with criminal law provisions, constitutional freedoms conflict with IPC sections on public order and morality'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 60
+Strategy Breakdown: {'multi_metric_original': 10, 'domain_variant_1': 10, 'domain_variant_2': 10, 'domain_variant_3': 10, 'expanded_parameters': 20}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.75, 'criminal_strength': 0.75, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 20.0, 'criminal_percentage': 100.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.20
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.3156
+  Original Distance: 0.9130
+  Domain Score: 0.5778
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: 2 
+ 
+SECTIONS  
+38.  Persons concerned in criminal act may be guilty of different offences. 
+39.  “Voluntarily ”. 
+40.  “Offence ”. 
+41.  “Special law ”. 
+42.  “Local law ”. 
+43.  “Illegal”. 
+“Legally bound to do ”. 
+44.  “Injury ”. 
+45.  “Life ”. 
+46.  “Death”. 
+47.  “Animal ”. 
+48.  “Vessel ”. 
+49...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2921
+  Original Distance: 0.8798
+  Domain Score: 0.5333
+  Strategy: domain_variant_3
+  Collection: ipc_1
+  Query Variant: constitutional protection fundamental rights balan...
+  Content: 3 
+ 
+SECTIONS  
+82. Act of a child under seven years of age.  
+83. Act of a child above seven and under twelve of imma ture understanding.  
+84. Act of a person of unsound mind.  
+85. Act of a person incapable of judgment by reason of intoxication caused against his will.  
+86. Offence requiring a p...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2916
+  Original Distance: 0.8306
+  Domain Score: 0.3333
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: 8 
+ 
+SECTIONS 
+275. Sale of adulterated drugs.  
+276. Sale of drug as a different drug or preparation.  
+277. Fouling water of public spring or reservoir.  
+278. Making atmosphere noxious to health.  
+279. Rash driving or riding on a public way.  
+280. Rash navigation of vessel.  
+281. Exhibition of...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2835
+  Original Distance: 0.9608
+  Domain Score: 0.7000
+  Strategy: expanded_parameters
+  Collection: ipc_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other ...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2783
+  Original Distance: 0.9139
+  Domain Score: 0.4556
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: fundamental rights balance with criminal law provi...
+  Content: 10 
+ 
+SECTIONS 
+364A. Kidnapping for ransom, etc. 
+365. Kidnapping or abducting with intent secretly and wrongfully to confine person. 
+366. Kidnapping, abducting or inducing woman to compel her marriage, etc. 
+366A. Procuration of minor girl. 
+366B. Importation of girl from foreign country. 
+367. K...
+--------------------------------------------------
+
+====================================================================================================
+

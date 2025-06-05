@@ -2,6 +2,7 @@
 
 import os
 import logging
+import time
 from typing import List, Dict, Any
 from dotenv import load_dotenv
 from datetime import datetime
@@ -207,6 +208,304 @@ class VectorDBTester:
             logger.exception("Detailed error information:")
             return {}
     
+    def test_enhanced_complex_search(
+        self, 
+        constitution_db, 
+        ipc_db, 
+        query: str, 
+        top_k: int = 10
+    ) -> Dict[str, Any]:
+        """
+        Enhanced search method for complex legal queries spanning multiple databases.
+        Implements multi-stage hybrid search with cross-database fusion.
+        """
+        logger.info(f"🔍 Testing enhanced complex search with query: '{query}'")
+        start_time = time.time()
+        
+        try:
+            # Stage 1: Query decomposition for legal domain
+            legal_query_variants = self._generate_legal_query_variants(query)
+            
+            # Stage 2: Parallel search across databases with different strategies
+            search_tasks = []
+            
+            # Constitution database - focus on constitutional aspects
+            if constitution_db:
+                constitution_tasks = [
+                    lambda: constitution_db.hybrid_search(
+                        query=variant,
+                        top_k=top_k * 2,  # Get more results for fusion
+                        rerank_strategy="rrf"
+                    ) for variant in legal_query_variants['constitution']
+                ]
+                search_tasks.extend(constitution_tasks)
+            
+            # IPC database - focus on criminal law aspects  
+            if ipc_db:
+                ipc_tasks = [
+                    lambda: ipc_db.hybrid_search(
+                        query=variant,
+                        top_k=top_k * 2,
+                        rerank_strategy="rrf" 
+                    ) for variant in legal_query_variants['ipc']
+                ]
+                search_tasks.extend(ipc_tasks)
+            
+            # Execute searches in parallel (simulated)
+            constitution_results = []
+            ipc_results = []
+            
+            # Constitution searches
+            for variant in legal_query_variants['constitution']:
+                if constitution_db:
+                    try:
+                        results = constitution_db.hybrid_search(
+                            query=variant,
+                            top_k=top_k,
+                            rerank_strategy="rrf"
+                        )
+                        for result in results:
+                            result['source_db'] = 'constitution'
+                            result['query_variant'] = variant
+                        constitution_results.extend(results)
+                    except Exception as e:
+                        logger.error(f"Constitution search failed for variant '{variant}': {e}")
+            
+            # IPC searches
+            for variant in legal_query_variants['ipc']:
+                if ipc_db:
+                    try:
+                        results = ipc_db.hybrid_search(
+                            query=variant,
+                            top_k=top_k,
+                            rerank_strategy="rrf"
+                        )
+                        for result in results:
+                            result['source_db'] = 'ipc'
+                            result['query_variant'] = variant
+                        ipc_results.extend(results)
+                    except Exception as e:
+                        logger.error(f"IPC search failed for variant '{variant}': {e}")
+            
+            # Stage 3: Advanced result fusion with domain relevance
+            fused_results = self._fuse_cross_database_results(
+                constitution_results, 
+                ipc_results, 
+                query
+            )
+            
+            # Stage 4: Legal cross-reference analysis
+            cross_references = self._analyze_legal_cross_references(fused_results)
+            
+            execution_time = time.time() - start_time
+            
+            logger.info(f"✅ Enhanced complex search completed in {execution_time:.2f} seconds")
+            logger.info(f"📊 Found {len(constitution_results)} constitution results, {len(ipc_results)} IPC results")
+            logger.info(f"🔗 Generated {len(fused_results)} fused results")
+            
+            return {
+                'query': query,
+                'strategy': 'enhanced_complex_search',
+                'results': fused_results[:top_k],
+                'raw_results': {
+                    'constitution': constitution_results,
+                    'ipc': ipc_results
+                },
+                'cross_references': cross_references,
+                'execution_time': execution_time,
+                'metadata': {
+                    'total_constitution_results': len(constitution_results),
+                    'total_ipc_results': len(ipc_results),
+                    'fusion_applied': True,
+                    'legal_analysis_applied': True
+                }
+            }
+            
+        except Exception as e:
+            logger.error(f"❌ Error in enhanced complex search: {e}")
+            return {
+                'query': query,
+                'error': str(e),
+                'results': [],
+                'execution_time': time.time() - start_time
+            }
+
+    def _generate_legal_query_variants(self, query: str) -> Dict[str, List[str]]:
+        """Generate domain-specific query variants for legal search."""
+        query_lower = query.lower()
+        
+        # Legal domain classification
+        constitution_keywords = [
+            'constitutional', 'article', 'fundamental rights', 'freedom', 
+            'speech', 'expression', 'directive principles', 'amendment'
+        ]
+        
+        ipc_keywords = [
+            'criminal', 'punishment', 'imprisonment', 'section', 'offense',
+            'defamation', 'hate speech', 'liability', 'conviction'
+        ]
+        
+        variants = {
+            'constitution': [query],  # Always include original query
+            'ipc': [query]           # Always include original query
+        }
+        
+        # Add constitution-focused variants
+        if any(kw in query_lower for kw in constitution_keywords):
+            variants['constitution'].extend([
+                f"Article 19 {query}",
+                f"fundamental rights {query}",
+                f"constitutional protection {query}",
+                f"reasonable restrictions {query}"
+            ])
+        
+        # Add IPC-focused variants
+        if any(kw in query_lower for kw in ipc_keywords):
+            variants['ipc'].extend([
+                f"IPC section {query}",
+                f"criminal law {query}",
+                f"legal consequences {query}",
+                f"punishment provisions {query}"
+            ])
+        
+        # Add cross-domain variants for complex queries
+        if (any(kw in query_lower for kw in constitution_keywords) and 
+            any(kw in query_lower for kw in ipc_keywords)):
+            cross_variants = [
+                f"constitutional criminal law interaction {query}",
+                f"legal framework balance {query}"
+            ]
+            variants['constitution'].extend(cross_variants)
+            variants['ipc'].extend(cross_variants)
+        
+        return variants
+
+    def _fuse_cross_database_results(
+        self, 
+        constitution_results: List[Dict[str, Any]], 
+        ipc_results: List[Dict[str, Any]], 
+        original_query: str
+    ) -> List[Dict[str, Any]]:
+        """Fuse results from multiple databases with domain relevance scoring."""
+        all_results = []
+        
+        # Process constitution results
+        for result in constitution_results:
+            enhanced_result = result.copy()
+            enhanced_result['domain_relevance'] = self._calculate_domain_relevance(
+                original_query, 'constitution'
+            )
+            enhanced_result['adjusted_score'] = self._calculate_adjusted_score(
+                result, enhanced_result['domain_relevance']
+            )
+            all_results.append(enhanced_result)
+        
+        # Process IPC results
+        for result in ipc_results:
+            enhanced_result = result.copy()
+            enhanced_result['domain_relevance'] = self._calculate_domain_relevance(
+                original_query, 'ipc'
+            )
+            enhanced_result['adjusted_score'] = self._calculate_adjusted_score(
+                result, enhanced_result['domain_relevance']
+            )
+            all_results.append(enhanced_result)
+        
+        # Remove duplicates based on content similarity
+        unique_results = self._deduplicate_results(all_results)
+        
+        # Sort by adjusted score (higher is better)
+        unique_results.sort(key=lambda x: x.get('adjusted_score', 0), reverse=True)
+        
+        return unique_results
+
+    def _calculate_domain_relevance(self, query: str, domain: str) -> float:
+        """Calculate how relevant the query is to a specific legal domain."""
+        query_lower = query.lower()
+        
+        domain_keywords = {
+            'constitution': ['constitutional', 'article', 'fundamental', 'rights', 'freedom'],
+            'ipc': ['criminal', 'punishment', 'section', 'offense', 'liability']
+        }
+        
+        if domain not in domain_keywords:
+            return 0.5  # Neutral relevance
+        
+        keywords = domain_keywords[domain]
+        relevance_score = sum(1 for kw in keywords if kw in query_lower) / len(keywords)
+        
+        return min(max(relevance_score, 0.1), 1.0)  # Clamp between 0.1 and 1.0
+
+    def _calculate_adjusted_score(self, result: Dict[str, Any], domain_relevance: float) -> float:
+        """Calculate adjusted score considering domain relevance."""
+        # Get original distance (lower is better for similarity)
+        original_distance = result.get('distance', 1.0)
+        
+        # Convert distance to similarity score (higher is better)
+        similarity_score = 1.0 - min(original_distance, 1.0)
+        
+        # Apply domain relevance boost
+        adjusted_score = similarity_score * (0.7 + 0.3 * domain_relevance)
+        
+        return adjusted_score
+
+    def _deduplicate_results(self, results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Remove duplicate results based on content similarity."""
+        unique_results = []
+        seen_content = set()
+        
+        for result in results:
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', '')
+            
+            # Create a simple hash of the content
+            content_hash = hash(content[:200])  # Use first 200 chars for comparison
+            
+            if content_hash not in seen_content:
+                seen_content.add(content_hash)
+                unique_results.append(result)
+        
+        return unique_results
+
+    def _analyze_legal_cross_references(
+        self, 
+        results: List[Dict[str, Any]]
+    ) -> Dict[str, Any]:
+        """Analyze legal cross-references and identify important connections."""
+        constitution_results = [r for r in results if r.get('source_db') == 'constitution']
+        ipc_results = [r for r in results if r.get('source_db') == 'ipc']
+        
+        analysis = {
+            'constitution_articles_found': [],
+            'ipc_sections_found': [],
+            'potential_conflicts': [],
+            'complementary_provisions': [],
+            'legal_principles': []
+        }
+        
+        # Extract article/section references
+        for result in constitution_results:
+            entity = result.get('entity', {})
+            article = entity.get('article', 'Unknown')
+            if article not in analysis['constitution_articles_found']:
+                analysis['constitution_articles_found'].append(article)
+        
+        for result in ipc_results:
+            entity = result.get('entity', {})
+            section = entity.get('section', 'Unknown')
+            if section not in analysis['ipc_sections_found']:
+                analysis['ipc_sections_found'].append(section)
+        
+        # Identify key legal principles (simplified heuristic)
+        if constitution_results and ipc_results:
+            analysis['legal_principles'] = [
+                'Balance between fundamental rights and criminal law',
+                'Constitutional protection vs. legal consequences',
+                'Reasonable restrictions framework'
+            ]
+        
+        return analysis
+
     def format_results(self, results: List[Dict[str, Any]], db_type: str) -> str:
         """Format the search results for display."""
         if not results:
@@ -331,6 +630,34 @@ def main():
     }
     save_to_log(ipc_results, ipc_query, "IPC")
     
+    # Test the new Enhanced Complex Search for cross-domain queries
+    complex_legal_query = """
+    What are the constitutional protections for freedom of speech and expression under Article 19, 
+    and how do they interact with IPC provisions on hate speech and defamation? Specifically, 
+    what are the reasonable restrictions on free speech, and what are the potential legal 
+    consequences for violating these restrictions?
+    """
+    
+    print("\n" + "="*80)
+    print("TESTING ENHANCED COMPLEX SEARCH (RECOMMENDED STRATEGY)")
+    print("="*80)
+    print(f"Complex Query: {complex_legal_query.strip()}")
+    print("-" * 80)
+    
+    # Test the enhanced complex search method
+    enhanced_complex_results = tester.test_enhanced_complex_search(
+        tester.constitution_db, 
+        tester.ipc_db, 
+        complex_legal_query.strip()
+    )
+    
+    # Save enhanced results to log
+    if enhanced_complex_results.get('results'):
+        enhanced_log_data = {
+            'enhanced_complex_search': enhanced_complex_results
+        }
+        save_to_log(enhanced_log_data, complex_legal_query.strip(), "Enhanced_Complex")
+    
     # Summary
     print("\n" + "="*80)
     print("SUMMARY")
@@ -367,6 +694,17 @@ def main():
         print(f"✅ Grouping Search: {len(ipc_grouping_results)} results")
     else:
         print("❌ Grouping Search: No results")
+    
+    print("\nEnhanced Complex Search Results:")
+    if enhanced_complex_results.get('results'):
+        print(f"✅ Enhanced Complex Search: {len(enhanced_complex_results['results'])} results")
+        print(f"⚡ Execution time: {enhanced_complex_results.get('execution_time', 0):.2f} seconds")
+        metadata = enhanced_complex_results.get('metadata', {})
+        print(f"📊 Constitution results: {metadata.get('total_constitution_results', 0)}")
+        print(f"📊 IPC results: {metadata.get('total_ipc_results', 0)}")
+        print(f"🔗 Cross-references found: {len(enhanced_complex_results.get('cross_references', {}).get('legal_principles', []))}")
+    else:
+        print("❌ Enhanced Complex Search: No results")
     
     print("\n✅ Enhanced test completed!")
     print(f"Results have been saved to: generated/search_results.log")

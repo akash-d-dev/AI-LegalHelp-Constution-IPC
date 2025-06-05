@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import logging
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI
 from agent_system.utils.Constants import Constants
@@ -253,7 +253,343 @@ def predict_punishment(case_description: str) -> str:
         return error_msg
 
 
+@tool
+def enhanced_cross_domain_legal_search(query: str) -> str:
+    """
+    🚀 PRIORITY TOOL for complex legal queries that span MULTIPLE legal domains or require cross-referencing.
+    
+    **USE THIS TOOL FIRST when queries involve ANY of these patterns:**
+    - Questions about constitutional rights AND criminal law together
+    - Queries mentioning BOTH "Constitution" AND "IPC" or "criminal"
+    - Questions about "fundamental rights" AND their "restrictions" or "violations"
+    - Queries asking how different areas of law "interact", "balance", or "conflict"
+    - Questions about constitutional protections AND their legal consequences
+    - Any query needing information from BOTH constitutional and criminal law
+    
+    **Example trigger phrases:**
+    - "constitutional protections...and IPC provisions"
+    - "fundamental rights...balance with criminal law"
+    - "Article 19...interact with...hate speech and defamation"
+    - "constitutional freedoms conflict with IPC sections"
+    
+    This tool automatically searches both Constitution and IPC databases and intelligently fuses 
+    results with advanced cross-domain analysis. Much more effective than using separate tools.
+    
+    ⚠️ DO NOT use separate search_constitution + search_ipc tools if this tool applies.
+    """
+    logger.info(f"🔍 ENHANCED TOOL: enhanced_cross_domain_legal_search called with query: '{query[:100]}...'")
+    
+    # Get both database instances
+    constitution_db = get_constitution_db()
+    ipc_db = get_ipc_db()
+    
+    if not constitution_db and not ipc_db:
+        error_msg = "Neither Constitution nor IPC database is available. Please check database configuration."
+        logger.error(f"❌ {error_msg}")
+        return error_msg
+    
+    try:
+        logger.info("🚀 Starting enhanced cross-domain search across multiple databases...")
+        
+        all_enhanced_results = []
+        search_summary = {}
+        
+        # Search Constitution database if available
+        if constitution_db:
+            logger.info("📜 Performing enhanced search on Constitution database...")
+            try:
+                const_results = constitution_db.enhanced_cross_domain_search(query, top_k=5)
+                
+                # Add database source to results
+                for result in const_results:
+                    result['source_database'] = 'Constitution'
+                
+                all_enhanced_results.extend(const_results)
+                search_summary['constitution_results'] = len(const_results)
+                logger.info(f"✅ Constitution enhanced search: {len(const_results)} results")
+                
+            except Exception as e:
+                logger.error(f"❌ Error in Constitution enhanced search: {e}")
+                search_summary['constitution_error'] = str(e)
+        
+        # Search IPC database if available
+        if ipc_db:
+            logger.info("⚖️ Performing enhanced search on IPC database...")
+            try:
+                ipc_results = ipc_db.enhanced_cross_domain_search(query, top_k=5)
+                
+                # Add database source to results
+                for result in ipc_results:
+                    result['source_database'] = 'IPC'
+                
+                all_enhanced_results.extend(ipc_results)
+                search_summary['ipc_results'] = len(ipc_results)
+                logger.info(f"✅ IPC enhanced search: {len(ipc_results)} results")
+                
+            except Exception as e:
+                logger.error(f"❌ Error in IPC enhanced search: {e}")
+                search_summary['ipc_error'] = str(e)
+        
+        # If no results from either database
+        if not all_enhanced_results:
+            logger.info("📭 No results found from enhanced cross-domain search")
+            return "No relevant legal provisions found using enhanced cross-domain search. The query may be too specific or the databases may not contain relevant information."
+        
+        # Perform final cross-database result fusion
+        logger.info("🔀 Performing final cross-database result fusion...")
+        final_results = _perform_cross_database_fusion(all_enhanced_results, query, top_k=8)
+        
+        # Analyze cross-database coverage
+        cross_db_analysis = _analyze_cross_database_coverage(final_results)
+        
+        logger.info(f"📊 Enhanced cross-domain search summary: {search_summary}")
+        logger.info(f"🎯 Final results after cross-database fusion: {len(final_results)}")
+        logger.info(f"🔗 Cross-database coverage: {cross_db_analysis}")
+        
+        # Format results for display
+        formatted_results = []
+        
+        # Add search summary
+        summary_lines = []
+        summary_lines.append("=== ENHANCED CROSS-DOMAIN SEARCH SUMMARY ===")
+        summary_lines.append(f"Query analyzed across {len([db for db in [constitution_db, ipc_db] if db])} legal databases")
+        
+        if search_summary.get('constitution_results'):
+            summary_lines.append(f"Constitution database: {search_summary['constitution_results']} enhanced results")
+        if search_summary.get('ipc_results'):
+            summary_lines.append(f"IPC database: {search_summary['ipc_results']} enhanced results")
+        
+        summary_lines.append(f"Final fused results: {len(final_results)}")
+        summary_lines.append(f"Cross-database relevance: {cross_db_analysis.get('cross_relevance_score', 0):.2f}")
+        summary_lines.append("=" * 50)
+        
+        formatted_results.extend(summary_lines)
+        formatted_results.append("")  # Empty line
+        
+        # Format individual results
+        for i, result in enumerate(final_results):
+            entity = result.get('entity', {})
+            content = entity.get('text') or entity.get('content', 'No content available')
+            
+            # Enhanced metadata
+            composite_score = result.get('composite_score', 0)
+            domain_score = result.get('domain_score', 0)
+            search_strategy = result.get('search_strategy', 'Unknown')
+            source_db = result.get('source_database', 'Unknown')
+            collection = result.get('collection', 'Unknown')
+            distance = result.get('distance', 'N/A')
+            
+            formatted_results.append(
+                f"Enhanced Result {i+1} (Composite Score: {composite_score:.3f}):\n"
+                f"Source: {source_db} Database - {collection}\n"
+                f"Search Strategy: {search_strategy}\n"
+                f"Domain Relevance: {domain_score:.3f} | Original Distance: {distance:.4f}\n"
+                f"Content: {content}\n"
+            )
+            
+            logger.debug(f"📄 Enhanced Result {i+1}: {source_db} DB, Score: {composite_score:.3f}, Strategy: {search_strategy}")
+        
+        result_text = "\n".join(formatted_results)
+        logger.info(f"✅ Enhanced cross-domain search completed, returning {len(final_results)} fused results")
+        
+        # Save enhanced search summary to log
+        _save_enhanced_tool_log(query, final_results, search_summary, cross_db_analysis)
+        
+        return result_text
+        
+    except Exception as e:
+        error_msg = f"Error in enhanced cross-domain legal search: {str(e)}"
+        logger.error(f"❌ {error_msg}")
+        return error_msg
+
+
+def _perform_cross_database_fusion(all_results: List[Dict[str, Any]], query: str, top_k: int = 8) -> List[Dict[str, Any]]:
+    """Perform intelligent fusion of results from multiple databases."""
+    logger.info(f"🔀 Fusing results from {len(all_results)} cross-database results...")
+    
+    # Calculate cross-database relevance scores
+    for result in all_results:
+        entity = result.get('entity', {})
+        content = entity.get('text') or entity.get('content', '')
+        source_db = result.get('source_database', '')
+        
+        # Cross-database relevance bonus
+        cross_db_bonus = _calculate_cross_database_bonus(content, query, source_db)
+        
+        # Update composite score with cross-database factor
+        original_composite = result.get('composite_score', 0)
+        enhanced_composite = original_composite * 0.8 + cross_db_bonus * 0.2
+        
+        result['enhanced_composite_score'] = enhanced_composite
+        result['cross_db_bonus'] = cross_db_bonus
+    
+    # Remove cross-database duplicates
+    unique_results = []
+    seen_content_hashes = set()
+    
+    # Sort by enhanced composite score
+    sorted_results = sorted(all_results, key=lambda x: x.get('enhanced_composite_score', 0), reverse=True)
+    
+    for result in sorted_results:
+        entity = result.get('entity', {})
+        content = entity.get('text') or entity.get('content', '')
+        
+        # Create content hash for duplicate detection across databases
+        content_hash = hash(content[:150]) if content else hash(str(result.get('id')))
+        
+        if content_hash not in seen_content_hashes:
+            seen_content_hashes.add(content_hash)
+            unique_results.append(result)
+            
+            if len(unique_results) >= top_k:
+                break
+    
+    logger.info(f"🧹 Cross-database fusion: {len(all_results)} -> {len(unique_results)} unique results")
+    return unique_results
+
+
+def _calculate_cross_database_bonus(content: str, query: str, source_db: str) -> float:
+    """Calculate bonus score for cross-database relevance."""
+    content_lower = content.lower()
+    query_lower = query.lower()
+    
+    # Query spans multiple domains
+    has_constitutional_terms = any(term in query_lower for term in ['constitutional', 'fundamental', 'rights', 'article'])
+    has_criminal_terms = any(term in query_lower for term in ['criminal', 'punishment', 'ipc', 'section', 'offense'])
+    
+    # Content relevance to opposite domain
+    if source_db == 'Constitution':
+        opposite_domain_relevance = sum(1 for term in ['restriction', 'liable', 'punishment', 'violation'] if term in content_lower)
+    else:  # IPC
+        opposite_domain_relevance = sum(1 for term in ['constitutional', 'fundamental', 'rights', 'protection'] if term in content_lower)
+    
+    # Base bonus for cross-domain queries
+    cross_domain_bonus = 0.1 if has_constitutional_terms and has_criminal_terms else 0.05
+    
+    # Relevance bonus
+    relevance_bonus = min(opposite_domain_relevance * 0.05, 0.15)
+    
+    return cross_domain_bonus + relevance_bonus
+
+
+def _analyze_cross_database_coverage(results: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Analyze coverage across different databases and legal domains."""
+    analysis = {
+        'total_results': len(results),
+        'database_distribution': {},
+        'strategy_distribution': {},
+        'cross_relevance_score': 0.0,
+        'domain_balance': 'unknown'
+    }
+    
+    if not results:
+        return analysis
+    
+    # Count database sources
+    const_count = sum(1 for r in results if r.get('source_database') == 'Constitution')
+    ipc_count = sum(1 for r in results if r.get('source_database') == 'IPC')
+    
+    analysis['database_distribution'] = {
+        'constitution': const_count,
+        'ipc': ipc_count,
+        'constitution_percentage': (const_count / len(results)) * 100,
+        'ipc_percentage': (ipc_count / len(results)) * 100
+    }
+    
+    # Count search strategies
+    strategy_counts = {}
+    for result in results:
+        strategy = result.get('search_strategy', 'unknown')
+        strategy_counts[strategy] = strategy_counts.get(strategy, 0) + 1
+    
+    analysis['strategy_distribution'] = strategy_counts
+    
+    # Calculate cross-relevance score
+    if const_count > 0 and ipc_count > 0:
+        balance_factor = min(const_count, ipc_count) / max(const_count, ipc_count)
+        coverage_factor = min(const_count, ipc_count) / len(results)
+        analysis['cross_relevance_score'] = balance_factor * coverage_factor
+        analysis['domain_balance'] = 'balanced' if balance_factor > 0.5 else 'imbalanced'
+    
+    return analysis
+
+
+def _save_enhanced_tool_log(query: str, results: List[Dict[str, Any]], search_summary: Dict[str, Any], 
+                           cross_db_analysis: Dict[str, Any]):
+    """Save enhanced tool execution results to log file."""
+    try:
+        import os
+        from datetime import datetime
+        
+        # Create the correct directory path
+        log_dir = os.path.join("agent_system", "admin", "scripts", "generated")
+        os.makedirs(log_dir, exist_ok=True)
+        
+        log_file = os.path.join(log_dir, "enhanced_tool_results.log")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        # Ensure the file can be created
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"\n{'='*120}\n")
+            f.write(f"ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG\n")
+            f.write(f"Timestamp: {timestamp}\n")
+            f.write(f"Query: '{query}'\n")
+            f.write(f"{'='*120}\n\n")
+            
+            # Search summary
+            f.write(f"CROSS-DATABASE SEARCH SUMMARY:\n")
+            f.write(f"Constitution Results: {search_summary.get('constitution_results', 'N/A')}\n")
+            f.write(f"IPC Results: {search_summary.get('ipc_results', 'N/A')}\n")
+            f.write(f"Final Fused Results: {len(results)}\n\n")
+            
+            # Cross-database analysis
+            f.write(f"CROSS-DATABASE ANALYSIS:\n")
+            f.write(f"Database Distribution: {cross_db_analysis.get('database_distribution', {})}\n")
+            f.write(f"Strategy Distribution: {cross_db_analysis.get('strategy_distribution', {})}\n")
+            f.write(f"Cross-Relevance Score: {cross_db_analysis.get('cross_relevance_score', 0):.3f}\n")
+            f.write(f"Domain Balance: {cross_db_analysis.get('domain_balance', 'unknown')}\n\n")
+            
+            # Detailed results
+            f.write(f"ENHANCED RESULTS DETAILS:\n")
+            for i, result in enumerate(results, 1):
+                entity = result.get('entity', {})
+                content = entity.get('text') or entity.get('content', 'No content available')
+                
+                f.write(f"Result {i}:\n")
+                f.write(f"  Source Database: {result.get('source_database', 'Unknown')}\n")
+                f.write(f"  Collection: {result.get('collection', 'Unknown')}\n")
+                f.write(f"  Enhanced Composite Score: {result.get('enhanced_composite_score', 0):.4f}\n")
+                f.write(f"  Original Composite Score: {result.get('composite_score', 0):.4f}\n")
+                f.write(f"  Cross-DB Bonus: {result.get('cross_db_bonus', 0):.4f}\n")
+                f.write(f"  Domain Score: {result.get('domain_score', 0):.4f}\n")
+                f.write(f"  Search Strategy: {result.get('search_strategy', 'Unknown')}\n")
+                f.write(f"  Query Variant: {result.get('query_variant', 'Unknown')[:60]}...\n")
+                f.write(f"  Content: {content[:400]}...\n")
+                f.write(f"{'-'*60}\n")
+            
+            f.write(f"\n{'='*120}\n\n")
+        
+        logger.info(f"📝 Enhanced tool log saved to: {log_file}")
+            
+    except Exception as e:
+        logger.error(f"❌ Error saving enhanced tool log: {e}")
+        # Try alternative path as fallback
+        try:
+            fallback_dir = "generated"
+            os.makedirs(fallback_dir, exist_ok=True)
+            fallback_file = os.path.join(fallback_dir, "enhanced_tool_results.log")
+            
+            with open(fallback_file, 'a', encoding='utf-8') as f:
+                f.write(f"[{timestamp}] Enhanced tool executed for query: {query[:100]}...\n")
+                f.write(f"Results: {len(results)} items\n")
+                f.write(f"Summary: {search_summary}\n\n")
+            
+            logger.info(f"📝 Enhanced tool log saved to fallback location: {fallback_file}")
+        except Exception as fallback_error:
+            logger.error(f"❌ Failed to save to fallback location: {fallback_error}")
+
+
 # List of all tools for easy import
-tools = [generate_keywords, search_constitution, search_ipc, predict_punishment]
-logger.info(f"🛠️ Tools module loaded with {len(tools)} tools: {[tool.name for tool in tools]}")
+tools = [generate_keywords, search_constitution, search_ipc, predict_punishment, enhanced_cross_domain_legal_search]
+logger.info(f"🛠️ Tools module updated with {len(tools)} tools: {[tool.name for tool in tools]}")
 

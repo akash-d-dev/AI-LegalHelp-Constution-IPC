@@ -578,3 +578,592 @@ Conte...'
 
 **Article 19 of the Indian Constitution** guarantees the right to freedom of speech and expression as one of the f...'
 2025-06-05 14:55:23 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 9
+2025-06-05 16:35:42 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 16:35:42 - agent_system.ai_agent - INFO - ❓ User query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+            and how do they interact with IPC provisions on hate speech and defamation? Specifically, 
+            what are the reasonable restrictions on free speech, and what are the potential legal 
+            consequences for violating these restrictions?'
+2025-06-05 16:35:42 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 16:35:42 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 16:35:42 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 16:35:44 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+    ...'
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:35:45 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 16:35:46 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:35:46 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 16:35:46 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 16:35:46 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:35:46 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 16:35:47 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 16:35:47 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on hate speech and defamation, reasonable restrictions on free speech, legal consequences for violating restrictions'}
+2025-06-05 16:35:47 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'constitutional protections for freedom of speech a...'
+2025-06-05 16:35:47 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on hate speech and defamation, reasonable restrictions on free speech, legal consequences for violating restrictions'
+2025-06-05 16:35:47 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 16:35:47 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-05 16:35:47 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-05 16:35:48 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["freedom of speech", "Article 19", "hate speech", "defamation", "reasonable restrictions", "IPC provisions"]
+2025-06-05 16:35:48 - agent_system.ai_agent.tools - INFO - 📋 Parsed 6 keywords: ['freedom of speech', 'Article 19', 'hate speech', 'defamation', 'reasonable restrictions', 'IPC provisions']
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["freedom of speech", "Article 19", "hate speech", "defamation", "reasonable restrictions", "IPC pro...'
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+    ...'
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:35:48 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_constitution(['query']), search_ipc(['query']), search_ipc(['query']), search_constitution(['query']), search_ipc(['query'])
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 6 tool calls: ['search_constitution', 'search_constitution', 'search_ipc', 'search_ipc', 'search_constitution', 'search_ipc']
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🎯 Executing 6 tool calls...
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🔨 Tool 1/6: search_constitution
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'freedom of speech'}
+2025-06-05 16:35:51 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'freedom of speech...'
+2025-06-05 16:35:51 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'freedom of speech'
+2025-06-05 16:35:51 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-05 16:36:02 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-05 16:36:02 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:36:19 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:36:19 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:36:19 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.1509, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:36:19 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:36:19 - agent_system.ai_agent - INFO - 🔨 Tool 2/6: search_constitution
+2025-06-05 16:36:19 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 19'}
+2025-06-05 16:36:19 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 19...'
+2025-06-05 16:36:19 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 19'
+2025-06-05 16:36:19 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:36:34 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:36:34 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:36:34 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0303, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:36:34 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:36:34 - agent_system.ai_agent - INFO - 🔨 Tool 3/6: search_ipc
+2025-06-05 16:36:34 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'hate speech'}
+2025-06-05 16:36:34 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'hate speech...'
+2025-06-05 16:36:34 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'hate speech'
+2025-06-05 16:36:34 - agent_system.ai_agent.tools - INFO - 🔄 Initializing IPC database...
+2025-06-05 16:36:37 - agent_system.ai_agent.tools - INFO - ✅ IPC database initialized successfully
+2025-06-05 16:36:37 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:36:44 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:36:44 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:36:44 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.2183, Strategy: l2_standard):
+Collection: ipc_2
+Section: Unknown Section
+Conte...'
+2025-06-05 16:36:44 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:36:44 - agent_system.ai_agent - INFO - 🔨 Tool 4/6: search_ipc
+2025-06-05 16:36:44 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'defamation'}
+2025-06-05 16:36:44 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'defamation...'
+2025-06-05 16:36:44 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'defamation'
+2025-06-05 16:36:44 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:36:50 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:36:50 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:36:50 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.7951, Strategy: l2_standard):
+Collection: ipc_2
+Section: Unknown Section
+Conte...'
+2025-06-05 16:36:50 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:36:50 - agent_system.ai_agent - INFO - 🔨 Tool 5/6: search_constitution
+2025-06-05 16:36:50 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'reasonable restrictions'}
+2025-06-05 16:36:50 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'reasonable restrictions...'
+2025-06-05 16:36:50 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'reasonable restrictions'
+2025-06-05 16:36:50 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:37:05 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:37:05 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:37:05 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.3167, Strategy: l2_standard):
+Collection: constitution_of_india_3
+Article: Unk...'
+2025-06-05 16:37:05 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:37:05 - agent_system.ai_agent - INFO - 🔨 Tool 6/6: search_ipc
+2025-06-05 16:37:05 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'legal consequences'}
+2025-06-05 16:37:05 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'legal consequences...'
+2025-06-05 16:37:05 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'legal consequences'
+2025-06-05 16:37:05 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:37:12 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:37:12 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.9071, Strategy: l2_standard):
+Collection: ipc_2
+Section: Unknown Section
+Conte...'
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 🏁 All 6 tools executed, returning results to LLM
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 📨 Current state has 10 messages
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+    ...'
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:37:12 - agent_system.ai_agent - INFO - 📤 Sending 11 messages to LLM...
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 💬 LLM final response: '### Constitutional Protections for Freedom of Speech and Expression under Article 19
+
+**Article 19 o...'
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 💡 Final answer preview: '### Constitutional Protections for Freedom of Speech and Expression under Article 19
+
+**Article 19 of the Indian Constitution** guarantees the right to freedom of speech and expression as one of the f...'
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 11
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - ❓ User query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            What happens when constitutional freedoms conflict with IPC sections on public order and morality?'
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 16:37:19 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 16:37:20 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 👤 Last user query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            ...'
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:37:21 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights, criminal law, constitutional freedoms, IPC sections, public order, morality'}
+2025-06-05 16:37:22 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'fundamental rights, criminal law, constitutional f...'
+2025-06-05 16:37:22 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'fundamental rights, criminal law, constitutional freedoms, IPC sections, public order, morality'
+2025-06-05 16:37:22 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 16:37:23 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["fundamental rights", "IPC sections", "public order", "morality"]
+2025-06-05 16:37:23 - agent_system.ai_agent.tools - INFO - 📋 Parsed 4 keywords: ['fundamental rights', 'IPC sections', 'public order', 'morality']
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["fundamental rights", "IPC sections", "public order", "morality"]...'
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 👤 Last user query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            ...'
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:37:23 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_ipc(['query']), search_constitution(['query']), search_constitution(['query'])
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 4 tool calls: ['search_constitution', 'search_ipc', 'search_constitution', 'search_constitution']
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🎯 Executing 4 tool calls...
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🔨 Tool 1/4: search_constitution
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights'}
+2025-06-05 16:37:24 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'fundamental rights...'
+2025-06-05 16:37:24 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'fundamental rights'
+2025-06-05 16:37:24 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:37:39 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:37:39 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:37:39 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.7545, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:37:39 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:37:39 - agent_system.ai_agent - INFO - 🔨 Tool 2/4: search_ipc
+2025-06-05 16:37:39 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'IPC sections'}
+2025-06-05 16:37:39 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'IPC sections...'
+2025-06-05 16:37:39 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'IPC sections'
+2025-06-05 16:37:39 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:37:46 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:37:46 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:37:46 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.3492, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-05 16:37:46 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:37:46 - agent_system.ai_agent - INFO - 🔨 Tool 3/4: search_constitution
+2025-06-05 16:37:46 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'public order'}
+2025-06-05 16:37:46 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'public order...'
+2025-06-05 16:37:46 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'public order'
+2025-06-05 16:37:46 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:38:01 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:38:01 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:38:01 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0929, Strategy: l2_standard):
+Collection: constitution_of_india_5
+Article: Unk...'
+2025-06-05 16:38:01 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:38:01 - agent_system.ai_agent - INFO - 🔨 Tool 4/4: search_constitution
+2025-06-05 16:38:01 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'morality'}
+2025-06-05 16:38:01 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'morality...'
+2025-06-05 16:38:01 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'morality'
+2025-06-05 16:38:01 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:38:15 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:38:15 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.3980, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 🏁 All 4 tools executed, returning results to LLM
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 📨 Current state has 8 messages
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 👤 Last user query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            ...'
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:38:15 - agent_system.ai_agent - INFO - 📤 Sending 9 messages to LLM...
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The relationship between fundamental rights under the Indian Constitution and criminal law provision...'
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The relationship between fundamental rights under the Indian Constitution and criminal law provisions, particularly those in the Indian Penal Code (IPC), is complex and often involves a balancing act ...'
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 9
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ❓ User query: 'What is Article 21 of the Indian Constitution?'
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 16:38:25 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Article 21 of the Indian Constitution?...'
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:38:26 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 21 of the Indian Constitution'}
+2025-06-05 16:38:27 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'Article 21 of the Indian Constitution...'
+2025-06-05 16:38:27 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'Article 21 of the Indian Constitution'
+2025-06-05 16:38:27 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 16:38:29 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["Article 21", "Right to Life", "Constitution of India"]
+2025-06-05 16:38:29 - agent_system.ai_agent.tools - INFO - 📋 Parsed 3 keywords: ['Article 21', 'Right to Life', 'Constitution of India']
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["Article 21", "Right to Life", "Constitution of India"]...'
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Article 21 of the Indian Constitution?...'
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:38:29 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_constitution(['query']), search_constitution(['query'])
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 3 tool calls: ['search_constitution', 'search_constitution', 'search_constitution']
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🎯 Executing 3 tool calls...
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🔨 Tool 1/3: search_constitution
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 21'}
+2025-06-05 16:38:30 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 21...'
+2025-06-05 16:38:30 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 21'
+2025-06-05 16:38:30 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:38:46 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:38:46 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:38:46 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0435, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:38:46 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:38:46 - agent_system.ai_agent - INFO - 🔨 Tool 2/3: search_constitution
+2025-06-05 16:38:46 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Right to Life'}
+2025-06-05 16:38:46 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Right to Life...'
+2025-06-05 16:38:46 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Right to Life'
+2025-06-05 16:38:46 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:39:01 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:39:01 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:39:01 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0062, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:39:01 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:39:01 - agent_system.ai_agent - INFO - 🔨 Tool 3/3: search_constitution
+2025-06-05 16:39:01 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Constitution of India'}
+2025-06-05 16:39:01 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Constitution of India...'
+2025-06-05 16:39:01 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Constitution of India'
+2025-06-05 16:39:01 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-05 16:39:18 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-05 16:39:18 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.3363, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 🏁 All 3 tools executed, returning results to LLM
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Article 21 of the Indian Constitution?...'
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:39:18 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Article 21 of the Indian Constitution states: **"No person shall be deprived of his life or personal...'
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Article 21 of the Indian Constitution states: **"No person shall be deprived of his life or personal liberty except according to procedure established by law."** This article is a fundamental right th...'
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 8
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - ❓ User query: 'What is the punishment for theft under IPC?'
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 16:39:22 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:39:23 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'punishment for theft under IPC'}
+2025-06-05 16:39:25 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'punishment for theft under IPC...'
+2025-06-05 16:39:25 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'punishment for theft under IPC'
+2025-06-05 16:39:25 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-05 16:39:26 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["theft punishment", "Indian Penal Code", "criminal law"]
+2025-06-05 16:39:26 - agent_system.ai_agent.tools - INFO - 📋 Parsed 3 keywords: ['theft punishment', 'Indian Penal Code', 'criminal law']
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["theft punishment", "Indian Penal Code", "criminal law"]...'
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:39:26 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_ipc(['query']), search_ipc(['query']), search_ipc(['query'])
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 3 tool calls: ['search_ipc', 'search_ipc', 'search_ipc']
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🎯 Executing 3 tool calls...
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🔨 Tool 1/3: search_ipc
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'theft punishment'}
+2025-06-05 16:39:27 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'theft punishment...'
+2025-06-05 16:39:27 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'theft punishment'
+2025-06-05 16:39:27 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:39:34 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:39:34 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:39:34 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.8224, Strategy: l2_standard):
+Collection: ipc_2
+Section: Unknown Section
+Conte...'
+2025-06-05 16:39:34 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:39:34 - agent_system.ai_agent - INFO - 🔨 Tool 2/3: search_ipc
+2025-06-05 16:39:34 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Indian Penal Code'}
+2025-06-05 16:39:34 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'Indian Penal Code...'
+2025-06-05 16:39:34 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'Indian Penal Code'
+2025-06-05 16:39:34 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:39:40 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:39:40 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:39:40 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.3442, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-05 16:39:40 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:39:40 - agent_system.ai_agent - INFO - 🔨 Tool 3/3: search_ipc
+2025-06-05 16:39:40 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'criminal law'}
+2025-06-05 16:39:40 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'criminal law...'
+2025-06-05 16:39:40 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'criminal law'
+2025-06-05 16:39:40 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-05 16:39:46 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-05 16:39:46 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.9239, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 🏁 All 3 tools executed, returning results to LLM
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is the punishment for theft under IPC?...'
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 16:39:46 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Under the Indian Penal Code (IPC), the punishment for theft is primarily governed by **Section 378**...'
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Under the Indian Penal Code (IPC), the punishment for theft is primarily governed by **Section 378** and **Section 379**. Here are the key points regarding the punishment for theft:
+
+1. **General Puni...'
+2025-06-05 16:39:53 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 8
+2025-06-05 17:03:45 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 17:03:45 - agent_system.ai_agent - INFO - ❓ User query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+            and how do they interact with IPC provisions on hate speech and defamation? Specifically, 
+            what are the reasonable restrictions on free speech, and what are the potential legal 
+            consequences for violating these restrictions?'
+2025-06-05 17:03:45 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 17:03:45 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 17:03:45 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 17:03:46 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+    ...'
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 17:03:47 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: enhanced_cross_domain_legal_search(['query'])
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['enhanced_cross_domain_legal_search']
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: enhanced_cross_domain_legal_search
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on hate speech and defamation, reasonable restrictions on free speech, legal consequences for violating these restrictions'}
+2025-06-05 17:03:49 - agent_system.ai_agent - INFO - 🔍 Calling enhanced_cross_domain_legal_search with query: 'constitutional protections for freedom of speech a...'
+2025-06-05 17:03:49 - agent_system.ai_agent.tools - INFO - 🔍 ENHANCED TOOL: enhanced_cross_domain_legal_search called with query: 'constitutional protections for freedom of speech and expression under Article 19, IPC provisions on ...'
+2025-06-05 17:03:49 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-05 17:03:59 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-05 17:03:59 - agent_system.ai_agent.tools - INFO - 🔄 Initializing IPC database...
+2025-06-05 17:04:03 - agent_system.ai_agent.tools - INFO - ✅ IPC database initialized successfully
+2025-06-05 17:04:03 - agent_system.ai_agent.tools - INFO - 🚀 Starting enhanced cross-domain search across multiple databases...
+2025-06-05 17:04:03 - agent_system.ai_agent.tools - INFO - 📜 Performing enhanced search on Constitution database...
+2025-06-05 17:04:40 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search: 5 results
+2025-06-05 17:04:40 - agent_system.ai_agent.tools - INFO - ⚖️ Performing enhanced search on IPC database...
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search: 5 results
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 🔀 Performing final cross-database result fusion...
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 🔀 Fusing results from 10 cross-database results...
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 🧹 Cross-database fusion: 10 -> 8 unique results
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 📊 Enhanced cross-domain search summary: {'constitution_results': 5, 'ipc_results': 5}
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 🎯 Final results after cross-database fusion: 8
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 🔗 Cross-database coverage: {'total_results': 8, 'database_distribution': {'constitution': 3, 'ipc': 5, 'constitution_percentage': 37.5, 'ipc_percentage': 62.5}, 'strategy_distribution': {'domain_variant_2': 2, 'domain_variant_1': 6}, 'cross_relevance_score': 0.22499999999999998, 'domain_balance': 'balanced'}
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - ✅ Enhanced cross-domain search completed, returning 8 fused results
+2025-06-05 17:04:56 - agent_system.ai_agent.tools - INFO - 📝 Enhanced tool log saved to: agent_system\admin\scripts\generated\enhanced_tool_results.log
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - ✅ Tool enhanced_cross_domain_legal_search completed. Result preview: '=== ENHANCED CROSS-DOMAIN SEARCH SUMMARY ===
+Query analyzed across 2 legal databases
+Constitution da...'
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 📨 Tool message created for enhanced_cross_domain_legal_search
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the constitutional protections for freedom of speech and expression under Article 19, 
+    ...'
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 17:04:56 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 💬 LLM final response: '### Constitutional Protections for Freedom of Speech and Expression under Article 19
+
+**Article 19(1...'
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 💡 Final answer preview: '### Constitutional Protections for Freedom of Speech and Expression under Article 19
+
+**Article 19(1)(a)** of the Indian Constitution guarantees the right to freedom of speech and expression as a fund...'
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ❓ User query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            What happens when constitutional freedoms conflict with IPC sections on public order and morality?'
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-05 17:05:08 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 👤 Last user query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            ...'
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 17:05:09 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: enhanced_cross_domain_legal_search(['query'])
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['enhanced_cross_domain_legal_search']
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: enhanced_cross_domain_legal_search
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights balance with criminal law provisions, constitutional freedoms conflict with IPC sections on public order and morality'}
+2025-06-05 17:05:11 - agent_system.ai_agent - INFO - 🔍 Calling enhanced_cross_domain_legal_search with query: 'fundamental rights balance with criminal law provi...'
+2025-06-05 17:05:11 - agent_system.ai_agent.tools - INFO - 🔍 ENHANCED TOOL: enhanced_cross_domain_legal_search called with query: 'fundamental rights balance with criminal law provisions, constitutional freedoms conflict with IPC s...'
+2025-06-05 17:05:11 - agent_system.ai_agent.tools - INFO - 🚀 Starting enhanced cross-domain search across multiple databases...
+2025-06-05 17:05:11 - agent_system.ai_agent.tools - INFO - 📜 Performing enhanced search on Constitution database...
+2025-06-05 17:05:46 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search: 5 results
+2025-06-05 17:05:46 - agent_system.ai_agent.tools - INFO - ⚖️ Performing enhanced search on IPC database...
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search: 5 results
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 🔀 Performing final cross-database result fusion...
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 🔀 Fusing results from 10 cross-database results...
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 🧹 Cross-database fusion: 10 -> 8 unique results
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 📊 Enhanced cross-domain search summary: {'constitution_results': 5, 'ipc_results': 5}
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 🎯 Final results after cross-database fusion: 8
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 🔗 Cross-database coverage: {'total_results': 8, 'database_distribution': {'constitution': 4, 'ipc': 4, 'constitution_percentage': 50.0, 'ipc_percentage': 50.0}, 'strategy_distribution': {'domain_variant_2': 1, 'domain_variant_1': 5, 'expanded_parameters': 1, 'domain_variant_3': 1}, 'cross_relevance_score': 0.5, 'domain_balance': 'balanced'}
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - ✅ Enhanced cross-domain search completed, returning 8 fused results
+2025-06-05 17:06:01 - agent_system.ai_agent.tools - INFO - 📝 Enhanced tool log saved to: agent_system\admin\scripts\generated\enhanced_tool_results.log
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - ✅ Tool enhanced_cross_domain_legal_search completed. Result preview: '=== ENHANCED CROSS-DOMAIN SEARCH SUMMARY ===
+Query analyzed across 2 legal databases
+Constitution da...'
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 📨 Tool message created for enhanced_cross_domain_legal_search
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 👤 Last user query: 'How do fundamental rights under the Constitution balance with criminal law provisions? 
+            ...'
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-05 17:06:01 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The relationship between fundamental rights under the Indian Constitution and criminal law provision...'
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The relationship between fundamental rights under the Indian Constitution and criminal law provisions, particularly those in the Indian Penal Code (IPC), is complex and involves a delicate balance bet...'
+2025-06-05 17:06:15 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
