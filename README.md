@@ -10,9 +10,10 @@ A powerful AI-driven agent that answers legal queries related to the **Constitut
    → e.g., *"When can the Indian government restrict freedom of speech?"*
 
 2. **AI Agent activates tools**:
-   - 🔑 `generate_keywords` → Extracts keywords like “freedom”, “speech”, “restrictions”
+   - 🔑 `generate_keywords` → Extracts keywords like "freedom", "speech", "restrictions"
    - 📚 `search_db_constitution` → Searches Indian Constitution vector DB
    - ⚖️ `search_db_penal_code` → Searches IPC vector DB
+   - 🔄 `enhanced_cross_domain_legal_search` → Performs parallel searches and cross-references between Constitution and IPC
    - 🔄 Synthesizes all retrieved data into a final answer
 
 3. **Returns structured legal answer**  
@@ -25,6 +26,7 @@ A powerful AI-driven agent that answers legal queries related to the **Constitut
 - `generate_keywords`: Keyword extractor from user input
 - `search_db_constitution`: Vector search on Constitution articles
 - `search_db_penal_code`: Vector search on IPC sections
+- `enhanced_cross_domain_legal_search`: Advanced cross-document search and fusion
 - `ai_agent`: Controls the flow, uses tools, composes the answer
 
 ---
@@ -41,3 +43,26 @@ A fine-tuned AI model trained on court judgments to:
 
 ---
 
+## 🚀 Key Features
+
+- **Smart Search**: Multi-stage hybrid search strategy for comprehensive results
+- **Cross-Reference**: Automatic linking between Constitution and IPC sections
+- **Context-Aware**: Understands legal context and relationships
+- **Fast & Accurate**: Optimized vector search with result fusion
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 3.8+
+- Milvus Vector Database
+- OpenAI GPT Models / Google Gemini Models
+- FastAPI Backend
+
+---
+
+## 📚 Data Sources
+
+- Constitution of India
+- Indian Penal Code (IPC)
+- Legal cross-references database
