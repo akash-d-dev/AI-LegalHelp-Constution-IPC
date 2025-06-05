@@ -59,6 +59,11 @@ A fine-tuned AI model trained on court judgments to:
 - OpenAI GPT Models / Google Gemini Models
 - FastAPI Backend
 
+## 📋 Testing & Logs
+
+For test results and detailed logs, check out the generated scripts and logs at:
+[Test Scripts & Logs](https://github.com/akash-d-dev/AI-LegalHelp-Constution-IPC/tree/main/backend/agent_system/admin/scripts/generated)
+
 ---
 
 ## 📚 Data Sources
