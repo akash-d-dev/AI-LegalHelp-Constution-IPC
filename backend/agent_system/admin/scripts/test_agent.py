@@ -13,8 +13,9 @@ def test_agent():
     """Test the legal AI agent with sample queries."""
     
     test_queries = [
-        "What are the fundamental rights guaranteed by the Indian Constitution?",
-        "What is the punishment for theft under IPC?",
+        # "What are the fundamental rights guaranteed by the Indian Constitution?",
+        # "What is the punishment for theft under IPC?",
+        "What are the constitutional protections for freedom of speech and expression under Article 19, and how do they interact with IPC provisions on hate speech and defamation? Specifically, what are the reasonable restrictions on free speech, and what are the potential legal consequences for violating these restrictions?"
     ]
     
     print("=== Legal AI Agent Test ===\n")

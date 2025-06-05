@@ -513,3 +513,446 @@ Result 3:
 
 ================================================================================
 
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 14:54:41
+Query: 'freedom of speech'
+Total Results: 45 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.1509
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to Freedom19.Protection of certain rights regarding freedom of speech, etc.20. Protection in respect of conviction for offences.21.Protection of life and personal liberty.21A. Right to education.22.Protection against arrest and detention in certain cases.Right against Exploitation23. Prohibition of traffic in human beings and forced labour.24.Prohibition of employment of children in factories, etc.Right to  Freedom of Religion25. Freedom of conscience and free profession, practice and propagation of religion.26.Freedom to manage religious affairs.27. Freedom as to payment of taxes for promotion of any particular religion.28. Freedom as to attendance at religious instruction or religious worship in certain educational institutions.
+----------------------------------------
+Result 2:
+  Distance: 1.3188
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)15(b) to manage its own affairs in matters of religion;(c) to own and acquire movable and immovable property; and(d) to administer such property in accordance with law.27. Freedom as to payment of taxes for promotion of any particular religion.—No person shall be compelled to pay any taxes, the proceeds of which are specifically appropriated in payment of expenses for the promotion or maintenance of any particular religion or religious denomination.28. Freedom as to attendance at religious instruction or religious worship in certain educational institutions.—(1) No religious instruction shall be provided in any educational institution wholly maintained out of State funds.(2) Nothing in clause (1) shall apply to an educational institution which is administered by the State but has been established under any endowment or trust which requires that religious instruction shall be imparted in such institution.(3) No person attending any educational institution recognised by the State or receiving aid out of State funds shall be required to take part in any religious instruction that may be imparted in such institution or to attend any religious worship that may be conducted in such institution or in any premises attached thereto unless such person or, if such person is a minor, his guardian has given his consent thereto.Cultural and Educational Rights29. Protection of interests of minorities.—(1) Any section of the citizens residing in the territory of India or any part thereof having a distinct language, script or culture of its own shall have the right to conserve the same.(2) No citizen shall be denied admission into any educational institution maintained by the State or receiving aid out of State funds on grounds only of religion, race, caste, language or any of them.30. Right of minorities to establish and administer educational institutions.—(1) All minorities, whether based on religion or language, shall have the right to establish and administer educational institutions of their choice.
+----------------------------------------
+Result 3:
+  Distance: 1.3692
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India.13. Laws inconsistent with or in derogation of the fundamental rights.—(1) All laws in force in the territory of India immediately before the commencement of this Constitution, in so far as they are inconsistent with the provisions of this Part, shall, to the extent of such inconsistency, be void.(2) The State shall not make any law which takes away or abridges the rights conferred by this Part and any law made in contravention of this clause shall, to the extent of the contravention, be void.(3) In this article, unless the context otherwise requires,—(a) “law” includes any Ordinance, order, bye-law, rule, regulation, notification, custom or usage having in the territory of India the force of law;(b) “laws in force” includes laws passed or made by a Legislature or other competent authority in the territory of India before the commencement of this Constitution and not previously repealed, notwithstanding that any such law or any part thereof may not be then in operation either at all or in particular areas.1[(4) Nothing in this article shall apply to any amendment of this Constitution made under article 368.]Right to Equality14. Equality before law.—The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.15.  Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.—(1) The State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth or any of them.(2) No citizen shall, on grounds only of religion, race, caste, sex, place of birth or any of them, be subject to any disability, liability, restriction or condition with regard to—______________________________________________1. Ins. by the Constitution  (Twenty-fourth Amendment)  Act, 1971, s. 2 (w.e.f. 5-11-1971).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 14:54:56
+Query: 'Article 19'
+Total Results: 45 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.0303
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain directive principles.[31D. Saving of laws in respect of anti-national activities.—Omitted.] Right to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.[32A. Constitutional validity of State laws not to be considered in proceedings under article 32.—Omitted.]33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc. 34. Restriction on rights conferred by this Part while martial law is in force in any area.35. Legislation to give effect to the provisions of this Part.PART IVDIRECTIVE PRINCIPLES OF STATE POLICY36. Definition.37. Application of the principles contained in this Part.38.State to secure a social order for the promotion of welfare of the people.39. Certain principles of policy to be followed by the State.39A. Equal justice and free legal aid.
+----------------------------------------
+Result 2:
+  Distance: 1.0917
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3621 2 3 4 5      6 52.Kharkharia15PatgramMekliganj60.7453. Kharkharia 13Patgram Mekliganj 51.6254.Lotamari14PatgramMekliganj110.9255.Bhotbari16PatgramMekliganj205.4656.Komat Changrabandha16APatgramMekliganj42.857. Komat Changrabandha17A Patgram Mekliganj 16.0158.Panisala17PatgramMekliganj137.6659.Dwarikamari Khasbash18PatgramMekliganj36.560. Panisala 153/PPatgram Mekliganj 0.2761.Panisala153/OPatgramMekliganj18.0162.Panisala19PatgramMekliganj64.6363.Panisala21PatgramMekliganj51.464.Lotamari20PatgramMekliganj283.5365.Lotamari22PatgramMekliganj98.8566.Dwarikamari23PatgramMekliganj39.5267.Dwarikamari25PatgramMekliganj45.7368.Chhat Bhothat24PatgramMekliganj56.1169.Baakata131PatgramHathabhanga22.3570.Baakata132PatgramHathabhanga11.9671.Baakata130PatgramHathibhanga20.4872. Bhogramguri 133 Patgram Hathibhanga1.4473.Chenakata134PatgramMekliganj7.8174.Banskata119PatgramMathabanga413.8175.Banskata120PatgramMathabanga30.7576.Banskata121PatgramMathabanga12.1577.Banskata113PatgramMathabanga57.8678.Banskata112PatgramMathabanga315.0479.Banskata114PatgramMathabanga0.77
+----------------------------------------
+Result 3:
+  Distance: 1.0937
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(xvii)PART XIRELATIONS BETWEEN THE UNION AND THE STATES CHAPTER I.LEGISLATIVE  RELATIONSDistribution of Legislative Powers245. Extent of laws made by Parliament and by the Legislatures of States.246. Subject-matter of laws made by Parliament and by the Legislatures of States.246A. Special provision with respect to goods and services tax. 247. Power of Parliament to provide for the establishment of certain additional courts.248. Residuary powers of legislation.249. Power of Parliament to legislate with respect to a matter in the State List in the national interest.250. Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation.251. Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States.252. Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State.253. Legislation for giving effect to international agreements.254. Inconsistency between laws made by Parliament and laws made by the Legislatures of States. 255. Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only.CHAPTER II.ADMINISTRATIVE RELATIONSGeneral256. Obligation of States and the Union.257. Control of the Union over States in certain cases.[257A. Assistance to States by deployment of armed forces or other forces of the Union.Omitted.]258. Power of the Union to confer powers, etc., on States in certain cases.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 14:55:06
+Query: 'hate speech'
+Total Results: 18 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.2183
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of either description for a ter m which may extend to 
+two years, or with fine, or with both; 
+If threat be to cause death or grievous hurt, etc .—and if the threat be to cause death or grievous 
+hurt, or to cause the destruction of any property by fire, or to cause an offence puni shable with death or 
+1[imprisonment for life], or with imprisonment for a term which may extend to seven years, or to impute 
+unchastity to a woman, shall be punished with imprisonment of either description for a term which may 
+extend to seven years, or with fine, or with both. 
+507. Criminal intimidation by an anonymous communication .—Whoever commits the offence of 
+criminal intimidation by an anonymous communication, or having taken precaution to conceal the name 
+or abode of the person from whom the threat comes, shall be punished with imprisonment of either 
+description for a term which may extend to two years, in addition to the punis hment provided for the 
+offence by the last preceding section. 
+508. Act caused by inducing person to believe that he will be rendered an object of the D ivine 
+displeasure.—Whoever voluntarily causes or attempts to cause any person to do anything which that 
+person is not legally bound to do, or to omit to do anything which he is legally entitled to do, by inducing 
+or attempting to induce that person to believe that he or any person in whom he is interested will become 
+or will be rendered by some act of the offender an object of Divine displeasure if he does not do the thing 
+which it is the object of the offender to cause him to do, or if he does the thing which it is the object of the 
+offender to cause him to omit, shall be punished with imprisonment of either description for a term which 
+may extend to one year, or with fine, or with both. 
+Illustrations 
+(a) A sits dhurna at Z's door with the intention of causing it to be beli eved that, by so sitting, he renders Z an object of 
+Divine displeasure. A has committed the offence defined in this section. 
+(b) A threatens Z that, unless Z performs a certain act, A will kill one of A's own children, under such circumstances that the 
+killing would be believed to render Z an object of Divine displeasure. A has committed the offence defined in this section. 
+509. Word, gesture or act intended to insult the modesty of a woman .—Whoever, intending to 
+insult the modesty of any woman, utters any words, makes any sound or gesture, or exhi bits any object, 
+intending that such word or sound shall be heard, or that such gesture or object shall  be seen, by such 
+woman, or intrudes upon the privacy of such woman, 2[shall be punished with simple imprisonment for a 
+term which may extend to three years, and also with fine]. 
+STATE AMENDMENT 
+Chhattisgarh  
+After Section 509 of the Penal Code, the following shall be inserted, namely: — 
+509A. Sexual harassment by relative. —Whoever, being related to a woman through blood, 
+adoption or marriage, and not being her husband, takes the advantage of his proximity and induces , 
+seduces or threatens such woman with intent to insult her modesty by word, gestur e or act shall be 
+punished with rigorous imprisonment which shall not be less than one year but which may extend to five 
+years and shall also liable to fine. 
+509B. Sexual harassment by electronic mode. —Whoever, by means of telecommunication device 
+or by any other electronic mode including internet, makes creates, solicits or init iates the transmission of 
+any comment, request, suggestion, proposal, image or other communication, which is obscene, l ewd, 
+lascivious, filthy or indecent with intent to harass or cause or having k nowledge that it would harass or 
+cause annoyance or mental agony to a woman shall be punished with rigorous imprisonment  for a term 
+which shall not be less than six months but may extend to two years and shall also be liable to fine. 
+[Vide Chhattisgarh Act 25 of 2015, sec. 6]. 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. Subs. by Act 13 of 2013, s. 10, for “shall be punished with simple imprisonment for a term which may exten d to one year, or 
+with fine, or with both” (w.e.f. 3-2-2013).
+----------------------------------------
+Result 2:
+  Distance: 1.2378
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 72 
+ 
+that any class of persons is likely to consider such destruction, damage or defilem ent as an insult to their 
+religion, shall be punished with imprisonment of either description for a term which may extend to two 
+years, or with fine, or with both. 
+1[295A. Deliberate and malicious acts, intended to outrage religious feelings of any class by 
+insulting its religion or religious beliefs .—Whoever, with deliberate and malicious intention of 
+outraging the religious feelings of any class of 2[citizens of India], 3[by words, either spoken or written, or 
+by signs or by visible representations or otherwise], insults or attempts to i nsult the religion or the 
+religious beliefs of that class, shall be punished with imprisonment of eit her description for a term which 
+may extend to 4[three years], or with fine, or with both.] 
+296. Disturbing religious assembly .—Whoever voluntarily causes disturbance to any assembly 
+lawfully engaged in the performance of religious worship, or religious ceremonies, shall be punished with 
+imprisonment of either description for a term which may extend to one year, or with fine, or with both. 
+297. Trespassing on burial places, etc .—Whoever, with the intention of wounding the feelings of 
+any person, or of insulting the religion of any person, or with the knowledge that  the feelings of any 
+person are likely to be wounded, or that the religion of any person is likely to be insulted thereby, 
+commits any trespass in any place of worship or on any place of sepulture, or any place set apart for 
+the performance of funeral rites or as a depository for the remains of the dead, or offers any indignity to 
+any human corpse, or causes disturbance to any persons assembled for the performance of funeral 
+ceremonies, 
+shall be punished with imprisonment of either description for a term which may extend to one year, or 
+with fine, or with both.  
+298. Uttering words, etc., with deliberate intent to wound religious feelings .—Whoever, with the 
+deliberate intention of wounding the religious feelings of any person, utters any word or makes any sound 
+in the hearing of that person or makes any gesture in the sight of that person or  places any object in the 
+sight of that person, shall be punished with imprisonment of either description f or a term which may 
+extend to one year, or with fine, or with both. 
+CHAPTER XVI 
+OF OFFENCES AFFECTING THE HUMAN BODY 
+Of offences affecting life 
+299. Culpable homicide.—Whoever causes death by doing an act with the intention of causing death, 
+or with the intention of causing such bodily injury as is likely to cau se death, or with the knowledge that 
+he is likely by such act to cause death, commits the offence of culpable homicide. 
+Illustrations 
+(a) A lays sticks and turf over a pit, with the intention of thereby cau sing death, or with the knowledge that death is likely to 
+be thereby caused. Z, believing the ground to be firm, treads on  it, falls in and is killed. A has committed the offence of culpable 
+homicide. 
+(b) A knows Z to be behind a bush. B does not know it. A, intending  to cause, or knowing it to be likely to cause Z's death, 
+induces B to fire at the bush. B fires and kills Z. Here B may be guilty of no offence; but A has committed the offence of culpable 
+homicide. 
+(c) A, by shooting at a fowl with intent to kill and steal it, kills B, w ho is behind a bush; A not knowing that he was there. 
+Here, although A was doing an unlawful act, he was not guilty o f culpable homicide, as he did not intend to kill B, or to cause  
+death by doing an act that he knew was likely to cause death. 
+Explanation 1. —A person who causes bodily injury to another who is labouring under a disorder, 
+disease or bodily infirmity, and thereby accelerates the death of that other, shall be deemed to have caused 
+his death. 
+                                                           
+1. Ins. by Act 25 of 1927, s. 2. 
+2. Subs. by the A. O. 1950, for “His Majesty’s subjects”. 
+3. Subs. by Act 41 of 1961, s. 3, for certain words (w.e.f. 27-9-1961). 
+4. Subs. by s. 3, ibid., for “two years”.
+----------------------------------------
+Result 3:
+  Distance: 1.2764
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 115 
+ 
+Explanation 1.—It may amount to defamation to impute anything to a deceased person, if the 
+imputation would harm the reputation of that person if living, and is intended to be hurt ful to the fellings 
+of his family or other near relatives. 
+Explanation 2.—It may amount to defamation to make an imputation concerning a company or an 
+association or collection of persons as such. 
+Explanation 3.—An imputation in the form of an alternative or expressed ironically, may am ount to 
+defamation. 
+Explanation 4.—No imputation is said to harm a person's reputation, unless that imputation directly  
+or indirectly, in the estimation of others, lowers the moral or intellectual  character of that person, or 
+lowers the character of that person in respect of his caste or of his calling, or  lowers the credit of that 
+person, or causes it to be believed that the body of that person is in a loothsome stat e, or in a state 
+generally considered as disgraceful. 
+Illustrations 
+(a) A says— “Z is an honest man; he never stole B's watch ”; intending to cause it to be believed that Z did steal B's watch. 
+This is defamation, unless it fall within one of the exceptions. 
+(b) A is asked who stole B's watch. A points to Z, intending to cause it to  be believed that Z stole B's watch. This is 
+defamation, unless it fall within one of the exceptions. 
+(c) A draws a picture of Z running away with B's watch, intending it to be  believed that Z stole B's watch. This is 
+defamation, unless it fall within one of the exceptions. 
+First Exception.—Imputation of truth which public good requires to be made or published .—It 
+is not defamation to impute anything which is true concerning any person, if it be for the public good that 
+the imputation should be made or published. Whether or not it is for the public good is a question of fact. 
+Second Exception .—Public conduct of public servants .—It is not defamation to express in good 
+faith any opinion whatever respecting the conduct of a public servant in the discharg e of his public 
+functions, or respecting his character, so far as his character appears in that conduct, and no further. 
+Third Exception.—Conduct of any person touching any public question .—It is not defamation to 
+express in good faith any opinion whatever respecting the conduct of any person touching  any public 
+question, and respecting his character, so far as his character appears in that conduct, and no further. 
+Illustration 
+It is not defamation in A to express in good faith any opinion w hatever respecting Z's conduct in petitioning Government on 
+a public question, in signing a requisition for a meeting on a p ublic question, in presiding or attending at such meeting, in 
+forming or joining any society which invites the public support, in  voting or canvassing for a particular candidate for any 
+situation in the efficient discharge of the duties of which the public is interested. 
+Fourth Exception .—Publication of reports of proceedings of courts. —It is not defamation to 
+publish substantially true report of the proceedings of a Court of Justice, or of  the result of any such 
+proceedings. 
+Explanation.—A Justice of the Peace or other officer holding an enquiry in open Court preliminary to 
+a trial in a Court of Justice, is a Court within the meaning of the above section. 
+Fifth Exception .—Merits of case decided in Court or conduct of witnesses and others 
+concerned.—It is not defamation to express in good faith any opinion whatever respecting the merits of 
+any case, civil or criminal, which has been decided by a Court of Justice, or respecting the conduct of any 
+person as a party, witness or agent, in any such case, or respecting the characte r of such person, as far as 
+his character appears in that conduct, and no further. 
+  Illustrations 
+(a) A says —“I think Z's evidence on that trial is so contradictory that he must be stupid  or dishonest. ” A is within this 
+exception if he says this in good faith, inasmuch as the opinion which he expresses respects Z's character as it appears in Z's 
+conduct as a witness, and no farther. 
+(b) But if A says—“I do not believe what Z asserted at that trial because I know him to be a man without veracity”; A is not 
+within this exception, inasmuch as the opinion which express of Z's character, is an opinion not founded on Z's conduct as a 
+witness. 
+Sixth Exception.—Merits of public performance.—It is not defamation to express in good faith any 
+opinion respecting the merits of any performance which its author has submitted to the j udgment of the
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-05 14:55:12
+Query: 'defamation'
+Total Results: 18 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.7951
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 115 
+ 
+Explanation 1.—It may amount to defamation to impute anything to a deceased person, if the 
+imputation would harm the reputation of that person if living, and is intended to be hurt ful to the fellings 
+of his family or other near relatives. 
+Explanation 2.—It may amount to defamation to make an imputation concerning a company or an 
+association or collection of persons as such. 
+Explanation 3.—An imputation in the form of an alternative or expressed ironically, may am ount to 
+defamation. 
+Explanation 4.—No imputation is said to harm a person's reputation, unless that imputation directly  
+or indirectly, in the estimation of others, lowers the moral or intellectual  character of that person, or 
+lowers the character of that person in respect of his caste or of his calling, or  lowers the credit of that 
+person, or causes it to be believed that the body of that person is in a loothsome stat e, or in a state 
+generally considered as disgraceful. 
+Illustrations 
+(a) A says— “Z is an honest man; he never stole B's watch ”; intending to cause it to be believed that Z did steal B's watch. 
+This is defamation, unless it fall within one of the exceptions. 
+(b) A is asked who stole B's watch. A points to Z, intending to cause it to  be believed that Z stole B's watch. This is 
+defamation, unless it fall within one of the exceptions. 
+(c) A draws a picture of Z running away with B's watch, intending it to be  believed that Z stole B's watch. This is 
+defamation, unless it fall within one of the exceptions. 
+First Exception.—Imputation of truth which public good requires to be made or published .—It 
+is not defamation to impute anything which is true concerning any person, if it be for the public good that 
+the imputation should be made or published. Whether or not it is for the public good is a question of fact. 
+Second Exception .—Public conduct of public servants .—It is not defamation to express in good 
+faith any opinion whatever respecting the conduct of a public servant in the discharg e of his public 
+functions, or respecting his character, so far as his character appears in that conduct, and no further. 
+Third Exception.—Conduct of any person touching any public question .—It is not defamation to 
+express in good faith any opinion whatever respecting the conduct of any person touching  any public 
+question, and respecting his character, so far as his character appears in that conduct, and no further. 
+Illustration 
+It is not defamation in A to express in good faith any opinion w hatever respecting Z's conduct in petitioning Government on 
+a public question, in signing a requisition for a meeting on a p ublic question, in presiding or attending at such meeting, in 
+forming or joining any society which invites the public support, in  voting or canvassing for a particular candidate for any 
+situation in the efficient discharge of the duties of which the public is interested. 
+Fourth Exception .—Publication of reports of proceedings of courts. —It is not defamation to 
+publish substantially true report of the proceedings of a Court of Justice, or of  the result of any such 
+proceedings. 
+Explanation.—A Justice of the Peace or other officer holding an enquiry in open Court preliminary to 
+a trial in a Court of Justice, is a Court within the meaning of the above section. 
+Fifth Exception .—Merits of case decided in Court or conduct of witnesses and others 
+concerned.—It is not defamation to express in good faith any opinion whatever respecting the merits of 
+any case, civil or criminal, which has been decided by a Court of Justice, or respecting the conduct of any 
+person as a party, witness or agent, in any such case, or respecting the characte r of such person, as far as 
+his character appears in that conduct, and no further. 
+  Illustrations 
+(a) A says —“I think Z's evidence on that trial is so contradictory that he must be stupid  or dishonest. ” A is within this 
+exception if he says this in good faith, inasmuch as the opinion which he expresses respects Z's character as it appears in Z's 
+conduct as a witness, and no farther. 
+(b) But if A says—“I do not believe what Z asserted at that trial because I know him to be a man without veracity”; A is not 
+within this exception, inasmuch as the opinion which express of Z's character, is an opinion not founded on Z's conduct as a 
+witness. 
+Sixth Exception.—Merits of public performance.—It is not defamation to express in good faith any 
+opinion respecting the merits of any performance which its author has submitted to the j udgment of the
+----------------------------------------
+Result 2:
+  Distance: 0.9670
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 116 
+ 
+public, or respecting the character of the author so far as his character app ears in such performance, and 
+no further. 
+Explanation.—A performance may be submitted to the judgment of the public expressly or by acts on 
+the part of the author which imply such submission to the judgment of the public. 
+Illustrations 
+(a) A person who publishes a book, submits that book to the judgment of the public. 
+(b) A person who makes a speech in public, submits that speech to the judgment of the public. 
+(c) An actor or singer who appears on a public stage, submits his acting or singing to the judgment of the public. 
+(d) A says of a book published by Z —“Z’s book is foolish; Z must be a weak man. Z's book is indecent; Z mu st be a man 
+of impure mind ”. A is within the exception, if he says this in good faith, inasm uch as the opinion which he expresses of Z 
+respects Z's character only so far as it appears in Z's book, and no further. 
+(e) But if A says “I am not surprised that Z's book is foolish and indecent, for he is a weak man and a libertine ”. A is not 
+within this exception, in as much as the opinion which he expresses of Z's character is an opinion not founded on Z's book. 
+Seventh Exception .—Censure passed in good faith by person having lawful authority over 
+another.—It is not defamation in a person having over another any authority, either conferr ed by law or 
+arising out of a lawful contract made with that other, to pass in good faith any censure on the conduct of 
+that other in matters to which such lawful authority relates. 
+Illustration 
+A Judge censuring in good faith the conduct of a witness, or o f an officer of the Court; a head of a department censuring in 
+good faith those who are under his orders, a parent censuring in goo d faith a child in the presence of other children; a 
+schoolmaster, whose authority is derived from a parent, censuring in g ood faith a pupil in the presence of other pupils; a master 
+censuring a servant in good faith for remissness in service; a banker ce nsuring in good faith the cashier of his bank for the 
+conduct of such cashier as such cashier- are within this exception. 
+Eighth Exception .—Accusation preferred in good faith to authorised person .—It is not 
+defamation to prefer in good faith an accusation against any person to any of those who have lawful 
+authority over that person with respect to the subject-matter of accusation. 
+Illustration 
+If A in good faith accuses Z before a Magistrate; if A in good faith complains of the conduct of Z, a servant, to Z's master; if 
+A in good faith complains of the conduct of Z, a child, to Z's father-A is within this exception. 
+Ninth Exception .—Imputation made in good faith by person for protection of his or other's 
+interests.—It is not defamation to make an imputation on the character of another provided that  the 
+imputation be made in good faith for the protection of the interest s of the person making it, or of any 
+other person, or for the public good. 
+Illustrations 
+(a) A, a shopkeeper, says to B, who manages his business —“Sell nothing to Z unless he pays you ready money, for I have 
+no opinion of his honesty. ” A is within the exception, if he has made this imputation on Z in go od faith for the protection of his 
+own interests. 
+(b) A, a Magistrate, in making a report to his own superior officer, casts a n imputation on the character of Z. Here, if the 
+imputation is made in good faith, and for the public good, A is within the exception. 
+Tenth Exception.—Caution intended for good of person to whom conveyed or for public good .—
+It is not defamation to convey a caution, in good faith, to one person against another , provided that such 
+caution be intended for the good of the person to whom it is conveyed, or of some person i n whom that 
+person is interested, or for the public good. 
+500. Punishment for defamation .—Whoever defames another shall be punished with simple 
+imprisonment for a term which may extend to two years, or with fine, or with both. 
+501. Printing or engraving matter known to be defamatory .—Whoever prints or engraves any 
+matter, knowing or having good reason to believe that such matter is defamatory of any per son, shall be 
+punished with simple imprisonment for a term which may extend to two years, or with fine, or with both. 
+502. Sale of printed or engraved substance containing defamatory matter .—Whoever sells or 
+offers for sale any printed or engraved substance containing defamatory matter , knowing that it contains
+----------------------------------------
+Result 3:
+  Distance: 0.9985
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of either description for a ter m which may extend to 
+two years, or with fine, or with both; 
+If threat be to cause death or grievous hurt, etc .—and if the threat be to cause death or grievous 
+hurt, or to cause the destruction of any property by fire, or to cause an offence puni shable with death or 
+1[imprisonment for life], or with imprisonment for a term which may extend to seven years, or to impute 
+unchastity to a woman, shall be punished with imprisonment of either description for a term which may 
+extend to seven years, or with fine, or with both. 
+507. Criminal intimidation by an anonymous communication .—Whoever commits the offence of 
+criminal intimidation by an anonymous communication, or having taken precaution to conceal the name 
+or abode of the person from whom the threat comes, shall be punished with imprisonment of either 
+description for a term which may extend to two years, in addition to the punis hment provided for the 
+offence by the last preceding section. 
+508. Act caused by inducing person to believe that he will be rendered an object of the D ivine 
+displeasure.—Whoever voluntarily causes or attempts to cause any person to do anything which that 
+person is not legally bound to do, or to omit to do anything which he is legally entitled to do, by inducing 
+or attempting to induce that person to believe that he or any person in whom he is interested will become 
+or will be rendered by some act of the offender an object of Divine displeasure if he does not do the thing 
+which it is the object of the offender to cause him to do, or if he does the thing which it is the object of the 
+offender to cause him to omit, shall be punished with imprisonment of either description for a term which 
+may extend to one year, or with fine, or with both. 
+Illustrations 
+(a) A sits dhurna at Z's door with the intention of causing it to be beli eved that, by so sitting, he renders Z an object of 
+Divine displeasure. A has committed the offence defined in this section. 
+(b) A threatens Z that, unless Z performs a certain act, A will kill one of A's own children, under such circumstances that the 
+killing would be believed to render Z an object of Divine displeasure. A has committed the offence defined in this section. 
+509. Word, gesture or act intended to insult the modesty of a woman .—Whoever, intending to 
+insult the modesty of any woman, utters any words, makes any sound or gesture, or exhi bits any object, 
+intending that such word or sound shall be heard, or that such gesture or object shall  be seen, by such 
+woman, or intrudes upon the privacy of such woman, 2[shall be punished with simple imprisonment for a 
+term which may extend to three years, and also with fine]. 
+STATE AMENDMENT 
+Chhattisgarh  
+After Section 509 of the Penal Code, the following shall be inserted, namely: — 
+509A. Sexual harassment by relative. —Whoever, being related to a woman through blood, 
+adoption or marriage, and not being her husband, takes the advantage of his proximity and induces , 
+seduces or threatens such woman with intent to insult her modesty by word, gestur e or act shall be 
+punished with rigorous imprisonment which shall not be less than one year but which may extend to five 
+years and shall also liable to fine. 
+509B. Sexual harassment by electronic mode. —Whoever, by means of telecommunication device 
+or by any other electronic mode including internet, makes creates, solicits or init iates the transmission of 
+any comment, request, suggestion, proposal, image or other communication, which is obscene, l ewd, 
+lascivious, filthy or indecent with intent to harass or cause or having k nowledge that it would harass or 
+cause annoyance or mental agony to a woman shall be punished with rigorous imprisonment  for a term 
+which shall not be less than six months but may extend to two years and shall also be liable to fine. 
+[Vide Chhattisgarh Act 25 of 2015, sec. 6]. 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. Subs. by Act 13 of 2013, s. 10, for “shall be punished with simple imprisonment for a term which may exten d to one year, or 
+with fine, or with both” (w.e.f. 3-2-2013).
+----------------------------------------
+
+================================================================================
+
