@@ -13,6 +13,9 @@ class Constants:
     # OpenAI
     OPENAI_API_KEY = None
     
+    # Google
+    GOOGLE_API_KEY = None
+    
     # HuggingFace
     HUGGINGFACE_API_TOKEN = None
     
@@ -35,7 +38,8 @@ class Constants:
     ##################################################################
     # LLM Model
     ##################################################################
-    LLM_MODEL_NAME = "gpt-4o-mini"
+    # LLM_MODEL_NAME = "gpt-4o-mini"
+    LLM_MODEL_NAME = "gemini-2.0-flash-exp"
     LLM_PROMPT_SYSTEM = """
     You are a legal AI assistant specializing in Indian Constitution and Indian Penal Code (IPC).
     
@@ -124,13 +128,14 @@ class Constants:
         Constants.MILVUS_URI_DB_IPC = os.getenv("MILVUS_URI_DB_IPC")
         Constants.MILVUS_TOKEN_DB_IPC = os.getenv("MILVUS_TOKEN_DB_IPC")
         Constants.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+        Constants.GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
         Constants.HUGGINGFACE_API_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN")
         
-        if(Constants.OPENAI_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
+        if(Constants.OPENAI_API_KEY is None)  | (Constants.GOOGLE_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
             raise Exception("Env variables not set")
 
     def check_env_variables():
-         if(Constants.OPENAI_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
+         if(Constants.OPENAI_API_KEY is None) | (Constants.GOOGLE_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
             raise Exception("Env variables not set")
          else:
             print("Env variables set")

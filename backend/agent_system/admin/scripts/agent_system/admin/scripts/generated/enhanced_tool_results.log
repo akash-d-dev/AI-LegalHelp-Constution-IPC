@@ -1,0 +1,556 @@
+
+========================================================================================================================
+ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG
+Timestamp: 2025-06-05 17:46:27
+Query: 'constitutional protections for freedom of speech and expression under Article 19, and how they interact with IPC provisions on hate speech and defamation? Specifically, what are the reasonable restrictions on free speech, and what are the potential legal consequences for violating these restrictions?'
+========================================================================================================================
+
+CROSS-DATABASE SEARCH SUMMARY:
+Constitution Results: 5
+IPC Results: 5
+Final Fused Results: 8
+
+CROSS-DATABASE ANALYSIS:
+Database Distribution: {'constitution': 3, 'ipc': 5, 'constitution_percentage': 37.5, 'ipc_percentage': 62.5}
+Strategy Distribution: {'domain_variant_1': 8}
+Cross-Relevance Score: 0.225
+Domain Balance: balanced
+
+ENHANCED RESULTS DETAILS:
+Result 1:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2622
+  Original Composite Score: 0.2902
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.6674
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other similar activity intending that the 
+participants in such activity shall use or be trained to use cr...
+------------------------------------------------------------
+Result 2:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2522
+  Original Composite Score: 0.2902
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6674
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to F...
+------------------------------------------------------------
+Result 3:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2433
+  Original Composite Score: 0.2791
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6302
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of either description for a ter m which may extend to 
+two years, or with fine, or with both; 
+If threa...
+------------------------------------------------------------
+Result 4:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2349
+  Original Composite Score: 0.2686
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5953
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)9(5) Nothing in this article shall affect the operation of any law which provides that the incumbent of an office in connection with the affairs of any religious or denominational institution or any member of the governing body thereof shall be a person professing a particular religion or belonging to a particular denomination.1[(6) Nothing i...
+------------------------------------------------------------
+Result 5:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2260
+  Original Composite Score: 0.2574
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5581
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 117 
+ 
+such matter, shall be punished with simple imprisonment for a term which may  extend to two years, or 
+with fine, or with both. 
+CHAPTER XXII 
+OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE 
+503. Criminal intimidation.—Whoever threatens another with any injury to his person, reputation or 
+property, or to the person or reputation of any one in whom that person is int erested, with intent to...
+------------------------------------------------------------
+Result 6:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2237
+  Original Composite Score: 0.2547
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5488
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either description for a term which may extent to two years, or with fine, or with both. 
+146. Rioting .—W...
+------------------------------------------------------------
+Result 7:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2215
+  Original Composite Score: 0.2519
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5395
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 93 
+ 
+(b) a public servant; or 
+(c) superintendent or manager of a jail, remand home or other place of custody establi shed by or 
+under any law for the time being in force, or a women's or children's institution; or 
+(d) on the management of a hospital or being on the staff of a hospital,  
+abuses such position or fiduciary relationship to induce or seduce any woman either in his custody or 
+unde...
+------------------------------------------------------------
+Result 8:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2164
+  Original Composite Score: 0.2330
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.4767
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain ...
+------------------------------------------------------------
+
+========================================================================================================================
+
+
+========================================================================================================================
+ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG
+Timestamp: 2025-06-05 17:47:23
+Query: 'How do fundamental rights under the Constitution balance with criminal law provisions? What happens when constitutional freedoms conflict with IPC sections on public order and morality?'
+========================================================================================================================
+
+CROSS-DATABASE SEARCH SUMMARY:
+Constitution Results: 5
+IPC Results: 5
+Final Fused Results: 8
+
+CROSS-DATABASE ANALYSIS:
+Database Distribution: {'constitution': 4, 'ipc': 4, 'constitution_percentage': 50.0, 'ipc_percentage': 50.0}
+Strategy Distribution: {'domain_variant_2': 3, 'domain_variant_1': 4, 'expanded_parameters': 1}
+Cross-Relevance Score: 0.500
+Domain Balance: balanced
+
+ENHANCED RESULTS DETAILS:
+Result 1:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.3621
+  Original Composite Score: 0.4277
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6538
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to F...
+------------------------------------------------------------
+Result 2:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.3074
+  Original Composite Score: 0.3342
+  Cross-DB Bonus: 0.2000
+  Domain Score: 0.4692
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)11(6) Nothing in sub-clause (g) of the said clause shall affect the operation of any existing law in so far as it imposes, or prevent the State from making any law imposing, in the interests of the general public, reasonable restrictions on the exercise of the right conferred by the said sub-clause, and, in particular, 1[nothing in the said s...
+------------------------------------------------------------
+Result 3:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2655
+  Original Composite Score: 0.2944
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.4692
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India.13. Laws inconsistent with or in derogation of the fundamenta...
+------------------------------------------------------------
+Result 4:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2550
+  Original Composite Score: 0.2938
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5231
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 59 
+ 
+with 1[imprisonment for life] or with imprisonment of either description for a ter m which may extend to 
+fourteen years, with or without fine, if the person in confinement, or who ought to have been 
+apprehended, is under sentence of death; or 
+ with imprisonment of either description for a term which may extend to seven year s, with or without 
+fine, if the person in confinement, or who ou...
+------------------------------------------------------------
+Result 5:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2489
+  Original Composite Score: 0.2862
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6538
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 99 
+ 
+person, or attempts to cause death or grievous hurt to any person, the imprison ment with which such 
+offender shall be punished shall not be less than seven years. 
+398. Attempt to commit robbery or dacoity when armed with deadly weapon .—If, at the time of 
+attempting to commit robbery or dacoity, the offender is armed with any deadly weapon, the 
+imprisonment with which such offender shal...
+------------------------------------------------------------
+Result 6:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2454
+  Original Composite Score: 0.2692
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.7308
+  Search Strategy: expanded_parameters
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other similar activity intending that the 
+participants in such activity shall use or be trained to use cr...
+------------------------------------------------------------
+Result 7:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2397
+  Original Composite Score: 0.2746
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6154
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.(2) The Supreme Court shall have power to issue directions or orders or writs, including writs in the natur...
+------------------------------------------------------------
+Result 8:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2329
+  Original Composite Score: 0.2662
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5846
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either description for a term which may extent to two years, or with fine, or with both. 
+146. Rioting .—W...
+------------------------------------------------------------
+
+========================================================================================================================
+
+
+========================================================================================================================
+ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG
+Timestamp: 2025-06-05 17:52:10
+Query: 'constitutional protections for freedom of speech and expression under Article 19, and how they interact with IPC provisions on hate speech and defamation? Specifically, what are the reasonable restrictions on free speech, and what are the potential legal consequences for violating these restrictions?'
+========================================================================================================================
+
+CROSS-DATABASE SEARCH SUMMARY:
+Constitution Results: 5
+IPC Results: 5
+Final Fused Results: 8
+
+CROSS-DATABASE ANALYSIS:
+Database Distribution: {'constitution': 3, 'ipc': 5, 'constitution_percentage': 37.5, 'ipc_percentage': 62.5}
+Strategy Distribution: {'domain_variant_1': 8}
+Cross-Relevance Score: 0.225
+Domain Balance: balanced
+
+ENHANCED RESULTS DETAILS:
+Result 1:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2622
+  Original Composite Score: 0.2902
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.6674
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other similar activity intending that the 
+participants in such activity shall use or be trained to use cr...
+------------------------------------------------------------
+Result 2:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2522
+  Original Composite Score: 0.2902
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6674
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to F...
+------------------------------------------------------------
+Result 3:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2433
+  Original Composite Score: 0.2791
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6302
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of either description for a ter m which may extend to 
+two years, or with fine, or with both; 
+If threa...
+------------------------------------------------------------
+Result 4:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2349
+  Original Composite Score: 0.2686
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5953
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)9(5) Nothing in this article shall affect the operation of any law which provides that the incumbent of an office in connection with the affairs of any religious or denominational institution or any member of the governing body thereof shall be a person professing a particular religion or belonging to a particular denomination.1[(6) Nothing i...
+------------------------------------------------------------
+Result 5:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2260
+  Original Composite Score: 0.2574
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5581
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 117 
+ 
+such matter, shall be punished with simple imprisonment for a term which may  extend to two years, or 
+with fine, or with both. 
+CHAPTER XXII 
+OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE 
+503. Criminal intimidation.—Whoever threatens another with any injury to his person, reputation or 
+property, or to the person or reputation of any one in whom that person is int erested, with intent to...
+------------------------------------------------------------
+Result 6:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2237
+  Original Composite Score: 0.2547
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5488
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either description for a term which may extent to two years, or with fine, or with both. 
+146. Rioting .—W...
+------------------------------------------------------------
+Result 7:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2215
+  Original Composite Score: 0.2519
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5395
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: 93 
+ 
+(b) a public servant; or 
+(c) superintendent or manager of a jail, remand home or other place of custody establi shed by or 
+under any law for the time being in force, or a women's or children's institution; or 
+(d) on the management of a hospital or being on the staff of a hospital,  
+abuses such position or fiduciary relationship to induce or seduce any woman either in his custody or 
+unde...
+------------------------------------------------------------
+Result 8:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2164
+  Original Composite Score: 0.2330
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.4767
+  Search Strategy: domain_variant_1
+  Query Variant: constitutional protections for freedom of speech and express...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain ...
+------------------------------------------------------------
+
+========================================================================================================================
+
+
+========================================================================================================================
+ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG
+Timestamp: 2025-06-05 17:52:59
+Query: 'How do fundamental rights under the Constitution balance with criminal law provisions? What happens when constitutional freedoms conflict with IPC sections on public order and morality?'
+========================================================================================================================
+
+CROSS-DATABASE SEARCH SUMMARY:
+Constitution Results: 5
+IPC Results: 5
+Final Fused Results: 8
+
+CROSS-DATABASE ANALYSIS:
+Database Distribution: {'constitution': 4, 'ipc': 4, 'constitution_percentage': 50.0, 'ipc_percentage': 50.0}
+Strategy Distribution: {'domain_variant_2': 3, 'domain_variant_1': 4, 'expanded_parameters': 1}
+Cross-Relevance Score: 0.500
+Domain Balance: balanced
+
+ENHANCED RESULTS DETAILS:
+Result 1:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.3621
+  Original Composite Score: 0.4277
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6538
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to F...
+------------------------------------------------------------
+Result 2:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.3074
+  Original Composite Score: 0.3342
+  Cross-DB Bonus: 0.2000
+  Domain Score: 0.4692
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)11(6) Nothing in sub-clause (g) of the said clause shall affect the operation of any existing law in so far as it imposes, or prevent the State from making any law imposing, in the interests of the general public, reasonable restrictions on the exercise of the right conferred by the said sub-clause, and, in particular, 1[nothing in the said s...
+------------------------------------------------------------
+Result 3:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2655
+  Original Composite Score: 0.2944
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.4692
+  Search Strategy: domain_variant_2
+  Query Variant: fundamental rights How do fundamental rights under the Const...
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India.13. Laws inconsistent with or in derogation of the fundamenta...
+------------------------------------------------------------
+Result 4:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2550
+  Original Composite Score: 0.2938
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5231
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 59 
+ 
+with 1[imprisonment for life] or with imprisonment of either description for a ter m which may extend to 
+fourteen years, with or without fine, if the person in confinement, or who ought to have been 
+apprehended, is under sentence of death; or 
+ with imprisonment of either description for a term which may extend to seven year s, with or without 
+fine, if the person in confinement, or who ou...
+------------------------------------------------------------
+Result 5:
+  Source Database: IPC
+  Collection: ipc_2
+  Enhanced Composite Score: 0.2489
+  Original Composite Score: 0.2862
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6538
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 99 
+ 
+person, or attempts to cause death or grievous hurt to any person, the imprison ment with which such 
+offender shall be punished shall not be less than seven years. 
+398. Attempt to commit robbery or dacoity when armed with deadly weapon .—If, at the time of 
+attempting to commit robbery or dacoity, the offender is armed with any deadly weapon, the 
+imprisonment with which such offender shal...
+------------------------------------------------------------
+Result 6:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2454
+  Original Composite Score: 0.2692
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.7308
+  Search Strategy: expanded_parameters
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other similar activity intending that the 
+participants in such activity shall use or be trained to use cr...
+------------------------------------------------------------
+Result 7:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.2397
+  Original Composite Score: 0.2746
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.6154
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.(2) The Supreme Court shall have power to issue directions or orders or writs, including writs in the natur...
+------------------------------------------------------------
+Result 8:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.2329
+  Original Composite Score: 0.2662
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.5846
+  Search Strategy: domain_variant_1
+  Query Variant: How do fundamental rights under the Constitution balance wit...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either description for a term which may extent to two years, or with fine, or with both. 
+146. Rioting .—W...
+------------------------------------------------------------
+
+========================================================================================================================
+

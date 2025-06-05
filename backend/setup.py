@@ -75,6 +75,7 @@ setup(
         "zstandard==0.23.0",
         "langgraph",
         "langchain-openai",
+        "langchain-google-genai",
         "langchain-huggingface>=0.1.0"
     ],
 ) 

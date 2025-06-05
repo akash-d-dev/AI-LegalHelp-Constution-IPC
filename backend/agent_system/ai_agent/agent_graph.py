@@ -10,6 +10,7 @@ from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage, AIMessage
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from agent_system.utils.Constants import Constants
 
 from .tools import tools
@@ -68,7 +69,8 @@ def build_graph() -> StateGraph:
     
     # Initialize LLM with tools
     logger.info(f"🤖 Initializing LLM with model: {Constants.LLM_MODEL_NAME}")
-    llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
+    # llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
+    llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.GOOGLE_API_KEY).bind_tools(tools)
     logger.info(f"🛠️ LLM bound with {len(tools)} tools: {[tool.name for tool in tools]}")
     
     # Create tools dictionary for easy lookup

@@ -519,21 +519,21 @@ class MilvusVectorDB:
                 all_results.extend(l2_results)
                 search_strategies.append(f"L2 Standard: {len(l2_results)}")
                 
-                # Strategy 2: Cosine similarity search (if supported)
+                # Strategy 2: L2 search with different parameters (since COSINE not supported)
                 try:
-                    cosine_results = self.client.search_similar(
+                    varied_results = self.client.search_similar(
                         collection_name=collection_name,
                         query_embedding=embedding,
                         top_k=top_k,
-                        search_params={"metric_type": "COSINE", "params": {}}
+                        search_params={"metric_type": "L2", "params": {"nprobe": 12}}
                     )
-                    for result in cosine_results:
-                        result['search_type'] = 'cosine'
+                    for result in varied_results:
+                        result['search_type'] = 'l2_varied'
                         result['collection'] = collection_name
-                    all_results.extend(cosine_results)
-                    search_strategies.append(f"Cosine: {len(cosine_results)}")
+                    all_results.extend(varied_results)
+                    search_strategies.append(f"L2 Varied: {len(varied_results)}")
                 except Exception as e:
-                    logger.debug(f"Cosine search not available for {collection_name}: {e}")
+                    logger.debug(f"L2 varied search error for {collection_name}: {e}")
                 
                 # Strategy 3: Higher top_k with different filtering
                 expanded_results = self.client.search_similar(
@@ -769,28 +769,38 @@ class MilvusVectorDB:
         return unique_variants[:6]  # Limit to avoid excessive searches
     
     def _multi_metric_search(self, query: str, top_k: int) -> List[Dict[str, Any]]:
-        """Search using multiple distance metrics for diverse results."""
+        """Search using L2 metric with varied parameters for diverse results."""
         _, embedding = self.embedder.generate_embeddings([query])
         embedding = embedding[0]
         
         all_results = []
-        metrics = [("L2", "L2"), ("COSINE", "COSINE"), ("IP", "IP")]
         
-        for metric_name, metric_type in metrics:
+        # Use only L2 metric (which your collections support) but with different search parameters
+        search_strategies = [
+            {"name": "L2_standard", "params": {"nprobe": 10}},
+            {"name": "L2_precise", "params": {"nprobe": 16}},
+            {"name": "L2_broad", "params": {"nprobe": 6}}
+        ]
+        
+        for strategy in search_strategies:
             for collection_name in self.collection_names:
                 try:
                     results = self.client.search_similar(
                         collection_name=collection_name,
                         query_embedding=embedding,
                         top_k=top_k,
-                        search_params={"metric_type": metric_type, "params": {}}
+                        search_params={
+                            "metric_type": "L2", 
+                            "params": strategy["params"]
+                        }
                     )
                     for result in results:
-                        result['search_type'] = f'multi_metric_{metric_name.lower()}'
+                        result['search_type'] = f'multi_metric_{strategy["name"].lower()}'
                         result['collection'] = collection_name
                     all_results.extend(results)
+                    logger.debug(f"✅ {strategy['name']} search found {len(results)} results from {collection_name}")
                 except Exception as e:
-                    logger.debug(f"Metric {metric_name} not supported for {collection_name}: {e}")
+                    logger.error(f"Failed to search collection {collection_name} with {strategy['name']}: {e}")
                     continue
         
         return all_results
