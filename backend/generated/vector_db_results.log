@@ -1,0 +1,33 @@
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 18:02:11
+Query: 'Article 370'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.9219
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: 371
+APPENDIX III1DECLRATION UNDER ARTICLE 370(3) OF THE CONSTITUTIONC.O. 273In exercise of the powers conferred by clause (3) of article 370  read with clause (1) of article 370 of the Constitution of India, the President, on the recommendation of Parliament, is pleased to declare that, as from the 6thAugust, 2019, all clauses of the said article 370 shall cease to be operative except  the following which shall read as under, namely:— “370. All provisions of this Constitution, as amended from time to time, without any modifications or exceptions, shall apply to the State of Jammu and Kashmir notwithstanding anything contrary contained in article 152 or article 308 or any other article of this Constitution or any other provision of the Constitution of Jammu and Kashmir or any law, document, judgement, ordinance, order, by-law, rule, regulation, notification, custom or usage having the force of law in the territory of India, or any other instrument, treaty or agreement as envisaged under article 363 or otherwise.”.______________________________________________1.Published with the Ministry of Law and Justice, (Legislative Department) notification No. G.S.R. 562(E), dated the 6th August, 2019, Gazette of India, Extraordinary, Part II, Section 3, Sub-section (i).
+----------------------------------------
+Result 2:
+  Distance: 0.9334
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain directive principles.[31D. Saving of laws in respect of anti-national activities.—Omitted.] Right to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.[32A. Constitutional validity of State laws not to be considered in proceedings under article 32.—Omitted.]33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc. 34. Restriction on rights conferred by this Part while martial law is in force in any area.35. Legislation to give effect to the provisions of this Part.PART IVDIRECTIVE PRINCIPLES OF STATE POLICY36. Definition.37. Application of the principles contained in this Part.38.State to secure a social order for the promotion of welfare of the people.39. Certain principles of policy to be followed by the State.39A. Equal justice and free legal aid.
+----------------------------------------
+Result 3:
+  Distance: 0.9732
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3621 2 3 4 5      6 52.Kharkharia15PatgramMekliganj60.7453. Kharkharia 13Patgram Mekliganj 51.6254.Lotamari14PatgramMekliganj110.9255.Bhotbari16PatgramMekliganj205.4656.Komat Changrabandha16APatgramMekliganj42.857. Komat Changrabandha17A Patgram Mekliganj 16.0158.Panisala17PatgramMekliganj137.6659.Dwarikamari Khasbash18PatgramMekliganj36.560. Panisala 153/PPatgram Mekliganj 0.2761.Panisala153/OPatgramMekliganj18.0162.Panisala19PatgramMekliganj64.6363.Panisala21PatgramMekliganj51.464.Lotamari20PatgramMekliganj283.5365.Lotamari22PatgramMekliganj98.8566.Dwarikamari23PatgramMekliganj39.5267.Dwarikamari25PatgramMekliganj45.7368.Chhat Bhothat24PatgramMekliganj56.1169.Baakata131PatgramHathabhanga22.3570.Baakata132PatgramHathabhanga11.9671.Baakata130PatgramHathibhanga20.4872. Bhogramguri 133 Patgram Hathibhanga1.4473.Chenakata134PatgramMekliganj7.8174.Banskata119PatgramMathabanga413.8175.Banskata120PatgramMathabanga30.7576.Banskata121PatgramMathabanga12.1577.Banskata113PatgramMathabanga57.8678.Banskata112PatgramMathabanga315.0479.Banskata114PatgramMathabanga0.77
+----------------------------------------
+
+================================================================================
+

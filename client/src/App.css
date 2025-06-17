@@ -371,6 +371,7 @@ html, body {
   /* background-color: #1e40af; */
   /* color: white; */
   border-bottom-left-radius: 0.25rem;
+  padding: 0;
 }
 
 .agent-message .message-content {

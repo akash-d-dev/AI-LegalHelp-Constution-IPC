@@ -6,7 +6,7 @@ class ApiService {
   constructor() {
     this.axiosInstance = axios.create({
       baseURL: API_BASE_URL,
-      timeout: 30000, // 30 seconds timeout for agent responses
+      timeout: 3 * 60 * 1000, // 3 minutes timeout for agent responses
       headers: {
         'Content-Type': 'application/json',
       },
@@ -39,15 +39,23 @@ class ApiService {
 
   async sendMessage(message, chatHistory = []) {
     try {
-      const response = await this.axiosInstance.post('/chat', {
+      // Convert frontend chat history to the expected format
+      const formattedHistory = chatHistory.map(msg => ({
+        content: msg.content,
+        sender: msg.sender,
+        timestamp: msg.timestamp
+      }));
+
+      const response = await this.axiosInstance.post('/api/v1/chat', {
         message,
-        chat_history: chatHistory,
+        chat_history: formattedHistory,
         timestamp: new Date().toISOString(),
       });
       
       return response.data;
     } catch (error) {
       throw new Error(
+        error.response?.data?.detail || 
         error.response?.data?.message || 
         error.message || 
         'Failed to send message'
@@ -80,7 +88,7 @@ class ApiService {
   // Health check for the backend
   async healthCheck() {
     try {
-      const response = await this.axiosInstance.get('/health');
+      const response = await this.axiosInstance.get('/api/v1/health');
       return response.data;
     } catch (error) {
       throw new Error(`Backend is not available: ${error.message}`);

@@ -38,7 +38,7 @@ class Constants:
     ##################################################################
     # LLM Model
     ##################################################################
-    # LLM_MODEL_NAME = "gpt-4o-mini"
+   #  LLM_MODEL_NAME = "gpt-4o-mini"
     LLM_MODEL_NAME = "gemini-2.0-flash-exp"
     LLM_PROMPT_SYSTEM = """
     You are a legal AI assistant specializing in Indian Constitution and Indian Penal Code (IPC).

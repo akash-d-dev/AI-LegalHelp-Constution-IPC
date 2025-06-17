@@ -69,8 +69,14 @@ def build_graph() -> StateGraph:
     
     # Initialize LLM with tools
     logger.info(f"🤖 Initializing LLM with model: {Constants.LLM_MODEL_NAME}")
-    # llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
-    llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.GOOGLE_API_KEY).bind_tools(tools)
+    
+    if Constants.LLM_MODEL_NAME == "gpt-4o-mini":
+        llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
+    elif Constants.LLM_MODEL_NAME == "gemini-2.0-flash-exp":
+        llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.GOOGLE_API_KEY).bind_tools(tools)
+    else:
+        raise ValueError(f"Invalid LLM model: {Constants.LLM_MODEL_NAME}")
+    
     logger.info(f"🛠️ LLM bound with {len(tools)} tools: {[tool.name for tool in tools]}")
     
     # Create tools dictionary for easy lookup
