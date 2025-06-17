@@ -55,7 +55,7 @@ html, body {
   color: #e2e8f0;
   text-align: center;
   padding: 0.25rem;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   border-top: 1px solid #475569;
 }
 
@@ -449,7 +449,7 @@ html, body {
 .chat-input-container {
   border-top: 1px solid #e2e8f0;
   background-color: #ffffff;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem .75rem;
   width: 100%;
   position: relative;
   flex-shrink: 0;
@@ -577,6 +577,7 @@ html, body {
   overflow-y: auto;
   background: transparent;
   color: #1e293b;
+  scrollbar-color: #ffffff #ffffff;
 }
 
 .message-input::placeholder {
@@ -592,15 +593,15 @@ html, body {
   background-color: #1e40af;
   border: none;
   color: white;
-  padding: 0.75rem;
+  padding: 0.75rem 0.5rem; 
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 44px;
-  height: 44px;
+  min-width: 32px;
+  height: 32px;
 }
 
 .send-button:hover:not(:disabled) {
@@ -634,7 +635,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.35rem;
   font-size: 0.75rem;
   border-top: 1px solid #e2e8f0;
 }

@@ -9,11 +9,11 @@ function App() {
         <ChatContainer />
       </main>
       
-      <footer className="app-footer">
+      {/* <footer className="app-footer">
         <p>
           © 2024 Constitutional AI - Educational tool for Indian Constitution & IPC
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

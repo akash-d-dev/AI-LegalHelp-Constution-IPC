@@ -52,7 +52,7 @@ const ChatContainer = () => {
       
       {connectionStatus === 'disconnected' && (
         <div className="connection-status offline">
-          <WifiOff size={16} />
+          <WifiOff size={12} />
           <span>Offline Mode - Messages saved locally</span>
         </div>
       )}
