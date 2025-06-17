@@ -5,7 +5,7 @@ Configuration settings for the Constitutional AI Chat API
 import os
 from typing import List
 from pydantic_settings import BaseSettings
-from pydantic import validator
+from pydantic import field_validator
 
 class Settings(BaseSettings):
     """Application settings"""
@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     
     # Agent settings
     MAX_CHAT_HISTORY: int = 5  # Only send last 5 interactions to AI
-    AGENT_TIMEOUT: int = 30  # Timeout for agent responses in seconds
+    AGENT_TIMEOUT: int = 6 * 60  # Timeout for agent responses in seconds
     
     # Database settings (for future MongoDB integration)
     DATABASE_URL: str = "mongodb://localhost:27017/constitutional_ai"
@@ -44,14 +44,14 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     LOG_FORMAT: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     
-    @validator("ALLOWED_ORIGINS", pre=True)
+    @field_validator("ALLOWED_ORIGINS", mode='before')
     def assemble_cors_origins(cls, v):
         """Validate and process CORS origins"""
         if isinstance(v, str):
             return [i.strip() for i in v.split(",")]
         return v
     
-    @validator("ENVIRONMENT")
+    @field_validator("ENVIRONMENT")
     def validate_environment(cls, v):
         """Validate environment setting"""
         if v not in ["development", "staging", "production"]:

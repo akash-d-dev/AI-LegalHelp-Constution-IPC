@@ -31,3 +31,367 @@ Result 3:
 
 ================================================================================
 
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 18:48:45
+Query: 'Section 302'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.4463
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 60 
+ 
+1[225A. Omission to apprehend, or sufferance of escape, on part of public servant, in cases not 
+otherwise, provided for. —Whoever, being a public servant legally bound as such public servant to 
+apprehend, or to keep in confinement, any person in any case not provided for in secti on 221, section 222 
+or section 223, or in any other law for the time being in force, omits to appr ehend that person or suffers 
+him to escape from confinement, shall be punished— 
+(a) if he does so intentionally, with imprisonment of either description for a te rm which may 
+extend to three years, or with fine, or with both; and 
+(b) if he does so negligently, with simple imprisonment for a term which may extend to two 
+years, or with fine, or with both. 
+225B. Resistance or obstruction to lawful apprehension, or escape or rescue in cases not 
+otherwise provided for.—Whoever, in any case not provided for in section 224 or section 225 or in any 
+other law for the time being in force, intentionally offers any resistance or illegal obstruction to the lawful 
+apprehension of himself or of any other person, or escapes or attempts to escape from  any custody in 
+which he is lawfully detained, or rescues or attempts to rescue any other person from any custody in 
+which that person is lawfully detained, shall be punished with imprisonment of either des cription for a 
+term which may extend to six months, or with fine, or with both.] 
+226. [Unlawful return from transportation. ] Rep. by the Code of Criminal Procedure (Amendment) 
+Act, 1955 (26 of 1955), s. 117 and the Sch. (w.e.f. 1-1-1956). 
+227. Violation of condition of remission of punishment .—Whoever, having accepted an y 
+conditional remission of punishment, knowingly violates any condition on which such remission  was 
+granted, shall be punished with the punishment to which he was originally sentenced, if he has already 
+suffered no part of that punishment, and if he has suffered any part of that punishment, then with so much 
+of that punishment as he has not already suffered. 
+228. Intentional insult or interruption to public servant sitting in judicial proceeding.—Whoever 
+intentionally offers any insult, or causes any interruption to any public servant, whil e such public servant 
+is sitting in any stage of a judicial proceeding, shall be punished with simpl e imprisonment for a term 
+which may extend to six months, or with fine which may extend to one thousand rupees, or with both. 
+2[228A. Disclosure of identity of the victim of certain offences, etc. —(1) Whoever prints or 
+publishes the name or any matter which may make known the identity of any person against whom  an 
+3[offence under section 376, 4[section 376A, section 376AB, section 376B, section 376C, section 376D, 
+section 376DA, section 376DB]  or section 376E] is alleged or found to have been commit ted (hereafter 
+in this section referred to as the victim) shall be punished with impri sonment of either description for a 
+term which may extend to two years and shall also be liable to fine. 
+(2) Nothing in sub-section (1) extends to any printing or publication of the name or any matter which 
+may make known the identity of the victim if such printing or publication is— 
+(a) by or under the order in writing of the officer- in-charge of the police station or the police 
+officer making the investigation into such offence acting in good faith for t he purposes of such 
+investigation; or 
+(b) by, or with the authorisation in writing of, the victim; or 
+(c) where the victim is dead or minor or of unsound mind, by, or with the aut horisation in writing 
+of, the next-of-kin of the victim: 
+Provided that no such authorisation shall be given by the next-of-kin to anybody other than the  
+chairman or the secretary, by whatever name called, of any recognised welfare institution or organisation. 
+                                                           
+1. Subs. by Act 10 of 1886, s. 24(1), for section 225A which had been ins. by Act 27 of 1870, s. 9. 
+2. Ins. by Act 43 of 1983, s. 2. 
+3. Subs. by Act 13 of 2013, s. 4, for “offence under sectio n 376, section 376A, section 376B, section  376C or section 376D” 
+(w.e.f. 3-2-2013). 
+4. Subs. by Act 22 of 2018, s. 3, for “section 376A, section 376B, section 376C, section 376D” (w.e.f. 21-4-2018).
+----------------------------------------
+Result 2:
+  Distance: 1.4740
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 59 
+ 
+with 1[imprisonment for life] or with imprisonment of either description for a ter m which may extend to 
+fourteen years, with or without fine, if the person in confinement, or who ought to have been 
+apprehended, is under sentence of death; or 
+ with imprisonment of either description for a term which may extend to seven year s, with or without 
+fine, if the person in confinement, or who ought to have been apprehended, is subject, by a sentence of a 
+Court of Justice, or by virtue of a commutation of such sentence, to 1[imprisonment for life] 2*** 3*** 
+4*** 5*** or imprisonment for a term of ten years or upwards; or  
+with imprisonment of either description for a term which may extend to three year s, or with fine, or 
+with both, if the person in confinement, or who ought to have been apprehended is subject, by a sentence  
+of a Court of Justice, to imprisonment for a term not extending to ten years 6[or if the person was lawfully 
+committed to custody]. 
+223. Escape from confinement or custody negligently suffered by public servant .—Whoever, 
+being a public servant legally bound as such public servant to keep in confinement  any person charged 
+with or convicted of any offence 6[or lawfully committed to custody], negligently suffers such person to 
+escape from confinement, shall be punished with simple imprisonment for a term which ma y extend to 
+two years, or with fine, or with both. 
+224. Resistance or obstruction by a person to his lawful apprehension .—Whoever intentionally 
+offers any resistance or illegal obstruction to the lawful apprehension of himself  for any offence with 
+which he is charged or of which he has been convicted, or escapes or attempts to escape from any custody 
+in which he is lawfully detained for any such offence, shall be punished with imprisonment  of either 
+description for a term which may extend to two years, or with fine, or with both. 
+Explanation.—The punishment in this section is in addition to the punishment for which the person to 
+be apprehended or detained in custody was liable for the offence with which he was cha rged, or of which 
+he was convicted. 
+225. Resistance or obstruction to lawful apprehension of another person.—Whoever intentionally 
+offers any resistance or illegal obstruction to the lawful apprehension of any other per son for an offence, 
+or rescues or attempts to rescue any other person from any custody in which that person is lawfully 
+detained for an offence, shall be punished with imprisonment of either description for a term which may 
+extend to two years, or with fine, or with both; 
+or, if the person to be apprehended, or the person rescued or attempted to be rescued, is char ged with 
+or liable to be apprehended for an offence punishable with 1[imprisonment for life] or imprisonment for a 
+term which may extend to ten years, shall be punished with imprisonment of either de scription for a term 
+which may extend to three years, and shall also be liable to fine; 
+or, if the person to be apprehended or rescued, or attempted to be rescued, is charged with or liable to 
+be apprehended for an offence punishable with death, shall be punished with imprisonment of eit her 
+description for a term which may extend to seven years, and shall also be liable to fine; 
+or, if the person to be apprehended or rescued, or attempted to be rescued, is liable under the sentence 
+of a Court of Justice, or by virtue of a commutation of such a sentence, to 1[imprisonment for life], 3*** 
+4*** 7*** or imprisonment, for a term of ten years or upwards, shall be punished with impr isonment of 
+either description for a term which may extend to seven years, and shall also be liable to fine; 
+or, if the person to be apprehended or rescued, or attempted to be rescued, is under sentence  of death, 
+shall be punished with 1[imprisonment for life] or imprisonment of either description for a term not 
+exceeding ten years, and shall also be liable to fine. 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117, and Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. The words “or penal servitude for life,” omitted by Act 17 of 1949, s. 2 (w.e.f. 6-4-1949). 
+3. The words “or to” omitted by Act 36 of 1957, s. 3 and the Second Sch. 
+4. The word “transportation” omitted by Act 26 of 1955, s. 117 and the Sch. (w.e.f. 1-1-1956). 
+5. The words “or penal servitude” omitted by Act 17 of 1949, s. 2 (w.e.f. 6-4-1949). 
+6. Ins. by Act 27 of 1870, s. 8. 
+7. The words “penal servitude,” omitted by Act 17 of 1949, s. 2 (w.e.f. 6-4-1949).
+----------------------------------------
+Result 3:
+  Distance: 1.4820
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 93 
+ 
+(b) a public servant; or 
+(c) superintendent or manager of a jail, remand home or other place of custody establi shed by or 
+under any law for the time being in force, or a women's or children's institution; or 
+(d) on the management of a hospital or being on the staff of a hospital,  
+abuses such position or fiduciary relationship to induce or seduce any woman either in his custody or 
+under his charge or present in the premises to have sexual intercourse with him, such sexua l intercourse 
+not amounting to the offence of rape, shall be punished with rigorous imprisonment  of either description 
+for a term which shall not be less than five years, but which may extend to ten y ears, and shall also be 
+liable to fine. 
+Explanation 1.—In this section, “sexual intercourse ” shall mean any of the acts mentioned in 
+clauses (a) to (d) of section 375. 
+Explanation 2. —For the purposes of this section, Explanation 1 to section 375 shall also be 
+applicable. 
+Explanation 3.—“Superintendent”, in relation to a jail, remand home or other place of custody or 
+a women's or children ’s institution, includes a person holding any other office in such jail, remand 
+home, place or institution by virtue of which such person can exercise any author ity or control over 
+its inmates. 
+Explanation 4. —The expressions “hospital” and “women's or children ’s institution ” shall 
+respectively have the same meaning as in Explanation to sub-section (2) of section 376.] 
+1[376D. Gang rape.—Where a woman is raped by one or more persons constituting a group or acting 
+in furtherance of a common intention, each of those persons shall be deemed to have committ ed the 
+offence of rape and shall be punished with rigorous imprisonment for a term which shall not be less than 
+twenty years, but which may extend to life which shall mean imprisonment for the remainder of that 
+person's natural life, and with fine: 
+Provided that such fine shall be just and reasonable to meet the medical expenses and rehabilitation of 
+the victim: 
+Provided further that any fine imposed under this section shall be paid to the victim.] 
+2[376DA.Punishment for gang rape on woman under sixteen years of age. —Where a woman 
+under sixteen years of age is raped by one or more persons constituting a group or acting in furtherance of 
+a common intention, each of those persons shall be deemed to have committed the offence of rape and 
+shall be punished with imprisonment for life, which shall mean imprisonment f or the remainder of that 
+person's natural life, and with fine: 
+ Provided that such fine shall be just and reasonable to meet the medical expenses a nd rehabilitation 
+of the victim:  
+Provided further that any fine imposed under this section shall be paid to the victim. 
+2[376DB.Punishment for gang rape on woman under twelve years of age. —Where a woman 
+under twelve years of age is raped by one or more persons constituting a group or acting in furtherance of 
+a common intention, each of those persons shall be deemed to have committed the offence of rape and 
+shall be punished with imprisonment for life, which shall mean imprisonment f or the remainder of that 
+person's natural life, and with fine, or with death:  
+Provided that such fine shall be just and reasonable to meet the medical expenses and rehabilitation of 
+the victim:  
+                                                           
+1. Subs. by Act 13 of 2013, s. 9, for sections 375, 376, 376A, 376B, 376C and 376D (w.e.f. 03-02-2013). 
+2. Ins. by Act 22 of 2018, s. 6 (w.e.f. 21-4-2018).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 18:48:50
+Query: 'murder law'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.7066
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 73 
+ 
+Explanation 2.—Where death is caused by bodily injury, the person who causes such bodily injury 
+shall be deemed to have caused the death, although by resorting to proper remedies and ski lful treatment 
+the death might have been prevented. 
+Explanation 3.—The causing of the death of a child in the mother's womb is not homicide. But it ma y 
+amount to culpable homicide to cause the death of a living child, if any part of that child has been brought 
+forth, though the child may not have breathed or been completely born. 
+300. Murder.—Except in the cases hereinafter excepted, culpable homicide is murder, if the act by 
+which the death is caused is done with the intention of causing death, or— 
+2ndly.—If it is done with the intention of causing such bodily injury as the offender knows to be likely 
+to cause the death of the person to whom the harm is caused, or— 
+3rdly.—If it is done with the intention of causing bodily injury to any person and the bodily injury 
+intended to be inflicted is sufficient in the ordinary course of nature to cause death, or— 
+4thly.—If the person committing the act knows that it is so imminently dangerous t hat it must, in all 
+probability, cause death, or such bodily injury as is likely to cause death, and comm its such act without 
+any excuse for incurring the risk of causing death or such injury as aforesaid. 
+Illustrations 
+(a) A shoots Z with the intention of killing him. Z dies in consequence. A commits murder. 
+(b) A, knowing that Z is labouring under such a disease that a blow is like ly to cause his death, strikes him with the intention 
+of causing bodily injury. Z dies in consequence of the blow. A is g uilty of murder, although the blow might not have been 
+sufficient in the ordinary course of nature to cause the death of a person in a sound state of health. But if A, not knowing that Z is 
+labouring under any disease, gives him such a blow as would not in  the ordinary course of nature kill a person in a sound state of 
+health, here A, although he may intend to cause bodily injury, is not guilty of murder, if he did not intend to cause death, or such 
+bodily injury as in the ordinary course of nature would cause death. 
+(c) A intentionally gives Z a sword-cut or club-wound sufficient to cau se the death of a man in the ordinary course of nature. 
+Z dies in consequence. Here A is guilty of murder, although he may not have intended to cause Z's death. 
+(d) A without any excuse fires a loaded cannon into a crowd of persons and kills one of them. A is guilty of murder, although  
+he may not have had a premeditated design to kill any particular individual. 
+Exception 1 .—When culpable homicide is not murder .—Culpable homicide is not murder if the 
+offender, whilst deprived of the power of self-control by grave and sudden provocation, c auses the death 
+of the person who gave the provocation or causes the death of any other person by mistake or accident. 
+The above exception is subject to the following provisos:— 
+First.—That the provocation is not sought or voluntarily provoked by the offender as an excus e for 
+killing or doing harm to any person. 
+Secondly.—That the provocation is not given by anything done in obedience to the law, or by a public  
+servant in the lawful exercise of the powers of such public servant. 
+Thirdly.—That the provocation is not given by anything done in the lawful exercise of the right of 
+private defence. 
+Explanation.—Whether the provocation was grave and sudden enough to prevent the offence from 
+amounting to murder is a question of fact. 
+Illustrations 
+(a) A, under the influence of passion excited by a provocation given by Z, intentionally kills Y, Z's child. This is murder, 
+inasmuch as the provocation was not given by the child, and th e death of the child was not caused by accident or misfortune in  
+doing an act caused by the provocation. 
+(b) Y gives grave and sudden provocation to A. A, on this provoc ation, fires a pistol at Y, neither intending nor knowing 
+himself to be likely to kill Z, who is near him, but out of sight. A kills Z. Here A has not committed murder, but merely culpable 
+homicide.
+----------------------------------------
+Result 2:
+  Distance: 0.7341
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 76 
+ 
+suicide, whoever abets the commission of such suicide, shall be punished with death or 1[imprisonment 
+for life], or imprisonment for a term not exceeding ten years, and shall also be liable to fine. 
+306. Abetment of suicide .—If any person commits suicide, whoever abets the commission of such 
+suicide, shall be punished with imprisonment of either description for a term  which may extend to ten 
+years, and shall also be liable to fine. 
+307. Attempt to murder.—Whoever does any act with such intention or knowledge, and under such 
+circumstances that, if he by that act caused death, he would be guilty of murder, shal l be punished with 
+imprisonment of either description for a term which may extend to ten years, and sha ll also be liable to 
+fine; and if hurt is caused to any person by such act, the offender shall be liab le either to 1[imprisonment 
+for life], or to such punishment as is hereinbefore mentioned. 
+Attempts by life-convicts .—2[When any person offending under this section is under sentence of 
+1[imprisonment for life], he may, if hurt is caused, be punished with death.] 
+Illustrations 
+(a) A shoots at Z with intention to kill him, under such circumstances that, if death ensued, A would be guilty of murder. A 
+is liable to punishment under this section. 
+(b) A, with the intention of causing the death of a child of tend er years, exposes it in a desert place. A has committed the 
+offence defined by this section, though the death of the child does not ensue. 
+(c) A, intending to murder Z, buys a gun and loads it. A has not yet c ommitted the offence. A fires the gun at Z. He has 
+committed the offence defined in this section, and, if by such firi ng he wounds Z, he is liable to the punishment provided by the 
+latter part of  3[the first paragraph of] this section. 
+(d) A, intending to murder Z by poison, purchases poison and mixes the  same with food which remains in A's keeping; A 
+has not yet committed the offence defined in this section. A places the food on Z's table or delivers it to Z's servants to place it on 
+Z's table. A has committed the offence defined in this section. 
+ 308. Attempt to commit culpable homicide .—Whoever does any act with such intention or 
+knowledge and under such circumstances that, if he by that act caused death, he would be guilt y of 
+culpable homicide not amounting to murder, shall be punished with imprisonment of eit her description 
+for a term which may extend to three years, or with fine, or with both; and, if  hurt is caused to any person 
+by such act, shall be punished with imprisonment of either description for a term which m ay extend to 
+seven years, or with fine, or with both. 
+Illustration 
+A, on grave and sudden provocation, fires a pistol at Z, unde r such circumstances that if he thereby caused death he would 
+be guilty of culpable homicide not amounting to murder. A has committed the offence defined in this section. 
+309. Attempt to commit suicide .—Whoever attempts to commit suicide and does any act towards 
+the commission of such offence, shall be punished with simple imprisonment for a t erm which may 
+extend to one year 4[or with fine, or with both.] 
+310. Thug.—Whoever, at any time after the passing of this Act, shall have been habitually associated 
+with any other or others for the purpose of committing robbery or child-steal ing by means of or 
+accompanied with murder, is a thug. 
+311. Punishment.—Whoever is a thug, shall be punished with 1[imprisonment for life], and shall also 
+be liable to fine. 
+Of the causing of miscarriage, of injuries to unborn children, of the exposure  
+of infants, and of the concealment of births. 
+312. Causing miscarraige .—Whoever voluntarily causes a woman with child to miscarry, shall, if 
+such miscarriage be not caused in good faith for the purpose of saving the life of the woman, be punished 
+with imprisonment of either description for a term which may extend to three y ears, or with fine, or with 
+both; and, if the woman be quick with child, shall be punished with imprisonment of either description for 
+a term which may extend to seven years, and shall also be liable to fine. 
+  
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. Ins. by Act 24 of 1870, s. 11. 
+3. Ins. by Act 12 of 1891, s. 2 and the Second Sch. 
+4. Subs. by Act 8 of 1882, s. 7, for “and shall also be liable to fine”.
+----------------------------------------
+Result 3:
+  Distance: 0.7613
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 74 
+ 
+(c) A is lawfully arrested by Z, a bailiff. A is excited to sudden and violent passion by the arrest, and kills Z. This is murder, 
+inasmuch as the provocation was given by a thing done by a public servant in the exercise of his powers. 
+(d) A appears as a witness before Z, a Magistrate. Z says that he does no t believe a word of A's deposition, and that A has 
+perjured himself. A is moved to sudden passion by these words, and kills Z. This is murder. 
+(e) A attempts to pull Z's nose. Z, in the exercise of the right of p rivate defence, lays hold of A to prevent him from doing 
+so. A is moved to sudden and violent passion in consequence, an d kills Z. This is murder, inasmuch as the provocation was 
+giving by a thing done in the exercise of the right of private defence. 
+(f) Z strikes B. B is by this provocation excited to violent rage. A, a by stander, intending to take advantage of B's rage, and 
+to cause him to kill Z, puts a knife into B's hand for that purpose. B kills Z with the knife. Here B may have committed only 
+culpable homicide, but A is guilty of murder. 
+Exception 2.—Culpable homicide is not murder if the offender, in the exercise in good faith of t he 
+right of private defence of person or property, exceeds the power given to h im by law and causes the 
+death of the person against whom he is exercising such right of defence without prem editation, and 
+without any intention of doing more harm than is necessary for the purpose of such defence. 
+Illustration 
+Z attempts to horsewhip A, not in such a manner as to cause grievo us hurt to A. A draws out a pistol. Z persists in the 
+assault. A believing in good faith that he can by no other m eans prevent himself from being horsewhipped, shoots Z dead. A has 
+not committed murder, but only culpable homicide. 
+Exception 3.—Culpable homicide is not murder if the offender, being a public servant or aiding  a 
+public servant acting for the advancement of public justice, exceeds the powers given to him by law, and 
+causes death by doing an act which he, in good faith, believes to be lawful and necessar y for the due 
+discharge of his duty as such public servant and without ill-will towards the perso n whose death is 
+caused. 
+Exception 4.—Culpable homicide is not murder if it is committed without premeditation i n a sudden 
+fight in the heat of passion upon a sudden quarrel and without the offender's having t aken undue 
+advantage or acted in a cruel or unusual manner. 
+Explanation.—It is immaterial in such cases which party offers the provocation or commits the first 
+assault. 
+Exception 5.—Culpable homicide is not murder when the person whose death is caused, being above 
+the age of eighteen years, suffers death or takes the risk of death with his own consent. 
+Illustration 
+A, by instigation, voluntarily causes Z, a person under eighteen years o f age to commit suicide. Here, on account of Z's 
+youth, he was incapable of giving consent to his own death; A has therefore abetted murder. 
+301. Culpable homicide by causing death of person other than person whose death was 
+intended.—If a person, by doing anything which he intends or knows to be likely to ca use death, 
+commits culpable homicide by causing the death of any person, whose death he neither intends nor knows 
+himself to be likely to cause, the culpable homicide committed by the offender i s of the description of 
+which it would have been if he had caused the death of the person whose death he intended or k new 
+himself to be likely to cause. 
+302. Punishment for murder .—Whoever commits murder shall be punished with death, or 
+1[imprisonment for life], and shall also be liable to fine. 
+303. Punishment for murder by life-convict .—Whoever, being under sentence of 1[imprisonment 
+for life], commits murder shall be punished with death. 
+304. Punishment for culpable homicide not amounting to murder .—Whoever commits culpable 
+homicide not amounting to murder shall be punished with 1[imprisonment for life], or imprisonment of 
+either description for a term which may extend to ten years, and shall also be liabl e to fine, if the act by 
+which the death is caused is done with the intention of causing death, or of  causing such bodily inju ry as 
+is likely to cause death; 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956).
+----------------------------------------
+
+================================================================================
+

@@ -311,3 +311,100 @@ Article: Unk...'
 
 Key provisions of Articl...'
 2025-06-17 18:02:13 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 8
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - ❓ User query: 'What is Section 302 of the Indian Penal Code?'
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 📚 Chat history provided with 4 messages
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO -   1. user: 'What are the constitutional protections for freedo...'
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO -   2. assistant: '### Constitutional Protections for Freedom of Spee...'
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO -   3. user: 'what does article 370 says?...'
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO -   4. assistant: 'Article 370 of the Indian Constitution was a tempo...'
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 18:48:23 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 📋 Initial state created with 5 total messages
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Section 302 of the Indian Penal Code?...'
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 18:48:24 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Section 302 of the Indian Penal Code'}
+2025-06-17 18:48:26 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'Section 302 of the Indian Penal Code...'
+2025-06-17 18:48:26 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'Section 302 of the Indian Penal Code'
+2025-06-17 18:48:26 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-17 18:48:26 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-17 18:48:27 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-17 18:48:29 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["Section 302", "Indian Penal Code", "murder law"]
+2025-06-17 18:48:29 - agent_system.ai_agent.tools - INFO - 📋 Parsed 3 keywords: ['Section 302', 'Indian Penal Code', 'murder law']
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["Section 302", "Indian Penal Code", "murder law"]...'
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Section 302 of the Indian Penal Code?...'
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 18:48:29 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_ipc(['query']), search_ipc(['query'])
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 2 tool calls: ['search_ipc', 'search_ipc']
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🎯 Executing 2 tool calls...
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🔨 Tool 1/2: search_ipc
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Section 302'}
+2025-06-17 18:48:30 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'Section 302...'
+2025-06-17 18:48:30 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'Section 302'
+2025-06-17 18:48:30 - agent_system.ai_agent.tools - INFO - 🔄 Initializing IPC database...
+2025-06-17 18:48:39 - agent_system.ai_agent.tools - INFO - ✅ IPC database initialized successfully
+2025-06-17 18:48:39 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 18:48:45 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 18:48:45 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 18:48:45 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.4463, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-17 18:48:45 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 18:48:45 - agent_system.ai_agent - INFO - 🔨 Tool 2/2: search_ipc
+2025-06-17 18:48:45 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'murder law'}
+2025-06-17 18:48:45 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'murder law...'
+2025-06-17 18:48:45 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'murder law'
+2025-06-17 18:48:45 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 18:48:50 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 18:48:50 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.7066, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 🏁 All 2 tools executed, returning results to LLM
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 📨 Current state has 10 messages
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 👤 Last user query: 'What is Section 302 of the Indian Penal Code?...'
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 18:48:50 - agent_system.ai_agent - INFO - 📤 Sending 11 messages to LLM...
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Section 302 of the Indian Penal Code (IPC) deals with the punishment for murder. It states:
+
+"Whoeve...'
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Section 302 of the Indian Penal Code (IPC) deals with the punishment for murder. It states:
+
+"Whoever commits murder shall be punished with death, or [imprisonment for life], and shall also be liable ...'
+2025-06-17 18:48:52 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 11
