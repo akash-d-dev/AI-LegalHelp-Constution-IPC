@@ -408,3 +408,288 @@ Conte...'
 
 "Whoever commits murder shall be punished with death, or [imprisonment for life], and shall also be liable ...'
 2025-06-17 18:48:52 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 11
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - ❓ User query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken product but refuses'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 📚 Chat history provided with 6 messages
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   1. user: 'What are the constitutional protections for freedo...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   2. assistant: '### Constitutional Protections for Freedom of Spee...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   3. user: 'what does article 370 says?...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   4. assistant: 'Article 370 of the Indian Constitution was a tempo...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   5. user: 'What is Section 302 of the Indian Penal Code?...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO -   6. assistant: 'Section 302 of the Indian Penal Code (IPC) deals w...'
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 18:59:47 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 📋 Initial state created with 7 total messages
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 👤 Last user query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken pro...'
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 18:59:48 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'remedies for breach of contract in India'}
+2025-06-17 18:59:50 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'remedies for breach of contract in India...'
+2025-06-17 18:59:50 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'remedies for breach of contract in India'
+2025-06-17 18:59:50 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-17 18:59:51 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ["remedies for breach of contract", "Indian Contract Act", "specific performance", "compensation"]
+2025-06-17 18:59:51 - agent_system.ai_agent.tools - INFO - 📋 Parsed 4 keywords: ['remedies for breach of contract', 'Indian Contract Act', 'specific performance', 'compensation']
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["remedies for breach of contract", "Indian Contract Act", "specific performance", "compensation"]...'
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed, returning results to LLM
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 📨 Current state has 9 messages
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 👤 Last user query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken pro...'
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 18:59:51 - agent_system.ai_agent - INFO - 📤 Sending 10 messages to LLM...
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_ipc(['query']), search_constitution(['query']), search_ipc(['query']), search_constitution(['query']), search_ipc(['query']), search_constitution(['query']), search_ipc(['query'])
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 8 tool calls: ['search_constitution', 'search_ipc', 'search_constitution', 'search_ipc', 'search_constitution', 'search_ipc', 'search_constitution', 'search_ipc']
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🎯 Executing 8 tool calls...
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🔨 Tool 1/8: search_constitution
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'breach of contract remedies'}
+2025-06-17 18:59:53 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'breach of contract remedies...'
+2025-06-17 18:59:53 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'breach of contract remedies'
+2025-06-17 18:59:53 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-17 18:59:56 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-17 18:59:56 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-17 19:00:10 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-17 19:00:10 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-17 19:00:10 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.4657, Strategy: l2_standard):
+Collection: constitution_of_india_3
+Article: Unk...'
+2025-06-17 19:00:10 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-17 19:00:10 - agent_system.ai_agent - INFO - 🔨 Tool 2/8: search_ipc
+2025-06-17 19:00:10 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'breach of contract remedies'}
+2025-06-17 19:00:10 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'breach of contract remedies...'
+2025-06-17 19:00:10 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'breach of contract remedies'
+2025-06-17 19:00:10 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 19:00:15 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 19:00:15 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 19:00:15 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.2600, Strategy: l2_standard):
+Collection: ipc_2
+Section: Unknown Section
+Conte...'
+2025-06-17 19:00:15 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 19:00:15 - agent_system.ai_agent - INFO - 🔨 Tool 3/8: search_constitution
+2025-06-17 19:00:15 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Indian Contract Act'}
+2025-06-17 19:00:15 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Indian Contract Act...'
+2025-06-17 19:00:15 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Indian Contract Act'
+2025-06-17 19:00:15 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-17 19:00:27 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-17 19:00:27 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-17 19:00:27 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.6546, Strategy: l2_standard):
+Collection: constitution_of_india_3
+Article: Unk...'
+2025-06-17 19:00:27 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-17 19:00:27 - agent_system.ai_agent - INFO - 🔨 Tool 4/8: search_ipc
+2025-06-17 19:00:27 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Indian Contract Act'}
+2025-06-17 19:00:27 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'Indian Contract Act...'
+2025-06-17 19:00:27 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'Indian Contract Act'
+2025-06-17 19:00:27 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 19:00:32 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 19:00:32 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 19:00:32 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 0.8454, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-17 19:00:32 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 19:00:32 - agent_system.ai_agent - INFO - 🔨 Tool 5/8: search_constitution
+2025-06-17 19:00:32 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'specific performance'}
+2025-06-17 19:00:32 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'specific performance...'
+2025-06-17 19:00:32 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'specific performance'
+2025-06-17 19:00:32 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-17 19:00:44 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-17 19:00:44 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-17 19:00:44 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.7498, Strategy: l2_standard):
+Collection: constitution_of_india_1
+Article: Unk...'
+2025-06-17 19:00:44 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-17 19:00:44 - agent_system.ai_agent - INFO - 🔨 Tool 6/8: search_ipc
+2025-06-17 19:00:44 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'specific performance'}
+2025-06-17 19:00:44 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'specific performance...'
+2025-06-17 19:00:44 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'specific performance'
+2025-06-17 19:00:44 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 19:00:49 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 19:00:49 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 19:00:49 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.8160, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-17 19:00:49 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 19:00:49 - agent_system.ai_agent - INFO - 🔨 Tool 7/8: search_constitution
+2025-06-17 19:00:49 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'compensation'}
+2025-06-17 19:00:49 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'compensation...'
+2025-06-17 19:00:49 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'compensation'
+2025-06-17 19:00:49 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-17 19:01:02 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-17 19:01:02 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-17 19:01:02 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.3468, Strategy: l2_standard):
+Collection: constitution_of_india_3
+Article: Unk...'
+2025-06-17 19:01:02 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-17 19:01:02 - agent_system.ai_agent - INFO - 🔨 Tool 8/8: search_ipc
+2025-06-17 19:01:02 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'compensation'}
+2025-06-17 19:01:02 - agent_system.ai_agent - INFO - 🔍 Calling search_ipc with query: 'compensation...'
+2025-06-17 19:01:02 - agent_system.ai_agent.tools - INFO - ⚖️ TOOL: search_ipc called with keyword: 'compensation'
+2025-06-17 19:01:02 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on IPC database...
+2025-06-17 19:01:07 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from IPC database
+2025-06-17 19:01:07 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search completed, returning 3 results
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - ✅ Tool search_ipc completed. Result preview: 'Result 1 (Distance: 1.4394, Strategy: l2_standard):
+Collection: ipc_1
+Section: Unknown Section
+Conte...'
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 📨 Tool message created for search_ipc
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 🏁 All 8 tools executed, returning results to LLM
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 📨 Current state has 18 messages
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 👤 Last user query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken pro...'
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 19:01:07 - agent_system.ai_agent - INFO - 📤 Sending 19 messages to LLM...
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The punishment for a company refusing to refund for a broken product, as promised in a contract, is ...'
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The punishment for a company refusing to refund for a broken product, as promised in a contract, is governed by the Indian Contract Act, 1872. This situation constitutes a breach of contract. Here's a...'
+2025-06-17 19:01:14 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 19
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 19:15:12 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning as expected. Let me know how I can assist you with your legal questions....'
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning as expected. Let me know how I can assist you with your legal questions....'
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 19:15:14 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 19:15:15 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning as expected. Let me know how I can assist you with your legal query!...'
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning as expected. Let me know how I can assist you with your legal query!...'
+2025-06-17 19:15:18 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - ❓ User query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken product but refuses'
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 19:15:31 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 👤 Last user query: 'what is the punishment for breaking a contract, let's say a company promises refund for a broken pro...'
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 19:15:32 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - 💬 LLM final response: '⚠️ DISCLAIMER: This query is outside the scope of our Constitution and IPC database. The response is...'
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - 💡 Final answer preview: '⚠️ DISCLAIMER: This query is outside the scope of our Constitution and IPC database. The response is based on general legal knowledge and may not be specific to Indian law.
+
+In general contract law, t...'
+2025-06-17 19:15:35 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - ❓ User query: 'what was  my last message?'
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📚 Chat history provided with 2 messages
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO -   1. user: 'what is the punishment for breaking a contract, le...'
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO -   2. assistant: '⚠️ DISCLAIMER: This query is outside the scope of ...'
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📋 Initial state created with 3 total messages
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 👤 Last user query: 'what was  my last message?...'
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants
+2025-06-17 19:17:19 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Your last message was: "what is the punishment for breaking a contract, let's say a company promises...'
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Your last message was: "what is the punishment for breaking a contract, let's say a company promises refund for a broken product but refuses"...'
+2025-06-17 19:17:20 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4

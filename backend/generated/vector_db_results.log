@@ -395,3 +395,891 @@ is likely to cause death;
 
 ================================================================================
 
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:10
+Query: 'breach of contract remedies'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.4657
+  Search Type: l2_standard
+  Collection: constitution_of_india_3
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part XII.—Finance, Property, Contracts and Suits) 170299. Contracts.—(1) All contracts made in the exercise of the executive power of the Union or of a State shall be expressed to be made by the President, or by the Governor1*** of the State, as the case may be, and all such contracts and all assurances of property made in the exercise of that power shall be executed on behalf of the President or the Governor1*** by such persons and in such manner as he may direct or authorise.(2) Neither the President nor the Governor2*** shall be personally liable in respect of any contract or assurance made or executed for the purposes of this Constitution, or for the purposes of any enactment relating to the Government of India heretofore in force, nor shall any person making or executing any such contract or assurance on behalf of any of them be personally liable in respect thereof.300. Suits and proceedings.—(1) The Government of India may sue or be sued by the name of the Union of India and the Government of a State may sue or be sued by the name of the State and may, subject to any provisions which may be made by Act of Parliament or of the Legislature of such State enacted by virtue of powers conferred by this Constitution, sue or be sued in relation to their respective affairs in the like cases as the Dominion of India and the corresponding Provinces or the corresponding Indian States might have sued or been sued if this Constitution had not been enacted.(2) If at the commencement of this Constitution—(a) any legal proceedings are pending to which the Dominion of India is a party, the Union of India shall be deemed to be substituted for the Dominion in those proceedings; and(b) any legal proceedings are pending to which a Province or an Indian State is a party, the corresponding State shall be deemed to be substituted for the Province or the Indian State in those proceedings. 3[CHAPTER IV.—RIGHT TO PROPERTY300A. Persons not to be deprived of property save by authority of  law.— No person shall be deprived of his property save by authority of law.]______________________________________________1. The words "or the Rajpramukh" omitted by the Constitution (Seventh Amendment) Act, 1956, s. 29 and Sch. (w.e.f. 1-11-1956).2. The words "nor the  Rajpramukh" omitted by s. 29 and Sch., ibid.(w.e.f. 1-11-1956).3. Ins. by the Constitution (Forty-fourth Amendment) Act, 1978, s. 34 (w.e.f. 20-6-1979).
+----------------------------------------
+Result 2:
+  Distance: 1.5145
+  Search Type: l2_standard
+  Collection: constitution_of_india_3
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part XIV.—Services under the Union and the States)  174necessary in order to secure the services of a person having special qualifications, provide  for the payment to him of  compensation, if before the expiration of an agreed period that post is abolished or he is, for reasons not connected with any misconduct on  his part, required to vacate that post.311. Dismissal, removal or reduction in rank of persons employed in civil capacities under the Union or a State.—(1) No person who is a member of a civil service of the  Union or an all-India service or a civil service of a  State or holds a civil post under  the Union or a State shall be dismissed or removed by an authority subordinate to that by which he was appointed.  1[(2) No such person  as aforesaid shall be dismissed or removed or reduced in rank except after an inquiry in which he has been informed of the charges against him and given a reasonable  opportunity of being heard in respect of those charges2***:3[Provided that where it is proposed after such inquiry, to impose upon him any such penalty, such penalty may be imposed on the basis of the evidence adduced during such inquiry and it shall not be necessary to give such person any opportunity of making  representation on  the penalty proposed:Provided further that this clause shall not apply—](a) where a person is dismissed or removed or reduced in rank on the ground of conduct which has led to his conviction on a criminal charge; or(b)where the authority empowered to dismiss or remove a person or to reduce him in rank is satisfied that for some reason, to be recorded by that authority in writing, it is not  reasonably practicable to hold such inquiry; or(c) where the President or the Governor, as the case may be, is satisfied that in the interest of the security of the State it is not expedient to hold such inquiry.(3) If, in respect of any such person as aforesaid, a question arises whether it is reasonably practicable to hold such inquiry as is referred to in clause (2), the decision thereon of the authority empowered to dismiss or remove such person  or to reduce him in rank shall be final.]______________________________________________1. Subs. by the Constitution (Fifteenth Amendment) Act, 1963, s. 10, for cls. (2) and (3) (w.e.f. 5-10-1963).2. Certain words omitted by the Constitution (Forty-second Amendment) Act, 1976, s. 44 (w.e.f. 3-1-1977).3. Subs. by s. 44, ibid.,for certain words (w.e.f. 3-1-1977).
+----------------------------------------
+Result 3:
+  Distance: 1.5330
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(xx) CHAPTER III.PROPERTY, CONTRACTS, RIGHTS,LIABILITIES,OBLIGATIONS AND SUITS294.Succession to property, assets, rights, liabilities and obligations in certain cases.295.Succession to property, assets, rights, liabilities and obligations in other cases.296.Property accruing by escheat or lapseor asbona vacantia.  297. Things of value within territorial waters or continental shelf and resources of the exclusive economic zone to vest in the Union.  298. Power to carry on trade, etc.  299. Contracts.  300. Suits and proceedings.CHAPTER IV.RIGHT  TO PROPERTY300A. Persons not to be deprived of property save by authority of law. PART XIIITRADE, COMMERCE AND INTERCOURSE WITHIN THE TERRITORY OF INDIA301.Freedom of trade, commerce and intercourse.302.Power of Parliament to impose restrictions on trade, commerce and intercourse.303.Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce.304. Restrictions on trade, commerce and intercourse among States.305. Saving of existing laws and laws providing for State monopolies.[306. Power  of  certain  States  in  Part B  of  the  First  Schedule to impose  restrictions  on  trade  and  commerce.Omitted] 307. Appointment of authority for carrying out the purposes of articles 301 to 304.PART XIVSERVICES UNDER THE UNION AND THE STATESCHAPTER I.SERVICES308. Interpretation.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:15
+Query: 'breach of contract remedies'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.2600
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 103 
+ 
+417. Punishment for cheating .—Whoever cheats shall be punished with imprisonment of either 
+description for a term which may extend to one year, or with fine, or with both. 
+418. Cheating with knowledge that wrongful loss may ensue to person whose interest offender is 
+bound to protect.—Whoever cheats with the knowledge that he is likely thereby to cause wr ongful loss 
+to a person whose interest in the transaction to which the cheating relates, he was bound, either by law, or 
+by a legal contract, to protect, shall be punished with imprisonment of either descripti on for a term which 
+may extend to three years, or with fine, or with both. 
+419. Punishment for cheating by personation .—Whoever cheats by personation shall be punished 
+with imprisonment of either description for a term which may extend to three y ears, or with fine, or with 
+both. 
+420. Cheating and dishonestly inducing delivery of property .—Whoever cheats and thereby 
+dishonestly induces the person deceived to deliver any property to any person, or to make, alter or destroy 
+the whole or any part of a valuable security, or anything which is signed or sea led, and which is capable 
+of being converted into a valuable security, shall be punished with imprisonment of either description for 
+a term which may extend to seven years, and shall also be liable to fine. 
+Of fraudulent feeds and dispositions of property 
+421. Dishonest or fraudulent removal or concealment of property to prevent distribution among 
+creditors.—Whoever dishonestly or fraudulently removes, conceals or delivers to any person, or transfers 
+or causes to be transferred to any person, without adequate consideration, any property, intending thereby 
+to prevent, or knowing it to be likely that he will thereby prevent, the distri bution of that property 
+according to law among his creditors or the creditors of any other person, shall be punished with 
+imprisonment of either description for a term which may extend to two years, or with fine, or with both. 
+422. Dishonestly or fraudulently preventing debt being available for creditors .—Whoever 
+dishonestly or fraudulently prevents any debt or demand due to himself or to any other person from being 
+made available according to law for payment of his debts or the debts of such other per son, shall be 
+punished with imprisonment of either description for a term which may extend to two years, or with fine, 
+or with both. 
+423. Dishonest or fraudulent execution of deed of transfer containing false statement o f 
+consideration.—Whoever dishonestly or fraudulently signs, executes or becomes a party to any deed o r 
+instrument which purports to transfer or subject to any charge any property, or  any interest therein, and 
+which contains any false statement relating to the consideration for such transfe r or charge, or relating t o 
+the person or persons for whose use or benefit it is really intended to operat e, shall be punished with 
+imprisonment of either description for a term which may extend to two years, or with fine, or with both. 
+424. Dishonest or fraudulent removal or concealment of property .—Whoever dishonestly or 
+fraudulently conceals or removes any property of himself or any other person, or dishonestl y or 
+fraudulently assists in the concealment or removal thereof, or dishonestly releases any demand or claim to 
+which he is entitled, shall be punished with imprisonment of either description for a t erm which may 
+extend to two years, or with fine, or with both. 
+Of mischief 
+425. Mischief.—Whoever with intent to cause, or knowing that he is likely to cause, wrongful loss or 
+damage to the public or to any person, causes the destruction of any property, or any such chang e in any 
+property or in the situation thereof as destroys or diminishes its value or utility, or affects it injuriously, 
+commits “mischief”. 
+Explanation 1.—It is not essential to the offence of mischief that the offender should i ntend to cause 
+loss or damage to the owner of the property injured or destroyed. It is sufficien t if he intends to cause, or 
+knows that he is likely to cause, wrongful loss or damage to any person by injuring any property, whether 
+it belongs to that person or not. 
+Explanation 2.—Mischief may be committed by an act affecting property belonging to the pe rson 
+who commits the act, or to that person and others jointly.
+----------------------------------------
+Result 2:
+  Distance: 1.2709
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 101 
+ 
+(b) A is a warehouse-keeper. Z going on a journey, entrusts his furniture  to A, under a contract that it shall be returned on 
+payment of a stipulated sum for warehouse room. A dishonestly sells the goods. A has committed criminal breach of trust. 
+(c) A, residing in Calcutta, is agent for Z, residing at Delhi. There is an express or implied contract between A and Z, that all 
+sums remitted by Z to A shall be invested by A, according to Z's direc tion. Z remits a lakh of rupees to A, with directions to A to 
+invest the same in Company's paper. A dishonestly disobeys the directions  and employs the money in his own business. A has 
+committed criminal breach of trust. 
+(d) But if A, in the last illustration, not dishonestly but in good faith , believing that it will be more for Z's advantage to hold 
+shares in the Bank of Bengal, disobeys Z's directions, and buys shares in the Bank of Bengal, for Z, instead of buying Company's 
+paper, here, thought Z should suffer loss, and should be entitled  to bring a civil action against A, on account of that loss, ye t A, 
+not having acted dishonestly, has not committed criminal breach of trust. 
+(e) A, a revenue-officer, is entrusted with public money and is eithe r directed by law, or bound by a contract, express or 
+implied, with the Government, to pay into a certain treasury all the p ublic money which he holds. A dishonestly appropriates the 
+money. A has committed criminal breach of trust. 
+(f) A, a carrier, is entrusted by Z with property to be carried by land or by water. A dishonestly misappropriates the property. 
+A has committed criminal breach of trust. 
+406. Punishment for criminal breach of trust.—Whoever commits criminal breach of trust shall be 
+punished with imprisonment of either description for a term which may extend to  three years, or with 
+fine, or with both. 
+407. Criminal breach of trust by carrier, etc.—Whoever, being entrusted with property as a carrier, 
+wharfinger or warehouse-keeper, commits criminal breach of trust in respect of such property, shall be 
+punished with imprisonment of either description for a term which may extend to seven years, and shall 
+also be liable to fine. 
+408. Criminal breach of trust by clerk or servant.—Whoever, being a clerk or servant or employed 
+as a clerk or servant, and being in any manner entrusted in such capacity with proper ty, or with any 
+dominion over property, commits criminal breach of trust in respect of that property, shall be punished 
+with imprisonment of either description for a term which may extend to se ven years, and shall also be 
+liable to fine. 
+409. Criminal breach of trust by public servant, or by banker, merchant or agent .—Whoever, 
+being in any manner entrusted with property, or with any dominion over propert y in his capacity of a 
+public servant or in the way of his business as a banker, merchant, factor, broker, at torney or agent, 
+commits criminal breach of trust in respect of that property, shall be pun ished with 1[imprisonment for 
+life], or with imprisonment of either description for a term which may extend to ten years, and shall also 
+be liable to fine. 
+Of the receiving of stolen property 
+410. Stolen property .—Property, the possession whereof has been transferred by theft, or by 
+extortion, or by robbery, and property which has been criminally misappropriated or in respect of which 
+2***3***criminal breach of trust has been committed, is designated as “stolen property”, 4[whether the 
+transfer has been made, or the misappropriation or breach of trust has bee n committed, within or without 
+5[India]]. But, if such property subsequently comes into the possession of a person leg ally entitled to the 
+possession thereof, it then ceases to be stolen property. 
+411. Dishonestly receiving stolen property .—Whoever dishonestly receives or retains any stolen 
+property, knowing or having reason to believe the same to be stolen property, shall be pun ished with 
+imprisonment of either description for a term which may extend to three years, or with fine, or with both. 
+412. Dishonestly receiving property stolen in the commission of a dacoity.—Whoever dishonestly 
+receives or retains any stolen property, the possession whereof he knows or has reason to believe to have 
+been transferred by the commission of dacoity, or dishonestly receives from a person, w hom he knows or 
+has reason to believe to belong or to have belonged to a gang of dacoits, property which h e knows or has 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. The word “the” rep by Act 12 of 1891, s. 2 and the First Sch. 
+3. The words “offence of” rep. by Act 8 of1882, s. 9. 
+4. Ins. by s. 9, ibid. 
+5. The words “British India” have successively been subs. by the A. O. 1948, the A. O. 1950 and Act 3 of 1951, s. 3 and the Sch., 
+to read as above (w.e.f. 1-4-1951).
+----------------------------------------
+Result 3:
+  Distance: 1.3713
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 97 
+ 
+Note:- For the purpose of this section, the term ‘Cattle’ means a cow and a calf, whether male or 
+female, bull, bullock, buffalo-male or female or calf of she-buffalo, whether male or female and an ox or 
+oxen. 
+382F. Whoever commits the offence of ‘Cattle lifting’ shall be punished with imprisonment for a 
+term which shall not be less than seven years but may extend to a term of t em years or with fine or with 
+both.” 
+[Vide Tripura Act 4 of 2019, s. 2] 
+Of Extortion 
+383. Extortion.—Whoever intentionally puts any person in fear of any injury to that person, or to any 
+other, and thereby dishonestly induces the person so put in fear to deliver to any person any property, or 
+valuable security or anything signed or sealed which may be converted into a valuable s ecurity, commits 
+“extortion”. 
+Illustrations 
+(a) A threatens to publish a defamatory libel concerning Z unless Z gives him money. He thus induces Z to give him money. 
+A has committed extortion. 
+(b) A threatens Z that he will keep Z's child in wrongful confinement, unless Z will sign and deliver to A a promissory note 
+binding Z to pay certain monies to A. Z sings and delivers the note. A has committed extortion. 
+(c) A threatens to send club-men to plough up Z's field unless Z will sign and deliver to B a bond binding Z under a penalty 
+to deliver certain produce to B, and thereby induces Z to sign and deliver the bond. A has committed extortion. 
+(d) A, by putting Z in fear of grievous hurt, dishonestly induces Z to  sign or affix his seal to a blank paper and deliver it to 
+A. Z sings and delivers the paper to A. Here, as the paper so signe d may be converted into a valuable security. A has committed 
+extortion. 
+384. Punishment for extortion .—Whoever commits extortion shall be punished with imprisonment 
+of either description for a term which may extend to three years, or with fine, or with both. 
+385. Putting person in fear of injury in order to commit extortion .—Whoever, in order to the 
+committing of extortion, puts any person in fear, or attempts to put any person i n fear, of any injury, shall 
+be punished with imprisonment of either description for a term which may extend to t wo years, or with 
+fine, or with both. 
+386. Extortion by putting a person in fear of death or grievous hurt .—Whoever commits 
+extortion by putting any person in fear of death or of grievous hurt to that person or to any other, shall be 
+punished with imprisonment of either description for a term which may extend to ten years, and shall also 
+be liable to fine. 
+387. Putting person in fear of death or of grievous hurt, in order to commit extortion .—
+Whoever, in order to the committing of extortion, puts or attempts to put any pe rson in fear of death or of 
+grievous hurt to that person or to any other, shall be punished with imprisonment of eit her description for 
+a term which may extend to seven years, and shall also be liable to fine. 
+388. Extortion by threat of accusation of an offence punishable with death or impri sonment for 
+life, etc.—Whoever commits extortion by putting any person in fear of an accusation against th at person 
+or any other, of having committed or attempted to commit any offence punishable with death, or with 
+1[imprisonment for life], or with imprisonment for a term which may extend t o ten years, or of having 
+attempted to induce any other person to commit such offence, shall be punished with imprisonm ent of 
+either description for a term which may extend to ten years, and shall also be liable to fine; and, if the 
+offence be one punishable under section 377 of this Code, may be punished with 1[imprisonment for life]. 
+389. Putting person in fear or accusation of offence, in order to commit extortion .—Whoever, in 
+order to the committing of extortion, puts or attempts to put any person in fea r of an accusation, against 
+that person or any other, of having committed, or attempted to commit, an of fence punishable with death 
+or with 1[imprisonment for life], or with imprisonment for a term which may extend t o ten years, shall be 
+punished with imprisonment of either description for a term which may extend to ten years, and shall also 
+be liable to fine; and, if the offence be punishable under section 377 of this Code, m ay be punished with 
+1[imprisonment for life]. 
+Of Robbery and dacoity 
+390. Robbery.—In all robbery there is either theft or extortion. 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:27
+Query: 'Indian Contract Act'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.6546
+  Search Type: l2_standard
+  Collection: constitution_of_india_3
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part XII.—Finance, Property, Contracts and Suits) 170299. Contracts.—(1) All contracts made in the exercise of the executive power of the Union or of a State shall be expressed to be made by the President, or by the Governor1*** of the State, as the case may be, and all such contracts and all assurances of property made in the exercise of that power shall be executed on behalf of the President or the Governor1*** by such persons and in such manner as he may direct or authorise.(2) Neither the President nor the Governor2*** shall be personally liable in respect of any contract or assurance made or executed for the purposes of this Constitution, or for the purposes of any enactment relating to the Government of India heretofore in force, nor shall any person making or executing any such contract or assurance on behalf of any of them be personally liable in respect thereof.300. Suits and proceedings.—(1) The Government of India may sue or be sued by the name of the Union of India and the Government of a State may sue or be sued by the name of the State and may, subject to any provisions which may be made by Act of Parliament or of the Legislature of such State enacted by virtue of powers conferred by this Constitution, sue or be sued in relation to their respective affairs in the like cases as the Dominion of India and the corresponding Provinces or the corresponding Indian States might have sued or been sued if this Constitution had not been enacted.(2) If at the commencement of this Constitution—(a) any legal proceedings are pending to which the Dominion of India is a party, the Union of India shall be deemed to be substituted for the Dominion in those proceedings; and(b) any legal proceedings are pending to which a Province or an Indian State is a party, the corresponding State shall be deemed to be substituted for the Province or the Indian State in those proceedings. 3[CHAPTER IV.—RIGHT TO PROPERTY300A. Persons not to be deprived of property save by authority of  law.— No person shall be deprived of his property save by authority of law.]______________________________________________1. The words "or the Rajpramukh" omitted by the Constitution (Seventh Amendment) Act, 1956, s. 29 and Sch. (w.e.f. 1-11-1956).2. The words "nor the  Rajpramukh" omitted by s. 29 and Sch., ibid.(w.e.f. 1-11-1956).3. Ins. by the Constitution (Forty-fourth Amendment) Act, 1978, s. 34 (w.e.f. 20-6-1979).
+----------------------------------------
+Result 2:
+  Distance: 0.7088
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(xx) CHAPTER III.PROPERTY, CONTRACTS, RIGHTS,LIABILITIES,OBLIGATIONS AND SUITS294.Succession to property, assets, rights, liabilities and obligations in certain cases.295.Succession to property, assets, rights, liabilities and obligations in other cases.296.Property accruing by escheat or lapseor asbona vacantia.  297. Things of value within territorial waters or continental shelf and resources of the exclusive economic zone to vest in the Union.  298. Power to carry on trade, etc.  299. Contracts.  300. Suits and proceedings.CHAPTER IV.RIGHT  TO PROPERTY300A. Persons not to be deprived of property save by authority of law. PART XIIITRADE, COMMERCE AND INTERCOURSE WITHIN THE TERRITORY OF INDIA301.Freedom of trade, commerce and intercourse.302.Power of Parliament to impose restrictions on trade, commerce and intercourse.303.Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce.304. Restrictions on trade, commerce and intercourse among States.305. Saving of existing laws and laws providing for State monopolies.[306. Power  of  certain  States  in  Part B  of  the  First  Schedule to impose  restrictions  on  trade  and  commerce.Omitted] 307. Appointment of authority for carrying out the purposes of articles 301 to 304.PART XIVSERVICES UNDER THE UNION AND THE STATESCHAPTER I.SERVICES308. Interpretation.
+----------------------------------------
+Result 3:
+  Distance: 0.7561
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Ninth Schedule)3321[287* *                       * * *]88. The Industries (Development and Regulation) Act, 1951 (Central Act 65 of 1951). 89. The Requisitioning and Acquisition of Immovable Property Act, 1952 (Central Act 30 of 1952). 90. The Mines and Minerals (Regulation and Development) Act, 1957 (Central Act 67 of 1957).91. The Monopolies and Restrictive Trade Practices Act, 1969 (Central Act 54 of 1969).2[92*                    *                   *                        *  *]93. The Coking Coal Mines (Emergency Provisions) Act, 1971 (Central Act 64 of 1971). 94. The Coking Coal Mines (Nationalisation) Act, 1972 (Central Act 36 of 1972). 95. The General Insurance Business (Nationalisation) Act, 1972 (Central Act 57 of 1972).96. The Indian Copper Corporation (Acquisition of Undertaking) Act, 1972 (Central Act 58 of 1972).97. The Sick Textile Undertakings (Taking Over of Management) Act, 1972 (Central Act 72 of 1972).98. The Coal Mines (Taking Over of Management) Act, 1973 (Central Act 15 of 1973).99. The Coal Mines (Nationalisation) Act, 1973 (Central Act 26 of 1973).100. The Foreign Exchange Regulation Act, 1973 (Central Act 46 of 1973).101. The Alcock Ashdown Company Limited (Acquisition of Under-takings) Act, 1973 (Central Act 56 of 1973).______________________________________________1. Entries 87 to 124  ins. by the Constitution (Thirty-ninth Amendment) Act, 1975, s. 5 (w.e.f. 10-8-1975).2. Entries 87 and 92 omitted by the Constitution (Forty-fourth Amendment) Act, 1978,    s. 44 (w.e.f. 20-6-1979).Rep. by the Competition Act, 2002 (12 of 2003) s. 66 (w.e.f. 1-9-2009).Rep. by the Foreign Exchange Management Act, 1999 (42 of 1999), s. 49 (w.e.f. 1-6-2000).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:32
+Query: 'Indian Contract Act'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.8454
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 1 
+ 
+THE INDIAN PENAL CODE 
+___________ 
+ARRANGEMENT OF SECTIONS 
+__________ 
+CHAPTER I 
+INTRODUCTION 
+PREAMBLE 
+SECTIONS 
+1. Title and extent of operation of the Code.  
+2. Punishment of offences committed within India.  
+3. Punishment of offences committed beyond, but which by law may be tried within, India. 
+4. Extension of Code to extra-territorial offences. 
+5. Certain laws not to be affected by this Act. 
+CHAPTER II 
+GENERAL EXPLANATIONS 
+6. Definitions in the Code to be understood subject to  exceptions.  
+7. Sense of expression once explained.  
+8. Gender. 
+9. Number.  
+10. “Man”. “Woman ”. 
+11. “Person”. 
+12. “Public ”. 
+13. [Omitted. ]. 
+14. “Servant of Government ”. 
+15. [Repealed. ]. 
+16. [Repealed .] . 
+17. “Government ”. 
+18. “India ”. 
+19. “Judge ”. 
+20. “Court of Justice ”. 
+21. “Public servant ”. 
+22. “Moveable property ”. 
+23. “Wrongful gain”. 
+“Wrongful loss”. 
+Gaining wrongfully/ Losing wrongfully. 
+24. “Dishonestly ”. 
+25. “Fraudulently ”. 
+26.  “Reason to believe ”. 
+27.  Property in possession of wife, clerk or servant. 
+28.  “Counterfeit ”. 
+29.  “Document”. 
+29A. “Electronic record”. 
+30.  “Valuable security ”. 
+31.  “A will ”. 
+32.  Words referring to acts include illegal omissions. 
+33.  “Act”. 
+“Omission”. 
+34.  Acts done by several persons in furtherance of common intention. 
+35.  When such an act is criminal by reason of its being done with a criminal knowledge or intention. 
+36.  Effect caused partly by act and partly by omission. 
+37.  Co-operation by doing one of several acts constituting an offence.
+----------------------------------------
+Result 2:
+  Distance: 0.8632
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 11 
+ 
+Of criminal misappropriation of property 
+SECTIONS 
+403. Dishonest misappropriation of property. 
+404. Dishonest misappropriation of property possessed by deceased person at the time of his death. 
+Of criminal breach of trust 
+405. Criminal breach of trust. 
+406. Punishment for criminal breach of trust. 
+407. Criminal breach of trust by carrier, etc. 
+408. Criminal breach of trust by clerk or servant. 
+409. Criminal breach of trust by public, servant. or by banker, merchant or agent. 
+Of the receiving of stolen property 
+410. Stolen property. 
+411. Dishonestly receiving stolen property. 
+412. Dishonestly receiving property stolen in the commission of a dacoity. 
+413. Habitually dealing in stolen property. 
+414. Assisting in concealment of stolen property. 
+Of Cheating 
+415. Cheating. 
+416. Cheating by personation. 
+417. Punishment for cheating. 
+418. Cheating with knowledge that wrongful loss may ensue to p erson whose interest offender is bound to protect. 
+419. Punishment for cheating by personation. 
+420. Cheating and dishonestly inducing delivery of property. 
+Of Fraudulent Deeds and Dispositions of Property 
+421. Dishonest or fraudulent removal or concealment of property to prevent distribution among creditor. 
+422. Dishonestly or fraudulently preventing debt being available for creditors. 
+423. Dishonest or fraudulent execution of deed of transfer containing false statement of consideration. 
+424. Dishonest or fraudulent removal or concealment of property. 
+Of mischief 
+425. Mischief. 
+426. Punishment for mischief. 
+427. Mischief causing damage to the amount of fifty rupees. 
+428. Mischief by killing or maiming animal of the value of ten rupees. 
+429. Mischief by killing or maiming cattle, etc., of any value or any animal of the value of fifty rupees. 
+430. Mischief by injury to works of irrigation or by wrongfully diverting  water. 
+431. Mischief by injury to public road, bridge, river or channel. 
+432. Mischief by causing inundation or obstruction to public drainage attended with damage. 
+433. Mischief by destroying, moving or rendering less useful a light-house or sea-mark. 
+434. Mischief by destroying or moving, etc., a land-mark fixed by public authority. 
+435. Mischief by fire or explosive substance with intent to cause damage to amount of one hundred or (in case of agricultural 
+produce) ten rupees. 
+436. Mischief by fire or explosive substance with intent to destroy house, etc. 
+437. Mischief with intent to destroy or make unsafe a decked vessel or one of twenty tons burden. 
+438. Punishment for the mischief described in section 437 committed by fire or explosive substance. 
+439. Punishment for intentionally running vessel agroun, or ashore with intent to commit theft, etc. 
+440. Mischief committed after preparation made for causing death or hurt. 
+Of criminal trespass 
+441. Criminal trespass. 
+442. House-trespass. 
+443. Lurking house-trespass. 
+444. Lurking house-trespass by night. 
+445. House-breaking. 
+446. House-breaking by night. 
+447. Punishment for criminal trespass. 
+448. Punishment for house-trespass. 
+449. House-trespass in order to commit offence punishable with death. 
+450. House-trespass in order to commit offence punishable with imprisonment for life. 
+451. House-trespass in order to commit offence punishable with imprisonment.
+----------------------------------------
+Result 3:
+  Distance: 0.8763
+  Search Type: l2_standard
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 101 
+ 
+(b) A is a warehouse-keeper. Z going on a journey, entrusts his furniture  to A, under a contract that it shall be returned on 
+payment of a stipulated sum for warehouse room. A dishonestly sells the goods. A has committed criminal breach of trust. 
+(c) A, residing in Calcutta, is agent for Z, residing at Delhi. There is an express or implied contract between A and Z, that all 
+sums remitted by Z to A shall be invested by A, according to Z's direc tion. Z remits a lakh of rupees to A, with directions to A to 
+invest the same in Company's paper. A dishonestly disobeys the directions  and employs the money in his own business. A has 
+committed criminal breach of trust. 
+(d) But if A, in the last illustration, not dishonestly but in good faith , believing that it will be more for Z's advantage to hold 
+shares in the Bank of Bengal, disobeys Z's directions, and buys shares in the Bank of Bengal, for Z, instead of buying Company's 
+paper, here, thought Z should suffer loss, and should be entitled  to bring a civil action against A, on account of that loss, ye t A, 
+not having acted dishonestly, has not committed criminal breach of trust. 
+(e) A, a revenue-officer, is entrusted with public money and is eithe r directed by law, or bound by a contract, express or 
+implied, with the Government, to pay into a certain treasury all the p ublic money which he holds. A dishonestly appropriates the 
+money. A has committed criminal breach of trust. 
+(f) A, a carrier, is entrusted by Z with property to be carried by land or by water. A dishonestly misappropriates the property. 
+A has committed criminal breach of trust. 
+406. Punishment for criminal breach of trust.—Whoever commits criminal breach of trust shall be 
+punished with imprisonment of either description for a term which may extend to  three years, or with 
+fine, or with both. 
+407. Criminal breach of trust by carrier, etc.—Whoever, being entrusted with property as a carrier, 
+wharfinger or warehouse-keeper, commits criminal breach of trust in respect of such property, shall be 
+punished with imprisonment of either description for a term which may extend to seven years, and shall 
+also be liable to fine. 
+408. Criminal breach of trust by clerk or servant.—Whoever, being a clerk or servant or employed 
+as a clerk or servant, and being in any manner entrusted in such capacity with proper ty, or with any 
+dominion over property, commits criminal breach of trust in respect of that property, shall be punished 
+with imprisonment of either description for a term which may extend to se ven years, and shall also be 
+liable to fine. 
+409. Criminal breach of trust by public servant, or by banker, merchant or agent .—Whoever, 
+being in any manner entrusted with property, or with any dominion over propert y in his capacity of a 
+public servant or in the way of his business as a banker, merchant, factor, broker, at torney or agent, 
+commits criminal breach of trust in respect of that property, shall be pun ished with 1[imprisonment for 
+life], or with imprisonment of either description for a term which may extend to ten years, and shall also 
+be liable to fine. 
+Of the receiving of stolen property 
+410. Stolen property .—Property, the possession whereof has been transferred by theft, or by 
+extortion, or by robbery, and property which has been criminally misappropriated or in respect of which 
+2***3***criminal breach of trust has been committed, is designated as “stolen property”, 4[whether the 
+transfer has been made, or the misappropriation or breach of trust has bee n committed, within or without 
+5[India]]. But, if such property subsequently comes into the possession of a person leg ally entitled to the 
+possession thereof, it then ceases to be stolen property. 
+411. Dishonestly receiving stolen property .—Whoever dishonestly receives or retains any stolen 
+property, knowing or having reason to believe the same to be stolen property, shall be pun ished with 
+imprisonment of either description for a term which may extend to three years, or with fine, or with both. 
+412. Dishonestly receiving property stolen in the commission of a dacoity.—Whoever dishonestly 
+receives or retains any stolen property, the possession whereof he knows or has reason to believe to have 
+been transferred by the commission of dacoity, or dishonestly receives from a person, w hom he knows or 
+has reason to believe to belong or to have belonged to a gang of dacoits, property which h e knows or has 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956). 
+2. The word “the” rep by Act 12 of 1891, s. 2 and the First Sch. 
+3. The words “offence of” rep. by Act 8 of1882, s. 9. 
+4. Ins. by s. 9, ibid. 
+5. The words “British India” have successively been subs. by the A. O. 1948, the A. O. 1950 and Act 3 of 1951, s. 3 and the Sch., 
+to read as above (w.e.f. 1-4-1951).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:44
+Query: 'specific performance'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.7498
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(xxv)364. Special provisions as to major ports and aerodromes.365.Effect of failure to comply with, or to give effect to, directions given by the Union. 366. Definitions.367. Interpretation.PART XX AMENDMENT OF THE CONSTITUTION368.Power of Parliament to amend the Constitution and procedure therefor. PART XXITEMPORARY, TRANSITIONAL AND SPECIAL PROVISIONS369.Temporary power to Parliament to make laws with respect to certain matters in the State List as if they were matters in the Concurrent List.370.Temporary provisions with respect to the State of Jammu and Kashmir.371.Special provision with respect to the States of Maharashtra and Gujarat.371A.Special provision with respect to the State of Nagaland.371B .Special provision with respect to the State of Assam.371C.Special provision with respect to the State of Manipur.371D. Special provisions with respect to the State of Andhra Pradesh or the State of Telangana.371E.Establishment of Central University in Andhra Pradesh.371F.Special provisions with respect to the State of Sikkim. 371G.Special provision with respect to the State of Mizoram.371H.Special provision with respect to the State of Arunachal Pradesh.371-I.Special provision with respect to the State of  Goa.371J.Special provisions with respect to the State of  Karnataka.372.Continuance in force of existing laws and their adaptation.372A.Power of the President to adapt laws.
+----------------------------------------
+Result 2:
+  Distance: 1.7734
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ix)134A.Certificate for appeal to the Supreme Court. 135. Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court.136. Special leave to appeal by the Supreme Court. 137. Review of judgments or orders by the Supreme Court. 138. Enlargement of the jurisdiction of the Supreme Court.139. Conferment on the Supreme Court of powers to issue certain writs.139A. Transfer of certain cases.140. Ancillary powers of the Supreme Court. 141. Law declared by Supreme Court to be binding on all courts.142. Enforcement of decrees and orders of the Supreme Court and orders as to discovery, etc.  143. Power of the President to consult the Supreme Court.144. Civil and judicial authorities to act in aid of the Supreme Court.[144A. Special provisions as to disposal of questions relating to constitutional validity of laws.Omitted.]145. Rules of Court, etc.146. Officers and servants and the expenses of the Supreme Court.147. Interpretation.CHAPTER V.COMPTROLLER AND AUDITOR-GENERAL OF INDIA148. Comptroller and Auditor-General of India.149. Duties and powers of the Comptroller and Auditor-General.150. Form of accounts of the Union and of the States.151. Audit reports.PART VITHE STATESCHAPTER I.GENERAL152. Definition.
+----------------------------------------
+Result 3:
+  Distance: 1.7923
+  Search Type: l2_standard
+  Collection: constitution_of_india_4
+  Article/Section: Unknown Section
+  Content: 273
+1[FOURTH SCHEDULE[Articles 4(1) and 80(2)] Allocation of seats in the Council of StatesTo each State or Union territory specified in the first column of  the following table, there shall be allotted the number of seats specified in the second column thereof opposite to that State or that Union territory, as the case may be: TABLE  1. Andhra Pradesh  ..........................................................2[11]3[2. Telangana ................................................................7]4[3.]Assam........................................................................74[4.]Bihar..........................................................................5[16]6[4[5.]Jharkhand ................................................................6]7[8[4[6.]Goa............................................................................1]]9[8[4[7.]Gujarat................................................................11]]10[8[4[8.]Haryana................................................................5]]8[4[9.]Kerala........................................................................9______________________________________________1. Fourth Schedule Subs. by the Constitution (Seventh Amendment) Act, 1956, s. 3(2), for ‘Fourth Schedule’ (w.e.f. 1-11-1956).2.  Subs. by the Andhra Pradesh Reorganisation Act, 2014, s. 12, for “18” (w.e.f.  2-6-2014).3.  Ins. by s. 12, ibid. (w.e.f.  2-6-2014).4.  Entries 2 to 30 renumbered as entries 3 to 31 respectively by s. 12, ibid. (w.e.f.  2-6-2014).5.  Subs. by the Bihar Reorganisation  Act, 2000 (30 of 2000), s. 7, for "22" (w.e.f. 15-11-2000).6.  Ins. by s. 7, ibid.(w.e.f. 15-11-2000).7.  Entries 4 to 26 renumbered as entries 5 to 27 respectively and entry “4 Goa….1” ins. by the Goa, Daman and Diu Reorganisation Act, 1987 (18 of 1987), s. 6(a) and (b) (w.e.f. 30-5-1987). 8.  Entries 4 to 29 renumbered as entries 5 to 30 by  the Bihar Reorganisation  Act, 2000 (30 of 2000), s. 7 (w.e.f. 15-11-2000).9. Subs. by the Bombay Reorganisation Act, 1960 (11 of 1960), s. 6, for entry "4"(w.e.f.1-5-1960).10. Ins. by the Punjab Reorganisation Act, 1966 (31 of 1966), s. 9 (w.e.f. 1-11-1966).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:00:49
+Query: 'specific performance'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.8160
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 74 
+ 
+(c) A is lawfully arrested by Z, a bailiff. A is excited to sudden and violent passion by the arrest, and kills Z. This is murder, 
+inasmuch as the provocation was given by a thing done by a public servant in the exercise of his powers. 
+(d) A appears as a witness before Z, a Magistrate. Z says that he does no t believe a word of A's deposition, and that A has 
+perjured himself. A is moved to sudden passion by these words, and kills Z. This is murder. 
+(e) A attempts to pull Z's nose. Z, in the exercise of the right of p rivate defence, lays hold of A to prevent him from doing 
+so. A is moved to sudden and violent passion in consequence, an d kills Z. This is murder, inasmuch as the provocation was 
+giving by a thing done in the exercise of the right of private defence. 
+(f) Z strikes B. B is by this provocation excited to violent rage. A, a by stander, intending to take advantage of B's rage, and 
+to cause him to kill Z, puts a knife into B's hand for that purpose. B kills Z with the knife. Here B may have committed only 
+culpable homicide, but A is guilty of murder. 
+Exception 2.—Culpable homicide is not murder if the offender, in the exercise in good faith of t he 
+right of private defence of person or property, exceeds the power given to h im by law and causes the 
+death of the person against whom he is exercising such right of defence without prem editation, and 
+without any intention of doing more harm than is necessary for the purpose of such defence. 
+Illustration 
+Z attempts to horsewhip A, not in such a manner as to cause grievo us hurt to A. A draws out a pistol. Z persists in the 
+assault. A believing in good faith that he can by no other m eans prevent himself from being horsewhipped, shoots Z dead. A has 
+not committed murder, but only culpable homicide. 
+Exception 3.—Culpable homicide is not murder if the offender, being a public servant or aiding  a 
+public servant acting for the advancement of public justice, exceeds the powers given to him by law, and 
+causes death by doing an act which he, in good faith, believes to be lawful and necessar y for the due 
+discharge of his duty as such public servant and without ill-will towards the perso n whose death is 
+caused. 
+Exception 4.—Culpable homicide is not murder if it is committed without premeditation i n a sudden 
+fight in the heat of passion upon a sudden quarrel and without the offender's having t aken undue 
+advantage or acted in a cruel or unusual manner. 
+Explanation.—It is immaterial in such cases which party offers the provocation or commits the first 
+assault. 
+Exception 5.—Culpable homicide is not murder when the person whose death is caused, being above 
+the age of eighteen years, suffers death or takes the risk of death with his own consent. 
+Illustration 
+A, by instigation, voluntarily causes Z, a person under eighteen years o f age to commit suicide. Here, on account of Z's 
+youth, he was incapable of giving consent to his own death; A has therefore abetted murder. 
+301. Culpable homicide by causing death of person other than person whose death was 
+intended.—If a person, by doing anything which he intends or knows to be likely to ca use death, 
+commits culpable homicide by causing the death of any person, whose death he neither intends nor knows 
+himself to be likely to cause, the culpable homicide committed by the offender i s of the description of 
+which it would have been if he had caused the death of the person whose death he intended or k new 
+himself to be likely to cause. 
+302. Punishment for murder .—Whoever commits murder shall be punished with death, or 
+1[imprisonment for life], and shall also be liable to fine. 
+303. Punishment for murder by life-convict .—Whoever, being under sentence of 1[imprisonment 
+for life], commits murder shall be punished with death. 
+304. Punishment for culpable homicide not amounting to murder .—Whoever commits culpable 
+homicide not amounting to murder shall be punished with 1[imprisonment for life], or imprisonment of 
+either description for a term which may extend to ten years, and shall also be liabl e to fine, if the act by 
+which the death is caused is done with the intention of causing death, or of  causing such bodily inju ry as 
+is likely to cause death; 
+                                                           
+1. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation for life” (w.e.f. 1-1-1956).
+----------------------------------------
+Result 2:
+  Distance: 1.8346
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 22 
+ 
+of the offender, commute the punishment for imprisonment of either description f or a term not exceeding 
+fourteen years. 
+1[55A. Definition of “appropriate Government ”.—In sections fifty-four and fifty-five the 
+expression “appropriate Government” means,— 
+(a) in cases where the sentence is a sentence of death or is for an offence agains t any law relating 
+to a matter to which the executive power of the Union extends, the Central Government; and 
+(b) in cases where the sentence (whether of death or not) is for an offence against any law relating 
+to a matter to which the executive power of the State extends, the Government of the State w ithin 
+which the offender is sentenced.] 
+56. [ Sentence of Europeans and Americans to penal servitude. Proviso as to sentence for term 
+exceeding ten years but not for life .] Rep. by the Criminal Law (Removal of Racial Discriminations) Act , 
+1949 (17 of 1949) (w. e. f. 6-4-1949). 
+57. Fractions of terms of punishment .—In calculating fractions of terms of punishment, 
+2[imprisonment] for life shall be reckoned as equivalent to 2[imprisonment] for twenty years. 
+58. [ Offenders sentenced to transportation how dealt with until transported .] Rep. by the Code of 
+Criminal Procedure (Amendment) Act, 1955 (26 of 1955), s. 117 and the Sch. (w.e.f. 1-1-1956). 
+59. [Transportation instead of imprisonment.] Rep. by s.117 and the Sch., ibid. (w.e.f. 1-1-1956). 
+60. Sentence may be (in certain cases of imprisonment) wholly or partly rigorous or simple.—In 
+every case in which an offender is punishable with imprisonment which may be of eit her description, it 
+shall be competent to the Court which sentences such offender to direct in the sentence that such 
+imprisonment shall be wholly rigorous, or that such imprisonment shall be wholly simple, or that any part 
+of such imprisonment shall be rigorous and the rest simple. 
+61. [ Sentence of forfeiture of property .] Rep. by the Indian Penal Code (Amendment) Act , 1921  
+(16 of 1921), s. 4. 
+62. [ Forfeiture of property, in respect of offenders punishable with death, transportati on or 
+imprisonment.] Rep. by s. 4, ibid. 
+63. Amount of fine.—Where no sum is expressed to which a fine may extend, the amount of fine to 
+which the offender is liable is unlimited, but shall not be excessive. 
+64. Sentence of imprisonment for non-payment of fine .—3[In every case of an offence punishable 
+with imprisonment as well as fine, in which the offender is sentenced to a fine, w hether with or without 
+imprisonment, 
+and in every case of an offence punishable 4[with imprisonment or fine, or] with fine only, in which 
+the offender is sentenced to a fine.] 
+it shall be competent to the Court which sentences such offender to direct by the sen tence that, in 
+default of payment of the fine, the offender shall suffer imprisonment for a certain term, which 
+imprisonment shall be in excess of any other imprisonment to which he may hav e been sentenced or to 
+which he may be liable under a commutation of a sentence.  
+65. Limit to imprisonment for non-payment of fine, when imprisonment and fine awardable.—
+The term for which the Court directs the offender to be imprisoned in defau lt of payment of a fine shall 
+not exceed one-fourth of the term of imprisonment which is the maximum fixed for  the offence, if the 
+offence be punishable with imprisonment as well as fine. 
+66. Description of imprisonment for non-payment of fine .—The imprisonment which the Court 
+imposes in default of payment of a fine may be of any description to which the offender mi ght have been 
+sentenced for the offence. 
+                                                           
+1. Subs. by the A. O 1950. Earlier ins. by the A. O. 1937. 
+2. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation” (w.e.f. 1-1-1956). 
+3. Subs. by Act 8 of 1882, s. 2, for “in every case in which an offender is sentenced to a fine”. 
+4. Ins. by Act 10 of 1886, s. 21 (2).
+----------------------------------------
+Result 3:
+  Distance: 1.8541
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 5 
+ 
+ SECTIONS 
+158. Being hired to take part in an unlawful assembly or riot.  
+or to go armed. 
+159. Affray. 
+160. Punishment for committing affray. 
+CHAPTER IX 
+OF OFFENCES BY OR RELATING TO  PUBLIC SERVANTS 
+161. [Repealed.]. 
+162. [Repealed.]. 
+163. [Repealed.]. 
+164. [Repealed.]. 
+165. [Repealed.]. 
+165A. [Repealed.]. 
+166. Public servant disobeying law, with intent to cause injury to any person. 
+166A. Public servant disobeying direction under law. 
+166B. Punishment for non-treatment of victim. 
+167. Public servant framing an incorrect document with i ntent to cau se injury. 
+168. Public servant unlawfully engaging in trade.  
+169. Public servant unlawfully buying or bidding for pro perty.  
+170. Personating a public servant. 
+171. Wearing garb or carrying token used by public serva nt with fraudulent intent.  
+CHAPTER IXA 
+OF OFFENCES RELATING TO ELECTIONS 
+171A. “Candidate ”, “Electoral right ” defined. 
+171B. Bribery. 
+171C. Undue influence at elections. 
+171D.Personation at elections. 
+171E. Punishment for bribery. 
+171F. Punishment for undue influence or personation  at an election. 
+171G.False statement in connection with an election . 
+171H. Illegal payments in connection with an electi on. 
+171-I. Failure to keep election accounts. 
+ 
+CHAPTER X 
+OF CONTEMPTS OF THE  LAWFUL AUTHORITY OF  PUBLIC SERVANTS 
+172. Absconding to avoid service or summons of other pro ceeding.  
+173. Preventing service of summons or other proceeding, or preventing publication thereof.  
+174. Non-attendance in obedience to an order from public  servant.  
+174A. Non-appearance in response to a proclamation u nder section 82 of Act 2 of  1974. 
+175. Omission to produce document to public servant by p erson legally bound to produce it.  
+176. Omission to give notice or information to public se rvant by person legally bound to give it.  
+177. Furnishing false information.  
+178. Refusing oath or affirmation when duly required by public servant to make it.  
+179. Refusing to answer public servant authorised to que stion.  
+180. Refusing to sign statement.  
+181. False statement on oath or affirmation to public se rvant or person authorised to administer an oath or  
+affirmation.  
+182. False information, with intent to cause public servant to use his lawful power to the injury of another person. 
+183. Resistance to the taking of property by the lawful authority of a public servant.  
+184. Obstructing sale of property offered for sale by au thority of public servant.  
+185. Illegal purchase or bid for property offered for sa le by authority of public servant.  
+186. Obstructing public servant in discharge of public f unctions.  
+187. Omission to assist public servant when bound by law  to give assistance.  
+188. Disobedience to order duly promulgated by public se rvant.  
+189. Threat of injury to public servant. 
+190. Threat of injury to induce person to refrain from applying for protection to public servant. 
+CHAPTER XI 
+OF FALSE EVIDENCE AND  OFFENCES AGAINST  PUBLIC JUSTICE 
+191. Giving false evidence.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:01:02
+Query: 'compensation'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.3468
+  Search Type: l2_standard
+  Collection: constitution_of_india_3
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part XIV.—Services under the Union and the States)  181(a) on all matters relating to methods of recruitment to civil services and for civil posts; (b) on the principles to be followed in making appointments to civil services and posts and in making promotions and transfers from one service to another and on the suitability of candidates for such appointments, promotions or transfers;(c) on all disciplinary matters affecting a person serving under the Government of India or the Government of a State in a civil capacity, including memorials or petitions relating to such matters;(d) on  any claim by or in respect of a person who is serving or has served under the Government of India or the Government of a State or under the Crown in India or under the Government of an Indian State, in a civil capacity, that any costs incurred by him in defending legal proceedings instituted against him in respect of acts done or purporting to be done in the execution of his duty should be paid out of the Consolidated Fund of India, or, as the case may be, out of the Consolidated Fund of the State;(e) on any claim for the award of a pension in respect of injuries sustained by a person while serving under the Government of India or the Government of a State or under the Crown in India or under the Government of an Indian State, in a civil capacity, and any question as to the amount of any such award,and it shall be the duty of a Public Service Commission to advise on any matter so referred to them and on any other matter which the President, or, as the case may be, the Governor1*** of the State, may refer to them:Provided that the President as respects the all-India services and also as respects other services and posts in connection with the affairs of the Union, and the Governor2***, as respects other services and posts in connection with the affairs of a State, may make regulations specifying the matters in which either generally, or in any particular class of case or in any particular circumstances, it shall not be necessary for a Public Service Commission to be consulted.(4) Nothing in clause (3) shall require a Public Service Commission to be consulted as respects the manner in which any provision referred to in clause (4) of article 16 may be made or as respects the manner in which effect may be given to the provisions of article 335.______________________________________________1. The words "or Rajpramukh" omitted by the Constitution (Seventh Amendment) Act, 1956, s. 29 and Sch. (w.e.f. 1-11-1956).2. The words "or Rajpramukh, as the case may be" omitted by s. 29 and Sch. ibid.(w.e.f. 1-11-1956).
+----------------------------------------
+Result 2:
+  Distance: 1.4022
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(vii)96. The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration.97. Salaries and allowances of the Chairman and Deputy Chairman and the Speaker and Deputy Speaker.98. Secretariat of Parliament.Conduct of Business99. Oath or affirmation by members.100. Voting in Houses, power of Houses to act notwithstanding vacancies and quorum.Disqualifications of Members101. Vacation of seats.102. Disqualifications for membership.103. Decision on questions as to disqualifications of members.104. Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when disqualified.Powers, Privileges and Immunities of Parliament and its Members105. Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof.106. Salaries and allowances of members.Legislative Procedure107. Provisions as to introduction and passing of Bills.108. Joint sitting of both Houses in certain cases.109. Special procedure in respect of Money Bills.110. Definition of “Money Bills”.111. Assent to Bills.Procedure in Financial Matters112. Annual financial statement.113. Procedure in Parliament with respect to estimates.114. Appropriation Bills.
+----------------------------------------
+Result 3:
+  Distance: 1.4066
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part V.—The Union)52(a) the sums required to meet expenditure described by this Constitution as expenditure charged upon the Consolidated Fund of India; and(b) the sums required to meet other expenditure proposed to be made from the Consolidated Fund of India, and shall distinguish expenditure on revenue account from other expenditure. (3) The following expenditure shall be expenditure charged on the Consolidated Fund of  India—(a) the emoluments and allowances of the President and other expenditure relating to his office;(b) the salaries and allowances of the Chairman and the Deputy Chairman of the Council of States and the Speaker and the Deputy Speaker of the House of the People;(c) debt charges for which the Government of India is liable including interest, sinking fund charges and redemption charges, and other expenditure relating to the raising of loans and the service and redemption of debt;(d) (i) the salaries, allowances and pensions payable to or in respect of Judges of the Supreme Court;(ii) the pensions payable to or in respect of Judges of the Federal Court;(iii) the pensions payable to or in respect of Judges of any High Court which exercises jurisdiction in relation to any area included in the territory of India or which at any time before the commencement of this Constitution exercised jurisdiction in relation to any area included in 1[a Governor's Province of the Dominion of India];(e) the salary, allowances and pension payable to or in respect of the Comptroller and Auditor-General of India;(f) any sums required to satisfy any judgment, decree or award of any court or arbitral tribunal;(g) any other expenditure declared by this Constitution or by Parliament by law to be so charged.113. Procedure in Parliament with respect to estimates.—(1) So much of the estimates as relates to expenditure charged upon the Consolidated Fund of India shall not be submitted to the vote of Parliament, but nothing in this clause shall be construed as preventing the discussion in either House of Parliament of any of those estimates.______________________________________________1. Subs. by the Constitution (Seventh Amendment) Act, 1956, s. 29 and Sch., for "a Province corresponding to a State specified in Part A of the First Schedule"(w.e.f. 1-11-1956).
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-17 19:01:07
+Query: 'compensation'
+Total Results: 24 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 1.4394
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 43 
+ 
+(ii) the Public Gambling Act, 1867, not being an offence punishable under section 3 of that Act 
+or an offence in respect of wagering punishable under section 13 of that Act; or  
+(iii) section 34 of the Police Act, 1861; or 
+(iv) section 160 of the Indian Penal Code, 1860; or 
+  ( b) any other offence punishable with fine only, or 
+(2) a procedure, under section 107 or section 109 of the Code of Criminal Procedure, 1973, pending  
+before a Magistrate on the date of commencement of this Act from before “December 31, 2015 ” shall 
+abate. 
+[Vide the Uttar Pradesh Act 35 of 1979, s. 9, and amended by Uttar Pradesh Act 29 of 2016 and 9 of 
+2018]. 
+CHAPTER IX 
+OF OFFENCES BY OR RELATING TO PUBLIC SERVANTS 
+161. [Public servant taking gratification other than legal remuneration in respect o f an official act .] 
+Rep. by the Prevention of Corruption Act, 1988 (49 of 1988), s. 31. 
+STATE AMENDMENT 
+Kerala.— 
+Amendment of section 161, Central Act 45 of 1860.—In section 161 of the Indian Penal Code 
+(Central Act 45 of 1860), after the explanation relating to “A motive or reward for doing ”, the 
+following explanation shall be inserted, namely:— 
+“‘Public Servant’.— For purposes of this section and sections 162, 163, 164, 165 and 165A, the 
+words ‘public servant’ shall denote, besides those who are public servants under section 21 or who 
+are deemed to be ‘public servants’ within the meaning of that section under any law for the time 
+being in force, persons falling under any of the descriptions hereinafter following, namely:— 
+(i) Every officer in the service or pay of the Travancore Devaswom Board or the Cochin 
+Devaswom Board or the Cochin Devaswom Board; 
+(ii) Every officer in the service or pay and every member of the Wakfs B oard constituted 
+under the Wakfs Act, 1954 (Central Act 29 of 1954); 
+(iii) The President and every member of a Village Court or Village Panchayat Court; 
+(iv) Every member of the Board of Directors or of the executive or managing  committee and 
+every officer or servant of a co-operative society registered or deemed to be registered under the 
+law relating to co-operative societies for the time being in force. 
+(v) Every member of the governing body and every officer or servant in the servi ce or pay of 
+a society registered under the Travancore-Cochin Literary, Scientific and Charitable Societies 
+Registration Act, 1955 or the Societies Registration Act, 1860, and receiving aid or grant from the 
+Government; 
+(vi) Every teacher or other officer or servant of the University of Kerala; 
+(vii) Every examiner of a University Examination or a Government Examination; 
+(viii) Every Manager, or teacher or servant of an educational institution which receives or has 
+received aid or grant from the Government or the University of kerala.”. 
+[Vide Kerala Act 27 of 1962, sec. 2].
+----------------------------------------
+Result 2:
+  Distance: 1.4788
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 23 
+ 
+67. Imprisonment for non-payment of fine, when offence punishable with fine on ly.—If the 
+offence be punishable with fine only, 1[the imprisonment which the Court imposes in default of payment 
+of the fine shall be simple, and] the term for which the Court directs the offender t o be imprisoned, in 
+default of payment of fine, shall not exceed the following scale, that is to say, f or any term not exceeding 
+two months when the amount of the fine shall not exceed fifty rupees, and for any ter m not exceeding 
+four months when the amount shall not exceed one hundred rupees, and for any term not exceeding six  
+months in any other case. 
+68. Imprisonment to terminate on payment of fine .—The imprisonment which is imposed in 
+default of payment of a fine shall terminate whenever that fine is either paid or levied by process of law. 
+69. Termination of imprisonment on payment of proportional part of fine .—If, before the 
+expiration of the term of imprisonment fixed in default of payment, such a proportion of the fine be paid 
+or levied that the term of imprisonment suffered in default of payment is not le ss than proportional to the 
+part of the fine still unpaid, the imprisonment shall terminate. 
+Illustration 
+A is sentenced to a fine of one hundred rupees and to four months' imprisonment in default of payment. Here, if seventy-five 
+rupees of the fine be paid or levied before the expiration of one month of the imprisonment, A will be discharged as soon as the 
+first month has expired. If seventy-five rupees be paid or levied at the time of the expiration of the first month, or at any later 
+time while A continues in imprisonment, A will be immediately discharged. If fifty rupees of the fine be paid or levied before the 
+expiration of two months of the imprisonment. A will be discharged as so on as the two months are completed. If fifty rupees be 
+paid or levied at the time of the expiration of those two months, or at any later time while A continues in imprisonment, A will be 
+immediately discharged. 
+70. Fine leviable within six years, or during imprisonment. Death not to discharge  property 
+from liability.—The fine, or any part thereof which remains unpaid, may be levied at any time within six 
+years after the passing of the sentence, and if, under the sentence, the offender be l iable to imprisonment 
+for a longer period than six years, then at any time previous to the expirati on of that period; and the death 
+of the offender does not discharge from the liability any property which woul d, after his death, be legally 
+liable for his debts. 
+71. Limit of punishment of offence made up of several offences .—Where anything which is an 
+offence is made up of parts, any of which parts is itself an offence, the offender shall not be punished with 
+the punishment of more than one of such his offences, unless it be so expressly provided. 
+2[Where anything is an offence falling within two or more separate definiti ons of any law in force for 
+the time being by which offences are defined or punished, or 
+where several acts, of which one or more than one would by itself or themselv es constitute an 
+offence, constitute, when combined, a different offence, 
+the offender shall not be punished with a more severe punishment than the Court which tri es him 
+could award for any one of such offences]. 
+Illustrations 
+(a) A gives Z fifty strokes with a stick. Here A may have committed the  offence of voluntarily causing hurt to Z by the 
+whole beating, and also by each of the blows which make up th e whole beating. If A were liable to punishment for every blow, 
+he might be imprisoned for fifty years, one for each blow. But he is liable only to one punishment for the whole beating. 
+(b) But, if, while A is beating Z, Y interferes, and A intentionally strikes Y, h ere, as the blow given to Y is no part of the act 
+whereby A voluntarily causes hurt to Z, A is liable to one punishment fo r voluntarily causing hurt to Z, and to another for the 
+blow given to Y. 
+72. Punishment of person guilty of one of several offences, the judgment stating th at it is 
+doubtful of which .—In all cases in which judgment is given that a person is guilty of one of several  
+offences specified in the judgment, but that it is doubtful of which of these offen ces he is guilty, the 
+offender shall be punished for the offence for which the lowest punishment is pr ovided if the same 
+punishment is not provided for all. 
+ 
+                                                           
+1. Ins. by Act 8 of 1882, s. 3. 
+2. Added by s. 4, ibid.
+----------------------------------------
+Result 3:
+  Distance: 1.4925
+  Search Type: l2_standard
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 22 
+ 
+of the offender, commute the punishment for imprisonment of either description f or a term not exceeding 
+fourteen years. 
+1[55A. Definition of “appropriate Government ”.—In sections fifty-four and fifty-five the 
+expression “appropriate Government” means,— 
+(a) in cases where the sentence is a sentence of death or is for an offence agains t any law relating 
+to a matter to which the executive power of the Union extends, the Central Government; and 
+(b) in cases where the sentence (whether of death or not) is for an offence against any law relating 
+to a matter to which the executive power of the State extends, the Government of the State w ithin 
+which the offender is sentenced.] 
+56. [ Sentence of Europeans and Americans to penal servitude. Proviso as to sentence for term 
+exceeding ten years but not for life .] Rep. by the Criminal Law (Removal of Racial Discriminations) Act , 
+1949 (17 of 1949) (w. e. f. 6-4-1949). 
+57. Fractions of terms of punishment .—In calculating fractions of terms of punishment, 
+2[imprisonment] for life shall be reckoned as equivalent to 2[imprisonment] for twenty years. 
+58. [ Offenders sentenced to transportation how dealt with until transported .] Rep. by the Code of 
+Criminal Procedure (Amendment) Act, 1955 (26 of 1955), s. 117 and the Sch. (w.e.f. 1-1-1956). 
+59. [Transportation instead of imprisonment.] Rep. by s.117 and the Sch., ibid. (w.e.f. 1-1-1956). 
+60. Sentence may be (in certain cases of imprisonment) wholly or partly rigorous or simple.—In 
+every case in which an offender is punishable with imprisonment which may be of eit her description, it 
+shall be competent to the Court which sentences such offender to direct in the sentence that such 
+imprisonment shall be wholly rigorous, or that such imprisonment shall be wholly simple, or that any part 
+of such imprisonment shall be rigorous and the rest simple. 
+61. [ Sentence of forfeiture of property .] Rep. by the Indian Penal Code (Amendment) Act , 1921  
+(16 of 1921), s. 4. 
+62. [ Forfeiture of property, in respect of offenders punishable with death, transportati on or 
+imprisonment.] Rep. by s. 4, ibid. 
+63. Amount of fine.—Where no sum is expressed to which a fine may extend, the amount of fine to 
+which the offender is liable is unlimited, but shall not be excessive. 
+64. Sentence of imprisonment for non-payment of fine .—3[In every case of an offence punishable 
+with imprisonment as well as fine, in which the offender is sentenced to a fine, w hether with or without 
+imprisonment, 
+and in every case of an offence punishable 4[with imprisonment or fine, or] with fine only, in which 
+the offender is sentenced to a fine.] 
+it shall be competent to the Court which sentences such offender to direct by the sen tence that, in 
+default of payment of the fine, the offender shall suffer imprisonment for a certain term, which 
+imprisonment shall be in excess of any other imprisonment to which he may hav e been sentenced or to 
+which he may be liable under a commutation of a sentence.  
+65. Limit to imprisonment for non-payment of fine, when imprisonment and fine awardable.—
+The term for which the Court directs the offender to be imprisoned in defau lt of payment of a fine shall 
+not exceed one-fourth of the term of imprisonment which is the maximum fixed for  the offence, if the 
+offence be punishable with imprisonment as well as fine. 
+66. Description of imprisonment for non-payment of fine .—The imprisonment which the Court 
+imposes in default of payment of a fine may be of any description to which the offender mi ght have been 
+sentenced for the offence. 
+                                                           
+1. Subs. by the A. O 1950. Earlier ins. by the A. O. 1937. 
+2. Subs. by Act 26 of 1955, s. 117 and the Sch., for “transportation” (w.e.f. 1-1-1956). 
+3. Subs. by Act 8 of 1882, s. 2, for “in every case in which an offender is sentenced to a fine”. 
+4. Ins. by Act 10 of 1886, s. 21 (2).
+----------------------------------------
+
+================================================================================
+
