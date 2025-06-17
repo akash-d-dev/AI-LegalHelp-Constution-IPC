@@ -60,7 +60,7 @@ const ChatContainer = () => {
       {connectionStatus === 'connected' && (
         <div className="connection-status online">
           <Wifi size={16} />
-          <span>Connected to Constitutional AI Agent</span>
+          <span>Connected to AI Legal Assistant</span>
         </div>
       )}
     </div>

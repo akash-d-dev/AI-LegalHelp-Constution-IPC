@@ -32,7 +32,7 @@ const ChatHeader = ({
         <div className="logo">
           <Scale className="logo-icon" size={32} />
           <div className="logo-text">
-            <h1>Constitutional AI</h1>
+            <h1>AI Legal Assistant</h1>
             <p>Indian Constitution & IPC Expert</p>
           </div>
         </div>

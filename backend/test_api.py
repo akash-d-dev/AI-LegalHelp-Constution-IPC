@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test script for Constitutional AI Chat API
+Test script for AI Legal Assistant Chat API
 """
 
 import asyncio
@@ -18,7 +18,7 @@ from app.models.chat import ChatMessage
 async def test_chat_service():
     """Test the chat service functionality"""
     
-    print("🧪 Testing Constitutional AI Chat Service")
+    print("🧪 Testing AI Legal Assistant Chat Service")
     print("=" * 50)
     
     # Test 1: Basic message processing

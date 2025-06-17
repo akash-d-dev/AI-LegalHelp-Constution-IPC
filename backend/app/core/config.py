@@ -1,5 +1,5 @@
 """
-Configuration settings for the Constitutional AI Chat API
+Configuration settings for the AI Legal Assistant Chat API
 """
 
 import os
@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     """Application settings"""
     
     # App settings
-    APP_NAME: str = "Constitutional AI Chat API"
+    APP_NAME: str = "AI Legal Assistant Chat API"
     VERSION: str = "1.0.0"
     ENVIRONMENT: str = "development"
     DEBUG: bool = True

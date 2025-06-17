@@ -1,10 +1,10 @@
-# Constitutional AI Chat API
+# AI Legal Assistant Chat API
 
-FastAPI backend for the Constitutional AI Chat application, providing endpoints to interact with Indian Constitution and IPC AI agents.
+FastAPI backend for the AI Legal Assistant Chat application, providing endpoints to interact with Indian Constitution and IPC AI agents.
 
 ## Features
 
-- 🤖 **AI Agent Integration**: Direct integration with Constitutional AI agents
+- 🤖 **AI Agent Integration**: Direct integration with AI Legal Assistant agents
 - 💬 **Chat API**: RESTful endpoints for real-time chat functionality
 - 📚 **Legal Expertise**: Specialized in Indian Constitution and IPC
 - 🔍 **Chat History Management**: Intelligent context management (last 5 interactions)
@@ -352,5 +352,5 @@ For issues or questions:
 
 ---
 
-**Built with FastAPI for the Constitutional AI Chat Application**
+**Built with FastAPI for the AI Legal Assistant Chat Application**
 *Showcasing AI agent development and modern web API design* 

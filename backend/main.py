@@ -1,5 +1,5 @@
 """
-FastAPI backend for Constitutional AI Chat Application
+FastAPI backend for AI Legal Assistant Chat Application
 """
 
 import os
@@ -26,7 +26,7 @@ logger = setup_logging()
 async def lifespan(app: FastAPI):
     """Application lifespan manager"""
     # Startup
-    logger.info("Starting Constitutional AI Chat API...")
+    logger.info("Starting AI Legal Assistant Chat API...")
     
     # Initialize environment variables for agent system
     Constants.set_env_variables()
@@ -35,11 +35,11 @@ async def lifespan(app: FastAPI):
     yield
     
     # Shutdown
-    logger.info("Shutting down Constitutional AI Chat API...")
+    logger.info("Shutting down AI Legal Assistant Chat API...")
 
 # Create FastAPI application
 app = FastAPI(
-    title="Constitutional AI Chat API",
+    title="AI Legal Assistant Chat API",
     description="API for interacting with Indian Constitution and IPC AI agents",
     version="1.0.0",
     docs_url="/docs" if settings.ENVIRONMENT == "development" else None,
@@ -65,7 +65,7 @@ app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
 async def root():
     """Root endpoint"""
     return {
-        "message": "Constitutional AI Chat API",
+        "message": "AI Legal Assistant Chat API",
         "version": "1.0.0",
         "status": "running",
         "docs": "/docs" if settings.ENVIRONMENT == "development" else "disabled"

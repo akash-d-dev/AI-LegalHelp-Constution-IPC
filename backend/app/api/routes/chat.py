@@ -17,7 +17,7 @@ router = APIRouter()
 @router.post("/chat", response_model=ChatResponse, summary="Send Chat Message")
 async def send_message(request: ChatRequest) -> ChatResponse:
     """
-    Send a message to the Constitutional AI agent
+    Send a message to the AI Legal Assistant agent
     
     Args:
         request: Chat request containing message and history

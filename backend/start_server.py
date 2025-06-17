@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Startup script for Constitutional AI Chat API
+Startup script for AI Legal Assistant Chat API
 """
 
 import os
@@ -18,7 +18,7 @@ def main():
     # Set environment variables
     os.environ.setdefault('ENVIRONMENT', 'development')
     
-    print("🚀 Starting Constitutional AI Chat API...")
+    print("🚀 Starting AI Legal Assistant Chat API...")
     print("📚 Backend for Indian Constitution & IPC AI Agent")
     print("-" * 50)
     

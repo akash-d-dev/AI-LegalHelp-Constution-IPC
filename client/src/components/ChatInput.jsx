@@ -158,7 +158,7 @@ const ChatInput = ({ onSendMessage, isLoading, isConnected, onCancel }) => {
           </span>
           {isLoading && (
             <span className="loading-text">
-              Consulting Constitutional AI...
+              Consulting AI Legal Assistant...
             </span>
           )}
         </div>

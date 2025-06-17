@@ -1,4 +1,4 @@
-# Constitutional AI Chat Application
+# AI Legal Assistant Chat Application
 
 A modern React chat interface for interacting with Indian Constitution and IPC (Indian Penal Code) AI agents.
 
@@ -76,7 +76,7 @@ client/
    VITE_API_BASE_URL=http://localhost:8000
    
    # App Configuration
-   VITE_APP_NAME=Constitutional AI Chat
+   VITE_APP_NAME=AI Legal Assistant Chat
    VITE_APP_VERSION=1.0.0
    ```
 
@@ -98,7 +98,7 @@ Create a `.env` file in the client directory:
 VITE_API_BASE_URL=http://localhost:8000
 
 # Optional: App metadata
-VITE_APP_NAME=Constitutional AI Chat
+VITE_APP_NAME=AI Legal Assistant Chat
 VITE_APP_VERSION=1.0.0
 
 # Optional: Feature flags for future features
@@ -234,7 +234,7 @@ npm run build
 
 ```env
 VITE_API_BASE_URL=https://your-backend-api.com
-VITE_APP_NAME=Constitutional AI
+VITE_APP_NAME=AI Legal Assistant
 VITE_DEBUG_MODE=false
 ```
 

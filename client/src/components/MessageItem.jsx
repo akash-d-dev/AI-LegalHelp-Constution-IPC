@@ -57,7 +57,7 @@ const MessageItem = ({ message }) => {
         <div className="message-sender">
           {getMessageIcon()}
           <span className="sender-name">
-            {sender === 'user' ? 'You' : 'Constitutional AI'}
+            {sender === 'user' ? 'You' : 'AI Legal Assistant'}
           </span>
         </div>
         <div className="message-timestamp">

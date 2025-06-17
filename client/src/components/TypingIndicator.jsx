@@ -7,7 +7,7 @@ const TypingIndicator = () => {
       <div className="message-header">
         <div className="message-sender">
           <Bot size={20} className="message-icon agent" />
-          <span className="sender-name">Constitutional AI</span>
+          <span className="sender-name">AI Legal Assistant</span>
         </div>
       </div>
       

@@ -1,5 +1,5 @@
 """
-Logging configuration for the Constitutional AI Chat API
+Logging configuration for the AI Legal Assistant Chat API
 """
 
 import logging

@@ -56,7 +56,7 @@ const MessageList = ({ messages, isTyping }) => {
       {messages.length === 0 ? (
         <div className="welcome-message">
           <div className="welcome-content">
-            <h2>Welcome to Constitutional AI</h2>
+            <h2>Welcome to AI Legal Assistant</h2>
             <p>
               I'm here to help you understand the Indian Constitution and Indian Penal Code. 
               Ask me anything about:

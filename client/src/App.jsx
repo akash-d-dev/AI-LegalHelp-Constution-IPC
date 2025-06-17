@@ -11,7 +11,7 @@ function App() {
       
       {/* <footer className="app-footer">
         <p>
-          © 2024 Constitutional AI - Educational tool for Indian Constitution & IPC
+          © 2024 AI Legal Assistant - Educational tool for Indian Constitution & IPC
         </p>
       </footer> */}
     </div>
