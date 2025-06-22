@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-06-23T01:50:11.546099",
+  "query": "is this comming from your knowledge or the response you got after db query?",
+  "tool_calls_executed": [],
+  "total_tool_calls": 0,
+  "db_results": [],
+  "total_db_results": 0,
+  "unique_tools_used": [],
+  "db_tools_used": []
+}

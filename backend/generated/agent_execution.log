@@ -1066,3 +1066,35 @@ Article: Unk...'
 2025-06-22 21:54:47 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 7
 2025-06-22 21:54:47 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250622_215447.json
 2025-06-22 21:54:47 - agent_system.ai_agent - INFO - 📊 State summary: 3 tool calls, 2 DB results
+2025-06-23 01:52:52 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-23 01:52:52 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-23 01:52:52 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-23 01:52:52 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-23 01:52:52 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-23 01:52:53 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-23 01:52:54 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I'm here and ready to assist you with queries related to the Indian Constitution and the Indian Pena...'
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I'm here and ready to assist you with queries related to the Indian Constitution and the Indian Penal Code (IPC). Please let me know how I can help you today!...'
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250623_015255.json
+2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results

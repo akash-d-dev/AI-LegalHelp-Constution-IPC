@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-06-23T01:35:47.430850",
+  "query": "“A police officer tortures a suspect in custody to force a confession. Which IPC section applies?",
+  "tool_calls_executed": [
+    "generate_keywords",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ],
+  "total_tool_calls": 5,
+  "db_results": [
+    {
+      "tool_name": "search_ipc",
+      "query": "police torture",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:35:44.646201"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "custodial torture",
+      "result": "Result 1 (Distance: 0.9640, Strategy: base):\nCollection: ipc_1\nSection: Unknown Section\nContent: 9 \n \nSECTIONS \n317. Exposure and abandonment of child under twelve years, by parent or person having care of it. \n318. Concealment of birth by secret disposal of dead body. \nOf Hurt \n319. Hurt. \n320. Grievous hurt. \n321. Voluntarily causing hurt.  \n322. Voluntarily causing grievous hurt.  \n323. Punishment for voluntarily causing hurt.  \n324. Voluntarily causing hurt by dangerous weapons or me ans.  \n325. Punishment for voluntarily causing grievous hurt.  \n326. Voluntarily causing grievous hurt by dangerous weap ons or means. \n326A. Voluntarily causing grievous hurt by use of acid, etc. \n326B. Voluntarily throwing or attempting to throw acid. \n327. Voluntarily causing hurt to extort property, or to constrain to an illegal to an act.  \n328. Causing hurt by means of poison, etc., with intent to  commit an offence.  \n329. Voluntarily causing grievous hurt to extort property, or to constrain to an illegal act. \n330. Voluntarily causing hurt to extort confession, or to compel restoration of property. \n331. Voluntarily causing grievous hurt to extort confess ion, or to compel restoration of property.  \n332. Voluntarily causing hurt to deter public servant from his duty. \n333. Voluntarily causing grievous hurt to deter public s ervant from his duty.  \n334. Voluntarily causing hurt on provocation.  \n335. Voluntarily causing grievous hurt on provocation.  \n336. Act endangering life or personal safety of others.  \n337. Causing hurt by act endangering life or personal sa fety of others.  \n338. Causing grievous hurt by act endangering life or personal safety of others. \nOf wrongful restraint and wrongful confinement \n339. Wrongful restraint.  \n340. Wrongful confinement.  \n341. Punishment for wrongful restraint.  \n342. Punishment for wrongful confinement.  \n343. Wrongful confinement for three or more days.  \n344. Wrongful confinement for ten or more days.  \n345. Wrongful confinement of person for whose liberation writ has been issued.  \n346. Wrongful confinement in secret.  \n347. Wrongful confinement to extort property, or constrain to illegal act.  \n348. Wrongful confinement to extort confession, or compel restoration of property. \nOf Criminal Force and Assault \n349. Force. \n350. Criminal force.  \n351. Assault. \n352. Punishment for assault or criminal force otherwise than on grave provocation.  \n353. Assault or criminal force to deter public servant fro m discharge of his duty.  \n354. Assault of criminal force to woman with intent to o utrage her modesty. \n354A. Sexual harassment and punishment for sexual harassment. \n354B. Assault or use of criminal force to woman with intent to disrobe. \n354C. Voyeurism. \n354D. Stalking. \n355. Assault or criminal force with intent to dishonour person, otherwise than on grave provocation.  \n356. Assault or criminal force in attempt to commit theft of property carried by a person. \n357. Assault or criminal force in attempt wrongfully to confine a person. \n358. Assault or criminal force on grave provocation. \nOf  Kidnapping, abduction, slavery and forced labour \n359. Kidnapping. \n360. Kidnapping from India.  \n361. Kidnapping from lawful guardianship. \n362. Abduction.  \n363. Punishment for kidnapping. \n363A. Kidnapping or maiming a minor for purposes of begging. \n364. Kidnapping or abducting in order to murder.\n",
+      "timestamp": "2025-06-23T01:35:45.143414"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "confession under duress",
+      "result": "Result 1 (Distance: 0.9784, Strategy: base):\nCollection: ipc_1\nSection: Unknown Section\nContent: 9 \n \nSECTIONS \n317. Exposure and abandonment of child under twelve years, by parent or person having care of it. \n318. Concealment of birth by secret disposal of dead body. \nOf Hurt \n319. Hurt. \n320. Grievous hurt. \n321. Voluntarily causing hurt.  \n322. Voluntarily causing grievous hurt.  \n323. Punishment for voluntarily causing hurt.  \n324. Voluntarily causing hurt by dangerous weapons or me ans.  \n325. Punishment for voluntarily causing grievous hurt.  \n326. Voluntarily causing grievous hurt by dangerous weap ons or means. \n326A. Voluntarily causing grievous hurt by use of acid, etc. \n326B. Voluntarily throwing or attempting to throw acid. \n327. Voluntarily causing hurt to extort property, or to constrain to an illegal to an act.  \n328. Causing hurt by means of poison, etc., with intent to  commit an offence.  \n329. Voluntarily causing grievous hurt to extort property, or to constrain to an illegal act. \n330. Voluntarily causing hurt to extort confession, or to compel restoration of property. \n331. Voluntarily causing grievous hurt to extort confess ion, or to compel restoration of property.  \n332. Voluntarily causing hurt to deter public servant from his duty. \n333. Voluntarily causing grievous hurt to deter public s ervant from his duty.  \n334. Voluntarily causing hurt on provocation.  \n335. Voluntarily causing grievous hurt on provocation.  \n336. Act endangering life or personal safety of others.  \n337. Causing hurt by act endangering life or personal sa fety of others.  \n338. Causing grievous hurt by act endangering life or personal safety of others. \nOf wrongful restraint and wrongful confinement \n339. Wrongful restraint.  \n340. Wrongful confinement.  \n341. Punishment for wrongful restraint.  \n342. Punishment for wrongful confinement.  \n343. Wrongful confinement for three or more days.  \n344. Wrongful confinement for ten or more days.  \n345. Wrongful confinement of person for whose liberation writ has been issued.  \n346. Wrongful confinement in secret.  \n347. Wrongful confinement to extort property, or constrain to illegal act.  \n348. Wrongful confinement to extort confession, or compel restoration of property. \nOf Criminal Force and Assault \n349. Force. \n350. Criminal force.  \n351. Assault. \n352. Punishment for assault or criminal force otherwise than on grave provocation.  \n353. Assault or criminal force to deter public servant fro m discharge of his duty.  \n354. Assault of criminal force to woman with intent to o utrage her modesty. \n354A. Sexual harassment and punishment for sexual harassment. \n354B. Assault or use of criminal force to woman with intent to disrobe. \n354C. Voyeurism. \n354D. Stalking. \n355. Assault or criminal force with intent to dishonour person, otherwise than on grave provocation.  \n356. Assault or criminal force in attempt to commit theft of property carried by a person. \n357. Assault or criminal force in attempt wrongfully to confine a person. \n358. Assault or criminal force on grave provocation. \nOf  Kidnapping, abduction, slavery and forced labour \n359. Kidnapping. \n360. Kidnapping from India.  \n361. Kidnapping from lawful guardianship. \n362. Abduction.  \n363. Punishment for kidnapping. \n363A. Kidnapping or maiming a minor for purposes of begging. \n364. Kidnapping or abducting in order to murder.\n",
+      "timestamp": "2025-06-23T01:35:45.614714"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "IPC Section 330",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:35:46.067326"
+    }
+  ],
+  "total_db_results": 4,
+  "unique_tools_used": [
+    "generate_keywords",
+    "search_ipc"
+  ],
+  "db_tools_used": [
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ]
+}

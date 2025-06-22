@@ -3,6 +3,9 @@ fastapi==0.115.0
 uvicorn[standard]==0.32.0
 pydantic-settings==2.7.0
 
+# Vector search and deduplication
+simhash==2.1.2
+
 # Existing dependencies
 annotated-types==0.7.0
 anyio==4.9.0

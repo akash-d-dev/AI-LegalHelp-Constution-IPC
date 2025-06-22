@@ -112,8 +112,37 @@ def build_graph() -> StateGraph:
             last_user_msg = user_messages[-1].content
             logger.info(f"👤 Last user query: '{last_user_msg[:100]}...'")
         
-        system_prompt = SystemMessage(content=Constants.LLM_PROMPT_SYSTEM)
-        logger.info("📋 System prompt loaded from Constants")
+        # Get state tracking information
+        db_results = state.get('db_results', []) or []
+        tool_calls_executed = state.get('tool_calls_executed', []) or []
+        
+        # Create state awareness message
+        state_awareness_content = ""
+        if db_results or tool_calls_executed:
+            state_awareness_content = "\n\nCURRENT AGENT STATE:\n"
+            
+            if tool_calls_executed:
+                state_awareness_content += f"Tools executed so far: {', '.join(tool_calls_executed)}\n"
+                state_awareness_content += f"Total tool calls: {len(tool_calls_executed)}\n"
+            
+            if db_results:
+                state_awareness_content += f"Database searches performed: {len(db_results)}\n"
+                db_tools_used = [result['tool_name'] for result in db_results]
+                state_awareness_content += f"Database tools used: {', '.join(set(db_tools_used))}\n"
+                
+                # Summarize recent database results
+                if db_results:
+                    state_awareness_content += "\nRecent database results summary:\n"
+                    for i, result in enumerate(db_results[-3:], 1):  # Show last 3 results
+                        tool_name = result['tool_name']
+                        query = result['query']
+                        result_preview = result['result'][:100] + "..." if len(result['result']) > 100 else result['result']
+                        state_awareness_content += f"{i}. {tool_name} (query: '{query}'): {result_preview}\n"
+            
+            state_awareness_content += "\nUse this information to decide if you need to search more or if you have sufficient information to provide a comprehensive answer."
+        
+        system_prompt = SystemMessage(content=Constants.LLM_PROMPT_SYSTEM + state_awareness_content)
+        logger.info("📋 System prompt loaded from Constants with state awareness")
         
         messages = [system_prompt] + list(state['messages'])
         logger.info(f"📤 Sending {len(messages)} messages to LLM...")
@@ -169,8 +198,27 @@ def build_graph() -> StateGraph:
                 result = error_msg
             else:
                 try:
-                    # Get the first argument value (tools expect single string input)
-                    query = list(tool_args.values())[0] if tool_args else ""
+                    # Handle tool arguments more carefully
+                    if not tool_args:
+                        logger.warning(f"⚠️ No arguments provided for tool {tool_name}")
+                        query = ""
+                    else:
+                        # Log all arguments for debugging
+                        logger.info(f"🔍 All tool arguments: {tool_args}")
+                        
+                        # For generate_keywords, we expect the 'query' parameter to be the complete user query
+                        if tool_name == 'generate_keywords':
+                            if 'query' in tool_args:
+                                query = tool_args['query']
+                                logger.info(f"🔑 generate_keywords received query: '{query}'")
+                            else:
+                                # Fallback to first argument value
+                                query = list(tool_args.values())[0] if tool_args else ""
+                                logger.warning(f"⚠️ generate_keywords missing 'query' parameter, using: '{query}'")
+                        else:
+                            # For other tools, use the first argument value
+                            query = list(tool_args.values())[0] if tool_args else ""
+                    
                     logger.info(f"🔍 Calling {tool_name} with query: '{query[:50]}...'")
                     
                     result = tools_dict[tool_name].invoke(query)

@@ -72,48 +72,50 @@ def get_llm():
 ########################################################
 @tool
 def generate_keywords(query: str) -> str:
-    """Generate 1-4 semantic keywords or phrases for a legal query to improve search results. Can generate single keywords, short phrases, or multiple terms based on query complexity."""
+    """Generates semantic keywords or phrases for a legal query to improve search results. Can generate single keywords, short phrases, or multiple terms based on query complexity."""
     logger.info(f"🔑 TOOL: generate_keywords called with query: '{query}'")
     
-    prompt = f"""You are a legal search expert. Your task is to generate 1-4 search keywords or phrases for Indian Constitution and Indian Penal Code vector databases.
+    prompt = f"""You are a legal search expert.
 
-    TASK: Convert the user's legal query into 1-4 search terms that can be:
-    - Single keywords (e.g., "murder", "defamation")
-    - Short phrases (e.g., "freedom of speech", "reasonable restrictions")
-    - Legal references (e.g., "Article 19", "Section 302")
+    🔹 **Goal**  
+    Turn the user’s natural–language legal query into a JSON array of the **smallest set of high-value search terms** (keywords or short phrases) that will maximise semantic-search recall in:
 
-    DATABASE CONTEXT:
-    - Constitution Database: Contains articles, clauses, amendments, fundamental rights, constitutional provisions
-    - IPC Database: Contains criminal law sections, offenses, punishments, legal procedures
-    - Both use vector similarity search (semantic matching, not exact text matching)
+    • Indian Penal Code (IPC) vector DB  
+    • Constitution of India vector DB  
 
-    KEYWORD REQUIREMENTS:
-    - Generate 1-4 keywords/phrases (can be fewer if query is very specific)
-    - Use legal terminology that appears in actual documents
-    - Include specific references when possible (e.g., "Article 19", "Section 302")
-    - Keywords should be semantically distinct from each other
-    - Can mix single words and phrases based on what works best for the query
+    🔹 **What counts as a keyword/phrase**  
+    • A single legal term – e.g., “defamation”, “trespass”  
+    • A short legal phrase – e.g., “forced confession”, “office of profit”  
+    • A precise citation when clearly relevant – e.g., “Section 302”, “Article 19”
 
-    EXAMPLES:
-    Query: "What are fundamental rights?"
-    → ["fundamental rights", "constitutional rights"]
+    🔹 **Rules**  
+    1. Return **1 – 4** items. You *may* exceed 4 **only** if the query is complex and extra terms will clearly improve recall.  
+    2. Use wording likely found in the IPC or the Constitution (avoid generic fillers like “law”, “penalty”).  
+    3. If a specific Article/Section is obviously implicated, include it exactly once.  
+    4. Keep items distinct; no redundant variations.  
+    5. Respond with **only** the JSON array—no extra text.
 
-    Query: "Freedom of speech restrictions in India"
-    → ["freedom of speech", "reasonable restrictions", "Article 19"]
+    🔹 **Examples**
 
-    Query: "Punishment for murder and related offenses"
-    → ["murder", "Section 302", "homicide", "punishment"]
+    User → *“Can freedom of speech be limited in India?”*  
+    `["freedom of speech", "reasonable restrictions", "Article 19"]`
 
-    Query: "Constitutional protection against arbitrary arrest"
-    → ["arbitrary arrest", "Article 22", "personal liberty"]
+    User → *“What is the punishment for stabbing someone to death?”*  
+    `["murder", "stabbing", "Section 302", "punishment for homicide"]`
 
-    Query: "Defamation laws"
-    → ["defamation", "criminal defamation"]
+    User → *“Protection against arbitrary arrest under Indian Constitution”*  
+    `["arbitrary arrest", "Article 22", "personal liberty"]`
 
-    User Query: {query}
+    User → *“Police tortured a suspect to make him confess”*  
+    `["custodial torture", "forced confession", "Section 330", "police abuse"]`
 
-    Generate ONLY a JSON array of 1-4 keywords/phrases:"""
-    
+    ---
+
+    User query: {query}
+
+    Return ONLY the JSON array of keywords/phrases:
+    """
+
     try:
         logger.info("🔄 Calling LLM to generate keywords...")
         llm = get_llm()

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-06-23T01:29:54.100019",
+  "query": "“A police officer tortures a suspect in custody to force a confession. Which IPC section applies?",
+  "tool_calls_executed": [
+    "generate_keywords",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ],
+  "total_tool_calls": 5,
+  "db_results": [
+    {
+      "tool_name": "search_ipc",
+      "query": "police torture",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:29:51.182360"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "custodial torture",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:29:51.643154"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "confession under duress",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:29:52.092617"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "IPC Section 330",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:29:52.678898"
+    }
+  ],
+  "total_db_results": 4,
+  "unique_tools_used": [
+    "generate_keywords",
+    "search_ipc"
+  ],
+  "db_tools_used": [
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ]
+}

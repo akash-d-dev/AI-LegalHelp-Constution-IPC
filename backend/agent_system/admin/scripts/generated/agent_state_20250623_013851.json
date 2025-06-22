@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-06-23T01:38:51.642831",
+  "query": "A government official intentionally delays issuing a ration card to a poor family despite all documents being in order. What section applies and what punishment is there?",
+  "tool_calls_executed": [
+    "generate_keywords",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ],
+  "total_tool_calls": 5,
+  "db_results": [
+    {
+      "tool_name": "search_ipc",
+      "query": "delay in issuing ration card",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:38:45.512475"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "government official",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:38:45.943576"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "Section 166",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:38:46.643835"
+    },
+    {
+      "tool_name": "search_ipc",
+      "query": "punishment",
+      "result": "No relevant IPC sections found for this query.",
+      "timestamp": "2025-06-23T01:38:47.158385"
+    }
+  ],
+  "total_db_results": 4,
+  "unique_tools_used": [
+    "search_ipc",
+    "generate_keywords"
+  ],
+  "db_tools_used": [
+    "search_ipc",
+    "search_ipc",
+    "search_ipc",
+    "search_ipc"
+  ]
+}
