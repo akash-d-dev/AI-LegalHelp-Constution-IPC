@@ -28,7 +28,7 @@ class MilvusClientWrapper:
         self, 
         collection_name: str, 
         query_embedding: List[float], 
-        top_k: int = 5,
+        top_k: int = 2,
         output_fields: Optional[List[str]] = None,
         search_params: Optional[Dict] = None,
         filter_expr: Optional[str] = None
@@ -81,7 +81,7 @@ class MilvusClientWrapper:
         collection_name: str,
         dense_vector: List[float],
         sparse_vector: Optional[Dict[int, float]] = None,
-        top_k: int = 5,
+        top_k: int = 2,
         output_fields: Optional[List[str]] = None,
         rerank_strategy: str = "rrf",
         weights: Optional[List[float]] = None
@@ -172,7 +172,7 @@ class MilvusClientWrapper:
         collection_name: str,
         query_embedding: List[float],
         group_by_field: str,
-        top_k: int = 5,
+        top_k: int = 2,
         group_size: int = 2,
         strict_group_size: bool = True,
         output_fields: Optional[List[str]] = None,
@@ -236,7 +236,7 @@ class MilvusVectorDB:
         self.collection_names = collection_names
         self.embedder = EmbeddingGenerator()
 
-    def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+    def search(self, query: str, top_k: int = 2) -> List[Dict[str, Any]]:
         """Basic search across all configured collections."""
         _, embedding = self.embedder.generate_embeddings([query])
         embedding = embedding[0]
@@ -262,7 +262,7 @@ class MilvusVectorDB:
         self, 
         query: str, 
         search_type: str = "both",
-        top_k: int = 5,
+        top_k: int = 2,
         group_by_field: Optional[str] = None,
         group_size: int = 2,
         rerank_strategy: str = "rrf",
@@ -361,7 +361,7 @@ class MilvusVectorDB:
     def hybrid_search(
         self, 
         query: str, 
-        top_k: int = 5,
+        top_k: int = 2,
         rerank_strategy: str = "rrf",
         weights: Optional[List[float]] = None
     ) -> List[Dict[str, Any]]:
@@ -392,7 +392,7 @@ class MilvusVectorDB:
         self, 
         query: str, 
         group_by_field: str,
-        top_k: int = 5,
+        top_k: int = 2,
         group_size: int = 2,
         strict_group_size: bool = True
     ) -> List[Dict[str, Any]]:
@@ -420,7 +420,7 @@ class MilvusVectorDB:
         all_results.sort(key=lambda x: x.get('distance', float('inf')))
         return all_results[:top_k]
 
-    def combined_search(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+    def combined_search(self, query: str, top_k: int = 2) -> List[Dict[str, Any]]:
         """
         Perform both hybrid and basic search, combine results, and return top results.
         This method combines the strengths of both search approaches for better accuracy.
@@ -487,7 +487,7 @@ class MilvusVectorDB:
         
         return final_results
 
-    def combined_search_enhanced(self, query: str, top_k: int = 3) -> List[Dict[str, Any]]:
+    def combined_search_enhanced(self, query: str, top_k: int = 2) -> List[Dict[str, Any]]:
         """
         Enhanced combined search that uses multiple search strategies to get diverse results
         even without sparse embeddings. This method uses different parameters and approaches
@@ -535,11 +535,11 @@ class MilvusVectorDB:
                 except Exception as e:
                     logger.debug(f"L2 varied search error for {collection_name}: {e}")
                 
-                # Strategy 3: Higher top_k with different filtering
+                # Strategy 3: Higher top_k with different filtering (but still limited for final output)
                 expanded_results = self.client.search_similar(
                     collection_name=collection_name,
                     query_embedding=embedding,
-                    top_k=min(top_k * 2, 10),  # Get more results for diversity
+                    top_k=min(top_k * 2, 6),  # Reduced from 10 to 6 for efficiency
                     search_params={"metric_type": "L2", "params": {}}
                 )
                 for result in expanded_results:
@@ -639,7 +639,7 @@ class MilvusVectorDB:
         except Exception as e:
             logger.error(f"❌ Error saving search results to log: {e}")
 
-    def enhanced_cross_domain_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+    def enhanced_cross_domain_search(self, query: str, top_k: int = 2) -> List[Dict[str, Any]]:
         """
         Enhanced cross-domain search specifically designed for legal queries that may span
         multiple legal domains (e.g., constitutional + criminal law). This method uses

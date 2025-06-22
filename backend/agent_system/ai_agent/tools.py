@@ -75,23 +75,57 @@ def generate_keywords(query: str) -> str:
     """Generate semantic keywords for a legal query to improve search results. Returns a list of keywords optimized for multiple database searches."""
     logger.info(f"🔑 TOOL: generate_keywords called with query: '{query}'")
     
-    prompt = f"""Analyze this legal query and generate optimal search keywords for Indian Constitution and Indian Penal Code databases.
+    prompt = f"""You are a legal search expert. Your task is to generate both a semantic sentence and search keywords for Indian Constitution and Indian Penal Code vector databases.
 
-    INSTRUCTIONS:
-    1. If the query covers MULTIPLE legal topics or needs information from different areas of law, generate MULTIPLE keywords (2-4 keywords)
-    2. If the query is about ONE specific topic, generate a SINGLE keyword
-    3. Each keyword should be a focused search term or short phrase that will retrieve relevant information
-    4. Return the result as a JSON list format: ["keyword1", "keyword2", "keyword3"]
-    5. Each keyword should be distinct and cover different aspects of the query
-    
-    Examples:
-    - Query about one topic → ["fundamental rights"]  
-    - Query about multiple topics → ["freedom of speech", "reasonable restrictions", "Article 19"]
-    - Complex query → ["dowry death", "Section 304B", "domestic violence"]
+    TASK: Convert the user's legal query into:
+    1. A semantic sentence that captures the legal concept in natural language
+    2. 1-4 search keywords for vector database lookup
 
-    Query: {query}
-    
-    Keywords JSON:"""
+    DATABASE CONTEXT:
+    - Constitution Database: Contains articles, clauses, amendments, fundamental rights, constitutional provisions
+    - IPC Database: Contains criminal law sections, offenses, punishments, legal procedures
+    - Both use vector similarity search (semantic matching, not exact text matching)
+
+    OUTPUT REQUIREMENTS:
+    - SEMANTIC SENTENCE: A natural language sentence that expresses the legal concept clearly
+    - KEYWORDS: 2-6 word phrases that capture core legal concepts for vector search
+    - Use legal terminology that appears in actual documents
+    - Include specific references when possible (e.g., "Article 19", "Section 302")
+    - Keywords should be semantically distinct from each other
+
+    DECISION RULES:
+    - SINGLE keyword if query focuses on one specific legal concept
+    - MULTIPLE keywords (2-4) if query covers multiple legal areas or needs comprehensive coverage
+    - Always return valid JSON format with both sentence and keywords
+
+    EXAMPLES:
+    Query: "What are fundamental rights?"
+    → {{
+    "sentence": "Fundamental rights guaranteed under the Indian Constitution",
+    "keywords": ["fundamental rights"]
+    }}
+
+    Query: "Freedom of speech restrictions in India"
+    → {{
+    "sentence": "Constitutional freedom of speech and expression with reasonable restrictions under Article 19",
+    "keywords": ["freedom of speech", "reasonable restrictions", "Article 19"]
+    }}
+
+    Query: "Punishment for murder and related offenses"
+    → {{
+    "sentence": "Criminal punishment for murder offenses under Indian Penal Code",
+    "keywords": ["murder", "Section 302", "homicide"]
+    }}
+
+    Query: "Constitutional protection against arbitrary arrest"
+    → {{
+    "sentence": "Constitutional safeguards against arbitrary arrest and detention under Article 22",
+    "keywords": ["arbitrary arrest", "Article 22", "personal liberty"]
+    }}
+
+    User Query: {query}
+
+    Generate both sentence and keywords as JSON object:"""
     
     try:
         logger.info("🔄 Calling LLM to generate keywords...")
@@ -103,13 +137,25 @@ def generate_keywords(query: str) -> str:
         # Try to parse as JSON, if it fails, treat as single keyword
         try:
             import json
-            keywords_list = json.loads(keywords_response)
-            if isinstance(keywords_list, list):
-                logger.info(f"📋 Parsed {len(keywords_list)} keywords: {keywords_list}")
+            parsed_response = json.loads(keywords_response)
+            
+            # Handle new format with sentence and keywords
+            if isinstance(parsed_response, dict) and 'keywords' in parsed_response:
+                keywords_list = parsed_response['keywords']
+                sentence = parsed_response.get('sentence', 'No sentence generated')
+                logger.info(f"📋 Parsed new format: {len(keywords_list)} keywords, sentence: '{sentence[:50]}...'")
+                logger.info(f"📝 Generated sentence: {sentence}")
+                # Return just the keywords array for backward compatibility
+                return json.dumps(keywords_list)
+            
+            # Handle old format (just keywords array)
+            elif isinstance(parsed_response, list):
+                logger.info(f"📋 Parsed {len(parsed_response)} keywords: {parsed_response}")
                 return keywords_response
             else:
-                logger.warning("⚠️ Response is not a list, treating as single keyword")
+                logger.warning("⚠️ Response is not in expected format, treating as single keyword")
                 return f'["{keywords_response}"]'
+                
         except json.JSONDecodeError:
             logger.warning("⚠️ Could not parse as JSON, treating as single keyword")
             # Clean the response and format as JSON
@@ -589,7 +635,7 @@ def _save_enhanced_tool_log(query: str, results: List[Dict[str, Any]], search_su
             logger.error(f"❌ Failed to save to fallback location: {fallback_error}")
 
 
-# List of all tools for easy import
+# List of all tools
 tools = [generate_keywords, search_constitution, search_ipc, predict_punishment, enhanced_cross_domain_legal_search]
 logger.info(f"🛠️ Tools module updated with {len(tools)} tools: {[tool.name for tool in tools]}")
 

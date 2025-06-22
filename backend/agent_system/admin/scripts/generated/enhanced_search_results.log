@@ -978,3 +978,164 @@ SECTIONS
 
 ====================================================================================================
 
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-22 20:16:19
+Query: 'constitutional protections for freedom of speech and expression under Article 19, and how they interact with IPC provisions on hate speech and defamation? Specifically, what are the reasonable restrictions on free speech, and what are the potential legal consequences for violating these restrictions?'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 200
+Strategy Breakdown: {'multi_metric_original': 75, 'domain_variant_1': 25, 'domain_variant_2': 25, 'domain_variant_3': 25, 'expanded_parameters': 50}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 100.0, 'criminal_percentage': 40.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.40
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.2902
+  Original Distance: 1.0994
+  Domain Score: 0.6674
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2686
+  Original Distance: 1.2253
+  Domain Score: 0.5953
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)9(5) Nothing in this article shall affect the operation of any law which provides that the incumbent of an office in connection with the affairs of any religious or denominational institution or any member of the governing body thereof shall be...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2330
+  Original Distance: 1.1576
+  Domain Score: 0.4767
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2302
+  Original Distance: 1.1605
+  Domain Score: 0.4674
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under ...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2202
+  Original Distance: 1.3434
+  Domain Score: 0.5674
+  Strategy: expanded_parameters
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)14Right against Exploitation23. Prohibition of traffic in human beings and forced labour.—(1) Traffic in human beings and begarand other similar forms of forced labour are prohibited and any contravention of this provision shall be an offence p...
+--------------------------------------------------
+
+====================================================================================================
+
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-22 20:16:31
+Query: 'constitutional protections for freedom of speech and expression under Article 19, and how they interact with IPC provisions on hate speech and defamation? Specifically, what are the reasonable restrictions on free speech, and what are the potential legal consequences for violating these restrictions?'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 80
+Strategy Breakdown: {'multi_metric_original': 30, 'domain_variant_1': 10, 'domain_variant_2': 10, 'domain_variant_3': 10, 'expanded_parameters': 20}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 20.0, 'criminal_percentage': 100.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.20
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.2902
+  Original Distance: 1.1889
+  Domain Score: 0.6674
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other ...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2791
+  Original Distance: 1.0576
+  Domain Score: 0.6302
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of ...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2574
+  Original Distance: 1.1733
+  Domain Score: 0.5581
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 117 
+ 
+such matter, shall be punished with simple imprisonment for a term which may  extend to two years, or 
+with fine, or with both. 
+CHAPTER XXII 
+OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE 
+503. Criminal intimidation.—Whoever threatens another with any injury to his person, reputation or 
+pr...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2547
+  Original Distance: 1.0777
+  Domain Score: 0.5488
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 40 
+ 
+145. Joining or continuing in unlawful assembly, knowing it has been commanded to 
+disperse.—Whoever joins or continues in an unlawful assembly, knowing that such unlawful assem bly 
+has been commanded in the manner prescribed by law to disperse, shall be punished with i mprisonment 
+of either...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2519
+  Original Distance: 1.4019
+  Domain Score: 0.5395
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections for freedom of speech a...
+  Content: 93 
+ 
+(b) a public servant; or 
+(c) superintendent or manager of a jail, remand home or other place of custody establi shed by or 
+under any law for the time being in force, or a women's or children's institution; or 
+(d) on the management of a hospital or being on the staff of a hospital,  
+abuses ...
+--------------------------------------------------
+
+====================================================================================================
+
