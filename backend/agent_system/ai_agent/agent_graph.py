@@ -59,8 +59,10 @@ logger = setup_agent_logging()
 
 
 class AgentState(TypedDict):
-    """State for the legal AI agent with message history."""
+    """State for the legal AI agent with message history and tracking variables."""
     messages: Annotated[Sequence[BaseMessage], add_messages]
+    db_results: Optional[List[dict]]
+    tool_calls_executed: Optional[List[str]]
 
 
 def build_graph() -> StateGraph:
@@ -137,13 +139,18 @@ def build_graph() -> StateGraph:
             raise
     
     def execute_tools(state: AgentState) -> AgentState:
-        """Execute tool calls from the LLM's response."""
+        """Execute tool calls from the LLM's response and track results."""
         logger.info("🔧 Entering tools execution node...")
         
         tool_calls = state['messages'][-1].tool_calls
         logger.info(f"🎯 Executing {len(tool_calls)} tool calls...")
         
+        # Get current tracking state
+        current_db_results = state.get('db_results', []) or []
+        current_tool_calls = state.get('tool_calls_executed', []) or []
+        
         results = []
+        new_db_results = []
         
         for i, tool_call in enumerate(tool_calls, 1):
             tool_name = tool_call['name']
@@ -152,6 +159,9 @@ def build_graph() -> StateGraph:
             
             logger.info(f"🔨 Tool {i}/{len(tool_calls)}: {tool_name}")
             logger.info(f"📝 Tool args: {tool_args}")
+            
+            # Track tool call
+            current_tool_calls.append(tool_name)
             
             if tool_name not in tools_dict:
                 error_msg = f"Error: Tool '{tool_name}' not found. Available tools: {list(tools_dict.keys())}"
@@ -167,6 +177,17 @@ def build_graph() -> StateGraph:
                     result_preview = str(result)[:100] if result else "No result"
                     logger.info(f"✅ Tool {tool_name} completed. Result preview: '{result_preview}...'")
                     
+                    # Track database results for search tools
+                    if tool_name in ['search_constitution', 'search_ipc', 'enhanced_cross_domain_legal_search']:
+                        db_result_entry = {
+                            'tool_name': tool_name,
+                            'query': query,
+                            'result': str(result),
+                            'timestamp': datetime.now().isoformat()
+                        }
+                        new_db_results.append(db_result_entry)
+                        logger.info(f"📊 Tracked DB result for {tool_name}")
+                    
                 except Exception as e:
                     error_msg = f"Error executing tool {tool_name}: {str(e)}"
                     logger.error(f"❌ {error_msg}")
@@ -181,8 +202,17 @@ def build_graph() -> StateGraph:
             results.append(tool_message)
             logger.info(f"📨 Tool message created for {tool_name}")
         
-        logger.info(f"🏁 All {len(tool_calls)} tools executed, returning results to LLM")
-        return {'messages': results}
+        # Update tracking state
+        updated_db_results = current_db_results + new_db_results
+        
+        logger.info(f"🏁 All {len(tool_calls)} tools executed")
+        logger.info(f"📈 State tracking: {len(current_tool_calls)} total tool calls, {len(updated_db_results)} DB results")
+        
+        return {
+            'messages': results,
+            'db_results': updated_db_results,
+            'tool_calls_executed': current_tool_calls
+        }
     
     # Build the graph
     logger.info("🔗 Building graph structure...")
@@ -283,7 +313,11 @@ def run_agent(query: str, chat_history: Optional[List[dict]] = None) -> str:
     # Add current user query
     messages.append(HumanMessage(content=query))
     
-    initial_state = {"messages": messages}
+    initial_state = {
+        "messages": messages,
+        "db_results": [],
+        "tool_calls_executed": []
+    }
     logger.info(f"📋 Initial state created with {len(messages)} total messages")
     
     # Run the agent
@@ -298,7 +332,9 @@ def run_agent(query: str, chat_history: Optional[List[dict]] = None) -> str:
         logger.info(f"💡 Final answer preview: '{answer_preview}...'")
         logger.info(f"📊 Total messages in final state: {len(result['messages'])}")
         
+        # Save conversation and state tracking logs
         save_agent_conversation_log(query, final_answer, len(result['messages']), chat_history)
+        save_agent_state_tracking(query, result.get('db_results', []), result.get('tool_calls_executed', []))
         
         return final_answer
         
@@ -351,7 +387,11 @@ def stream_agent(query: str, chat_history: Optional[List[dict]] = None):
     # Add current user query
     messages.append(HumanMessage(content=query))
     
-    initial_state = {"messages": messages}
+    initial_state = {
+        "messages": messages,
+        "db_results": [],
+        "tool_calls_executed": []
+    }
     logger.info(f"📋 Initial state created for streaming with {len(messages)} total messages")
     
     try:
@@ -407,6 +447,37 @@ def save_agent_conversation_log(query: str, final_answer: str, total_messages: i
             
     except Exception as e:
         logger.error(f"❌ Error saving conversation log: {e}")
+
+
+def save_agent_state_tracking(query: str, db_results: List[dict], tool_calls_executed: List[str]):
+    """Save the agent state tracking information to a JSON file."""
+    try:
+        # Create generated directory if it doesn't exist
+        os.makedirs("generated", exist_ok=True)
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        state_file = os.path.join("generated", f"agent_state_{timestamp}.json")
+        
+        state_data = {
+            "timestamp": datetime.now().isoformat(),
+            "query": query,
+            "tool_calls_executed": tool_calls_executed,
+            "total_tool_calls": len(tool_calls_executed),
+            "db_results": db_results,
+            "total_db_results": len(db_results),
+            "unique_tools_used": list(set(tool_calls_executed)),
+            "db_tools_used": [result['tool_name'] for result in db_results]
+        }
+        
+        import json
+        with open(state_file, 'w', encoding='utf-8') as f:
+            json.dump(state_data, f, indent=2, ensure_ascii=False)
+        
+        logger.info(f"💾 Agent state tracking saved to: {state_file}")
+        logger.info(f"📊 State summary: {len(tool_calls_executed)} tool calls, {len(db_results)} DB results")
+        
+    except Exception as e:
+        logger.error(f"❌ Error saving state tracking: {e}")
 
 
 def get_conversation_history_format() -> dict:

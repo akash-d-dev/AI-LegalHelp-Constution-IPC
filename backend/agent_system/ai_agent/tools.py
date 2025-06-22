@@ -72,60 +72,47 @@ def get_llm():
 ########################################################
 @tool
 def generate_keywords(query: str) -> str:
-    """Generate semantic keywords for a legal query to improve search results. Returns a list of keywords optimized for multiple database searches."""
+    """Generate 1-4 semantic keywords or phrases for a legal query to improve search results. Can generate single keywords, short phrases, or multiple terms based on query complexity."""
     logger.info(f"🔑 TOOL: generate_keywords called with query: '{query}'")
     
-    prompt = f"""You are a legal search expert. Your task is to generate both a semantic sentence and search keywords for Indian Constitution and Indian Penal Code vector databases.
+    prompt = f"""You are a legal search expert. Your task is to generate 1-4 search keywords or phrases for Indian Constitution and Indian Penal Code vector databases.
 
-    TASK: Convert the user's legal query into:
-    1. A semantic sentence that captures the legal concept in natural language
-    2. 1-4 search keywords for vector database lookup
+    TASK: Convert the user's legal query into 1-4 search terms that can be:
+    - Single keywords (e.g., "murder", "defamation")
+    - Short phrases (e.g., "freedom of speech", "reasonable restrictions")
+    - Legal references (e.g., "Article 19", "Section 302")
 
     DATABASE CONTEXT:
     - Constitution Database: Contains articles, clauses, amendments, fundamental rights, constitutional provisions
     - IPC Database: Contains criminal law sections, offenses, punishments, legal procedures
     - Both use vector similarity search (semantic matching, not exact text matching)
 
-    OUTPUT REQUIREMENTS:
-    - SEMANTIC SENTENCE: A natural language sentence that expresses the legal concept clearly
-    - KEYWORDS: 2-6 word phrases that capture core legal concepts for vector search
+    KEYWORD REQUIREMENTS:
+    - Generate 1-4 keywords/phrases (can be fewer if query is very specific)
     - Use legal terminology that appears in actual documents
     - Include specific references when possible (e.g., "Article 19", "Section 302")
     - Keywords should be semantically distinct from each other
-
-    DECISION RULES:
-    - SINGLE keyword if query focuses on one specific legal concept
-    - MULTIPLE keywords (2-4) if query covers multiple legal areas or needs comprehensive coverage
-    - Always return valid JSON format with both sentence and keywords
+    - Can mix single words and phrases based on what works best for the query
 
     EXAMPLES:
     Query: "What are fundamental rights?"
-    → {{
-    "sentence": "Fundamental rights guaranteed under the Indian Constitution",
-    "keywords": ["fundamental rights"]
-    }}
+    → ["fundamental rights", "constitutional rights"]
 
     Query: "Freedom of speech restrictions in India"
-    → {{
-    "sentence": "Constitutional freedom of speech and expression with reasonable restrictions under Article 19",
-    "keywords": ["freedom of speech", "reasonable restrictions", "Article 19"]
-    }}
+    → ["freedom of speech", "reasonable restrictions", "Article 19"]
 
     Query: "Punishment for murder and related offenses"
-    → {{
-    "sentence": "Criminal punishment for murder offenses under Indian Penal Code",
-    "keywords": ["murder", "Section 302", "homicide"]
-    }}
+    → ["murder", "Section 302", "homicide", "punishment"]
 
     Query: "Constitutional protection against arbitrary arrest"
-    → {{
-    "sentence": "Constitutional safeguards against arbitrary arrest and detention under Article 22",
-    "keywords": ["arbitrary arrest", "Article 22", "personal liberty"]
-    }}
+    → ["arbitrary arrest", "Article 22", "personal liberty"]
+
+    Query: "Defamation laws"
+    → ["defamation", "criminal defamation"]
 
     User Query: {query}
 
-    Generate both sentence and keywords as JSON object:"""
+    Generate ONLY a JSON array of 1-4 keywords/phrases:"""
     
     try:
         logger.info("🔄 Calling LLM to generate keywords...")
@@ -134,32 +121,30 @@ def generate_keywords(query: str) -> str:
         keywords_response = response.content.strip()
         logger.info(f"✅ Generated keywords response: {keywords_response}")
         
-        # Try to parse as JSON, if it fails, treat as single keyword
+        # Try to parse as JSON array
         try:
             import json
             parsed_response = json.loads(keywords_response)
             
-            # Handle new format with sentence and keywords
-            if isinstance(parsed_response, dict) and 'keywords' in parsed_response:
-                keywords_list = parsed_response['keywords']
-                sentence = parsed_response.get('sentence', 'No sentence generated')
-                logger.info(f"📋 Parsed new format: {len(keywords_list)} keywords, sentence: '{sentence[:50]}...'")
-                logger.info(f"📝 Generated sentence: {sentence}")
-                # Return just the keywords array for backward compatibility
-                return json.dumps(keywords_list)
-            
-            # Handle old format (just keywords array)
-            elif isinstance(parsed_response, list):
+            # Handle expected format (keywords array)
+            if isinstance(parsed_response, list):
+                # Ensure we have 1-4 keywords
+                if len(parsed_response) < 1:
+                    logger.warning(f"⚠️ Only {len(parsed_response)} keyword(s) generated, should be 1-4")
+                elif len(parsed_response) > 4:
+                    logger.warning(f"⚠️ {len(parsed_response)} keywords generated, truncating to 4")
+                    parsed_response = parsed_response[:4]
+                
                 logger.info(f"📋 Parsed {len(parsed_response)} keywords: {parsed_response}")
-                return keywords_response
+                return json.dumps(parsed_response)
             else:
-                logger.warning("⚠️ Response is not in expected format, treating as single keyword")
-                return f'["{keywords_response}"]'
+                logger.warning("⚠️ Response is not a JSON array, treating as single keyword")
+                return f'["{str(parsed_response)}"]'
                 
         except json.JSONDecodeError:
             logger.warning("⚠️ Could not parse as JSON, treating as single keyword")
             # Clean the response and format as JSON
-            clean_response = keywords_response.replace('"', '').replace("'", "")
+            clean_response = keywords_response.replace('"', '').replace("'", "").strip()
             return f'["{clean_response}"]'
             
     except Exception as e:

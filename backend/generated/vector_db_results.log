@@ -1348,3 +1348,69 @@ Result 3:
 
 ================================================================================
 
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-22 21:54:32
+Query: 'fundamental rights'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.7545
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity in matters of public employment. 17.Abolition of Untouchability.18. Abolition of titles. Right to Freedom19.Protection of certain rights regarding freedom of speech, etc.20. Protection in respect of conviction for offences.21.Protection of life and personal liberty.21A. Right to education.22.Protection against arrest and detention in certain cases.Right against Exploitation23. Prohibition of traffic in human beings and forced labour.24.Prohibition of employment of children in factories, etc.Right to  Freedom of Religion25. Freedom of conscience and free profession, practice and propagation of religion.26.Freedom to manage religious affairs.27. Freedom as to payment of taxes for promotion of any particular religion.28. Freedom as to attendance at religious instruction or religious worship in certain educational institutions.
+----------------------------------------
+Result 2:
+  Distance: 0.9229
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under the control of the Government of India.13. Laws inconsistent with or in derogation of the fundamental rights.—(1) All laws in force in the territory of India immediately before the commencement of this Constitution, in so far as they are inconsistent with the provisions of this Part, shall, to the extent of such inconsistency, be void.(2) The State shall not make any law which takes away or abridges the rights conferred by this Part and any law made in contravention of this clause shall, to the extent of the contravention, be void.(3) In this article, unless the context otherwise requires,—(a) “law” includes any Ordinance, order, bye-law, rule, regulation, notification, custom or usage having in the territory of India the force of law;(b) “laws in force” includes laws passed or made by a Legislature or other competent authority in the territory of India before the commencement of this Constitution and not previously repealed, notwithstanding that any such law or any part thereof may not be then in operation either at all or in particular areas.1[(4) Nothing in this article shall apply to any amendment of this Constitution made under article 368.]Right to Equality14. Equality before law.—The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India.15.  Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.—(1) The State shall not discriminate against any citizen on grounds only of religion, race, caste, sex, place of birth or any of them.(2) No citizen shall, on grounds only of religion, race, caste, sex, place of birth or any of them, be subject to any disability, liability, restriction or condition with regard to—______________________________________________1. Ins. by the Constitution  (Twenty-fourth Amendment)  Act, 1971, s. 2 (w.e.f. 5-11-1971).
+----------------------------------------
+Result 3:
+  Distance: 1.0344
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates, etc.31B. Validation of certain Acts and Regulations. 31C. Saving of laws giving effect to certain directive principles.[31D. Saving of laws in respect of anti-national activities.—Omitted.] Right to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.[32A. Constitutional validity of State laws not to be considered in proceedings under article 32.—Omitted.]33. Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc. 34. Restriction on rights conferred by this Part while martial law is in force in any area.35. Legislation to give effect to the provisions of this Part.PART IVDIRECTIVE PRINCIPLES OF STATE POLICY36. Definition.37. Application of the principles contained in this Part.38.State to secure a social order for the promotion of welfare of the people.39. Certain principles of policy to be followed by the State.39A. Equal justice and free legal aid.
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-22 21:54:44
+Query: 'Constitution of India'
+Total Results: 60 -> Unique: 3 -> Final: 3
+================================================================================
+
+Result 1:
+  Distance: 0.3363
+  Search Type: l2_standard
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF INDIA PREAMB LEWE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a 1[SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC] and to secure to all its citizens:JUSTICE, social, economic and political; LIBERTY of thought, expression, belief, faith and worship;EQUALITY of status and of opportunity;and to promote among them allFRATERNITY assuring the dignity of the individual and the 2[unity and integrity of the Nation];IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION.______________________________________________1. Subs. by the Constitution (Forty-second Amendment) Act, 1976, s.2, for "SOVEREIGN DEMOCRATIC REPUBLIC" (w.e.f. 3-1-1977).2. Subs. by s. 2, ibid., for "Unity of the Nation" (w.e.f. 3-1-1977).
+----------------------------------------
+Result 2:
+  Distance: 0.3561
+  Search Type: l2_standard
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3621 2 3 4 5      6 52.Kharkharia15PatgramMekliganj60.7453. Kharkharia 13Patgram Mekliganj 51.6254.Lotamari14PatgramMekliganj110.9255.Bhotbari16PatgramMekliganj205.4656.Komat Changrabandha16APatgramMekliganj42.857. Komat Changrabandha17A Patgram Mekliganj 16.0158.Panisala17PatgramMekliganj137.6659.Dwarikamari Khasbash18PatgramMekliganj36.560. Panisala 153/PPatgram Mekliganj 0.2761.Panisala153/OPatgramMekliganj18.0162.Panisala19PatgramMekliganj64.6363.Panisala21PatgramMekliganj51.464.Lotamari20PatgramMekliganj283.5365.Lotamari22PatgramMekliganj98.8566.Dwarikamari23PatgramMekliganj39.5267.Dwarikamari25PatgramMekliganj45.7368.Chhat Bhothat24PatgramMekliganj56.1169.Baakata131PatgramHathabhanga22.3570.Baakata132PatgramHathabhanga11.9671.Baakata130PatgramHathibhanga20.4872. Bhogramguri 133 Patgram Hathibhanga1.4473.Chenakata134PatgramMekliganj7.8174.Banskata119PatgramMathabanga413.8175.Banskata120PatgramMathabanga30.7576.Banskata121PatgramMathabanga12.1577.Banskata113PatgramMathabanga57.8678.Banskata112PatgramMathabanga315.0479.Banskata114PatgramMathabanga0.77
+----------------------------------------
+Result 3:
+  Distance: 0.3924
+  Search Type: l2_standard
+  Collection: constitution_of_india_4
+  Article/Section: Unknown Section
+  Content: 252
+PART XXIISHORT TITLE, COMMENCEMENT, 1[AUTHORITATIVE TEXT IN HINDI] AND REPEALS393. Short title.—This Constitution may be called the Constitution of India. 394.  Commencement.—This article and articles 5, 6, 7, 8, 9, 60,  324, 366, 367, 379, 380, 388, 391, 392 and 393 shall come into force at once, and the remaining provisions of this Constitution shall come into force on the twenty-sixth day of January, 1950, which day is referred to in this Constitution as the commencement of this Constitution. 2[394A. Authoritative text in the Hindi language.—(1) The President shall cause to be published under his authority,— (a) the translation of this Constitution in the Hindi language, signed by the members of the Constituent Assembly, with such modifications as may be necessary to bring it in conformity with the language, style and terminology adopted in the authoritative texts of Central Acts in the Hindi language, and incorporating therein all the amendments of this Constitution made before such publication; and(b) the translation in the Hindi language of every amendment of this Constitution made in the English language. (2) The translation of this Constitution and of every amendment thereof published under clause (1) shall be construed to have the same meaning as  the original thereof and if any difficulty arises in so construing any part of such translation, the President shall cause the same to be revised suitably.(3) The translation of this Constitution and of every amendment thereof published under this article shall  be deemed to be, for all purposes, the authoritative text thereof in the Hindi language.]395. Repeals.— The Indian Independence Act, 1947, and the Government of India Act, 1935, together with all enactments amending or supplementing the latter Act, but not including the Abolition of Privy Council Jurisdiction Act, 1949, are hereby repealed.______________________________________________1. Ins. by the Constitution (Fifty-eighth Amendment) Act, 1987, s. 2 (w.e.f. 9-12-1987).2. Art 394A, Ins. by s. 3, ibid. (w.e.f. 9-12-1987).
+----------------------------------------
+
+================================================================================
+

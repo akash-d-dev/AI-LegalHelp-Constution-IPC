@@ -1139,3 +1139,165 @@ abuses ...
 
 ====================================================================================================
 
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-22 22:05:54
+Query: 'constitutional protections freedom of speech expression Article 19 hate speech defamation IPC reasonable restrictions legal consequences'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 200
+Strategy Breakdown: {'multi_metric_original': 75, 'domain_variant_1': 25, 'domain_variant_2': 25, 'domain_variant_3': 25, 'expanded_parameters': 50}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 100.0, 'criminal_percentage': 40.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.40
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.3251
+  Original Distance: 0.8999
+  Domain Score: 0.6500
+  Strategy: domain_variant_2
+  Collection: constitution_of_india_1
+  Query Variant: fundamental rights constitutional protections free...
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth.16. Equality of opportunity...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2625
+  Original Distance: 1.1716
+  Domain Score: 0.5750
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)9(5) Nothing in this article shall affect the operation of any law which provides that the incumbent of an office in connection with the affairs of any religious or denominational institution or any member of the governing body thereof shall be...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2100
+  Original Distance: 1.1897
+  Domain Score: 0.4000
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition of property—Omitted.] Saving of Certain Laws31A. Saving of Laws providing for acquisition of estates...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2025
+  Original Distance: 1.1268
+  Domain Score: 0.3750
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislature of each of the States and all local or other authorities within the territory of India or under ...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.1950
+  Original Distance: 1.1459
+  Domain Score: 0.3500
+  Strategy: domain_variant_1
+  Collection: constitution_of_india_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)15(b) to manage its own affairs in matters of religion;(c) to own and acquire movable and immovable property; and(d) to administer such property in accordance with law.27. Freedom as to payment of taxes for promotion of any particular religion....
+--------------------------------------------------
+
+====================================================================================================
+
+
+====================================================================================================
+ENHANCED CROSS-DOMAIN SEARCH LOG
+Timestamp: 2025-06-22 22:06:07
+Query: 'constitutional protections freedom of speech expression Article 19 hate speech defamation IPC reasonable restrictions legal consequences'
+====================================================================================================
+
+SEARCH STRATEGY SUMMARY:
+Total Raw Results: 80
+Strategy Breakdown: {'multi_metric_original': 30, 'domain_variant_1': 10, 'domain_variant_2': 10, 'domain_variant_3': 10, 'expanded_parameters': 20}
+Final Unique Results: 5
+
+DOMAIN ANALYSIS:
+Query Classification: {'constitutional_strength': 0.5, 'criminal_strength': 0.25, 'is_cross_domain': True}
+Domain Coverage: {'constitutional_percentage': 20.0, 'criminal_percentage': 100.0, 'balanced_coverage': False}
+Cross-Domain Relevance: 0.20
+
+DETAILED RESULTS:
+Result 1:
+  Composite Score: 0.3303
+  Original Distance: 0.8870
+  Domain Score: 0.5750
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 118 
+ 
+believing that such statement, rumour or report is true and makes, publishes or circulates it 2[in good faith 
+and] without any such intent as aforesaid.] 
+506. Punishment for criminal intimidation .—Whoever commits the offence of criminal 
+intimidation shall be punished with imprisonment of ...
+--------------------------------------------------
+Result 2:
+  Composite Score: 0.2625
+  Original Distance: 1.1063
+  Domain Score: 0.5750
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 41 
+ 
+(b) commits any act which is prejudicial to the maintenance of harmony between different 
+religious, racial, language or regional groups or castes or communities, and which disturbs or is likely 
+to disturb the public tranquillity, 1[or] 
+1[(c) organizes any exercise, movement, drill or other ...
+--------------------------------------------------
+Result 3:
+  Composite Score: 0.2547
+  Original Distance: 0.9756
+  Domain Score: 0.5000
+  Strategy: domain_variant_1
+  Collection: ipc_2
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 117 
+ 
+such matter, shall be punished with simple imprisonment for a term which may  extend to two years, or 
+with fine, or with both. 
+CHAPTER XXII 
+OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE 
+503. Criminal intimidation.—Whoever threatens another with any injury to his person, reputation or 
+pr...
+--------------------------------------------------
+Result 4:
+  Composite Score: 0.2491
+  Original Distance: 0.9599
+  Domain Score: 0.4500
+  Strategy: domain_variant_1
+  Collection: ipc_1
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 13 
+ 
+CHAPTER XX 
+OF OFFENCES RELATING TO MARRIAGE 
+SECTIONS 
+493. Cohabitation caused by a man deceitfully inducing a be lief of lawful marriage. 
+494. Marrying again during life-time of husband or wife. 
+495. Same offence with concealment of former marriage from person with whom subsequent marriag...
+--------------------------------------------------
+Result 5:
+  Composite Score: 0.2225
+  Original Distance: 1.4076
+  Domain Score: 0.5750
+  Strategy: expanded_parameters
+  Collection: ipc_2
+  Query Variant: constitutional protections freedom of speech expre...
+  Content: 99 
+ 
+person, or attempts to cause death or grievous hurt to any person, the imprison ment with which such 
+offender shall be punished shall not be less than seven years. 
+398. Attempt to commit robbery or dacoity when armed with deadly weapon .—If, at the time of 
+attempting to commit robbery or da...
+--------------------------------------------------
+
+====================================================================================================
+
