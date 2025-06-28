@@ -2,6 +2,8 @@
 
 A powerful AI-driven agent that answers legal queries related to the **Constitution of India** and the **Indian Penal Code (IPC)** using keyword generation, vector search, and smart tool orchestration.
 
+![image](https://github.com/user-attachments/assets/5c679ff6-f1ca-43ad-b6ac-dd16cc91bc92)
+
 ---
 
 ## 🧠 How It Works
@@ -26,7 +28,6 @@ A powerful AI-driven agent that answers legal queries related to the **Constitut
 - `generate_keywords`: Keyword extractor from user input
 - `search_db_constitution`: Vector search on Constitution articles
 - `search_db_penal_code`: Vector search on IPC sections
-- `enhanced_cross_domain_legal_search`: Advanced cross-document search and fusion
 - `ai_agent`: Controls the flow, uses tools, composes the answer
 
 ---
