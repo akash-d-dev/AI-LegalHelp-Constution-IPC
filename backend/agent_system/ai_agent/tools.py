@@ -165,9 +165,9 @@ def generate_keywords(query: str) -> str:
 
 @tool
 def search_constitution(query: str) -> str:
-    """Search the Indian Constitution database using enhanced multi-strategy search for most relevant articles, clauses, and amendments. 
+    """Search the Indian Constitution database using basic search for most relevant articles, clauses, and amendments. 
     
-    IMPORTANT: This tool should ONLY be used AFTER calling generate_keywords first. Use individual keywords from the generated keyword list for targeted searches. Uses multiple distance metrics and search parameters for improved diversity and accuracy."""
+    IMPORTANT: This tool should ONLY be used AFTER calling generate_keywords first. Use individual keywords from the generated keyword list for targeted searches. Returns top 2 most relevant results."""
     logger.info(f"📜 TOOL: search_constitution called with keyword: '{query}'")
     
     constitution_db = get_constitution_db()
@@ -178,34 +178,33 @@ def search_constitution(query: str) -> str:
         return error_msg
     
     try:
-        logger.info("🔍 Performing enhanced multi-strategy search on Constitution database...")
-        results = constitution_db.combined_search_enhanced(query, top_k=3)
+        logger.info("🔍 Performing basic search on Constitution database...")
+        results = constitution_db.search(query, top_k=2)
         
         if not results:
             logger.info("📭 No relevant constitutional provisions found")
             return "No relevant constitutional provisions found for this query."
         
-        logger.info(f"📊 Found {len(results)} enhanced search results from Constitution database")
+        logger.info(f"📊 Found {len(results)} search results from Constitution database")
         
         formatted_results = []
         for i, result in enumerate(results):
             entity = result.get('entity', {})
             content = entity.get('text') or entity.get('content', 'No content available')
             distance = result.get('distance', 'Unknown')
-            search_type = result.get('search_type', 'Unknown')
             collection = result.get('collection', 'Unknown')
             article = entity.get('article', 'Unknown Article')
             
             formatted_results.append(
-                f"Result {i+1} (Distance: {distance:.4f}, Strategy: {search_type}):\n"
+                f"Result {i+1} (Distance: {distance:.4f}):\n"
                 f"Collection: {collection}\n"
                 f"Article: {article}\n"
                 f"Content: {content}\n"
             )
-            logger.debug(f"📄 Result {i+1}: Article {article}, Distance: {distance:.4f}, Strategy: {search_type}")
+            logger.debug(f"📄 Result {i+1}: Article {article}, Distance: {distance:.4f}")
         
         result_text = "\n".join(formatted_results)
-        logger.info(f"✅ Constitution enhanced search completed, returning {len(formatted_results)} results")
+        logger.info(f"✅ Constitution basic search completed, returning {len(formatted_results)} results")
         return result_text
         
     except Exception as e:
@@ -216,9 +215,9 @@ def search_constitution(query: str) -> str:
 
 @tool
 def search_ipc(query: str) -> str:
-    """Search the Indian Penal Code database using enhanced multi-strategy search for most relevant sections and offenses. 
+    """Search the Indian Penal Code database using basic search for most relevant sections and offenses. 
     
-    IMPORTANT: This tool should ONLY be used AFTER calling generate_keywords first. Use individual keywords from the generated keyword list for targeted searches. Uses multiple distance metrics and search parameters for improved diversity and accuracy."""
+    IMPORTANT: This tool should ONLY be used AFTER calling generate_keywords first. Use individual keywords from the generated keyword list for targeted searches. Returns top 2 most relevant results."""
     logger.info(f"⚖️ TOOL: search_ipc called with keyword: '{query}'")
     
     ipc_db = get_ipc_db()
@@ -229,34 +228,33 @@ def search_ipc(query: str) -> str:
         return error_msg
     
     try:
-        logger.info("🔍 Performing enhanced multi-strategy search on IPC database...")
-        results = ipc_db.combined_search_enhanced(query, top_k=3)
+        logger.info("🔍 Performing basic search on IPC database...")
+        results = ipc_db.search(query, top_k=2)
         
         if not results:
             logger.info("📭 No relevant IPC sections found")
             return "No relevant IPC sections found for this query."
         
-        logger.info(f"📊 Found {len(results)} enhanced search results from IPC database")
+        logger.info(f"📊 Found {len(results)} search results from IPC database")
         
         formatted_results = []
         for i, result in enumerate(results):
             entity = result.get('entity', {})
             content = entity.get('text') or entity.get('content', 'No content available')
             distance = result.get('distance', 'Unknown')
-            search_type = result.get('search_type', 'Unknown')
             collection = result.get('collection', 'Unknown')
             section = entity.get('section', 'Unknown Section')
             
             formatted_results.append(
-                f"Result {i+1} (Distance: {distance:.4f}, Strategy: {search_type}):\n"
+                f"Result {i+1} (Distance: {distance:.4f}):\n"
                 f"Collection: {collection}\n"
                 f"Section: {section}\n"
                 f"Content: {content}\n"
             )
-            logger.debug(f"📄 Result {i+1}: Section {section}, Distance: {distance:.4f}, Strategy: {search_type}")
+            logger.debug(f"📄 Result {i+1}: Section {section}, Distance: {distance:.4f}")
         
         result_text = "\n".join(formatted_results)
-        logger.info(f"✅ IPC enhanced search completed, returning {len(formatted_results)} results")
+        logger.info(f"✅ IPC basic search completed, returning {len(formatted_results)} results")
         return result_text
         
     except Exception as e:
@@ -339,7 +337,7 @@ def enhanced_cross_domain_legal_search(query: str) -> str:
         if constitution_db:
             logger.info("📜 Performing enhanced search on Constitution database...")
             try:
-                const_results = constitution_db.enhanced_cross_domain_search(query, top_k=5)
+                const_results = constitution_db.enhanced_cross_domain_search(query, top_k=3)
                 
                 # Add database source to results
                 for result in const_results:
@@ -357,7 +355,7 @@ def enhanced_cross_domain_legal_search(query: str) -> str:
         if ipc_db:
             logger.info("⚖️ Performing enhanced search on IPC database...")
             try:
-                ipc_results = ipc_db.enhanced_cross_domain_search(query, top_k=5)
+                ipc_results = ipc_db.enhanced_cross_domain_search(query, top_k=3)
                 
                 # Add database source to results
                 for result in ipc_results:
@@ -378,7 +376,7 @@ def enhanced_cross_domain_legal_search(query: str) -> str:
         
         # Perform final cross-database result fusion
         logger.info("🔀 Performing final cross-database result fusion...")
-        final_results = _perform_cross_database_fusion(all_enhanced_results, query, top_k=8)
+        final_results = _perform_cross_database_fusion(all_enhanced_results, query, top_k=4)
         
         # Analyze cross-database coverage
         cross_db_analysis = _analyze_cross_database_coverage(final_results)
@@ -444,7 +442,7 @@ def enhanced_cross_domain_legal_search(query: str) -> str:
         return error_msg
 
 
-def _perform_cross_database_fusion(all_results: List[Dict[str, Any]], query: str, top_k: int = 8) -> List[Dict[str, Any]]:
+def _perform_cross_database_fusion(all_results: List[Dict[str, Any]], query: str, top_k: int = 4) -> List[Dict[str, Any]]:
     """Perform intelligent fusion of results from multiple databases."""
     logger.info(f"🔀 Fusing results from {len(all_results)} cross-database results...")
     

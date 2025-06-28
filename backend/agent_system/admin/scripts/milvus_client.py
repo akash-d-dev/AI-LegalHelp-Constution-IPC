@@ -17,8 +17,8 @@ class MilvusDBClient:
     def _get_client(self):
         """Create a new client connection"""
         return MilvusClient(
-            uri=self.uri,
-            token=self.token
+            uri=self.uri if self.uri else "",
+            token=self.token if self.token else ""
         )
 
     def create_collection(self, collection_name, dimension=768):

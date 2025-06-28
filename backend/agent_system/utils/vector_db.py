@@ -532,7 +532,7 @@ class MilvusVectorDB:
         for h in rr_scored:
             try:
                 # For L2 metric, we want distance < threshold (e.g., 1.0)
-                if h.distance < 1.0:
+                if h.distance < 2.0:
                     final.append(h)
                     logger.debug(f"✅ Added final hit: ID={h.id}, Distance={h.distance}, Strategy={h.strategy}")
                 else:

@@ -6156,3 +6156,263 @@ the Prevention of Corruption Act, 1988 (49 of 1988), s. 31.
 
 ================================================================================
 
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:14:40
+Query: 'subject  to  any  of  the  disqualifications'
+Total Results: 60 -> Unique: 30 -> Final: 0
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:17:36
+Query: 'subject  to  any  of  the  disqualifications'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 1.2870
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part V.—The Union)46102. Disqualifications for membership.—(1) A person shall be disqualified for being chosen as, and for being, a member of either House of Parliament— 1[(...
+----------------------------------------
+Result 2:
+  L2 Distance: 1.3334
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_2
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part VI.—The States) 86191. Disqualifications for membership.—(1) A person shall be disqualified for being chosen as, and for being, a member of the Legislative Assembly or ...
+----------------------------------------
+Result 3:
+  L2 Distance: 1.3983
+  Search Strategy: base
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: 345
+1[TENTH SCHEDULE[Articles 102(2) and 191(2)]Provisions as to disqualification on ground of defection 1. Interpretation.—In this Schedule, unless the context otherwise requires,— (a) "House" means ...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:24:36
+Query: 'fundamental rights and duties with respect to freedom of speech and expression'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.7811
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of d...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.9618
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+Result 3:
+  L2 Distance: 0.9899
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislat...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:26:51
+Query: 'fundamental rights and duties with respect to freedom of speech and expression'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.7811
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of d...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.9618
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+Result 3:
+  L2 Distance: 0.9899
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislat...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:27:48
+Query: 'fundamental rights and duties with respect to freedom of speech and expression'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.7811
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of d...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.9618
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+Result 3:
+  L2 Distance: 0.9899
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislat...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:39:49
+Query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+Total Results: 90 -> Unique: 40 -> Final: 5
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 1.1934
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by ap...
+----------------------------------------
+Result 2:
+  L2 Distance: 1.2377
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)12(2) Every person who is arrested and detained in custody shall be produced before the nearest magistrate within a period of twenty-four hours ...
+----------------------------------------
+Result 3:
+  L2 Distance: 1.2632
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)13Provided that nothing in this sub-clause shall authorise the detention of any person beyond the maximum period prescribed by any law made by P...
+----------------------------------------
+Result 4:
+  L2 Distance: 1.3268
+  Search Strategy: expanded
+  Collection: constitution_of_india_2
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part V.—The Union)65141. Law declared by Supreme Court to be binding on all courts.—The law declared by the Supreme Court shall be binding on all courts within the territory...
+----------------------------------------
+Result 5:
+  L2 Distance: 1.3378
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:39:51
+Query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+Total Results: 36 -> Unique: 16 -> Final: 5
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 1.2470
+  Search Strategy: base
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 59 
+ 
+with 1[imprisonment for life] or with imprisonment of either description for a ter m which may extend to 
+fourteen years, with or without fine, if the person in confinement, or who ought to have...
+----------------------------------------
+Result 2:
+  L2 Distance: 1.2925
+  Search Strategy: base
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 28 
+ 
+97. Right of private defence of the body and of property .—Every person has a right, subject to the 
+restrictions contained in section 99, to defend— 
+First.—His own body, and the body of any ot...
+----------------------------------------
+Result 3:
+  L2 Distance: 1.3242
+  Search Strategy: base
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 29 
+ 
+1[Seventhly.—An act of throwing or administering acid or an attempt to throw or adm inister acid 
+which may reasonably cause the apprehension that grievous hurt will otherwise be the consequence...
+----------------------------------------
+Result 4:
+  L2 Distance: 1.3253
+  Search Strategy: base
+  Collection: ipc_2
+  Article/Section: Unknown Section
+  Content: 91 
+ 
+(i) within the limits of the police station to which such police officer is appointed; or 
+(ii) in the premises of any station house; or 
+(iii) on a woman in such police officer's custody or in ...
+----------------------------------------
+Result 5:
+  L2 Distance: 1.3262
+  Search Strategy: base
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 17 
+ 
+Seventh.—Every person who holds any office by virtue of which he is empowered to place or kee p 
+any person in confinement; 
+Eighth.—Every officer of 1[the Government] whose duty it is, as such ...
+----------------------------------------
+
+================================================================================
+
