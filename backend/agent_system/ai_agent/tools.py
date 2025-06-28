@@ -5,7 +5,9 @@ from __future__ import annotations
 import logging
 from typing import List, Optional, Dict, Any
 from langchain_core.tools import tool
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
+from pydantic import SecretStr
 from agent_system.utils.Constants import Constants
 from agent_system.utils.vector_db import MilvusVectorDB
 
@@ -14,9 +16,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Global variables for lazy initialization
-_constitution_db: Optional[object] = None
-_ipc_db: Optional[object] = None
-_llm: Optional[ChatOpenAI] = None
+_constitution_db: Optional[MilvusVectorDB] = None
+_ipc_db: Optional[MilvusVectorDB] = None
+_llm: Optional[ChatOpenAI | ChatGoogleGenerativeAI] = None
 
 ########################################################
 #Helper functions
@@ -28,8 +30,8 @@ def get_constitution_db():
         logger.info("🔄 Initializing Constitution database...")
         try:
             _constitution_db = MilvusVectorDB(
-                uri=Constants.MILVUS_URI_DB_COI,
-                token=Constants.MILVUS_TOKEN_DB_COI,
+                uri=Constants.MILVUS_URI_DB_COI if Constants.MILVUS_URI_DB_COI else "",
+                token=Constants.MILVUS_TOKEN_DB_COI if Constants.MILVUS_TOKEN_DB_COI else "",
                 collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_CONSTITUTION}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_CONSTITUTION + 1)],
             )
             logger.info("✅ Constitution database initialized successfully")
@@ -46,8 +48,8 @@ def get_ipc_db():
         logger.info("🔄 Initializing IPC database...")
         try:
             _ipc_db = MilvusVectorDB(
-                uri=Constants.MILVUS_URI_DB_IPC,
-                token=Constants.MILVUS_TOKEN_DB_IPC,
+                uri=Constants.MILVUS_URI_DB_IPC if Constants.MILVUS_URI_DB_IPC else "",
+                token=Constants.MILVUS_TOKEN_DB_IPC if Constants.MILVUS_TOKEN_DB_IPC else "",
                 collection_names=[f"{Constants.MILVUS_COLLECTION_NAME_IPC}_{i}" for i in range(1, Constants.MILVUS_COLLECTION_COUNT_IPC + 1)],
             )
             logger.info("✅ IPC database initialized successfully")
@@ -62,7 +64,13 @@ def get_llm():
     global _llm
     if _llm is None:
         logger.info("🔄 Initializing LLM...")
-        _llm = ChatOpenAI(temperature=0, api_key=Constants.OPENAI_API_KEY)
+        if Constants.LLM_MODEL_NAME == "gpt-4o-mini":
+            _llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=SecretStr(Constants.OPENAI_API_KEY) if Constants.OPENAI_API_KEY else None)
+        elif Constants.LLM_MODEL_NAME == "gemini-2.0-flash-exp":
+            _llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=SecretStr(Constants.GOOGLE_API_KEY) if Constants.GOOGLE_API_KEY else None)
+        else:
+            raise ValueError(f"Invalid LLM model: {Constants.LLM_MODEL_NAME}")
+        
         logger.info("✅ LLM initialized successfully")
     return _llm
 
@@ -78,35 +86,35 @@ def generate_keywords(query: str) -> str:
     prompt = f"""You are a legal search expert.
 
     🔹 **Goal**  
-    Turn the user’s natural–language legal query into a JSON array of the **smallest set of high-value search terms** (keywords or short phrases) that will maximise semantic-search recall in:
+    Turn the user's natural–language legal query into a JSON array of the **smallest set of high-value search terms** (keywords or short phrases) that will maximise semantic-search recall in:
 
     • Indian Penal Code (IPC) vector DB  
     • Constitution of India vector DB  
 
     🔹 **What counts as a keyword/phrase**  
-    • A single legal term – e.g., “defamation”, “trespass”  
-    • A short legal phrase – e.g., “forced confession”, “office of profit”  
-    • A precise citation when clearly relevant – e.g., “Section 302”, “Article 19”
+    • A single legal term – e.g., "defamation", "trespass"  
+    • A short legal phrase – e.g., "forced confession", "office of profit"  
+    • A precise citation when clearly relevant – e.g., "Section 302", "Article 19"
 
     🔹 **Rules**  
     1. Return **1 – 4** items. You *may* exceed 4 **only** if the query is complex and extra terms will clearly improve recall.  
-    2. Use wording likely found in the IPC or the Constitution (avoid generic fillers like “law”, “penalty”).  
+    2. Use wording likely found in the IPC or the Constitution (avoid generic fillers like "law", "penalty").  
     3. If a specific Article/Section is obviously implicated, include it exactly once.  
     4. Keep items distinct; no redundant variations.  
     5. Respond with **only** the JSON array—no extra text.
 
     🔹 **Examples**
 
-    User → *“Can freedom of speech be limited in India?”*  
+    User → *"Can freedom of speech be limited in India?"*  
     `["freedom of speech", "reasonable restrictions", "Article 19"]`
 
-    User → *“What is the punishment for stabbing someone to death?”*  
+    User → *"What is the punishment for stabbing someone to death?"*  
     `["murder", "stabbing", "Section 302", "punishment for homicide"]`
 
-    User → *“Protection against arbitrary arrest under Indian Constitution”*  
+    User → *"Protection against arbitrary arrest under Indian Constitution"*  
     `["arbitrary arrest", "Article 22", "personal liberty"]`
 
-    User → *“Police tortured a suspect to make him confess”*  
+    User → *"Police tortured a suspect to make him confess"*  
     `["custodial torture", "forced confession", "Section 330", "police abuse"]`
 
     ---
@@ -120,7 +128,7 @@ def generate_keywords(query: str) -> str:
         logger.info("🔄 Calling LLM to generate keywords...")
         llm = get_llm()
         response = llm.invoke(prompt)
-        keywords_response = response.content.strip()
+        keywords_response = str(response.content).strip()
         logger.info(f"✅ Generated keywords response: {keywords_response}")
         
         # Try to parse as JSON array
@@ -279,7 +287,7 @@ def predict_punishment(case_description: str) -> str:
         response = llm.invoke(prompt)
         prediction = response.content
         logger.info(f"✅ Punishment prediction completed (length: {len(prediction)} chars)")
-        return prediction
+        return str(prediction)
     except Exception as e:
         error_msg = f"Error predicting punishment: {str(e)}"
         logger.error(f"❌ {error_msg}")

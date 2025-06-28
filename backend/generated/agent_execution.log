@@ -1098,3 +1098,847 @@ Article: Unk...'
 2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
 2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250623_015255.json
 2025-06-23 01:52:55 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 18:20:03 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 18:20:03 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 18:20:03 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 18:20:03 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 18:20:03 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 18:20:06 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 18:20:07 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 18:20:08 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:20:08 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 18:21:16 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 18:21:18 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:21:18 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 18:21:18 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 18:21:19 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 18:21:20 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:21:20 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 18:23:14 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 18:23:15 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:23:15 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 18:23:15 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 18:23:16 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 18:23:17 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 18:23:17 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************7uEA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 19:57:09 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 19:57:09 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 19:57:09 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 19:57:09 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 19:57:09 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 19:57:10 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 19:57:11 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 19:57:11 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gpt-4o-mini
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 19:57:11 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 19:57:12 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 19:57:13 - agent_system.ai_agent - ERROR - ❌ Error in LLM call: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 19:57:13 - agent_system.ai_agent - ERROR - ❌ Agent execution failed: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - ❓ User query: 'hi'
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 19:58:59 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 👤 Last user query: 'hi...'
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 19:59:00 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Hello! How can I assist you with questions about the Indian Constitution or the Indian Penal Code (I...'
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Hello! How can I assist you with questions about the Indian Constitution or the Indian Penal Code (IPC)?...'
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_195903.json
+2025-06-28 19:59:03 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO - ❓ User query: 'what are the consequences of doing a movie piracy'
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO - 📚 Chat history provided with 2 messages
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO -   1. user: 'hi...'
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO -   2. assistant: 'Hello! How can I assist you with questions about t...'
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 21:03:48 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 21:03:49 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 📋 Initial state created with 3 total messages
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 👤 Last user query: 'what are the consequences of doing a movie piracy...'
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 21:03:50 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I can provide some general information, but movie piracy typically falls under Copyright Law, which ...'
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I can provide some general information, but movie piracy typically falls under Copyright Law, which is outside the scope of the Indian Constitution and IPC.
+
+Movie piracy, the act of reproducing or di...'
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_210354.json
+2025-06-28 21:03:54 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - ❓ User query: 'What are the consequences of a double murder ?'
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 📚 Chat history provided with 4 messages
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO -   1. user: 'hi...'
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO -   2. assistant: 'Hello! How can I assist you with questions about t...'
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO -   3. user: 'what are the consequences of doing a movie piracy...'
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO -   4. assistant: 'I can provide some general information, but movie ...'
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 21:04:35 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 📋 Initial state created with 5 total messages
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the consequences of a double murder ?...'
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 21:04:36 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'What are the consequences of a double murder ?'}
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'What are the consequences of a double murder ?'}
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'What are the consequences of a double murder ?'
+2025-06-28 21:04:38 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'What are the consequences of a double murder ?...'
+2025-06-28 21:04:38 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'What are the consequences of a double murder ?'
+2025-06-28 21:04:38 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-28 21:04:38 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-28 21:04:40 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-28 21:04:41 - agent_system.ai_agent.tools - ERROR - ❌ Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk...'
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the consequences of a double murder ?...'
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am unable to process your request due to an issue with the API key. Please try again later....'
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am unable to process your request due to an issue with the API key. Please try again later....'
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 8
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_210441.json
+2025-06-28 21:04:41 - agent_system.ai_agent - INFO - 📊 State summary: 1 tool calls, 0 DB results
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 21:08:13 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 21:08:14 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 21:08:16 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 21:08:16 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 21:08:16 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-28 21:08:16 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-28 21:08:17 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-28 21:08:17 - agent_system.ai_agent.tools - ERROR - ❌ Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk...'
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 21:08:17 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-28 21:08:18 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 21:08:18 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 21:08:18 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am unable to generate keywords due to an API key error. However, I can still provide you with the ...'
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am unable to generate keywords due to an API key error. However, I can still provide you with the answer based on my general knowledge.
+
+The fundamental rights in the Indian Constitution are enshrin...'
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 4
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_210819.json
+2025-06-28 21:08:19 - agent_system.ai_agent - INFO - 📊 State summary: 1 tool calls, 0 DB results
+2025-06-28 23:24:57 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:24:57 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 23:24:57 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 23:24:57 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:24:57 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:24:58 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning as expected....'
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning as expected....'
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_232501.json
+2025-06-28 23:25:01 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 📚 Chat history provided with 2 messages
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO -   1. user: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO -   2. assistant: 'I am unable to generate keywords due to an API key...'
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:25:56 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 📋 Initial state created with 3 total messages
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:25:57 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:26:02 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 23:26:02 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:26:02 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-28 23:26:02 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-28 23:26:05 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-28 23:26:05 - agent_system.ai_agent.tools - ERROR - ❌ Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-my-re**********************************************************KbpW. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["Error generating keywords: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk...'
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:26:05 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am still encountering an issue with the API key, which prevents me from generating keywords. Howev...'
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am still encountering an issue with the API key, which prevents me from generating keywords. However, I can still provide you with the answer based on my general knowledge.
+
+The fundamental rights i...'
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 6
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_232607.json
+2025-06-28 23:26:07 - agent_system.ai_agent - INFO - 📊 State summary: 1 tool calls, 0 DB results
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - ❓ User query: 'can you try again'
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 📚 Chat history provided with 4 messages
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO -   1. user: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO -   2. assistant: 'I am unable to generate keywords due to an API key...'
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO -   3. user: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO -   4. assistant: 'I am still encountering an issue with the API key,...'
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:39:24 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 📋 Initial state created with 5 total messages
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 👤 Last user query: 'can you try again...'
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:39:25 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am still encountering an issue with the API key, which prevents me from using the tools. I am unab...'
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am still encountering an issue with the API key, which prevents me from using the tools. I am unable to proceed with your request at this time. Please try again later....'
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 6
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_233927.json
+2025-06-28 23:39:27 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:40:13 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'What are the fundamental rights in the Indian Cons...'
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ```json
+["fundamental rights", "Indian Constitution", "Article 12", "Article 13"]
+```
+2025-06-28 23:40:16 - agent_system.ai_agent.tools - WARNING - ⚠️ Could not parse as JSON, treating as single keyword
+2025-06-28 23:40:16 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["```json
+[fundamental rights, Indian Constitution, Article 12, Article 13]
+```"]...'
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:40:17 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_constitution(['query']), search_constitution(['query']), search_constitution(['query'])
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 4 tool calls: ['search_constitution', 'search_constitution', 'search_constitution', 'search_constitution']
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🎯 Executing 4 tool calls...
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔨 Tool 1/4: search_constitution
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights'}
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'fundamental rights'}
+2025-06-28 23:40:18 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'fundamental rights...'
+2025-06-28 23:40:18 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'fundamental rights'
+2025-06-28 23:40:18 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-28 23:44:18 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-28 23:44:18 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-28 23:44:19 - agent_system.ai_agent.tools - INFO - 📊 Found 2 enhanced search results from Constitution database
+2025-06-28 23:44:19 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 2 results
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.7545, Strategy: nprobe12):
+Collection: constitution_of_india_1
+Article: Unknow...'
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 🔨 Tool 2/4: search_constitution
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Indian Constitution'}
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Indian Constitution'}
+2025-06-28 23:44:19 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Indian Constitution...'
+2025-06-28 23:44:19 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Indian Constitution'
+2025-06-28 23:44:19 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-28 23:44:20 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-28 23:44:20 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.3944, Strategy: base):
+Collection: constitution_of_india_1
+Article: Unknown Ar...'
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 🔨 Tool 3/4: search_constitution
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 12'}
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 12'}
+2025-06-28 23:44:20 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 12...'
+2025-06-28 23:44:20 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 12'
+2025-06-28 23:44:20 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-28 23:44:21 - agent_system.ai_agent.tools - INFO - 📭 No relevant constitutional provisions found
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'No relevant constitutional provisions found for this query....'
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 🔨 Tool 4/4: search_constitution
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 13'}
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 13'}
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 13...'
+2025-06-28 23:44:21 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 13'
+2025-06-28 23:44:21 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-28 23:44:21 - agent_system.ai_agent.tools - INFO - 📊 Found 1 enhanced search results from Constitution database
+2025-06-28 23:44:21 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 1 results
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.9987, Strategy: nprobe12):
+Collection: constitution_of_india_1
+Article: Unknow...'
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 🏁 All 4 tools executed
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📈 State tracking: 5 total tool calls, 4 DB results
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📨 Current state has 8 messages
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:44:21 - agent_system.ai_agent - INFO - 📤 Sending 9 messages to LLM...
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The Fundamental Rights are enshrined in Part III of the Indian Constitution and guarantee civil libe...'
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The Fundamental Rights are enshrined in Part III of the Indian Constitution and guarantee civil liberties to all citizens to prevent encroachments by the State. These rights are:
+
+1.  **Right to Equal...'
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 9
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_234425.json
+2025-06-28 23:44:25 - agent_system.ai_agent - INFO - 📊 State summary: 5 tool calls, 4 DB results
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:44:58 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:44:59 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitutio...'
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitution or the Indian Penal Code?...'
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_234500.json
+2025-06-28 23:45:00 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:45:05 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:45:06 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitutio...'
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitution or the Indian Penal Code?...'
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_234507.json
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ❓ User query: 'Test health check'
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-28 23:45:07 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 👤 Last user query: 'Test health check...'
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-28 23:45:08 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 💬 LLM final response: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitutio...'
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'I am functioning normally. How can I assist you with a legal query related to the Indian Constitution or the Indian Penal Code?...'
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 2
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250628_234509.json
+2025-06-28 23:45:09 - agent_system.ai_agent - INFO - 📊 State summary: 0 tool calls, 0 DB results
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - ❓ User query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 📚 No chat history provided - starting fresh conversation
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-29 00:18:21 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 📋 Initial state created with 1 total messages
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 📨 Current state has 1 messages
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 00:18:22 - agent_system.ai_agent - INFO - 📤 Sending 2 messages to LLM...
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'What are the fundamental rights in the Indian Constitution?'}
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-29 00:18:24 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'What are the fundamental rights in the Indian Cons...'
+2025-06-29 00:18:24 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'What are the fundamental rights in the Indian Constitution?'
+2025-06-29 00:18:24 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords...
+2025-06-29 00:18:24 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-29 00:18:24 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-29 00:18:25 - agent_system.ai_agent.tools - INFO - ✅ Generated keywords response: ```json
+["fundamental rights", "Indian Constitution", "Article 12", "Article 13"]
+```
+2025-06-29 00:18:25 - agent_system.ai_agent.tools - WARNING - ⚠️ Could not parse as JSON, treating as single keyword
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '["```json
+[fundamental rights, Indian Constitution, Article 12, Article 13]
+```"]...'
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 📨 Current state has 3 messages
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 00:18:25 - agent_system.ai_agent - INFO - 📤 Sending 4 messages to LLM...
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_constitution(['query']), search_constitution(['query']), search_constitution(['query'])
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 4 tool calls: ['search_constitution', 'search_constitution', 'search_constitution', 'search_constitution']
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🎯 Executing 4 tool calls...
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔨 Tool 1/4: search_constitution
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'fundamental rights'}
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'fundamental rights'}
+2025-06-29 00:18:26 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'fundamental rights...'
+2025-06-29 00:18:26 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'fundamental rights'
+2025-06-29 00:18:26 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-29 00:18:45 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-29 00:18:45 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-29 00:18:47 - agent_system.ai_agent.tools - INFO - 📊 Found 2 enhanced search results from Constitution database
+2025-06-29 00:18:47 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 2 results
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.7545, Strategy: base):
+Collection: constitution_of_india_1
+Article: Unknown Ar...'
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 🔨 Tool 2/4: search_constitution
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Indian Constitution'}
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Indian Constitution'}
+2025-06-29 00:18:47 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Indian Constitution...'
+2025-06-29 00:18:47 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Indian Constitution'
+2025-06-29 00:18:47 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-29 00:18:48 - agent_system.ai_agent.tools - INFO - 📊 Found 3 enhanced search results from Constitution database
+2025-06-29 00:18:48 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 3 results
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.3944, Strategy: base):
+Collection: constitution_of_india_1
+Article: Unknown Ar...'
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 🔨 Tool 3/4: search_constitution
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 12'}
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 12'}
+2025-06-29 00:18:48 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 12...'
+2025-06-29 00:18:48 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 12'
+2025-06-29 00:18:48 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-29 00:18:49 - agent_system.ai_agent.tools - INFO - 📭 No relevant constitutional provisions found
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'No relevant constitutional provisions found for this query....'
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 🔨 Tool 4/4: search_constitution
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 13'}
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 13'}
+2025-06-29 00:18:49 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 13...'
+2025-06-29 00:18:49 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 13'
+2025-06-29 00:18:49 - agent_system.ai_agent.tools - INFO - 🔍 Performing enhanced multi-strategy search on Constitution database...
+2025-06-29 00:18:50 - agent_system.ai_agent.tools - INFO - 📊 Found 1 enhanced search results from Constitution database
+2025-06-29 00:18:50 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search completed, returning 1 results
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.9987, Strategy: expanded):
+Collection: constitution_of_india_1
+Article: Unknow...'
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 🏁 All 4 tools executed
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📈 State tracking: 5 total tool calls, 4 DB results
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📨 Current state has 8 messages
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 👤 Last user query: 'What are the fundamental rights in the Indian Constitution?...'
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 00:18:50 - agent_system.ai_agent - INFO - 📤 Sending 9 messages to LLM...
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Fundamental Rights in the Indian Constitution are enshrined in Part III and guarantee civil libertie...'
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Fundamental Rights in the Indian Constitution are enshrined in Part III and guarantee civil liberties to all citizens to ensure a life of peace and harmony. These rights are:
+
+1.  **Right to Equality*...'
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 9
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250629_001852.json
+2025-06-29 00:18:52 - agent_system.ai_agent - INFO - 📊 State summary: 5 tool calls, 4 DB results

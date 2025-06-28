@@ -5,12 +5,13 @@ from __future__ import annotations
 import logging
 import os
 from datetime import datetime
-from typing import Annotated, Sequence, TypedDict, List, Optional
+from typing import Annotated, Sequence, TypedDict, List, Optional, Union
 from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage, ToolMessage, AIMessage
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
+from pydantic import SecretStr
 from agent_system.utils.Constants import Constants
 
 from .tools import tools
@@ -65,7 +66,7 @@ class AgentState(TypedDict):
     tool_calls_executed: Optional[List[str]]
 
 
-def build_graph() -> StateGraph:
+def build_graph():
     """Build and return the compiled LangGraph agent."""
     logger.info("🏗️ Building agent graph...")
     
@@ -73,9 +74,11 @@ def build_graph() -> StateGraph:
     logger.info(f"🤖 Initializing LLM with model: {Constants.LLM_MODEL_NAME}")
     
     if Constants.LLM_MODEL_NAME == "gpt-4o-mini":
-        llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.OPENAI_API_KEY).bind_tools(tools)
+        llm = ChatOpenAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=SecretStr(Constants.OPENAI_API_KEY) if Constants.OPENAI_API_KEY else None).bind_tools(tools)
+        print("LLM initialized with OpenAI")
     elif Constants.LLM_MODEL_NAME == "gemini-2.0-flash-exp":
-        llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=Constants.GOOGLE_API_KEY).bind_tools(tools)
+        llm = ChatGoogleGenerativeAI(temperature=0, model=Constants.LLM_MODEL_NAME, api_key=SecretStr(Constants.GOOGLE_API_KEY) if Constants.GOOGLE_API_KEY else None).bind_tools(tools)
+        print("LLM initialized with Google")
     else:
         raise ValueError(f"Invalid LLM model: {Constants.LLM_MODEL_NAME}")
     
@@ -88,9 +91,8 @@ def build_graph() -> StateGraph:
     def should_continue(state: AgentState) -> str:
         """Check if the last message contains tool calls."""
         last_message = state['messages'][-1]
-        has_tool_calls = hasattr(last_message, 'tool_calls') and last_message.tool_calls
         
-        if has_tool_calls:
+        if isinstance(last_message, AIMessage) and hasattr(last_message, 'tool_calls') and last_message.tool_calls:
             tool_names = [tc['name'] for tc in last_message.tool_calls]
             logger.info(f"🔄 Agent decision: CONTINUE - Found {len(last_message.tool_calls)} tool calls: {tool_names}")
             return "tools"
@@ -152,7 +154,7 @@ def build_graph() -> StateGraph:
             logger.info("✅ LLM response received")
             
             # Log if the response contains tool calls
-            if hasattr(response, 'tool_calls') and response.tool_calls:
+            if isinstance(response, AIMessage) and hasattr(response, 'tool_calls') and response.tool_calls:
                 tool_call_info = []
                 for tc in response.tool_calls:
                     tool_call_info.append(f"{tc['name']}({list(tc['args'].keys())})")
@@ -161,7 +163,11 @@ def build_graph() -> StateGraph:
                 content_preview = response.content[:100] if response.content else "No content"
                 logger.info(f"💬 LLM final response: '{content_preview}...'")
             
-            return {'messages': [response]}
+            return {
+                'messages': [response],
+                'db_results': db_results,
+                'tool_calls_executed': tool_calls_executed
+            }
             
         except Exception as e:
             logger.error(f"❌ Error in LLM call: {str(e)}")
@@ -171,7 +177,17 @@ def build_graph() -> StateGraph:
         """Execute tool calls from the LLM's response and track results."""
         logger.info("🔧 Entering tools execution node...")
         
-        tool_calls = state['messages'][-1].tool_calls
+        last_message = state['messages'][-1]
+        
+        if not isinstance(last_message, AIMessage) or not hasattr(last_message, 'tool_calls') or not last_message.tool_calls:
+            logger.warning("⚠️ No tool calls found in last message")
+            return {
+                'messages': [],
+                'db_results': state.get('db_results', []) or [],
+                'tool_calls_executed': state.get('tool_calls_executed', []) or []
+            }
+        
+        tool_calls = last_message.tool_calls
         logger.info(f"🎯 Executing {len(tool_calls)} tool calls...")
         
         # Get current tracking state
@@ -323,7 +339,13 @@ def run_agent(query: str, chat_history: Optional[List[dict]] = None) -> str:
     Returns:
         str: The agent's response to the current query
     """
-    Constants.check_env_variables()
+    # Check environment variables
+    try:
+        Constants.check_env_variables()
+    except Exception as e:
+        logger.error(f"❌ Environment check failed: {e}")
+        raise
+    
     logger.info("🚀 Starting agent execution...")
     logger.info(f"❓ User query: '{query}'")
     
@@ -371,7 +393,7 @@ def run_agent(query: str, chat_history: Optional[List[dict]] = None) -> str:
     # Run the agent
     logger.info("🔄 Invoking agent...")
     try:
-        result = app.invoke(initial_state)
+        result = app.invoke(initial_state)  # type: ignore
         logger.info("✅ Agent execution completed")
         
         # Log final result
@@ -443,7 +465,7 @@ def stream_agent(query: str, chat_history: Optional[List[dict]] = None):
     logger.info(f"📋 Initial state created for streaming with {len(messages)} total messages")
     
     try:
-        for i, chunk in enumerate(app.stream(initial_state, stream_mode="values")):
+        for i, chunk in enumerate(app.stream(initial_state, stream_mode="values")):  # type: ignore
             logger.info(f"📦 Received chunk {i+1}")
             if "messages" in chunk:
                 last_message = chunk["messages"][-1]

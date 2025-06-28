@@ -1414,3 +1414,185 @@ PART XXIISHORT TITLE, COMMENCEMENT, 1[AUTHORITATIVE TEXT IN HINDI] AND REPEALS39
 
 ================================================================================
 
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-28 23:44:19
+Query: 'fundamental rights'
+Total Results: 60 -> Unique: 30 -> Final: 2
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.7545
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of d...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.9229
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislat...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-28 23:44:20
+Query: 'Indian Constitution'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.3944
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF INDIA PREAMB LEWE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a 1[SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC] and to secure to all its citizens:JUS...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.4064
+  Search Strategy: base
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3621 2 3 4 5      6 52.Kharkharia15PatgramMekliganj60.7453. Kharkharia 13Patgram Mekliganj 51.6254.Lotamari14PatgramMekliganj110.9255.Bhotbari16PatgramMekliganj2...
+----------------------------------------
+Result 3:
+  L2 Distance: 0.4203
+  Search Strategy: base
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3681 2 3 4 5      6 43.(i) Chhit NalgramSitalkuchiPatgarm6649.5 (ii) Chhit Nalgram (Fragment)SitalkuchiPatgarm 66 44.(i) BatrigachhDinhataKaliganj81577.37 (ii) B...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-28 23:44:21
+Query: 'Article 12'
+Total Results: 60 -> Unique: 29 -> Final: 0
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-28 23:44:21
+Query: 'Article 13'
+Total Results: 60 -> Unique: 30 -> Final: 1
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.9987
+  Search Strategy: nprobe12
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 00:18:47
+Query: 'fundamental rights'
+Total Results: 60 -> Unique: 30 -> Final: 2
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.7545
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(ii)PART IIIFUNDAMENTAL RIGHTSGeneral 12. Definition.13. Laws inconsistent with or in derogation of the fundamental rights. Right to Equality14.Equality before law.15. Prohibition of d...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.9229
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: 6
+PART III FUNDAMENTAL RIGHTSGeneral12. Definition.—In this Part, unless the context otherwise requires, “the State” includes the Government and Parliament of India and the Government and the Legislat...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 00:18:48
+Query: 'Indian Constitution'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.3944
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF INDIA PREAMB LEWE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a 1[SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC] and to secure to all its citizens:JUS...
+----------------------------------------
+Result 2:
+  L2 Distance: 0.4064
+  Search Strategy: base
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3621 2 3 4 5      6 52.Kharkharia15PatgramMekliganj60.7453. Kharkharia 13Patgram Mekliganj 51.6254.Lotamari14PatgramMekliganj110.9255.Bhotbari16PatgramMekliganj2...
+----------------------------------------
+Result 3:
+  L2 Distance: 0.4203
+  Search Strategy: base
+  Collection: constitution_of_india_5
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Appendix I) 3681 2 3 4 5      6 43.(i) Chhit NalgramSitalkuchiPatgarm6649.5 (ii) Chhit Nalgram (Fragment)SitalkuchiPatgarm 66 44.(i) BatrigachhDinhataKaliganj81577.37 (ii) B...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 00:18:49
+Query: 'Article 12'
+Total Results: 60 -> Unique: 29 -> Final: 0
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 00:18:50
+Query: 'Article 13'
+Total Results: 60 -> Unique: 30 -> Final: 1
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 0.9987
+  Search Strategy: expanded
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: ContentsARTICLES(iii) Cultural and Educational Rights29. Protection of interests of minorities.30. Right of minorities to establish and administer educational institutions.[31. Compulsory acquisition ...
+----------------------------------------
+
+================================================================================
+

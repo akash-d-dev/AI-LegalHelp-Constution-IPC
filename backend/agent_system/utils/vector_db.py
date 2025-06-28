@@ -492,11 +492,12 @@ class MilvusVectorDB:
                 
                 # Check if similar content already exists (Hamming distance < 5)
                 is_duplicate = any(
-                    bin(sig ^ s).count("1") < 5 for s in seen_simhashes
+                    bin(sig ^ s).count("1") < 5 for s in seen_simhashes if isinstance(s, int) and sig is not None
                 )
                 
                 if not is_duplicate:
-                    seen_simhashes.add(sig)
+                    if sig is not None:
+                        seen_simhashes.add(int(sig))
                     deduped.append(h)
                     logger.debug(f"✅ Added unique hit: ID={h.id}, Distance={h.distance}")
                 else:

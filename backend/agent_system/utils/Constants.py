@@ -38,8 +38,8 @@ class Constants:
     ##################################################################
     # LLM Model
     ##################################################################
-    LLM_MODEL_NAME = "gpt-4o-mini"
-   #  LLM_MODEL_NAME = "gemini-2.0-flash-exp"
+   #  LLM_MODEL_NAME = "gpt-4o-mini"
+    LLM_MODEL_NAME = "gemini-2.0-flash-exp"
     LLM_PROMPT_SYSTEM = """
     You are a legal AI assistant specializing in Indian Constitution and Indian Penal Code (IPC).
     
@@ -159,7 +159,8 @@ class Constants:
     5. Use the state information provided to make informed decisions about whether to search more
     """
 
-    def set_env_variables():
+    @classmethod
+    def set_env_variables(cls):
         load_dotenv()
         print("Setting env variables")
         Constants.MILVUS_URI_DB_COI = os.getenv("MILVUS_URI_DB_COI")
@@ -173,7 +174,8 @@ class Constants:
         if(Constants.OPENAI_API_KEY is None)  | (Constants.GOOGLE_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
             raise Exception("Env variables not set")
 
-    def check_env_variables():
+    @classmethod
+    def check_env_variables(cls):
          if(Constants.OPENAI_API_KEY is None) | (Constants.GOOGLE_API_KEY is None) | (Constants.MILVUS_URI_DB_COI is None) | (Constants.MILVUS_TOKEN_DB_COI is None) | (Constants.MILVUS_URI_DB_IPC is None) | (Constants.MILVUS_TOKEN_DB_IPC is None):
             raise Exception("Env variables not set")
          else:

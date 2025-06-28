@@ -13,7 +13,7 @@ class EmbeddingGenerator:
         self.model_name = Constants.EMBEDDING_MODEL_NAME
         self.embeddings_model = HuggingFaceEmbeddings(model_name=self.model_name)
 
-    def generate_embeddings(self, texts: List[str]) -> Tuple[List[str], List[np.ndarray]]:
+    def generate_embeddings(self, texts: List[str]) -> Tuple[List[str], List[List[float]]]:
         """Generate embeddings for a list of texts using HuggingFace embeddings.
         
         Args:
