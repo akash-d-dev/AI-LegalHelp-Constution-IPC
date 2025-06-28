@@ -1656,3 +1656,79 @@ Search Method: Concurrent L2-based with SimHash deduplication
 
 ================================================================================
 
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:54:17
+Query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+Total Results: 60 -> Unique: 30 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 1.1934
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by ap...
+----------------------------------------
+Result 2:
+  L2 Distance: 1.2377
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)12(2) Every person who is arrested and detained in custody shall be produced before the nearest magistrate within a period of twenty-four hours ...
+----------------------------------------
+Result 3:
+  L2 Distance: 1.2632
+  Search Strategy: base
+  Collection: constitution_of_india_1
+  Article/Section: Unknown Section
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)13Provided that nothing in this sub-clause shall authorise the detention of any person beyond the maximum period prescribed by any law made by P...
+----------------------------------------
+
+================================================================================
+
+
+================================================================================
+REFACTORED VECTOR DATABASE SEARCH LOG
+Timestamp: 2025-06-29 02:54:17
+Query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+Total Results: 24 -> Unique: 12 -> Final: 3
+Search Method: Concurrent L2-based with SimHash deduplication
+================================================================================
+
+Result 1:
+  L2 Distance: 1.2470
+  Search Strategy: nprobe12
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 59 
+ 
+with 1[imprisonment for life] or with imprisonment of either description for a ter m which may extend to 
+fourteen years, with or without fine, if the person in confinement, or who ought to have...
+----------------------------------------
+Result 2:
+  L2 Distance: 1.2925
+  Search Strategy: nprobe12
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 28 
+ 
+97. Right of private defence of the body and of property .—Every person has a right, subject to the 
+restrictions contained in section 99, to defend— 
+First.—His own body, and the body of any ot...
+----------------------------------------
+Result 3:
+  L2 Distance: 1.3242
+  Search Strategy: nprobe12
+  Collection: ipc_1
+  Article/Section: Unknown Section
+  Content: 29 
+ 
+1[Seventhly.—An act of throwing or administering acid or an attempt to throw or adm inister acid 
+which may reasonably cause the apprehension that grievous hurt will otherwise be the consequence...
+----------------------------------------
+
+================================================================================
+

@@ -7,7 +7,8 @@ from typing import List, Optional, Dict, Any
 from langchain_core.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
-from pydantic import SecretStr
+from langchain_core.output_parsers import PydanticOutputParser
+from pydantic import SecretStr, BaseModel, Field
 from agent_system.utils.Constants import Constants
 from agent_system.utils.vector_db import MilvusVectorDB
 
@@ -19,6 +20,12 @@ logger = logging.getLogger(__name__)
 _constitution_db: Optional[MilvusVectorDB] = None
 _ipc_db: Optional[MilvusVectorDB] = None
 _llm: Optional[ChatOpenAI | ChatGoogleGenerativeAI] = None
+
+class KeywordResponse(BaseModel):
+    keywords: List[str] = Field(
+        description="Array of legal keywords/phrases for search",
+        min_length=1
+    )
 
 ########################################################
 #Helper functions
@@ -83,84 +90,103 @@ def generate_keywords(query: str) -> str:
     """Generates semantic keywords or phrases for a legal query to improve search results. Can generate single keywords, short phrases, or multiple terms based on query complexity."""
     logger.info(f"🔑 TOOL: generate_keywords called with query: '{query}'")
     
+    # Initialize structured output parser
+    parser = PydanticOutputParser(pydantic_object=KeywordResponse)
+    
     prompt = f"""You are a legal search expert.
 
-    🔹 **Goal**  
-    Turn the user's natural–language legal query into a JSON array of the **smallest set of high-value search terms** (keywords or short phrases) that will maximise semantic-search recall in:
+    **Goal**  
+    Turn the user's natural–language legal query into the **smallest set of high-value search terms** (keywords or short phrases) that will maximise semantic-search recall in:
 
     • Indian Penal Code (IPC) vector DB  
     • Constitution of India vector DB  
 
-    🔹 **What counts as a keyword/phrase**  
+    **What counts as a keyword/phrase**  
     • A single legal term – e.g., "defamation", "trespass"  
     • A short legal phrase – e.g., "forced confession", "office of profit"  
     • A precise citation when clearly relevant – e.g., "Section 302", "Article 19"
 
-    🔹 **Rules**  
+    **Rules**  
     1. Return **1 – 4** items. You *may* exceed 4 **only** if the query is complex and extra terms will clearly improve recall.  
     2. Use wording likely found in the IPC or the Constitution (avoid generic fillers like "law", "penalty").  
     3. If a specific Article/Section is obviously implicated, include it exactly once.  
     4. Keep items distinct; no redundant variations.  
-    5. Respond with **only** the JSON array—no extra text.
+    5. Break the user's query into sub-queries based on the context and generate keywords for each sub-query.
 
-    🔹 **Examples**
+    **Examples**
 
     User → *"Can freedom of speech be limited in India?"*  
-    `["freedom of speech", "reasonable restrictions", "Article 19"]`
+    Keywords: ["freedom of speech", "reasonable restrictions", "Article 19"]
 
     User → *"What is the punishment for stabbing someone to death?"*  
-    `["murder", "stabbing", "Section 302", "punishment for homicide"]`
+    Keywords: ["murder", "stabbing", "Section 302", "punishment for homicide"]
 
     User → *"Protection against arbitrary arrest under Indian Constitution"*  
-    `["arbitrary arrest", "Article 22", "personal liberty"]`
+    Keywords: ["arbitrary arrest", "Article 22", "personal liberty"]
 
     User → *"Police tortured a suspect to make him confess"*  
-    `["custodial torture", "forced confession", "Section 330", "police abuse"]`
+    Keywords: ["custodial torture", "forced confession", "Section 330", "police abuse"]
 
     ---
 
     User query: {query}
 
-    Return ONLY the JSON array of keywords/phrases:
+    {parser.get_format_instructions()}
     """
 
     try:
-        logger.info("🔄 Calling LLM to generate keywords...")
+        logger.info("🔄 Calling LLM to generate keywords with structured output...")
         llm = get_llm()
         response = llm.invoke(prompt)
-        keywords_response = str(response.content).strip()
-        logger.info(f"✅ Generated keywords response: {keywords_response}")
         
-        # Try to parse as JSON array
+        # Parse the structured response
         try:
-            import json
-            parsed_response = json.loads(keywords_response)
+            parsed_response = parser.parse(str(response.content))
+            keywords = parsed_response.keywords
             
-            # Handle expected format (keywords array)
-            if isinstance(parsed_response, list):
-                # Ensure we have 1-4 keywords
-                if len(parsed_response) < 1:
-                    logger.warning(f"⚠️ Only {len(parsed_response)} keyword(s) generated, should be 1-4")
-                elif len(parsed_response) > 4:
-                    logger.warning(f"⚠️ {len(parsed_response)} keywords generated, truncating to 4")
-                    parsed_response = parsed_response[:4]
+            # Ensure we have keywords
+            if len(keywords) < 1:
+                logger.warning(f"⚠️ Only {len(keywords)} keyword(s) generated, should be 1-4")
+                keywords = [query]
                 
-                logger.info(f"📋 Parsed {len(parsed_response)} keywords: {parsed_response}")
-                return json.dumps(parsed_response)
-            else:
-                logger.warning("⚠️ Response is not a JSON array, treating as single keyword")
-                return f'["{str(parsed_response)}"]'
+            logger.info(f"📋 Generated {len(keywords)} keywords using structured output: {keywords}")
+            return str(keywords)
+            
+        except Exception as parse_error:
+            logger.warning(f"⚠️ Structured parsing failed: {parse_error}, falling back to manual parsing")
+            
+            # Fallback to manual JSON parsing
+            import json
+            keywords_response = str(response.content).strip()
+            
+            try:
+                # Try to extract JSON array from the response
+                if '[' in keywords_response and ']' in keywords_response:
+                    start = keywords_response.find('[')
+                    end = keywords_response.rfind(']') + 1
+                    json_part = keywords_response[start:end]
+                    parsed_keywords = json.loads(json_part)
+                    
+                    if isinstance(parsed_keywords, list):
+                        keywords = parsed_keywords
+                        logger.info(f"📋 Fallback parsing successful: {len(keywords)} keywords")
+                        return str(keywords)
                 
-        except json.JSONDecodeError:
-            logger.warning("⚠️ Could not parse as JSON, treating as single keyword")
-            # Clean the response and format as JSON
-            clean_response = keywords_response.replace('"', '').replace("'", "").strip()
-            return f'["{clean_response}"]'
+                # If all else fails, treat as single keyword
+                clean_response = keywords_response.replace('"', '').replace("'", "").strip()
+                keywords = [clean_response]
+                logger.info(f"📋 Final fallback: single keyword '{clean_response}'")
+                return str(keywords)
+                
+            except Exception as fallback_error:
+                logger.error(f"❌ All parsing methods failed: {fallback_error}")
+                keywords = [query]
+                return str(keywords)
             
     except Exception as e:
         error_msg = f"Error generating keywords: {str(e)}"
         logger.error(f"❌ {error_msg}")
-        return f'["{error_msg}"]'
+        return str([error_msg])
 
 
 @tool

@@ -2069,3 +2069,216 @@ Article: Unknow...'
 2025-06-29 00:31:29 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 12
 2025-06-29 00:31:29 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250629_003129.json
 2025-06-29 00:31:29 - agent_system.ai_agent - INFO - 📊 State summary: 6 tool calls, 5 DB results
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - ❓ User query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 📚 Chat history provided with 4 messages
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO -   1. user: 'What are the fundamental rights in the Indian Cons...'
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO -   2. assistant: 'Fundamental Rights in the Indian Constitution are ...'
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO -   3. user: 'An MLA is alleged to hold an office of profit unde...'
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO -   4. assistant: 'Based on the searches, I was unable to locate spec...'
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-29 02:53:52 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 📋 Initial state created with 5 total messages
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 📨 Current state has 5 messages
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 👤 Last user query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary sea...'
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 02:53:53 - agent_system.ai_agent - INFO - 📤 Sending 6 messages to LLM...
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: enhanced_cross_domain_legal_search(['query'])
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['enhanced_cross_domain_legal_search']
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: enhanced_cross_domain_legal_search
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'}
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'}
+2025-06-29 02:53:55 - agent_system.ai_agent - INFO - 🔍 Calling enhanced_cross_domain_legal_search with query: 'Police conduct a search without warrant. What cons...'
+2025-06-29 02:53:55 - agent_system.ai_agent.tools - INFO - 🔍 ENHANCED TOOL: enhanced_cross_domain_legal_search called with query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary sea...'
+2025-06-29 02:53:55 - agent_system.ai_agent.tools - INFO - 🔄 Initializing Constitution database...
+2025-06-29 02:54:09 - agent_system.ai_agent.tools - INFO - ✅ Constitution database initialized successfully
+2025-06-29 02:54:09 - agent_system.ai_agent.tools - INFO - 🔄 Initializing IPC database...
+2025-06-29 02:54:13 - agent_system.ai_agent.tools - INFO - ✅ IPC database initialized successfully
+2025-06-29 02:54:13 - agent_system.ai_agent.tools - INFO - 🚀 Starting enhanced cross-domain search across multiple databases...
+2025-06-29 02:54:13 - agent_system.ai_agent.tools - INFO - 📜 Performing enhanced search on Constitution database...
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - ✅ Constitution enhanced search: 3 results
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - ⚖️ Performing enhanced search on IPC database...
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - ✅ IPC enhanced search: 3 results
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 🔀 Performing final cross-database result fusion...
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 🔀 Fusing results from 6 cross-database results...
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 🧹 Cross-database fusion: 6 -> 4 unique results
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 📊 Enhanced cross-domain search summary: {'constitution_results': 3, 'ipc_results': 3}
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 🎯 Final results after cross-database fusion: 4
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 🔗 Cross-database coverage: {'total_results': 4, 'database_distribution': {'constitution': 3, 'ipc': 1, 'constitution_percentage': 75.0, 'ipc_percentage': 25.0}, 'strategy_distribution': {'unknown': 4}, 'cross_relevance_score': 0.08333333333333333, 'domain_balance': 'imbalanced'}
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - ✅ Enhanced cross-domain search completed, returning 4 fused results
+2025-06-29 02:54:17 - agent_system.ai_agent.tools - INFO - 📝 Enhanced tool log saved to: agent_system\admin\scripts\generated\enhanced_tool_results.log
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - ✅ Tool enhanced_cross_domain_legal_search completed. Result preview: '=== ENHANCED CROSS-DOMAIN SEARCH SUMMARY ===
+Query analyzed across 2 legal databases
+Constitution da...'
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📊 Tracked DB result for enhanced_cross_domain_legal_search
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📨 Tool message created for enhanced_cross_domain_legal_search
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 1 DB results
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 👤 Last user query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary sea...'
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 02:54:17 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 💬 LLM final response: 'The enhanced cross-domain search results provide the following information:
+
+**Constitutional Protec...'
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'The enhanced cross-domain search results provide the following information:
+
+**Constitutional Protections:**
+
+*   **Article 32:** Guarantees the right to move the Supreme Court for the enforcement of ...'
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 8
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250629_025420.json
+2025-06-29 02:54:20 - agent_system.ai_agent - INFO - 📊 State summary: 1 tool calls, 1 DB results
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🚀 Starting agent execution...
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - ❓ User query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature. Which constitutional article addresses disqualification and are there exceptions?'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 📚 Chat history provided with 6 messages
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   1. user: 'What are the fundamental rights in the Indian Cons...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   2. assistant: 'Fundamental Rights in the Indian Constitution are ...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   3. user: 'An MLA is alleged to hold an office of profit unde...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   4. assistant: 'Based on the searches, I was unable to locate spec...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   5. user: 'Police conduct a search without warrant. What cons...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO -   6. assistant: 'The enhanced cross-domain search results provide t...'
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🏗️ Building agent graph...
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🤖 Initializing LLM with model: gemini-2.0-flash-exp
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🛠️ LLM bound with 5 tools: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 📚 Tools dictionary created with keys: ['generate_keywords', 'search_constitution', 'search_ipc', 'predict_punishment', 'enhanced_cross_domain_legal_search']
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🔗 Building graph structure...
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 📍 Added nodes: llm, tools
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🚪 Set entry point: llm
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🔀 Added conditional edges from llm
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - ➡️ Added edge: tools -> llm
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - ⚙️ Compiling graph...
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - ✅ Graph compiled successfully
+2025-06-29 02:55:09 - agent_system.ai_agent - INFO - 🎨 Generating graph visualization...
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - ✅ Graph visualization saved as 'generated/graph_visualization.png'
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 🎉 Agent graph build completed successfully
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 📋 Initial state created with 7 total messages
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 🔄 Invoking agent...
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 📨 Current state has 7 messages
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 👤 Last user query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature....'
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 02:55:10 - agent_system.ai_agent - INFO - 📤 Sending 8 messages to LLM...
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: generate_keywords(['query'])
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 1 tool calls: ['generate_keywords']
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🎯 Executing 1 tool calls...
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔨 Tool 1/1: generate_keywords
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature. Which constitutional article addresses disqualification and are there exceptions?'}
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature. Which constitutional article addresses disqualification and are there exceptions?'}
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔑 generate_keywords received query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature. Which constitutional article addresses disqualification and are there exceptions?'
+2025-06-29 02:55:12 - agent_system.ai_agent - INFO - 🔍 Calling generate_keywords with query: 'An MLA is alleged to hold an office of profit unde...'
+2025-06-29 02:55:12 - agent_system.ai_agent.tools - INFO - 🔑 TOOL: generate_keywords called with query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature. Which constitutional article addresses disqualification and are there exceptions?'
+2025-06-29 02:55:12 - agent_system.ai_agent.tools - INFO - 🔄 Calling LLM to generate keywords with structured output...
+2025-06-29 02:55:12 - agent_system.ai_agent.tools - INFO - 🔄 Initializing LLM...
+2025-06-29 02:55:12 - agent_system.ai_agent.tools - INFO - ✅ LLM initialized successfully
+2025-06-29 02:55:14 - agent_system.ai_agent.tools - INFO - 📋 Generated 4 keywords using structured output: ['office of profit', 'disqualification of members', 'Article 102', 'Article 191']
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - ✅ Tool generate_keywords completed. Result preview: '['office of profit', 'disqualification of members', 'Article 102', 'Article 191']...'
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 📨 Tool message created for generate_keywords
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 🏁 All 1 tools executed
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 📈 State tracking: 1 total tool calls, 0 DB results
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 📨 Current state has 9 messages
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 👤 Last user query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature....'
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 02:55:14 - agent_system.ai_agent - INFO - 📤 Sending 10 messages to LLM...
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔧 LLM wants to call tools: search_constitution(['query']), search_constitution(['query']), search_constitution(['query']), search_constitution(['query'])
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔄 Agent decision: CONTINUE - Found 4 tool calls: ['search_constitution', 'search_constitution', 'search_constitution', 'search_constitution']
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔧 Entering tools execution node...
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🎯 Executing 4 tool calls...
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔨 Tool 1/4: search_constitution
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'office of profit'}
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'office of profit'}
+2025-06-29 02:55:15 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'office of profit...'
+2025-06-29 02:55:15 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'office of profit'
+2025-06-29 02:55:15 - agent_system.ai_agent.tools - INFO - 🔍 Performing basic search on Constitution database...
+2025-06-29 02:55:17 - agent_system.ai_agent.tools - INFO - 📊 Found 2 search results from Constitution database
+2025-06-29 02:55:17 - agent_system.ai_agent.tools - INFO - ✅ Constitution basic search completed, returning 2 results
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.4359):
+Collection: constitution_of_india_2
+Article: Unknown Article
+Content: 1...'
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 🔨 Tool 2/4: search_constitution
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'disqualification of members'}
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'disqualification of members'}
+2025-06-29 02:55:17 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'disqualification of members...'
+2025-06-29 02:55:17 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'disqualification of members'
+2025-06-29 02:55:17 - agent_system.ai_agent.tools - INFO - 🔍 Performing basic search on Constitution database...
+2025-06-29 02:55:19 - agent_system.ai_agent.tools - INFO - 📊 Found 2 search results from Constitution database
+2025-06-29 02:55:19 - agent_system.ai_agent.tools - INFO - ✅ Constitution basic search completed, returning 2 results
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 0.8916):
+Collection: constitution_of_india_1
+Article: Unknown Article
+Content: T...'
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 🔨 Tool 3/4: search_constitution
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 102'}
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 102'}
+2025-06-29 02:55:19 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 102...'
+2025-06-29 02:55:19 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 102'
+2025-06-29 02:55:19 - agent_system.ai_agent.tools - INFO - 🔍 Performing basic search on Constitution database...
+2025-06-29 02:55:20 - agent_system.ai_agent.tools - INFO - 📊 Found 2 search results from Constitution database
+2025-06-29 02:55:20 - agent_system.ai_agent.tools - INFO - ✅ Constitution basic search completed, returning 2 results
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0559):
+Collection: constitution_of_india_5
+Article: Unknown Article
+Content: T...'
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 🔨 Tool 4/4: search_constitution
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 📝 Tool args: {'query': 'Article 191'}
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 🔍 All tool arguments: {'query': 'Article 191'}
+2025-06-29 02:55:20 - agent_system.ai_agent - INFO - 🔍 Calling search_constitution with query: 'Article 191...'
+2025-06-29 02:55:20 - agent_system.ai_agent.tools - INFO - 📜 TOOL: search_constitution called with keyword: 'Article 191'
+2025-06-29 02:55:20 - agent_system.ai_agent.tools - INFO - 🔍 Performing basic search on Constitution database...
+2025-06-29 02:55:22 - agent_system.ai_agent.tools - INFO - 📊 Found 2 search results from Constitution database
+2025-06-29 02:55:22 - agent_system.ai_agent.tools - INFO - ✅ Constitution basic search completed, returning 2 results
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - ✅ Tool search_constitution completed. Result preview: 'Result 1 (Distance: 1.0474):
+Collection: constitution_of_india_5
+Article: Unknown Article
+Content: T...'
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📊 Tracked DB result for search_constitution
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📨 Tool message created for search_constitution
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 🏁 All 4 tools executed
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📈 State tracking: 5 total tool calls, 4 DB results
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 🧠 Entering LLM node...
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📨 Current state has 14 messages
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 👤 Last user query: 'An MLA is alleged to hold an office of profit under the state while also serving in the legislature....'
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📋 System prompt loaded from Constants with state awareness
+2025-06-29 02:55:22 - agent_system.ai_agent - INFO - 📤 Sending 15 messages to LLM...
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - ✅ LLM response received
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 💬 LLM final response: 'Based on the search results, here's the relevant information regarding disqualification of an MLA ho...'
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 🏁 Agent decision: END - No tool calls found, finishing execution
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - ✅ Agent execution completed
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 💡 Final answer preview: 'Based on the search results, here's the relevant information regarding disqualification of an MLA holding an office of profit:
+
+*   **Article 191:** This article deals with disqualifications for membe...'
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 📊 Total messages in final state: 15
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 💾 Agent state tracking saved to: generated\agent_state_20250629_025524.json
+2025-06-29 02:55:24 - agent_system.ai_agent - INFO - 📊 State summary: 5 tool calls, 4 DB results

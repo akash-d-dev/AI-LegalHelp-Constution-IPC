@@ -506,3 +506,76 @@ Result 8:
 
 ========================================================================================================================
 
+
+========================================================================================================================
+ENHANCED CROSS-DOMAIN TOOL EXECUTION LOG
+Timestamp: 2025-06-29 02:54:17
+Query: 'Police conduct a search without warrant. What constitutional protections exist against arbitrary search and seizure and what IPC sections govern police powers?'
+========================================================================================================================
+
+CROSS-DATABASE SEARCH SUMMARY:
+Constitution Results: 3
+IPC Results: 3
+Final Fused Results: 4
+
+CROSS-DATABASE ANALYSIS:
+Database Distribution: {'constitution': 3, 'ipc': 1, 'constitution_percentage': 75.0, 'ipc_percentage': 25.0}
+Strategy Distribution: {'unknown': 4}
+Cross-Relevance Score: 0.083
+Domain Balance: imbalanced
+
+ENHANCED RESULTS DETAILS:
+Result 1:
+  Source Database: IPC
+  Collection: ipc_1
+  Enhanced Composite Score: 0.0300
+  Original Composite Score: 0.0000
+  Cross-DB Bonus: 0.1500
+  Domain Score: 0.0000
+  Search Strategy: Unknown
+  Query Variant: Unknown...
+  Content: 28 
+ 
+97. Right of private defence of the body and of property .—Every person has a right, subject to the 
+restrictions contained in section 99, to defend— 
+First.—His own body, and the body of any other person, against any offence affecting the human 
+body; 
+Secondly.—The property, whether movable or immovable, of himself or of any other person, against 
+any act which is an offence falling under ...
+------------------------------------------------------------
+Result 2:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.0200
+  Original Composite Score: 0.0000
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.0000
+  Search Strategy: Unknown
+  Query Variant: Unknown...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)19Right  to Constitutional Remedies 32. Remedies for enforcement of rights conferred by this Part.—(1) The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.(2) The Supreme Court shall have power to issue directions or orders or writs, including writs in the natur...
+------------------------------------------------------------
+Result 3:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.0200
+  Original Composite Score: 0.0000
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.0000
+  Search Strategy: Unknown
+  Query Variant: Unknown...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)12(2) Every person who is arrested and detained in custody shall be produced before the nearest magistrate within a period of twenty-four hours of such arrest excluding the time necessary for the journey from the place of arrest to the court of the magistrate and no such person shall be detained in custody beyond the said period without the a...
+------------------------------------------------------------
+Result 4:
+  Source Database: Constitution
+  Collection: constitution_of_india_1
+  Enhanced Composite Score: 0.0200
+  Original Composite Score: 0.0000
+  Cross-DB Bonus: 0.1000
+  Domain Score: 0.0000
+  Search Strategy: Unknown
+  Query Variant: Unknown...
+  Content: THE CONSTITUTION OF  INDIA(Part III.—Fundamental Rights)13Provided that nothing in this sub-clause shall authorise the detention of any person beyond the maximum period prescribed by any law made by Parliament under sub-clause (b) of clause (7); or(b) such person is detained in accordance with the provisions of any law made by Parliament under sub-clauses (a) and (b) of clause (7).(5) When any per...
+------------------------------------------------------------
+
+========================================================================================================================
+
